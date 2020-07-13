@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ShopDuAn"
+    }
+  },
+  "defaultProject": "ShopDuAn",
+  "cli": {
+    "analytics": "516cafaf-8019-46dc-b4b5-ee82c7c191e7"
+  }
 }
