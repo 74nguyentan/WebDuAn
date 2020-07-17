@@ -1,0 +1,357 @@
+@keyframes circular {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform:  rotateY(0deg);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: rotateY(360deg);
+    }
+}
+@keyframes increase {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+@keyframes fadeInTop {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform:translateY(-200px);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+@keyframes activeScaleRed {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(180deg);
+        color: red;
+    }
+}
+@keyframes activeScaleWhite {
+    0% {
+        transform: rotateY(90deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+@keyframes rightText {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-1000px);
+    }
+    100%  {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+}
+@keyframes topIn {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-50%,-1000px);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%,-50%);
+    }
+}
+@keyframes rotateText {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: rotateX(-360deg);
+        transform-origin: 50% 50%;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform-origin: 50% 50%;
+        transform: rotateX(0deg);
+    }
+}
+@keyframes Elasticity {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0.6;
+        transform: scale(1.2);
+    }
+}
+@keyframes inRight {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes leftOut {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(100%);
+    }
+}
+@keyframes inLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0%);
+    }
+}
+@keyframes rightOut {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-100%);
+    }
+}
+@keyframes ScaleButton {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+}
+@keyframes topDown {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-1000px);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+@keyframes growth {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0);
+        transform-origin: 50% 50%;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+        transform-origin: 50% 50%;
+    }
+}
+@keyframes hide {
+    0% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-300%);
+    }
+}
+@keyframes show {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-300%);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(-100%);
+    }
+}
+@keyframes show1 {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0%);
+    }
+}
+@keyframes hide1 {
+    0% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-200%);
+    }
+}
+@keyframes show2 {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0%);
+    }
+}
+@keyframes rotate {
+    0% {
+        filter: hue-rotate(0deg)
+    }
+    100% {
+        filter: hue-rotate(360deg)
+    }
+}
+@keyframes aniLogin {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-100%) rotateY(0deg);
+        transform-origin: 50% 50%;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0%) rotateY(360deg);
+        transform-origin: 50% 50%;
+    }
+}
+.navbar-menu__link span {
+    position: absolute;
+    display: block;
+}
+.navbar-menu__link span:nth-child(1) {
+    top: -3px;
+    left: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg,transparent,#f7f7f7);
+}
+.navbar-menu__link:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+.navbar-menu__link span:nth-child(3) {
+    bottom: -3px;
+    right: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(270deg,transparent,#f7f7f7);
+}
+.navbar-menu__link:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.navbar-menu__link span:nth-child(2) {
+    top:-100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#f7f7f7);
+}
+.navbar-menu__link:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.navbar-menu__link span:nth-child(4) {
+    bottom:-100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#f7f7f7);
+}
+.navbar-menu__link:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+.outer {
+    position: relative;
+    background: #111;
+}
+
+.button {
+    height: 40px;
+    width: 100px;
+    border-radius:50px;
+}
+.outer button, .outer span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.outer button {
+    background: #262829;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #f2f2f2;
+    letter-spacing: 2px;
+    z-index: 1;
+}
+.button button {
+    border-radius: 50px;
+    width: 95px;
+    height: 35px;
+}
+.outer span {
+    width: 100%;
+    height: 100%;
+    background: inherit;
+}
+.button span {
+    border-radius: 50px;
+}
+.active-button.outer span:nth-child(1) {
+    filter: blur(7px);
+}
+.active-button.outer span:nth-child(2) {
+    filter: blur(14px);
+}
+.active-button.outer {
+    animation : rotate  1.5s linear infinite;
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+}

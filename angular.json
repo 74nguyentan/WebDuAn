@@ -24,13 +24,26 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
-
+              "./src/styles.css",
+              "./src/assets/bootstrap-4.5.0-dist/css/bootstrap.min.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/bootstrap/dist/css/bootstrap-grid.min.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "./src/assets/css/animation.css",
+              "./src/assets/css/grid.css",
+              "./src/assets/css/style.css",
+              "./src/assets/css/reponsive.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/popper.js/dist/umd/popper.js",
+              "node_modules/popper.js/dist/popper.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/popper.js/dist/umd/popper.js",
+              "node_modules/bootstrap-notify/bootstrap-notify.js",
+              "node_modules/bootstrap-material-design/dist/js/bootstrap-material-design.min.js",
+              "./src/assets/js/main.js"
             ]
           },
           "configurations": {
