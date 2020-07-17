@@ -11,9 +11,16 @@ import { NavComponent } from './Layouts/nav/nav.component';
 import { HomePageComponent } from './Components/home-page/home-page.component';
 import { FilterComponent } from './Layouts/filter/filter.component';
 import { AdvertisementComponent } from './Layouts/advertisement/advertisement.component';
+
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
 // import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 // import { TooltipModule } from 'ngx-bootstrap/tooltip';
 // import { ModalModule } from 'ngx-bootstrap/modal';
+library.add(faCoffee);
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,15 +31,22 @@ import { AdvertisementComponent } from './Layouts/advertisement/advertisement.co
     HomePageComponent,
     FilterComponent,
     AdvertisementComponent
+
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     // BsDropdownModule.forRoot(),
     // TooltipModule.forRoot(),
     // ModalModule.forRoot()
+    FontAwesomeModule
   ],
+
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
-export class AppModule { }
+export class AppModule {}
+
+
