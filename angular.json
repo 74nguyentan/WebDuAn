@@ -40,15 +40,13 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/popper.js/dist/umd/popper.js",
-              "node_modules/popper.js/dist/popper.js",
+             "node_modules/popper.js/dist/popper.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-              "node_modules/popper.js/dist/umd/popper.js",
+             "node_modules/popper.js/dist/umd/popper.js",
               "node_modules/bootstrap-notify/bootstrap-notify.js",
               "node_modules/bootstrap-material-design/dist/js/bootstrap-material-design.min.js",
-              "./src/assets/js/main.js",
-              "node_modules/font-awesome/css/font-awesome.css",
-              "node_modules/font-awesome/css/font-awesome.min.css"
+              "./src/assets/js/main.js"
 
           ]
         },

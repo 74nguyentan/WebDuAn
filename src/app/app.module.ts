@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,13 +14,13 @@ import { AdvertisementComponent } from './Layouts/advertisement/advertisement.co
 
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+//import { library } from '@fortawesome/fontawesome-svg-core';
+//import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
-// import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-// import { TooltipModule } from 'ngx-bootstrap/tooltip';
-// import { ModalModule } from 'ngx-bootstrap/modal';
-library.add(faCoffee);
+ //import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+ //import { TooltipModule } from 'ngx-bootstrap/tooltip';
+/// import { ModalModule } from 'ngx-bootstrap/modal';
+//library.add(faCoffee);
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +39,7 @@ library.add(faCoffee);
     AppRoutingModule,
     // BsDropdownModule.forRoot(),
     // TooltipModule.forRoot(),
-    // ModalModule.forRoot()
+   //  ModalModule.forRoot()
     FontAwesomeModule
   ],
 
