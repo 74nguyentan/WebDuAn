@@ -1,4 +1,9 @@
-
+.a-link{
+  /* color: #82e445; */
+  color: greenyellow;
+  /* color: red; */
+  font-size: 14px;
+}
 .subnav-content {
   display: none;
   position: absolute;
@@ -24,40 +29,3 @@
 }
 
 
-
-
-/*
-
-.formcontroll {
-  margin-left: 200px;
-
-}
-nav li {
-   display: inline-block;
-   padding: 3px;
-
-}
-.search {
-  margin-left: 60px;
-}
-
-nav {
-   margin-top: 10px;
-}
-.dropdown-menu{
-   width: 2000px;
-   padding:0px;
-   margin-left: -860px; width: 1350px;
-   margin-top: 50px;
-}
-.dropdown:hover .dropdown-menu {display: block;}
-
-
-.dropdown-menu img {
-   object-fit: contain;
-   width: 200px; height: 100px;
-}
-.dropdown-menu li {
-   margin-left: 50px;
-   font-size: small;
-} */

@@ -36,13 +36,14 @@
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
 
 
+
               // "src/assets/bootstrap-4.5.0-dist/css/bootstrap.min.css",
               "src/assets/css/animation.css",
               "src/assets/css/grid.css",
               "src/assets/css/reponsive.css",
 
               //login
-            //  "src/assets/fonts/Linearicons-Free-v1.0.0/icon-font.min.css",
+
               "src/assets/vendor/animate/animate.css",
               "src/assets/vendor/css-hamburgers/hamburgers.min.css",
               "src/assets/vendor/select2/select2.min.css",
@@ -53,19 +54,24 @@
               "node_modules/bootstrap/dist/js/bootstrap.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
 
-              "src/assets/vendor/bootstrap/js/popper.js",
-              "src/assets/vendor/select2/select2.min.js",
               "src/assets/js/main.js",
 
+
+              "src/assets/vendor/bootstrap/js/popper.js",
+              "src/assets/vendor/select2/select2.min.js",
               "src/assets/vendor/select2/checklogin.js"
-            ]
-          },
+          ]
+
+
+        },
           "configurations": {
             "production": {
-              "fileReplacements": [{
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.prod.ts"
-              }],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -74,7 +80,8 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{
+              "budgets": [
+                {
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"

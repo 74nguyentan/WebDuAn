@@ -31,6 +31,8 @@ imageUrlLogoo =
   'https://drive.google.com/uc?export=download&id=1KKAgJ92TD0pk1z51TPMnlY03aXxYRouJ';
 imageUrl11 = '';
 
+danhMuc = false;
+role = 0;
   constructor() { }
 
   ngOnInit(): void {
