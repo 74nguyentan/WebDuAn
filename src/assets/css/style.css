@@ -2,70 +2,6 @@
   padding: 0;
   margin: 0;
 }
-.navbar-menu {
-  background-color: #2f3535;
-  /* background-color: #81F581; */
-  opacity: 0.1;
-  z-index: 1000;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 60px 0 60px;
-
-  visibility: hidden;
-  transition: 0.8s;
-  animation: fadeInTop 0.8s forwards;
-
-  -moz-box-shadow: 0px 5px 17px #000000;
-  -webkit-box-shadow: 0px 5px 17px #000000;
-  box-shadow: 0px 5px 17px #000000;
-}
-
-.navbar-menu__img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-.navbar-menu__list {
-  /* padding: 0 0; */
-  list-style: none;
-  display: flex;
-  /* justify-content: center;
-  align-items: center; */
-}
-.navbar-menu__item {
-  padding: 0 10px;
-}
-.navbar-menu__link {
-  /* font-family: Zapf Chancery, cursive; */
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-  /* color: #b9b8b8;
-   */
-  color: #fff;
-  /* color: #000; */
-  overflow: hidden;
-  padding: 3px 5px;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.navbar-menu__link:hover {
-  color: #ffff;
-  /* color: #000; */
-  transition-delay: 1s;
-  text-decoration: none;
-  box-shadow: 1px 1px 15px #5dd0cb;
-}
-
-.navbar-menu__cart {
-  cursor: pointer;
-  color: #fff;
-  font-size: 18px;
-  margin-bottom: -10px;
-  transition: 0.3;
-}
 
 .container-content {
   position: absolute;
@@ -97,13 +33,7 @@
   z-index: 99999999;
 }
 
-.navvcontent {
-  position: fixed;
-  top: 111px;
-  width: 100%;
-  background-color: rgba(67, 76, 76, 0.8);
-  color: white;
-}
+
 
 #new-page {
   position: relative;
@@ -1035,52 +965,6 @@
 .product-2:hover .product-1__hover {
   transition: 0.3s;
   transform: scale(1);
-}
-.search-box {
-  position: absolute;
-  top: 10%;
-  left: 4%;
-  background: #2f3640;
-  height: 40px;
-  border-radius: 40px;
-  padding: 10px;
-}
-.btn-search {
-  text-decoration: none;
-  color: #e84118;
-  float: right;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #2f3640;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.4s;
-  color: white;
-  cursor: pointer;
-}
-.search-txt {
-  border: none;
-  background: none;
-  outline: none;
-  float: left;
-  padding: 0;
-  color: white;
-  font-size: 16px;
-  transition: 0.4s;
-  line-height: 40px;
-  width: 0px;
-  font-weight: bold;
-}
-.search-box:hover > .search-txt {
-  width: 240px;
-  padding: 0 6px;
-}
-
-.search-box:hover > .btn-search {
-  background: white;
-  color: black;
 }
 .container-rating {
   position: relative;
