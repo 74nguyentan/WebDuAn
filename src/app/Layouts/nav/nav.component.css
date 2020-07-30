@@ -107,8 +107,8 @@
 
 .search-box {
   position: fixed;
-  top: 8%;
-  left: 18%;
+  top: 50px;
+  left: 20%;
   /* background: #2f3640; */
   background-color: #fff;
   /* height: 50px; */
@@ -154,4 +154,10 @@
 .search-box:hover > .btn-search {
   background: white;
   color: black;
+}
+.search__icon{
+  color: rgb(183, 250, 82);
+}
+.search__icon:hover{
+  color: #000;
 }

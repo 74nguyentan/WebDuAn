@@ -28,8 +28,8 @@
 
       </div>
       <div class="row">
-        <ul class="navbar-menu__list">
-          <li class="navbar-menu__item">
+        <ul class="navbar-nav navbar-menu__list">
+          <li class="nav-item navbar-menu__item">
             <a routerLink="/" class="navbar-menu__link">
               <span></span>
               <span></span>
@@ -38,7 +38,7 @@
               Trang Chủ
             </a>
           </li>
-          <li class="navbar-menu__item">
+          <li class="nav-item navbar-menu__item">
             <a routerLink="/listNew" class="navbar-menu__link">
               <span></span>
               <span></span>
@@ -48,7 +48,7 @@
             </a>
           </li>
 
-          <li class="navbar-menu__item">
+          <li class="nav-item navbar-menu__item">
             <a href="#" class="navbar-menu__link">
               <span></span>
               <span></span>
@@ -58,13 +58,10 @@
             </a>
           </li>
 
-          <li class="navbar-menu__item">
+          <li class="nav-item navbar-menu__item">
             <a
               routerLink="#"
-
-
-              class="nav-link dropdown-toggle navbar-menu__link"
-
+              class=" dropdown-toggle navbar-menu__link"
               id="navbarDropdown"
               role="button"
               data-toggle="dropdown"
@@ -148,7 +145,7 @@
 
           <li class="nav-item dropdown navbar-menu__item" *ngIf="role == 0">
             <a
-              class="nav-link dropdown-toggle navbar-menu__link"
+              class="dropdown-toggle navbar-menu__link"
               href="#"
               id="navbarDropdown"
               role="button"
@@ -170,7 +167,7 @@
             </div>
           </li>
 
-          <li class="navbar-menu__item" *ngIf="role == 1">
+          <li class="nav-item navbar-menu__item" *ngIf="role == 1">
             <a href="#" class="navbar-menu__link">
               <span></span>
               <span></span>
@@ -182,7 +179,7 @@
 
           <li class="nav-item dropdown navbar-menu__item">
             <a
-              class="nav-link dropdown-toggle navbar-menu__link"
+              class="dropdown-toggle navbar-menu__link"
               href="#"
               id="navbarDropdown"
               role="button"
@@ -208,7 +205,7 @@
               <a class="dropdown-item" href="#">Đăng kí</a>
             </div>
           </li>
-          <li class="navbar-menu__item">
+          <li class="nav-item navbar-menu__item">
             <span class="navbar-menu__cart">
               <i class="fas fa-globe"></i>
             </span>
@@ -221,8 +218,8 @@
 
 
 <div class="search-box hide-on-moblie">
-  <input type="text" placeholder="Tìm kiếm...." class="search-txt">
-  <a href="" class="btn-search">
-      <i class="fas fa-search"></i>
+  <input type="text" placeholder="&nbsp;Tìm kiếm...." class="search-txt">
+  <a href="" class="btn-search " >
+      <i class="fas fa-search search__icon"></i>
   </a>
 </div>
