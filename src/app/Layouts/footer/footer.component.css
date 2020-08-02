@@ -4,5 +4,6 @@ a {
   text-decoration: none;
 }
 a.dark-grey-text:hover{
-  color:red;
+  color:#21d192;
+  font-weight: 500;
 }

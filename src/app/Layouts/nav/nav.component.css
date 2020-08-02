@@ -35,7 +35,7 @@
   padding: 0 10px;
 }
 .navbar-menu__link {
-  /* font-family: Zapf Chancery, cursive; */
+  /* font-family: SVN-Russell; */
   position: relative;
   display: inline-block;
   text-decoration: none;
@@ -67,7 +67,7 @@
 
 .navvcontent {
   position: fixed;
-  top: 111px;
+  top: 105px;
   width: 100%;
   background-color: rgba(67, 76, 76, 0.8);
   color: white;
