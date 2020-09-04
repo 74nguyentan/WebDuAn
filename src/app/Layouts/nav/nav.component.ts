@@ -28,10 +28,13 @@ imageUrl8 =
 imageUrl9 =
   'https://cf.shopee.vn/file/099edde1ab31df35bc255912bab54a5e_tn&quot;';
 imageUrlLogoo =
-  'https://drive.google.com/uc?export=download&id=1KKAgJ92TD0pk1z51TPMnlY03aXxYRouJ';
+  // 'https://drive.google.com/uc?export=download&id=1KKAgJ92TD0pk1z51TPMnlY03aXxYRouJ';
+  // 'https://drive.google.com/uc?export=download&id=1XgxLjFjfx0mgtsO4a6IFCAFyq5zAe2fP';
+  // 'https://drive.google.com/uc?export=download&id=1Od1WIhRJ9E_WW50dNvJnxMFrRYGmfyxB';
+  'https://drive.google.com/uc?export=download&id=1BHdFaUB1pypfuHOGRgBdgXZtWpwPS4fS';
 imageUrl11 = '';
 
-danhMuc = false;
+login = false;
 role = 0;
   constructor() { }
 

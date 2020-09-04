@@ -1,108 +1,15 @@
 
 .navbar-menu {
-  background-color: #2f3535;
-  /* background-color: #81F581; */
-  opacity: 0.1;
+
   z-index: 1000;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 60px 0 60px;
-
-  visibility: hidden;
+  /* visibility: hidden;
   transition: 0.8s;
-  animation: fadeInTop 0.8s forwards;
+  animation: fadeInTop 0.8s forwards; */
 
-  -moz-box-shadow: 0px 5px 17px #000000;
-  -webkit-box-shadow: 0px 5px 17px #000000;
-  box-shadow: 0px 5px 17px #000000;
+  -webkit-box-shadow: 0px 18px 26px -14px rgba(0,0,0,0.17);
+-moz-box-shadow: 0px 18px 26px -14px rgba(0,0,0,0.17);
+box-shadow: 0px 18px 26px -14px rgba(0,0,0,0.17);
 }
-
-.navbar-menu__img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.navbar-menu__list {
-  /* padding: 0 0; */
-  list-style: none;
-  display: flex;
-  /* justify-content: center;
-  align-items: center; */
-}
-.navbar-menu__item {
-  padding: 0 10px;
-}
-.navbar-menu__link {
-  /* font-family: SVN-Russell; */
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-  /* color: #b9b8b8;
-   */
-  color: #fff;
-  /* color: #000; */
-  overflow: hidden;
-  padding: 3px 5px;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.navbar-menu__link:hover {
-  color: #ffff;
-  /* color: #000; */
-  transition-delay: 1s;
-  text-decoration: none;
-  box-shadow: 1px 1px 15px #5dd0cb;
-}
-
-.navbar-menu__cart {
-  cursor: pointer;
-  color: #fff;
-  font-size: 18px;
-  margin-bottom: -10px;
-  transition: 0.3;
-}
-
-.navvcontent {
-  position: fixed;
-  top: 105px;
-  width: 100%;
-  background-color: rgba(67, 76, 76, 0.8);
-  color: white;
-}
-.a-link{
-  /* color: #82e445; */
-  color: greenyellow;
-  /* color: red; */
-  font-size: 14px;
-}
-.subnav-content {
-  display: none;
-  position: absolute;
-  left: 0;
-  background-color: red;
-  width: 100%;
-  z-index: 1;
-}
-
-.subnav-content a {
-  float: left;
-  color: white;
-  text-decoration: none;
-}
-
-.subnav-content a:hover {
-  background-color: #eee;
-  color: black;
-}
-
-.subnav:hover .subnav-content {
-  display: block;
-}
-
-
 /* search */
 
 .search-box {
@@ -156,7 +63,8 @@
   color: black;
 }
 .search__icon{
-  color: rgb(183, 250, 82);
+  /* color: #59d80a; */
+  color: greenyellow;
 }
 .search__icon:hover{
   color: #000;
