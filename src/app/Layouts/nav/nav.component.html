@@ -1,21 +1,61 @@
+
+<div class="header--sidebar"></div>
 <header class="header" style="background-color: #ffffff">
+
   <div class="header__top">
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-6 col-md-8 col-sm-6 col-xs-12">
           <p>
-            <!-- <a class="float-right mr-3 a-link">Trợ giúp <i class="far fa-question-circle"></i></a> -->
+            460 Lí Thường Kiệt, Liên Chiểu, Đà Nẵng - Hotline: 804-377-3580 -
+            804-399-3580
           </p>
         </div>
         <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
           <div class="header__actions">
-            <a *ngIf="!login"  routerLink="/login">Đăng nhập</a>
-            <a *ngIf="login">Tài khoản</a>
+            <a  *ngIf="!login" routerLink="/login">Đăng nhập <i class="fas fa-sign-in-alt"></i></a>
             <a href="#"> Ứng dụng <i class="fas fa-long-arrow-alt-down"></i></a>
             <a href="#">Thông báo <i class="far fa-bell"></i></a>
-            <a href="#">Ngôn ngữ<i class="fa fa-angle-down"></i></a>
+            <div class="btn-group ps-dropdown" style="z-index: 9999999999">
+              <a
+                class="dropdown-toggle"
+                *ngIf="login"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Tài khoản <i class="fas fa-user-cog"></i></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#" ><img src="../assets/images/images/flag/usa.svg" alt="" *ngIf="role == 1">
+                    Quản lý sản phẩm</a>
+                </li>
+                <li>
+                  <a href="#"><img src="../assets/images/images/flag/singapore.svg"alt="" *ngIf="role == 1">Điểm</a>
+                </li>
+                <li>
+                  <a href="#"><img src="../assets/images/images/flag/japan.svg" alt="" /> Thông tin</a>
+                </li>
+                <li>
+                  <a href="#"><img src="../assets/images/images/flag/japan.svg" alt="" /> Đăng xuất</a>
+                </li>
 
+              </ul>
 
+            </div>
+            <div class="btn-group ps-dropdown" style="z-index: 9999999999">
+              <a
+                class="dropdown-toggle"
+                href="#"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Ngôn ngữ <i class="fas fa-globe-americas"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">English</a></li>
+                <li><a href="#">Japanese</a></li>
+                <li><a href="#">Chinese</a></li>
+              </ul>
+            </div>
 
           </div>
         </div>
@@ -25,7 +65,7 @@
   <nav class="navigation navbar-menu">
     <div class="container-fluid">
       <div class="navigation__column left">
-        <div class="header__logo" >
+        <div class="header__logo">
           <a class="ps-logo" href="index.html"
             ><img src="{{ imageUrlLogoo }}"
           /></a>
@@ -46,53 +86,41 @@
             <div class="mega-menu">
               <div class="mega-wrap">
                 <div class="mega-column">
-                  <ul class="mega-item ">
+                  <ul class="mega-item">
                     <li>
                       <a href="product-listing.html"
-                        ><img
-                          src="{{ imageUrl6 }}"
-                          style="height: 35px"
-                        />Thiết bị điện gia dụng</a
+                        ><img src="{{ imageUrl6 }}" style="height: 35px" />Thiết
+                        bị điện gia dụng</a
                       >
                     </li>
                     <li>
                       <a href="product-listing.html"
-                        ><img
-                        src="{{ imageUrl7 }}"
-                        style="height: 35px"
-                        /> Thể thao & du lịch</a
+                        ><img src="{{ imageUrl7 }}" style="height: 35px" /> Thể
+                        thao & du lịch</a
                       >
                     </li>
                     <li>
                       <a href="product-listing.html"
-                        ><img
-                        src="{{ imageUrl7 }}"
-                          style="height: 35px"
-                        />Ô tô & xe máy-xe đạp</a
+                        ><img src="{{ imageUrl7 }}" style="height: 35px" />Ô tô
+                        & xe máy-xe đạp</a
                       >
                     </li>
                     <li>
                       <a href="product-listing.html"
-                        ><img
-                        src="{{ imageUrl8 }}"
-                          style="height: 35px"
-                        />Thời trang nữ</a
+                        ><img src="{{ imageUrl8 }}" style="height: 35px" />Thời
+                        trang nữ</a
                       >
                     </li>
                     <li>
                       <a href="product-listing.html"
-                        ><img
-                        src="{{ imageUrl9 }}"
-                          style="height: 35px"
-                        />Giày dép nữ</a
+                        ><img src="{{ imageUrl9 }}" style="height: 35px" />Giày
+                        dép nữ</a
                       >
                     </li>
                     <li>
                       <a href="product-listing.html"
-                        ><img
-                        src="{{ imageUrl9 }}"
-                          style="height: 35px"
-                        />Mẹ & bé</a
+                        ><img src="{{ imageUrl9 }}" style="height: 35px" />Mẹ &
+                        bé</a
                       >
                     </li>
                   </ul>
@@ -143,7 +171,7 @@
             </div>
           </li>
 
-          <li class="menu-item"><a routerLink="/proDetaill">Bán hàng</a></li>
+          <li class="menu-item"><a routerLink="/product">Bán hàng</a></li>
           <li class="menu-item menu-item-has-children dropdown">
             <a href="#">News</a>
             <ul class="sub-menu">
