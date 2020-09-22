@@ -34,7 +34,6 @@
               // "node_modules/font-awesome/css/font-awesome.css",
               // "node_modules/font-awesome/css/font-awesome.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
-              // "node_modules/jquery/dist/jquery.slim.min.js",
 
               "src/assets/css/animation.css",
               "src/assets/css/grid.css",
@@ -47,7 +46,6 @@
             ],
             "scripts": [
               // "node_modules/jquery/dist/jquery.min.js",
-              // "node_modules/jquery/dist/jquery.slim.min.js",
               // "node_modules/bootstrap/dist/js/bootstrap.js",
               // "node_modules/bootstrap/dist/js/bootstrap.min.js",
 
@@ -132,7 +130,7 @@
               "e2e/tsconfig.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "*/node_modules/*"
             ]
           }
         },

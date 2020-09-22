@@ -36,10 +36,10 @@ body {
   left: -32px;
 }
 .carousel-indicators {
-  bottom: -30px;
+  bottom: 0px;
 }
 .carousel-indicators li {
-  border-radius: 0;
+  border-radius: 10px;
   width: 10px;
   height: 10px;
   background: #ccc;
@@ -51,3 +51,42 @@ body {
   background: #3276b1;
   border-color: #3276b1;
 }
+
+/* danh muc */
+.products {
+  padding: 20px 0;
+  text-align: center;
+  }
+
+  .products div div {
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: 0.2s;
+  }
+
+  .products  div:hover div {
+  margin-top: -10px;
+  border: 1px solid rgb(200, 200, 200);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+  background: rgba(200, 200, 200, 0.1);
+  transition: 0.5s;
+  }
+
+  .dl-horizontal dt {
+  float: left;
+  width: 120px;
+  overflow: hidden;
+  clear: left;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  }
+  .dl-horizontal dd {
+  margin-left: 140px;
+  text-align:left;
+  }
+/* menucon */
+
+
+/* //jđjdj */
