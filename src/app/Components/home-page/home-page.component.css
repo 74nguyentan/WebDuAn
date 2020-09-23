@@ -89,4 +89,197 @@ body {
 /* menucon */
 
 
-/* //jđjdj */
+/* //cua hang
+ */
+ .hover {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 60%;
+}
+
+.hover-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  transition: all 0.4s;
+}
+
+.hover img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.hover2-noidung {
+  position: relative;
+  z-index: 99;
+}
+
+.hover-2 .hover-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+}
+
+.hover-2-tieude {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 99;
+  transition: all 0.3s;
+}
+
+.hover-2-trichdan {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  left: 0;
+  text-align: center;
+  z-index: 99;
+  transition: all 0.3s;
+}
+
+.hover-2:hover .hover-2-tieude {
+  transform: translateY(-1.5rem);
+}
+
+.hover-2:hover .hover-2-trichdan {
+  bottom: 0.5rem;
+  opacity: 1;
+}
+
+.hover-2:hover .hover-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+}
+
+/* xoay */
+#transition img {
+  transition: 1s ease-in-out;
+}
+#transition:hover img {
+  transform: rotate(3turn);
+  -webkit-transform: rotate(3turn);
+  -moz-transform: rotate(3turn);
+}
+/* sp luot */
+.box {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 5px #555;
+  }
+  .box img {
+  width: 100%;
+  height: auto;
+  }
+
+  .box .box-heading {
+  width: 90%;
+  position: absolute;
+  bottom: 25px;
+  left: 5%;
+  background: rgba(253, 252, 252, 0.6);
+  padding: 10px 60px 10px 25px;
+  color: #fff;
+  transition: all 0.3s ease 0s;
+  }
+
+  .box:hover .box-heading {
+  left: 100%;
+  }
+
+  .box .box-heading:after {
+  content: "";
+  font-family: fontawesome;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  top: 13px;
+  right: 11px;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  }
+
+  .box .title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  }
+
+  .box .post {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-top: 5px;
+  }
+
+  .box .boxContent {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  padding: 30px 35px;
+  background: rgba(197, 171, 84, 0.8);
+  transition: all 0.3s ease 0s;
+  }
+
+  .box:hover .boxContent {
+  left: 0;
+  }
+
+  .box .description {
+  font-size: 14px;
+  color: #fff;
+  line-height: 25px;
+  }
+
+  .box .cart {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #20211c;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 20px;
+  transition: all 0.3s ease 0s;
+  }
+
+  .box .cart:hover {
+  text-decoration: none;
+  background: #fff;
+  color: #3fc9f7;
+
+  }
+
+  .box .cart i {
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 5px;
+  }
+
+  @media only screen and (max-width: 990px) {
+  .box {
+  margin-bottom: 20px;
+  }
+  }
+
+  @media only screen and (max-width: 479px) {
+  .box .boxContent {
+  padding: 10px;
+  }
+
+  .box .cart {
+  margin-top: 10px;
+  }
+  }
+/* dichtrai */
+
