@@ -4,6 +4,8 @@ import { ListproductsComponent } from './Components/listProducts/listproducts.co
 import { HomePageComponent } from './Components/home-page/home-page.component';
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ProductNewsComponent } from './Components/product-news/product-news.component';
+
 
 const routes: Routes = [
   {
@@ -17,6 +19,10 @@ const routes: Routes = [
   {
     path: 'proDetaill',
     component: ProductDetailComponent,
+  },
+  {
+    path: 'pronews',
+    component: ProductNewsComponent,
   },
   {
     path: 'login',

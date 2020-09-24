@@ -14,6 +14,7 @@ import { AdvertisementComponent } from './Layouts/advertisement/advertisement.co
 
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ProductNewsComponent } from './Components/product-news/product-news.component';
 //import { library } from '@fortawesome/fontawesome-svg-core';
 //import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
@@ -30,7 +31,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     NavComponent,
     HomePageComponent,
     FilterComponent,
-    AdvertisementComponent
+    AdvertisementComponent,
+    ProductNewsComponent
 
   ],
 
