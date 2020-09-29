@@ -11,7 +11,9 @@
 box-shadow: 0px 18px 26px -14px rgba(0,0,0,0.17);
 }
 /* search */
-
+a:hover{
+  text-decoration:none;
+}
 .search-box {
   position: fixed;
   top: 50px;

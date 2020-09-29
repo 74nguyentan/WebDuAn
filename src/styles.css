@@ -3,3 +3,6 @@
 @import '~bootstrap/dist/css/bootstrap.css';
 @import "~font-awesome/css/font-awesome.css";
 
+body {
+  background: #f5f5f5;
+}
