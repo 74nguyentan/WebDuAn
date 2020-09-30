@@ -1,211 +1,408 @@
-<div class="container">
 
-  <div class="tophead"> <a href="tel:19002628" title="Hotline mua hàng giải phóng hàng tồn"> <img class=" lazyloaded"
-        style="cursor:pointer" data-src="/public/dienmaycholon/general/img/2020091702.png"
-        src="../../../assets/images/images/pronews/top.PNG" alt="Hotline giải phóng hàng tồn"> </a></div>
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-
+<div class="container pt-5 pb-3">
+  <!-- header -->
   <div class="row">
-    <div class="row">
-      <div class="col-md-9">
-
-        <h2 class="title_category title_promohome"> <span class="floor"> CÁC SẢN PHẦM MỚI </span> </h2>
-
-      </div>
-      <div class="col-md-3">
-        <!-- Controls -->
-        <div class="controls pull-right hidden-xs">
-          <a class="left fa fa-chevron-left btn btn-success" href="#carousel-example" data-slide="prev"></a><a
-            class="right fa fa-chevron-right btn btn-success" href="#carousel-example" data-slide="next"></a>
-        </div>
+    <div class="col-md-3">
+      <div id="menu">
+        <ul>
+          <li><a href="">QUẦN ÁO NỮ</a>
+            <div id="sub">
+              <ul>
+                <li><a href="#">ĐẦM XÈO</a> <img src="http://www.webhot.vn/Content/image/supplier/giaynam.png"/></li>
+                <li><a href="#">ÁO SƠ MI</a><img src="http://www.webhot.vn/Content/image/supplier/giaynu.png"/></li>
+                <li><a href="#">ÁO KHOÁC</a><img src="http://www.webhot.vn/Content/image/supplier/giaynam.png"/></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="">QUẦN ÁO NAM</a>
+            <div id="sub">
+              <ul>
+                <li><a href="#">ÁO KHOÁC</a> <img src="http://www.webhot.vn/Content/image/supplier/giaynu.png"/></li>
+                <li><a href="#">ÁO THUN</a><img src="http://www.webhot.vn/Content/image/supplier/giaynu.png"/></li>
+                <li><a href="#">ÁO SƠ MI</a><img src="http://www.webhot.vn/Content/image/supplier/giaynu.png"/></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="">TRANG SỨC</a>
+            <div id="sub">
+              <ul>
+                <li><a href="#">ĐỒNG HỒ</a> <img src="http://www.webhot.vn/Content/image/supplier/dongho.png"/></li>
+                <li><a href="#">BÓP VÍ</a><img src="http://www.webhot.vn/Content/image/supplier/bopvi.png"/></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="">BA LÔ - TÚI XÁCH</a>
+            <div id="sub">
+              <ul>
+                <li><a href="#">BA LÔ</a> <img src="http://www.webhot.vn/Content/image/supplier/giaynu.png"> </li>
+                <li><a href="#">TÚI XÁCH</a> <img src="http://www.webhot.vn/Content/image/supplier/giaynu.png"> </li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="">GIÀY DÉP</a>
+            <div id="sub">
+              <ul>
+                <li><a href="#">GIÀY NAM</a> <img src="http://www.webhot.vn/Content/image/supplier/giaynam.png"/></li>
+                <li><a href="#">GIÀY NỮ</a><img src="http://www.webhot.vn/Content/image/supplier/giaynu.png"/></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
-    <hr>
-    <div id="carousel-example" class="carousel slide hidden-xs" data-ride="carousel">
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner">
-        <div class="item active">
-          <div class="row">
-            <div class="col-sm-3" *ngFor="let product of products">
-              <div class="col-item">
-                <i class="iconsprites_payment_0d">Trả góp 0% - Trả trước 0Đ</i>
-                <div class="photo">
-                  <img src="{{ product.image }}" class="img-responsive" alt="a" />
-                </div>
-                <div class="info">
-                  <div class="row">
-                    <div class="price col-md-6">
-                      <h5>
-                        {{ product.name }} </h5>
-                      <h5 class="price-text-color">
-                        {{ product.price }} <sup>đ</sup> </h5>
-                      <span class="price_market"> {{ product.price2 }}<sup>đ</sup> </span>
-                    </div>
-                    <div class="rating hidden-sm col-md-6">
-                      <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
-                      </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
-                      </i><i class="fa fa-star"></i>
-                    </div>
-                  </div>
-                  <div class="separator clear-left">
-                    <p class="btn-add">
-                      <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Thêm
-                        Vào Giỏ</a></p>
-                    <p class="btn-details">
-                      <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Chi Tiết</a>
-                    </p>
-                  </div>
-                  <div class="clearfix">
-                  </div>
-                </div>
-              </div>
-            </div>
-
+    <div class="col-md-9">
+      <div id="carousel-simple" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-simple" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-simple" data-slide-to="1"></li>
+          <li data-target="#carousel-simple" data-slide-to="2"></li>
+          <li data-target="#carousel-simple" data-slide-to="3"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img
+              src="https://static.chotot.com.vn/storage/admin-centre/buyer_collection_y_homepage_banner/buyer_collection_y_homepage_banner_1600686253876.jpg"
+              alt="" class="d-block w-100" />
           </div>
-        </div>
-        <div class="item">
-          <div class="row">
-            <div class="col-sm-3" *ngFor="let product2 of products2">
-              <div class="col-item">
-                <i class="iconsprites_payment_0d">Trả góp 0% - Trả trước 0Đ</i>
-                <div class="photo">
-                  <img src="{{ product2.image }}" class="img-responsive" alt="a" />
-                </div>
-                <div class="info">
-                  <div class="row">
-                    <div class="price col-md-6">
-                      <h5>
-                        {{ product2.name }}</h5>
-                      <h5 class="price-text-color">
-                        {{ product2.price }} <sup>đ</sup></h5>
-                      <span class="price_market"> {{ product2.price2 }}<sup>đ</sup> </span>
-                    </div>
-                    <div class="rating hidden-sm col-md-6">
-                      <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
-                      </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
-                      </i><i class="fa fa-star"></i>
-                    </div>
-                  </div>
-                  <div class="separator clear-left">
-                    <p class="btn-add">
-                      <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Thêm
-                        Vào Giỏ</a></p>
-                    <p class="btn-details">
-                      <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Chi Tiết</a>
-                    </p>
-                  </div>
-                  <div class="clearfix">
-                  </div>
-                </div>
-              </div>
-            </div>
-
+          <div class="item">
+            <img
+              src="https://static.chotot.com.vn/storage/admin-centre/buyer_collection_y_homepage_banner/buyer_collection_y_homepage_banner_1600686253876.jpg"
+              alt="" class="d-block w-100" />
+          </div>
+          <div class="item">
+            <img
+              src="https://static.chotot.com.vn/storage/admin-centre/buyer_collection_y_homepage_banner/buyer_collection_y_homepage_banner_1600686253876.jpg"
+              alt="" class="d-block w-100" />
+          </div>
+          <div class="item">
+            <img
+              src="https://static.chotot.com.vn/storage/admin-centre/buyer_collection_y_homepage_banner/buyer_collection_y_homepage_banner_1600686253876.jpg"
+              alt="" class="d-block w-100" />
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!-- header -->
 
-  <div class="row">
-    <div class="row">
-      <div class="col-md-9">
-
-        <h2 class="title_category title_promohome"> <span class="floor"> CÁC SẢN PHẦM MỚI </span> </h2>
-
-      </div>
-      <div class="col-md-3">
-        <!-- Controls -->
-        <div class="controls pull-right hidden-xs">
-          <a class="left fa fa-chevron-left btn btn-success" href="#carousel-example" data-slide="prev"></a><a
-            class="right fa fa-chevron-right btn btn-success" href="#carousel-example" data-slide="next"></a>
-        </div>
+  <!-- day sp 1 -->
+  <div class="row mt-3">
+    <div class="col-md-6">
+      <h3 style="color:green;"><u>SẢN PHẨM NỔI BẬT</u> </h3>
+    </div>
+    <div class="col-md-6">
+      <!-- Controls -->
+      <div class="controls pull-right hidden-xs">
+        <a class="left fa fa-chevron-left btn btn-success" href="#carousel-example" data-slide="prev"></a><a
+          class="right fa fa-chevron-right btn btn-success" href="#carousel-example" data-slide="next"></a>
       </div>
     </div>
-    <hr>
-    <div id="carousel-example" class="carousel slide hidden-xs" data-ride="carousel">
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner">
-        <div class="item active">
-          <div class="row">
-            <div class="col-sm-3" *ngFor="let product of products">
-              <div class="col-item">
-                <i class="iconsprites_payment_0d">Trả góp 0% - Trả trước 0Đ</i>
-                <div class="photo">
-                  <img src="{{ product.image }}" class="img-responsive" alt="a" />
-                </div>
-                <div class="info">
-                  <div class="row">
-                    <div class="price col-md-6">
-                      <h5>
-                        {{ product.name }} </h5>
-                      <h5 class="price-text-color">
-                        {{ product.price }} <sup>đ</sup> </h5>
-                      <span class="price_market"> {{ product.price2 }}<sup>đ</sup> </span>
-                    </div>
-                    <div class="rating hidden-sm col-md-6">
-                      <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
-                      </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
-                      </i><i class="fa fa-star"></i>
-                    </div>
+  </div>
+  <hr>
+  <div class="row pt-3">
+    <div class="col-md-12">
+      <div id="carousel-example" class="carousel slide hidden-xs" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <div class="row">
+              <div class="col-sm-3" *ngFor="let product of products">
+                <div class="col-item boderr">
+                  <i class="iconsprites_payment_0d">Trả góp 0% - Trả trước 0Đ</i>
+                  <div class="photo">
+                    <img src="{{ product.image }}" class="img-responsive" alt="a" />
                   </div>
-                  <div class="separator clear-left">
-                    <p class="btn-add">
-                      <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Thêm
-                        Vào Giỏ</a></p>
-                    <p class="btn-details">
-                      <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Chi Tiết</a>
-                    </p>
-                  </div>
-                  <div class="clearfix">
+                  <div class="info">
+                    <div class="row">
+                      <div class="price col-md-6">
+                        <h5>
+                          {{ product.name }} </h5>
+                        <h5 class="price-text-color">
+                          {{ product.price }} <sup>đ</sup> </h5>
+                        <span class="price_market"> {{ product.price2 }}<sup>đ</sup> </span>
+                      </div>
+                      <div class="rating hidden-sm col-md-6">
+                        <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                        </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                        </i><i class="fa fa-star"></i>
+                      </div>
+                    </div>
+                    <div class="separator clear-left">
+                      <p class="btn-add">
+                        <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Thêm
+                          Vào Giỏ</a></p>
+                      <p class="btn-details">
+                        <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Chi Tiết</a>
+                      </p>
+                    </div>
+                    <div class="clearfix">
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
+            </div>
           </div>
-        </div>
-        <div class="item">
-          <div class="row">
-            <div class="col-sm-3" *ngFor="let product2 of products2">
-              <div class="col-item">
-                <i class="iconsprites_payment_0d">Trả góp 0% - Trả trước 0Đ</i>
-                <div class="photo">
-                  <img src="{{ product2.image }}" class="img-responsive" alt="a" />
-                </div>
-                <div class="info">
-                  <div class="row">
-                    <div class="price col-md-6">
-                      <h5>
-                        {{ product2.name }}</h5>
-                      <h5 class="price-text-color">
-                        {{ product2.price }} <sup>đ</sup></h5>
-                      <span class="price_market"> {{ product2.price2 }}<sup>đ</sup> </span>
-                    </div>
-                    <div class="rating hidden-sm col-md-6">
-                      <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
-                      </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
-                      </i><i class="fa fa-star"></i>
-                    </div>
+          <div class="item">
+            <div class="row">
+              <div class="col-sm-3" *ngFor="let product2 of products2">
+                <div class="col-item">
+                  <i class="iconsprites_payment_0d">Trả góp 0% - Trả trước 0Đ</i>
+                  <div class="photo">
+                    <img src="{{ product2.image }}" class="img-responsive" alt="a" />
                   </div>
-                  <div class="separator clear-left">
-                    <p class="btn-add">
-                      <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Thêm
-                        Vào Giỏ</a></p>
-                    <p class="btn-details">
-                      <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Chi Tiết</a>
-                    </p>
-                  </div>
-                  <div class="clearfix">
+                  <div class="info">
+                    <div class="row">
+                      <div class="price col-md-6">
+                        <h5>
+                          {{ product2.name }}</h5>
+                        <h5 class="price-text-color">
+                          {{ product2.price }} <sup>đ</sup></h5>
+                        <span class="price_market"> {{ product2.price2 }}<sup>đ</sup> </span>
+                      </div>
+                      <div class="rating hidden-sm col-md-6">
+                        <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                        </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                        </i><i class="fa fa-star"></i>
+                      </div>
+                    </div>
+                    <div class="separator clear-left">
+                      <p class="btn-add">
+                        <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Thêm
+                          Vào Giỏ</a></p>
+                      <p class="btn-details">
+                        <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Chi Tiết</a>
+                      </p>
+                    </div>
+                    <div class="clearfix">
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!-- day sp 1 -->
+
+  <!-- day sp 2 -->
+  <div class="row mt-3">
+    <div class="col-md-6">
+      <h3 style="color:green;"><u>SẢN PHẨM NỔI BẬT</u> </h3>
+    </div>
+    <div class="col-md-6">
+      <!-- Controls -->
+      <div class="controls pull-right hidden-xs">
+        <a class="left fa fa-chevron-left btn btn-success" href="#carousel-example1" data-slide="prev"></a><a
+          class="right fa fa-chevron-right btn btn-success" href="#carousel-example1" data-slide="next"></a>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row pt-3">
+    <div class="col-md-12">
+      <div id="carousel-example1" class="carousel slide hidden-xs" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <div class="row">
+              <div class="col-sm-3" *ngFor="let product of products">
+                <div class="col-item boderr">
+                  <i class="iconsprites_payment_0d">Trả góp 0% - Trả trước 0Đ</i>
+                  <div class="photo">
+                    <img src="{{ product.image }}" class="img-responsive" alt="a" />
+                  </div>
+                  <div class="info">
+                    <div class="row">
+                      <div class="price col-md-6">
+                        <h5>
+                          {{ product.name }} </h5>
+                        <h5 class="price-text-color">
+                          {{ product.price }} <sup>đ</sup> </h5>
+                        <span class="price_market"> {{ product.price2 }}<sup>đ</sup> </span>
+                      </div>
+                      <div class="rating hidden-sm col-md-6">
+                        <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                        </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                        </i><i class="fa fa-star"></i>
+                      </div>
+                    </div>
+                    <div class="separator clear-left">
+                      <p class="btn-add">
+                        <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Thêm
+                          Vào Giỏ</a></p>
+                      <p class="btn-details">
+                        <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Chi Tiết</a>
+                      </p>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="item">
+            <div class="row">
+              <div class="col-sm-3" *ngFor="let product2 of products2">
+                <div class="col-item">
+                  <i class="iconsprites_payment_0d">Trả góp 0% - Trả trước 0Đ</i>
+                  <div class="photo">
+                    <img src="{{ product2.image }}" class="img-responsive" alt="a" />
+                  </div>
+                  <div class="info">
+                    <div class="row">
+                      <div class="price col-md-6">
+                        <h5>
+                          {{ product2.name }}</h5>
+                        <h5 class="price-text-color">
+                          {{ product2.price }} <sup>đ</sup></h5>
+                        <span class="price_market"> {{ product2.price2 }}<sup>đ</sup> </span>
+                      </div>
+                      <div class="rating hidden-sm col-md-6">
+                        <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                        </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                        </i><i class="fa fa-star"></i>
+                      </div>
+                    </div>
+                    <div class="separator clear-left">
+                      <p class="btn-add">
+                        <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Thêm
+                          Vào Giỏ</a></p>
+                      <p class="btn-details">
+                        <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Chi Tiết</a>
+                      </p>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- day sp 2 -->
+
+  <!-- day sp 3 -->
+  <div class="row mt-3">
+    <div class="col-md-6">
+      <h3 style="color:green;"><u>SẢN PHẨM NỔI BẬT</u> </h3>
+    </div>
+    <div class="col-md-6">
+      <!-- Controls -->
+      <div class="controls pull-right hidden-xs">
+        <a class="left fa fa-chevron-left btn btn-success" href="#carousel-example2" data-slide="prev"></a><a
+          class="right fa fa-chevron-right btn btn-success" href="#carousel-example2" data-slide="next"></a>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row pb-5">
+    <div class="col-md-12">
+      <div id="carousel-example2" class="carousel slide hidden-xs" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <div class="row">
+              <div class="col-sm-3" *ngFor="let product of products">
+                <div class="col-item boderr">
+                  <i class="iconsprites_payment_0d">Trả góp 0% - Trả trước 0Đ</i>
+                  <div class="photo">
+                    <img src="{{ product.image }}" class="img-responsive" alt="a" />
+                  </div>
+                  <div class="info">
+                    <div class="row">
+                      <div class="price col-md-6">
+                        <h5>
+                          {{ product.name }} </h5>
+                        <h5 class="price-text-color">
+                          {{ product.price }} <sup>đ</sup> </h5>
+                        <span class="price_market"> {{ product.price2 }}<sup>đ</sup> </span>
+                      </div>
+                      <div class="rating hidden-sm col-md-6">
+                        <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                        </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                        </i><i class="fa fa-star"></i>
+                      </div>
+                    </div>
+                    <div class="separator clear-left">
+                      <p class="btn-add">
+                        <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Thêm
+                          Vào Giỏ</a></p>
+                      <p class="btn-details">
+                        <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Chi Tiết</a>
+                      </p>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="item">
+            <div class="row">
+              <div class="col-sm-3" *ngFor="let product2 of products2">
+                <div class="col-item">
+                  <i class="iconsprites_payment_0d">Trả góp 0% - Trả trước 0Đ</i>
+                  <div class="photo">
+                    <img src="{{ product2.image }}" class="img-responsive" alt="a" />
+                  </div>
+                  <div class="info">
+                    <div class="row">
+                      <div class="price col-md-6">
+                        <h5>
+                          {{ product2.name }}</h5>
+                        <h5 class="price-text-color">
+                          {{ product2.price }} <sup>đ</sup></h5>
+                        <span class="price_market"> {{ product2.price2 }}<sup>đ</sup> </span>
+                      </div>
+                      <div class="rating hidden-sm col-md-6">
+                        <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                        </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                        </i><i class="fa fa-star"></i>
+                      </div>
+                    </div>
+                    <div class="separator clear-left">
+                      <p class="btn-add">
+                        <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Thêm
+                          Vào Giỏ</a></p>
+                      <p class="btn-details">
+                        <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Chi Tiết</a>
+                      </p>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- day sp 3 -->
+
+
 </div>
+<script>
+      $(document).on('click', '.mega-dropdown-one', function(e) {
+        e.stopPropagation()
+    })
+    $(document).on('click', '.mega-dropdown-two', function(e) {
+        e.stopPropagation()
+    })
+</script>
