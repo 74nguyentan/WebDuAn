@@ -16,6 +16,7 @@ import { AdvertisementComponent } from './Layouts/advertisement/advertisement.co
 import { NgxImageZoomModule } from 'ngx-image-zoom';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ToSellProductComponent } from './Components/to-sell-product/to-sell-product.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FilterComponent,
     ProductDetailComponent,
     AdvertisementComponent,
-    ProductNewsComponent
+    ProductNewsComponent,
+    ToSellProductComponent
 
   ],
 

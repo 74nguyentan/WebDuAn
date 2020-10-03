@@ -1,0 +1,90 @@
+form {
+  border: 1px solid #b1154a;
+}
+
+.form-group input,
+#text {
+  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: left;
+  margin-bottom: auto;
+}
+
+#coban,
+#mota,
+#sanpham {
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: darkblue;
+}
+
+#inputState,
+#inputState option {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 15px;
+}
+
+#inputState:hover,
+#exampleFormControlFile1:hover,
+.form-group textarea:hover,
+.form-group input:hover,
+.input-group:hover {
+  -moz-box-shadow: 5px 3px 8px #000000;
+  -webkit-box-shadow: 5px 3px 8px #000000;
+  box-shadow: 5px 3px 8px #000000;
+}
+
+/* mucluc */
+#con {
+  position: relative;
+}
+
+.left,
+    .right {
+        /* top: 50%; */
+        float: left;
+        transform: translateY(50%);
+        position: fixed;
+    }
+
+    .left {
+        background: #337ab7;
+        display: inline-block;
+        white-space: nowrap;
+        width: 50px;
+        transition: width .5s;
+    }
+
+    .right {
+        background: #fff;
+        width: 350px;
+        transition: width 1s;
+        border-style: solid;
+        border-color: #ccc;
+        border-width: 1px;
+    }
+
+    .left:hover {
+        width: 250px;
+    }
+
+    .item:hover {
+        background-color: #222;
+    }
+
+    .left .fas {
+        margin: 15px;
+        width: 20px;
+        color: #fff;
+    }
+
+    i.fas {
+        font-size: 17px;
+        vertical-align: middle !important;
+    }
+
+    .item {
+        height: 50px;
+        overflow: hidden;
+        color: #fff;
+    }

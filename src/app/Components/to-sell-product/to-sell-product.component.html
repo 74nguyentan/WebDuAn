@@ -1,0 +1,169 @@
+<div class="container-fluid">
+
+  <div class="row pb-5 pt-5" id="me">
+    <!-- mucluc -->
+    <div class="col-md-2" id="con">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="left">
+              <div class="item">
+                <i class="fas fa-fw fa-bars"></i>
+              </div>
+              <div class="item" (click)="scroll(coban)">
+                <i class="fas fa-fw fa-map-marked-alt"></i> Thông tin cơ bản
+              </div>
+              <div class="item" (click)="scroll(sanpham)">
+                <i class="fas fa-fw fa-columns"></i> Thông tin sản phẩm
+              </div>
+              <div class="item" (click)="scroll(mota)">
+                <i class="fas fa-fw fa-th"></i> Mô tả chi tiết
+              </div>
+              <!-- <div class="item">
+                <i class="fas fa-fw fa-user-circle"></i> Dash
+            </div> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- mucluc -->
+
+     <!-- form -->
+    <div class="col-md-10">
+      <div class="container">
+        <!-- thong tin co ban -->
+        <form #coban>
+          <h3 id="coban">Thông tin cơ bản</h3>
+          <div class="form-group row pt-5 pb-5">
+            <label for="inputEmail3" class="col-md-3 col-form-label"> <a id="text">Mã sản phẩm</a> </label>
+            <div class="col-md-6">
+              <input type="name" class="form-control" id="inputEmail3" readonly>
+            </div>
+            <div class="col-md-3">
+              <p id="text">Mã nhận diện</p>
+            </div>
+          </div>
+          <div class="form-group row pb-5">
+            <label for="inputEmail3" class="col-md-3 col-form-label"> <a id="text">Mã người dùng</a> </label>
+            <div class="col-md-6">
+              <input type="name" class="form-control" id="inputEmail3" readonly>
+            </div>
+            <div class="col-md-3">
+              <p id="text">Mã duy nhất</p>
+            </div>
+          </div>
+          <div class="form-group row pb-5">
+            <label for="inputEmail3" class="col-md-3 col-form-label"> <a id="text">Mã loại hàng</a> </label>
+            <div class="col-md-6">
+              <input type="name" class="form-control" id="inputEmail3" readonly>
+            </div>
+          </div>
+        </form>
+        <!-- thong tin co ban -->
+        <hr>
+
+        <!-- thong tin san pham -->
+        <form #sanpham>
+          <h3 id="sanpham">Thông tin sản phẩm</h3>
+          <div class="form-group row pt-5 pb-5">
+            <label for="inputEmail3" class="col-md-3 col-form-label"> <a id="text">Tên sản phẩm</a> </label>
+            <div class="col-md-6">
+              <input type="name" class="form-control" id="inputEmail3">
+            </div>
+            <div class="col-md-3">
+              <p id="text">Tên nhận diện</p>
+            </div>
+          </div>
+          <div class="form-group row pb-5">
+            <label for="inputEmail3" class="col-md-3 col-form-label"> <a id="text">Danh mục ngành hàng</a> </label>
+            <div class="col-md-6">
+              <select id="inputState" class="form-control">
+                <option selected>Điện dân dụng</option>
+                <option>Xe cộ</option>
+                <option>Áo quần</option>
+                <option>Phụ kiện điện tử</option>
+                <option>Đồ nghề</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <p id="text">Lựa chọn danh mục hiện có</p>
+            </div>
+          </div>
+          <div class="form-group row pb-5">
+            <label for="inputEmail3" class="col-md-3 col-form-label"> <a id="text">Ngày đăng bán</a> </label>
+            <div class="col-md-6">
+              <input type="date" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+          </div>
+
+        </form>
+        <!-- thong tin san pham -->
+        <hr>
+
+        <!-- mo ta chi tiet -->
+        <form #mota>
+          <h3 id="mota">Mô tả chi tiết</h3>
+          <div class="form-group row pt-5 pb-5">
+            <label for="inputEmail3" class="col-md-3 col-form-label"> <a id="text">Mô tả sản phẩm</a> </label>
+            <div class="col-md-6">
+              <textarea class="form-control" id="exampleFormControlTextarea3" rows="7"></textarea>
+            </div>
+            <div class="col-md-3">
+              <p id="text">Chi tiết mẫu mã,...</p>
+            </div>
+          </div>
+
+          <div class="form-group row pb-5">
+            <label for="inputEmail3" class="col-md-3 col-form-label"> <a id="text">Giá thành</a> </label>
+            <div class="col-md-6">
+              <!-- <input type="name" class="form-control" id="inputEmail3"> -->
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">VND</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <p id="text">Giá sản phẩm bao gồm thuế</p>
+            </div>
+          </div>
+          <div class="form-group row pb-5">
+            <label for="inputEmail3" class="col-md-3 col-form-label"> <a id="text">Số lượng</a> </label>
+            <div class="col-md-6">
+              <input type="name" class="form-control" id="inputEmail3">
+            </div>
+          </div>
+          <div class="form-group row pb-5">
+            <label for="inputEmail3" class="col-md-3 col-form-label"> <a id="text">Hình ảnh</a> </label>
+            <div class="col-md-6">
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+            <div class="col-md-3">
+              <p id="text">Hình ảnh yêu cầu <span style="color: chocolate;">300X300</span> hoặc <span
+                  style="color: chocolate;">500X500</span></p>
+            </div>
+          </div>
+          <div class="form-group row pb-5">
+            <label for="inputEmail3" class="col-md-3 col-form-label"> <a id="text">Thương hiệu sản phẩm</a> </label>
+            <div class="col-md-6">
+              <input type="name" class="form-control" id="inputEmail3">
+            </div>
+            <div class="col-md-3">
+              <p id="text">Ghi rõ thương hiệu sản phẩm</p>
+            </div>
+          </div>
+        </form>
+        <!-- mo ta chi tiet -->
+
+      </div>
+    </div>
+    <!-- form -->
+
+  </div>
+
+</div>
+
+
