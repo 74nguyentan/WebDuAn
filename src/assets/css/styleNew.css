@@ -6567,7 +6567,7 @@ button.ps-btn--gray:before {
 @media (max-width: 767px) {
   .ps-services .ps-service {
     max-height: 50px;
-    overlow-y: hidden;
+    overflow-y: hidden;
     font-size: 12px;
   }
 }
