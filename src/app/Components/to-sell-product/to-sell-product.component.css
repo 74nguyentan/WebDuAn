@@ -1,30 +1,51 @@
 form {
-  border: 1px solid #b1154a;
+  /* border: 2px solid #b1154a; */
+  /* background: palegreen; */
+  border: dashed 0px #000000;
+  -moz-border-radius-topleft: 12px;
+  -moz-border-radius-topright: 12px;
+  -moz-border-radius-bottomleft: 11px;
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-top-left-radius: 12px;
+  -webkit-border-top-right-radius: 12px;
+  -webkit-border-bottom-left-radius: 11px;
+  -webkit-border-bottom-right-radius: 10px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 10px;
 }
 
-.form-group input,
-#text {
+.form-group input {
   font-size: 15px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: left;
   margin-bottom: auto;
 }
 
+.form-group .text {
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: left;
+  margin-bottom: auto;
+  padding-left: 20px;
+}
+
 #coban,
 #mota,
 #sanpham {
-  font-size: 20px;
+  font-size: 22px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: darkblue;
 }
 
-#inputState,
-#inputState option {
+#danhmuc,
+#danhmuc option {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 15px;
+  font-size: 16px;
 }
 
-#inputState:hover,
+#danhmuc:hover,
 #exampleFormControlFile1:hover,
 .form-group textarea:hover,
 .form-group input:hover,
@@ -35,56 +56,167 @@ form {
 }
 
 /* mucluc */
-#con {
-  position: relative;
+.left {
+  /* top: 50%; */
+  float: left;
+  /* transform: translateY(100%); */
+  /* position: absolute; */
+  position: fixed;
+  bottom: 250px;
+  left: 5px;
+  z-index: 100;
 }
 
-.left,
-    .right {
-        /* top: 50%; */
-        float: left;
-        transform: translateY(50%);
-        position: fixed;
+.left {
+  background: black;
+  display: inline-block;
+  white-space: nowrap;
+  width: 3%;
+  transition: width .5s;
+}
+
+.left:hover {
+  width: 15%;
+}
+
+.item:hover {
+  background-color: #222;
+}
+
+.left .fas {
+  margin: 15px;
+  width: 20px;
+  color: #fff;
+}
+
+i.fas {
+  font-size: 17px;
+  vertical-align: middle !important;
+}
+
+.item {
+  height: 50px;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* sp cu fa ke */
+#gianhang{
+  font-size: 25px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+}
+.animate {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  }
+
+  .products {
+  width: 100%;
+  border: 1px solid rgb(215, 215, 215);
+  position: relative;
+  font-family:Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  overflow: hidden;
+  }
+
+  .products img {
+  width: 100px;
+  margin-bottom: 10px;
+  }
+
+  .products .products-details {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  padding: 0 15px;
+  background:rgba(0,0,0,0.5);
+  text-align: center;
+  }
+
+  .products .products-details .products-header {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    padding: 0 15px;
+    text-align: center;
     }
 
-    .left {
-        background: #337ab7;
-        display: inline-block;
-        white-space: nowrap;
-        width: 50px;
-        transition: width .5s;
-    }
+  .products .products-details .products-header {
+  height: auto;
+  bottom: 100%;
+  padding: 10px 5px;
+  }
 
-    .right {
-        background: #fff;
-        width: 350px;
-        transition: width 1s;
-        border-style: solid;
-        border-color: #ccc;
-        border-width: 1px;
-    }
+  .products:hover .products-details {
+  bottom: 0px;
+  overflow: auto;
+  padding-bottom: 25px;
+  }
 
-    .left:hover {
-        width: 250px;
-    }
+  .products:hover .products-details .products-header {
+  position: relative;
+  bottom: 0px;
+  padding-top: 45px;
+  padding-bottom: 25px;
+  }
+  .products .products-details p{
+  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .products .products-details .products-header h1,  .products .products-details .products-header h3 {
+  /* color: rgb(62, 62, 62); */
+  color:  rgb(142, 182, 52);
+  font-size: 22px;
+  font-weight: 900;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
 
-    .item:hover {
-        background-color: #222;
-    }
+  .products .products-details .products-header h3 {
+  color: rgb(142, 182, 52);
+  /* color: white; */
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 5px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
 
-    .left .fas {
-        margin: 15px;
-        width: 20px;
-        color: #fff;
-    }
+  .products .products-details .products-detail .social {
+  list-style: none;
+  padding: 0px;
+  margin-top: 25px;
+  text-align: center;
+  }
 
-    i.fas {
-        font-size: 17px;
-        vertical-align: middle !important;
-    }
+  .products .products-details .products-detail .social a {
+  position: relative;
+  display: inline-block;
+  min-width: 40px;
+  padding: 10px 0px;
+  margin: 0px 5px;
+  overflow: hidden;
+  text-align: center;
+  /* color: #000000; */
+  color: white;
+  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
 
-    .item {
-        height: 50px;
-        overflow: hidden;
-        color: #fff;
-    }
+#hoantat{
+  float: right;
+  font-size: 25px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#hoantat:hover{
+  background-color: black;
+  color: white;
+}

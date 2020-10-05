@@ -17,6 +17,7 @@ import { NgxImageZoomModule } from 'ngx-image-zoom';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ToSellProductComponent } from './Components/to-sell-product/to-sell-product.component';
+import {RegisterComponentComponent} from './Components/register-component/register-component.component'
 
 @NgModule({
   declarations: [
@@ -30,8 +31,8 @@ import { ToSellProductComponent } from './Components/to-sell-product/to-sell-pro
     ProductDetailComponent,
     AdvertisementComponent,
     ProductNewsComponent,
-    ToSellProductComponent
-
+    ToSellProductComponent,
+    RegisterComponentComponent,
   ],
 
   imports: [
