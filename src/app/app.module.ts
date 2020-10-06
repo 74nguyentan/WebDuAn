@@ -13,7 +13,7 @@ import { NavComponent } from './Layouts/nav/nav.component';
 import { HomePageComponent } from './Components/home-page/home-page.component';
 import { FilterComponent } from './Layouts/filter/filter.component';
 import { AdvertisementComponent } from './Layouts/advertisement/advertisement.component';
-import { NgxImageZoomModule } from 'ngx-image-zoom';
+import { NgxImgZoomModule  } from 'ngx-img-zoom';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ToSellProductComponent } from './Components/to-sell-product/to-sell-product.component';
@@ -39,7 +39,7 @@ import {RegisterComponentComponent} from './Components/register-component/regist
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    NgxImageZoomModule
+    NgxImgZoomModule
   ],
 
   providers: [],
