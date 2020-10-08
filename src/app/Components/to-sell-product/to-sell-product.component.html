@@ -1,233 +1,176 @@
 <div class="container-fluid">
   <div class="row pb-5 pt-5" id="me">
     <!-- form -->
-    <div class="col-md-9" style="padding-left: 50px ;">
-      <div class="container">
+    <div class="col-md-8" style="padding-left: 50px ;">
+      <div id="container" class="container">
         <!-- thong tin co ban -->
-        <form #coban>
-          <h3 id="coban" class="pl-3 pt-2">Thông tin cơ bản</h3>
-          <div class="form-group row pb-5">
-            <label for="manguoidung" class="col-md-3 col-form-label">
-              <a class="text">Mã người dùng</a>
-            </label>
-            <div class="col-md-6">
-              <input type="name" class="form-control" id="manguoidung" readonly />
-            </div>
-            <div class="col-md-3">
-              <p class="text">Mã duy nhất</p>
-            </div>
-          </div>
-          <div class="form-group row pb-5">
-            <label for="masanpham" class="col-md-3 col-form-label">
-              <a class="text">Mã sản phẩm</a>
-            </label>
-            <div class="col-md-6">
-              <input type="name" class="form-control" id="masanpham" readonly />
-            </div>
-            <div class="col-md-3">
-              <p class="text">Mã duy nhất</p>
-            </div>
-          </div>
-          <div class="form-group row pb-5">
-            <label for="maloaihang" class="col-md-3 col-form-label">
-              <a class="text">Mã loại hàng</a>
-            </label>
-            <div class="col-md-6">
-              <input type="name" class="form-control" id="maloaihang" readonly />
-            </div>
-          </div>
-        </form>
-        <!-- thong tin co ban -->
-        <hr />
-
-        <!-- thong tin san pham -->
-        <form #sanpham>
-          <h3 id="sanpham" class="pl-3 pt-2">Thông tin sản phẩm</h3>
-          <div class="form-group row pt-5 pb-5">
-            <label for="tensanpham" class="col-md-3 col-form-label">
-              <a class="text">Tên sản phẩm</a>
-            </label>
-            <div class="col-md-6">
-              <input type="name" class="form-control" id="tensanpham" required />
-            </div>
-            <div class="col-md-3">
-              <p class="text">Tên nhận diện</p>
-            </div>
-          </div>
-          <div class="form-group row pb-5">
-            <label for="danhmuc" class="col-md-3 col-form-label">
-              <a class="text">Danh mục ngành hàng</a>
-            </label>
-            <div class="col-md-6">
-              <select id="danhmuc" class="form-control">
-                <option selected>Điện dân dụng</option>
-                <option>Xe cộ</option>
-                <option>Áo quần</option>
-                <option>Phụ kiện điện tử</option>
-                <option>Đồ nghề</option>
-              </select>
-            </div>
-            <div class="col-md-3">
-              <p class="text">Lựa chọn danh mục hiện có</p>
-            </div>
-          </div>
-          <div class="form-group row pb-5">
-            <label for="ngaydang" class="col-md-3 col-form-label">
-              <a class="text">Ngày đăng bán</a>
-            </label>
-            <div class="col-md-6">
-              <input type="date" id="ngaydang" class="form-control-file" required />
-            </div>
-          </div>
-        </form>
-        <!-- thong tin san pham -->
-        <hr />
-
-        <!-- mo ta chi tiet -->
-        <form #mota>
-          <h3 id="mota" class="pl-3 pt-2">Mô tả chi tiết</h3>
-          <div class="form-group row pt-5 pb-5">
-            <label for="motasp" class="col-md-3 col-form-label">
-              <a class="text">Mô tả sản phẩm</a>
-            </label>
-            <div class="col-md-6">
-              <textarea class="form-control" rows="7" id="motasp" required></textarea>
-            </div>
-            <div class="col-md-3">
-              <p class="text">Chi tiết mẫu mã,...</p>
-            </div>
-          </div>
-
-          <div class="form-group row pb-5">
-            <label for="gia" class="col-md-3 col-form-label">
-              <a class="text">Giá thành</a>
-            </label>
-            <div class="col-md-6">
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" id="gia"
-                  aria-label="Dollar amount (with dot and two decimal places)"  required/>
-                <div class="input-group-prepend">
-                  <span class="input-group-text">VND</span>
-                </div>
+        <header>Thêm sản phẩm mới</header>
+        <form id="form1" runat="server">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="input-field">
+                <input type="text" required="">
+                <label>Tên hàng</label>
               </div>
             </div>
-            <div class="col-md-3">
-              <p class="text">Giá sản phẩm bao gồm thuế</p>
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+              <div class="input-field">
+                <input class="pswrd" type="password" required="">
+                <label>Giá</label>
+              </div>
             </div>
           </div>
-          <div class="form-group row pb-5">
-            <label for="soluong" class="col-md-3 col-form-label">
-              <a class="text">Số lượng</a>
-            </label>
-            <div class="col-md-6">
-              <input type="name" class="form-control" id="soluong"  required/>
+          <div class="row">
+            <div class="col-md-5">
+              <div class="input-field">
+                <input type="text" required="">
+                <label>Xuất xứ</label>
+              </div>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+              <div class="input-field">
+                <input class="pswrd" type="password" required="">
+                <label>Trạng thái</label>
+              </div>
             </div>
           </div>
-          <div class="form-group row pb-5">
-            <label for="hinhanh" class="col-md-3 col-form-label">
-              <a class="text">Hình ảnh</a>
-            </label>
-            <div class="col-md-6">
-              <input type="file" class="form-control-file" id="hinhanh" required/>
+          <div class="row">
+            <div class="col-md-5">
+              <div class="input-field">
+                <input type="text" required="">
+                <label>Địa chỉ bán</label>
+              </div>
             </div>
-            <div class="col-md-3">
-              <p class="text">
-                Hình ảnh yêu cầu
-                <span style="color: chocolate">300X300</span> hoặc
-                <span style="color: chocolate">500X500</span>
-              </p>
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+              <div class="input-field">
+                <input class="pswrd" type="password" required="">
+                <label>Số lượng</label>
+              </div>
             </div>
           </div>
-          <div class="form-group row pb-5">
-            <label for="thuonghieu" class="col-md-3 col-form-label">
-              <a class="text">Thương hiệu sản phẩm</a>
-            </label>
-            <div class="col-md-6">
-              <input type="name" class="form-control" id="thuonghieu" required/>
+          <div class="row">
+            <div class="col-md-5">
+              <div class="input-field">
+                <!-- <input type="text" required=""> -->
+                <textarea class="form-control" rows="7" id="motasp" required></textarea>
+                <label>Mô tả</label>
+              </div>
             </div>
-            <div class="col-md-3">
-              <p class="text">Ghi rõ thương hiệu sản phẩm</p>
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+              <!-- <div class="form-group">
+                <label>Select multi image files</label>
+                <input type="file" class="form-control" id="fileInput" multiple>
+              </div> -->
+              <!-- <div class="form-group">
+                <label>Select image files</label>
+                <input type="file" class="form-control" id="fileInput" multiple>
+              </div>
+              <div class="container js-file-list">
+              </div> -->
+
+
+              <!-- <form id="form1" runat="server">
+                <input type='file' id="imgInp" />
+                <img id="blah" src="#" alt="your image" />
+            </form> -->
+
+            <img id="blah" alt="your image" width="200" height="100" />
+
+<input type="file"
+       onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="button">
+                <div class="inner">
+                </div>
+                <button id="button">HOÀN TẤT</button>
+              </div>
             </div>
           </div>
         </form>
 
-        <div class="row">
-          <div class="col-md-9">
-            <button id="hoantat" type="button" class="btn btn-success">HOÀN TẤT</button>
-          </div>
-        </div>
         <!-- mo ta chi tiet -->
       </div>
     </div>
     <!-- form -->
-
+    <div class="col-md-1"></div>
     <!-- sp cu -->
     <div class="col-md-3">
-      <div class="container">
-        <div class="row"><a id="gianhang" href="#">Sản phẩm có trong gian của bạn</a></div>
-        <div class="col-md-12">
-          <div class="products"> <img style="width: 100%"
-              src="https://i.pinimg.com/564x/d9/41/83/d94183dab3243608e581887c3bc63444.jpg" alt="">
-            <div class="products-details animate">
-              <div class="products-header">
-                <h1> Sản phẩm 1 </h1>
-                <h3> Giá: 600.000 đ </h3>
-              </div>
-              <div class="products-detail">
-                <p style="color: white;">Sản phẩm trong gian hàng của chủ shop</p>
-                <div class="social">
-                  <button type="button" class="btn btn-outline-success"> <a href="#">Chi tiết sản phẩm</a> </button>
+      <div id="trangsp" class="container">
+        <div class="row"><div class="col-md-12" id="back"><a href="#">Sản phẩm gần đây</a></div></div>
+        <div class="ex3">
+          <div class="col-md-12">
+            <div class="products" >
+              <img style="width: 100%" src="https://vnn-imgs-f.vgcloud.vn/2019/07/19/18/datsun-redigo-600x400.jpg" alt="">
+              <div class="products-details animate" >
+                <div class="products-header">
+                  <h1> Ô tô CAMBRI </h1>
+                  <h3> Giá: 1.000.000.000 đ </h3>
+                </div>
+                <div class="products-detail">
+                  <p style="color: white;">Sản phẩm trong gian hàng của chủ shop</p>
+                  <div class="social">
+                    <button type="button" class="btn btn-outline-success"> <a href="#">Chi tiết sản phẩm</a> </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-12">
-          <div class="products"> <img style="width: 100%"
-              src="https://i.pinimg.com/564x/d9/41/83/d94183dab3243608e581887c3bc63444.jpg" alt="">
-            <div class="products-details animate">
-              <div class="products-header">
-                <h1> Sản phẩm 1 </h1>
-                <h3> Giá: 600.000 đ </h3>
-              </div>
-              <div class="products-detail">
-                <p style="color: white;">Sản phẩm trong gian hàng của chủ shop</p>
-                <div class="social">
-                  <button type="button" class="btn btn-outline-success"> <a href="#">Chi tiết sản phẩm</a> </button>
+          <div class="col-md-12">
+            <div class="products"> <img style="width: 100%"
+                src="https://vnn-imgs-f.vgcloud.vn/2020/06/30/16/ngam-xe-may-simson-s51-enduro-huyen-thoai-31-nam-tuoi-gia-150-trieu-dong-1-600x400.jpg" alt="">
+              <div class="products-details animate">
+                <div class="products-header">
+                  <h1> Xe máy FERALI </h1>
+                  <h3> Giá: 600.000.000 đ </h3>
+                </div>
+                <div class="products-detail">
+                  <p style="color: white;">Sản phẩm trong gian hàng của chủ shop</p>
+                  <div class="social">
+                    <button type="button" class="btn btn-outline-success"> <a href="#">Chi tiết sản phẩm</a> </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-12">
-          <div class="products"> <img style="width: 100%"
-              src="https://i.pinimg.com/564x/d9/41/83/d94183dab3243608e581887c3bc63444.jpg" alt="">
-            <div class="products-details animate">
-              <div class="products-header">
-                <h1> Sản phẩm 1 </h1>
-                <h3> Giá: 600.000 đ </h3>
-              </div>
-              <div class="products-detail">
-                <p style="color: white;">Sản phẩm trong gian hàng của chủ shop</p>
-                <div class="social">
-                  <button type="button" class="btn btn-outline-success"> <a href="#">Chi tiết sản phẩm</a> </button>
+          <div class="col-md-12">
+            <div class="products"> <img style="width: 100%"
+                src="https://cdn.tgdd.vn/Files/2014/04/03/540444/Thuong-hieu-may-giat-uy-tin-2-600x400.jpg" alt="">
+              <div class="products-details animate">
+                <div class="products-header">
+                  <h1> Máy giặt Panasoni </h1>
+                  <h3> Giá: 4.999.999 đ </h3>
+                </div>
+                <div class="products-detail">
+                  <p style="color: white;">Sản phẩm trong gian hàng của chủ shop</p>
+                  <div class="social">
+                    <button type="button" class="btn btn-outline-success"> <a href="#">Chi tiết sản phẩm</a> </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-12">
-          <div class="products"> <img style="width: 100%"
-              src="https://i.pinimg.com/564x/d9/41/83/d94183dab3243608e581887c3bc63444.jpg" alt="">
-            <div class="products-details animate">
-              <div class="products-header">
-                <h1> Sản phẩm 1 </h1>
-                <h3> Giá: 600.000 đ </h3>
-              </div>
-              <div class="products-detail">
-                <p style="color: white;">Sản phẩm trong gian hàng của chủ shop</p>
-                <div class="social">
-                  <button type="button" class="btn btn-outline-success"> <a href="#">Chi tiết sản phẩm</a> </button>
+          <div class="col-md-12">
+            <div class="products"> <img style="width: 100%"
+                src="https://bantrasofa.net/wp-content/uploads/2018/03/ban-tra-sofa-go-cong-nghiep-600x400.jpg" alt="">
+              <div class="products-details animate">
+                <div class="products-header">
+                  <h1> Bàn HourOver </h1>
+                  <h3> Giá: 1.222.333 đ </h3>
+                </div>
+                <div class="products-detail">
+                  <p style="color: white;">Sản phẩm trong gian hàng của chủ shop</p>
+                  <div class="social">
+                    <button type="button" class="btn btn-outline-success"> <a href="#">Chi tiết sản phẩm</a> </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -238,36 +181,124 @@
     </div>
     <!-- sp cu -->
   </div>
+  <div class="row">
+    <div class="wrapper">
+      <h1>Chọn và hiển thị nhiều ảnh trước khi upload bằng javascript</h1>
+      <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" multiple />
+      <div id="displayImg">
+
+      </div>
+      <script>
+          function ImagesFileAsURL() {
+              var fileSelected = document.getElementById('upload').files;
+              if (fileSelected.length > 0) {
+                  for (var i = 0; i < fileSelected.length; i++) {
+                      var fileToLoad = fileSelected[i];
+                      var fileReader = new FileReader();
+                      fileReader.onload = function(fileLoaderEvent) {
+                          var srcData = fileLoaderEvent.target.result;
+                          var newImage = document.createElement('img');
+                          newImage.src = srcData;
+                          document.getElementById('displayImg').innerHTML += newImage.outerHTML;
+                      }
+                      fileReader.readAsDataURL(fileToLoad);
+                  }
+
+              }
+          }
+      </script>
+  </div>
+  </div>
 </div>
 
-<div class="left">
-  <div class="item">
-    <i class="fas fa-fw fa-bars"></i>
-  </div>
-  <div class="item" (click)="scroll(coban)">
-    <i class="fas fa-fw fa-map-marked-alt"></i> Thông tin cơ bản
-  </div>
-  <div class="item" (click)="scroll(sanpham)">
-    <i class="fas fa-fw fa-columns"></i> Thông tin sản phẩm
-  </div>
-  <div class="item" (click)="scroll(mota)">
-    <i class="fas fa-fw fa-th"></i> Mô tả chi tiết
-  </div>
-  <!-- <div class="item">
-    <i class="fas fa-fw fa-user-circle"></i> Dash
-</div> -->
+<div class="container">
+  <h2>Upload multi file</h2>
+  <form>
+    <div class="form-group">
+      <label>Select image files</label>
+      <input type="file" class="form-control" id="fileInputxxx" multiple>
+    </div>
+  </form>
 </div>
+<div class="col js-file-list">
+  alo
+</div>
+<!-- oke -->
+<!-- <script>
+function readURL(input) {
+
+if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+        $('#imageUpload').css('display', "block");
+        $('#imageUpload').attr('src', e.target.result);
+    }
+
+    reader.readAsDataURL(input.files[0]);
+}
+}
+
+$("#main_picture").change(function() {
+readURL(this);
+});
+</script> -->
+<!-- //anh -->
 <script type="text/javascript">
-  $(document).ready(function () {
-    $("[rel='tooltip']").tooltip();
-    $('.thumbnail').hover(
-      function () {
-        $(this).find('.caption').slideDown(250); //.fadeIn(250)
-      },
-      function () {
-        $(this).find('.caption').slideUp(250); //.fadeOut(205)
-      }
-    );
+
+$(document).ready(function(){
+  $('#fileInput').on('change', function() {
+
+    var files = $(this)[0].files;
+    uploadFile(files, 0);
   });
 
+  function uploadFile(files, index) {
+    var length = files.length
+    if (index == length) {
+      return;
+    }
+
+    var file = files[index];
+    var fileReader = new FileReader();
+    fileReader.onload = function() {
+      var str = '<div class="col-md-2">' +
+        '<span class="js-file-name"></span><br>' +
+        '<span class="js-file-size"></span> (Byte)<br>' +
+        '<img class="img-thumbnail js-file-image" style="width: 100%; height: 100%">' +
+        '</div>';
+      $('.js-file-list').append(str);
+
+      var imageSrc = event.target.result;
+      var fileName = file.name;
+      var fileSize = file.size;
+
+      $('.js-file-name').last().text(fileName);
+      $('.js-file-size').last().text(fileSize);
+      $('.js-file-image').last().attr('src', imageSrc);
+
+      uploadFile(files, index + 1);
+    };
+    fileReader.readAsDataURL(file);
+  }
+});
+
+
 </script>
+<!-- <script>
+  function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#imgInp").change(function(){
+        readURL(this);
+    });
+</script> -->

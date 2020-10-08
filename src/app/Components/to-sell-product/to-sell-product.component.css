@@ -1,3 +1,7 @@
+a:hover {
+  text-decoration: none;
+}
+
 form {
   /* border: 2px solid #b1154a; */
   /* background: palegreen; */
@@ -101,103 +105,132 @@ i.fas {
 }
 
 /* sp cu fa ke */
-#gianhang{
+#back a {
   font-size: 25px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
 }
-.animate {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  }
 
-  .products {
+#back a:hover {
+  text-shadow: -1px 2px 5px #38f20e;
+}
+
+#back {
+  background-color: chocolate;
+  text-align: center;
+  border: dashed 0px #000000;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomleft: 0px;
+  -moz-border-radius-bottomright: 0px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+
+.animate {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.products {
   width: 100%;
   border: 1px solid rgb(215, 215, 215);
   position: relative;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 10px;
   overflow: hidden;
-  }
+}
 
-  .products img {
+.products img {
   width: 100px;
-  margin-bottom: 10px;
-  }
+  /* margin-bottom: 10px; */
+}
 
-  .products .products-details {
+.products .products-details {
   width: 100%;
   height: 100%;
   position: absolute;
   bottom: -100%;
   left: 0;
   padding: 0 15px;
-  background:rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   text-align: center;
-  }
+}
 
-  .products .products-details .products-header {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    padding: 0 15px;
-    text-align: center;
-    }
+.products .products-details .products-header {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  bottom: -100%;
+  left: 25%;
+  padding: 0 15px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+}
 
-  .products .products-details .products-header {
+.products .products-details .products-header {
   height: auto;
   bottom: 100%;
   padding: 10px 5px;
-  }
+}
 
-  .products:hover .products-details {
+.products:hover .products-details {
   bottom: 0px;
   overflow: auto;
   padding-bottom: 25px;
-  }
+}
 
-  .products:hover .products-details .products-header {
+.products:hover .products-details .products-header {
   position: relative;
   bottom: 0px;
-  padding-top: 45px;
-  padding-bottom: 25px;
-  }
-  .products .products-details p{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.products .products-details p {
   font-size: 15px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
-  .products .products-details .products-header h1,  .products .products-details .products-header h3 {
+}
+
+.products .products-details .products-header h1,
+.products .products-details .products-header h3 {
   /* color: rgb(62, 62, 62); */
-  color:  rgb(142, 182, 52);
+  color: black;
   font-size: 22px;
   font-weight: 900;
   margin: 0 !important;
   padding: 0 !important;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
+}
 
-  .products .products-details .products-header h3 {
-  color: rgb(142, 182, 52);
+.products .products-details .products-header h3 {
+  color: black;
   /* color: white; */
   font-size: 15px;
   font-weight: 400;
   margin-top: 5px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
+}
 
-  .products .products-details .products-detail .social {
+.products .products-details .products-detail .social {
   list-style: none;
   padding: 0px;
   margin-top: 25px;
   text-align: center;
-  }
+}
 
-  .products .products-details .products-detail .social a {
+.products .products-details .products-detail .social a {
   position: relative;
   display: inline-block;
   min-width: 40px;
@@ -209,14 +242,249 @@ i.fas {
   color: white;
   font-size: 15px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
+}
 
-#hoantat{
+#hoantat {
   float: right;
   font-size: 25px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-#hoantat:hover{
+
+#hoantat:hover {
   background-color: black;
   color: white;
+}
+
+/* //oke */
+* {
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: sans-serif;
+  justify-content: center;
+  background: url(https://devforum.info/DEMO/LoginForm1/bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#container {
+  position: relative;
+  width: 105%;
+  background: white;
+  /* padding: 60px 40px; */
+  padding-right: 90px;
+  padding-left: 60px;
+  height: auto;
+}
+
+header {
+  font-size: 40px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.input-field,
+form .button {
+  margin: 25px 0;
+  position: relative;
+  height: 50px;
+  width: 110%;
+}
+
+.input-field input {
+  height: 100%;
+  width: 100%;
+  border: 1px solid silver;
+  padding-left: 15px;
+  outline: none;
+  font-size: 19px;
+  transition: .4s;
+}
+
+input:focus {
+  border: 1px solid #1DA1F2;
+}
+
+.input-field label,
+span.show {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 550;
+}
+
+.input-field label {
+  left: 15px;
+  pointer-events: none;
+  color: grey;
+  font-size: 18px;
+  transition: .4s;
+}
+
+span.show {
+  right: 20px;
+  color: #111;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  visibility: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+
+input:valid~span.show {
+  visibility: visible;
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+  transform: translateY(-38px);
+  background: white;
+  font-size: 16px;
+  color: #1DA1F2;
+}
+
+form .button {
+  margin-top: 30px;
+  overflow: hidden;
+  z-index: 111;
+  width: 30%;
+  float: right;
+}
+
+.button .inner {
+  position: absolute;
+  height: 100%;
+  width: 300%;
+  right: -100%;
+  z-index: -1;
+  transition: all .4s;
+  /* background: -webkit-linear-gradient(right,#00dbde,#fc00ff,#00dbde,#fc00ff); */
+  background: -webkit-linear-gradient(right, #00dbde, #1ff792, #00dbde, #1ff792);
+}
+
+.button:hover .inner {
+  left: 0;
+}
+
+.button button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container .auth {
+  margin: 35px 0 20px 0;
+  font-size: 19px;
+  color: grey;
+}
+
+.links {
+  display: flex;
+  cursor: pointer;
+}
+
+.facebook,
+.google {
+  height: 40px;
+  width: 100%;
+  border: 1px solid silver;
+  border-radius: 3px;
+  margin: 0 10px;
+  transition: .4s;
+}
+
+.facebook:hover {
+  border: 1px solid #4267B2;
+}
+
+.google:hover {
+  border: 1px solid #dd4b39;
+}
+
+.facebook i,
+.facebook span {
+  color: #4267B2;
+}
+
+.google i,
+.google span {
+  color: #dd4b39;
+}
+
+.links i {
+  font-size: 23px;
+  line-height: 40px;
+  margin-left: -90px;
+}
+
+.links span {
+  position: absolute;
+  font-size: 17px;
+  font-weight: bold;
+  padding-left: 8px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.signup {
+  margin-top: 50px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.signup a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}
+
+#trangsp {
+  margin-left: -30px;
+}
+
+/* ?? */
+div.ex3 {
+  /* background-color: lightblue; */
+  width: 100%;
+  height: 590px;
+  overflow: auto;
+}
+/* anh */
+.wrapper {
+  margin: 20% auto;
+  width: 60%;
+}
+
+#displayImg {
+  margin-top: 30px;
+  background-color: chocolate;
+  z-index: 1000;
+}
+
+#displayImg img {
+  height: 50px;
+  margin-right: 15px;
+  display: inline-block;
+
 }
