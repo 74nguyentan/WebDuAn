@@ -1,0 +1,19 @@
+
+
+#displayImgzzz {
+  margin-top: 20px;
+}
+
+#displayImgzzz img {
+  height: 50px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  display: inline-block;
+  transition: transform .5s ease;
+}
+#displayImgzzz img:hover {
+  -moz-box-shadow: 1px 0px 12px #000000;
+  -webkit-box-shadow: 1px 0px 12px #000000;
+  box-shadow: 1px 0px 12px #000000;
+  transform: scale(1.1);
+}

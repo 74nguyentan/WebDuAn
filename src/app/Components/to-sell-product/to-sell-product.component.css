@@ -467,24 +467,31 @@ form .button {
 div.ex3 {
   /* background-color: lightblue; */
   width: 100%;
-  height: 590px;
+  height: 640px;
   overflow: auto;
 }
 /* anh */
-.wrapper {
-  margin: 20% auto;
-  width: 60%;
+#c_anh{
+  margin: 0px;
+  padding: 0px;
+  width: 110%;
+}
+.wrapperzzz {
+  width: 100%;
+}
+.wrapperzzz h1 {
+  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* #displayImgzzz {
+  margin-top: 20px;
 }
 
-#displayImg {
-  margin-top: 30px;
-  background-color: chocolate;
-  z-index: 1000;
-}
-
-#displayImg img {
+#displayImgzzz .img {
   height: 50px;
-  margin-right: 15px;
+  margin-bottom: 20px;
   display: inline-block;
-
-}
+  -moz-box-shadow: 1px 0px 12px #000000;
+  -webkit-box-shadow: 1px 0px 12px #000000;
+  box-shadow: 1px 0px 12px #000000;
+} */
