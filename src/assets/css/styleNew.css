@@ -6861,7 +6861,7 @@ button.ps-btn--gray:before {
   transition: all 0.4s ease;
 }
 .ps-product--detail .ps-product__preview .item:hover {
-  border-color: #8d8d8d;
+  border-color: #2ac37d;
 }
 .ps-product--detail .ps-product__preview .item:focus {
   outline: none;
@@ -6920,6 +6920,7 @@ button.ps-btn--gray:before {
 }
 .ps-product--detail .ps-product__video:hover i {
   background-color: rgba(42, 195, 125, 0.8);
+
 }
 .ps-product--detail .ps-product__video:hover i:before {
   color: #fff;
