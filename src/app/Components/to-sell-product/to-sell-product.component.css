@@ -117,7 +117,7 @@ i.fas {
 } */
 
 #back {
-  background-color:green;
+  /* background-color:#4ab00c; */
   text-align: center;
   border: dashed 0px #000000;
   -moz-border-radius-topleft: 5px;
@@ -235,7 +235,7 @@ i.fas {
   position: relative;
   display: inline-block;
   min-width: 40px;
-  padding: 10px 0px;
+  padding: 10px 10px;
   margin: 0px 5px;
   overflow: hidden;
   text-align: center;
