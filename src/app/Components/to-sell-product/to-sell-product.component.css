@@ -109,14 +109,15 @@ i.fas {
   font-size: 25px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
+  color: white;
 }
 
-#back a:hover {
+/* #back a:hover {
   text-shadow: -1px 2px 5px #38f20e;
-}
+} */
 
 #back {
-  background-color: chocolate;
+  background-color:green;
   text-align: center;
   border: dashed 0px #000000;
   -moz-border-radius-topleft: 5px;
@@ -268,9 +269,9 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  font-family: sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   justify-content: center;
-  background: url(https://devforum.info/DEMO/LoginForm1/bg.jpg);
+  /* background: url(https://devforum.info/DEMO/LoginForm1/bg.jpg); */
   background-size: cover;
   background-position: center;
 }
@@ -287,9 +288,10 @@ body {
 
 header {
   font-size: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   margin-top: 30px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: green;
 }
 
 .input-field,
@@ -398,53 +400,6 @@ form .button {
   color: grey;
 }
 
-.links {
-  display: flex;
-  cursor: pointer;
-}
-
-.facebook,
-.google {
-  height: 40px;
-  width: 100%;
-  border: 1px solid silver;
-  border-radius: 3px;
-  margin: 0 10px;
-  transition: .4s;
-}
-
-.facebook:hover {
-  border: 1px solid #4267B2;
-}
-
-.google:hover {
-  border: 1px solid #dd4b39;
-}
-
-.facebook i,
-.facebook span {
-  color: #4267B2;
-}
-
-.google i,
-.google span {
-  color: #dd4b39;
-}
-
-.links i {
-  font-size: 23px;
-  line-height: 40px;
-  margin-left: -90px;
-}
-
-.links span {
-  position: absolute;
-  font-size: 17px;
-  font-weight: bold;
-  padding-left: 8px;
-  font-family: 'Open Sans', sans-serif;
-}
-
 .signup {
   margin-top: 50px;
   font-family: 'Noto Sans', sans-serif;
@@ -475,13 +430,21 @@ div.ex3 {
   margin: 0px;
   padding: 0px;
   width: 110%;
+
 }
 .wrapperzzz {
-  width: 100%;
+  width: 110%;
+  margin-top: 25px;
+  height: auto;
 }
-.wrapperzzz h1 {
-  font-size: 15px;
+.wrapperzzz input{
+  margin-top: 5px;
+}
+.wrapperzzz p {
+  font-size: 14px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 600;
+  /* color: black; */
 }
 /* #displayImgzzz {
   margin-top: 20px;
