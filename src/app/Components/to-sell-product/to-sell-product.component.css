@@ -187,7 +187,7 @@ i.fas {
 
 .products:hover .products-details {
   bottom: 0px;
-  overflow: auto;
+  height: 100%;
   padding-bottom: 25px;
 }
 
