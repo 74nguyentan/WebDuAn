@@ -14,11 +14,13 @@ import { HomePageComponent } from './Components/home-page/home-page.component';
 import { FilterComponent } from './Layouts/filter/filter.component';
 import { AdvertisementComponent } from './Layouts/advertisement/advertisement.component';
 import { NgxImgZoomModule  } from 'ngx-img-zoom';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ToSellProductComponent } from './Components/to-sell-product/to-sell-product.component';
 import {RegisterComponentComponent} from './Components/register-component/register-component.component';
-import { ListProductOfUserComponent } from './Components/list-product-of-user/list-product-of-user.component'
+import { ListProductOfUserComponent } from './Components/list-product-of-user/list-product-of-user.component';
+import { UserImpormationComponent } from './Components/user-impormation/user-impormation.component'
 
 @NgModule({
   declarations: [
@@ -34,15 +36,16 @@ import { ListProductOfUserComponent } from './Components/list-product-of-user/li
     ProductNewsComponent,
     ToSellProductComponent,
     RegisterComponentComponent,
-    ListProductOfUserComponent
-
+    ListProductOfUserComponent,
+    UserImpormationComponent
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    NgxImgZoomModule
+    NgxImgZoomModule,
+    NgxPaginationModule
   ],
 
   providers: [],

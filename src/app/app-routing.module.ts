@@ -8,7 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProductNewsComponent } from './Components/product-news/product-news.component';
 import {ToSellProductComponent} from './Components/to-sell-product/to-sell-product.component';
 import {RegisterComponentComponent} from './Components/register-component/register-component.component';
-
+import {UserImpormationComponent} from './Components/user-impormation/user-impormation.component'
 
 const routes: Routes = [
   {
@@ -42,6 +42,10 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponentComponent,
+  },
+  {
+    path: 'impormation',
+    component: UserImpormationComponent
   }
 ];
 

@@ -31,6 +31,7 @@
     "ngx-bootstrap": "^5.6.1",
     "ngx-image-zoom": "^0.6.0",
     "ngx-img-zoom": "^4.1.2",
+    "ngx-pagination": "^5.0.0",
     "popper.js": "^1.16.1",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",

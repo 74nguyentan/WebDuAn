@@ -1560,3 +1560,37 @@ iframe {
 -webkit-box-shadow: 1px 2px 5px #000000;
 box-shadow: 1px 2px 5px #000000;
 }
+
+
+#tieude span{
+  color: green;
+  margin-left: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+ font-family: sans-serif;
+ font-size: 40px;
+}
+.table{
+  margin-left: 30px;
+  width: 95%;
+}
+.table tr th{
+  color: blue;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 15px;
+}
+.table tr td{
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 15px;
+}
+#chinh{
+  margin-top: 20px;
+  margin-right: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 25px;
+  color: red;
+}
+/* #an{
+  display: flex;
+} */
