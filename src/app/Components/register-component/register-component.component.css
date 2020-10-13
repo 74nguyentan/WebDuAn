@@ -21,10 +21,12 @@
   text-decoration: none;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
+
 .form_content a:hover {
   background: black;
   color: white;
 }
+
 .login_form {
   background: #fff;
   height: auto;
@@ -36,10 +38,12 @@
 .login_form h1 {
   color: #262626;
 }
+
 .login_form h3 a {
   color: green;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 .login_form input {
   display: block;
   width: 100%;
@@ -72,6 +76,7 @@
   text-decoration: none;
   font-weight: bold;
 }
+
 /* form */
 
 
@@ -115,66 +120,73 @@
 [ RESTYLE TAG ]*/
 
 * {
-	margin: 0px;
+  margin: 0px;
   padding: 0px;
 
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 
-body, html {
+body,
+html {
 
-background-size: cover;
-background-repeat: no-repeat;
-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
 
 }
 
 /*---------------------------------------------*/
 a {
-	font-family: Poppins-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
+  font-family: Poppins-Regular;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
 }
 
 a:focus {
-	outline: none !important;
+  outline: none !important;
 }
 
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
   color: #d33f8d;
 }
 
 /*---------------------------------------------*/
-h1,h2,h3,h4,h5,h6 {
-	margin: 0px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
 }
 
 p {
-	font-family: Poppins-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
+  font-family: Poppins-Regular;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0px;
 }
 
-ul, li {
-	margin: 0px;
-	list-style-type: none;
+ul,
+li {
+  margin: 0px;
+  list-style-type: none;
 }
 
 
 /*---------------------------------------------*/
 input {
-	outline: none;
-	border: none;
+  outline: none;
+  border: none;
 }
 
 textarea {
@@ -182,43 +194,88 @@ textarea {
   border: none;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   border-color: transparent !important;
 }
 
-input:focus::-webkit-input-placeholder { color:transparent; }
-input:focus:-moz-placeholder { color:transparent; }
-input:focus::-moz-placeholder { color:transparent; }
-input:focus:-ms-input-placeholder { color:transparent; }
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
 
-textarea:focus::-webkit-input-placeholder { color:transparent; }
-textarea:focus:-moz-placeholder { color:transparent; }
-textarea:focus::-moz-placeholder { color:transparent; }
-textarea:focus:-ms-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder {
+  color: transparent;
+}
 
-input::-webkit-input-placeholder { color: #acacac; }
-input:-moz-placeholder { color: #acacac; }
-input::-moz-placeholder { color: #acacac; }
-input:-ms-input-placeholder { color: #acacac; }
+input:focus::-moz-placeholder {
+  color: transparent;
+}
 
-textarea::-webkit-input-placeholder { color: #acacac; }
-textarea:-moz-placeholder { color: #acacac; }
-textarea::-moz-placeholder { color: #acacac; }
-textarea:-ms-input-placeholder { color: #acacac; }
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+
+textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+input::-webkit-input-placeholder {
+  color: #acacac;
+}
+
+input:-moz-placeholder {
+  color: #acacac;
+}
+
+input::-moz-placeholder {
+  color: #acacac;
+}
+
+input:-ms-input-placeholder {
+  color: #acacac;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #acacac;
+}
+
+textarea:-moz-placeholder {
+  color: #acacac;
+}
+
+textarea::-moz-placeholder {
+  color: #acacac;
+}
+
+textarea:-ms-input-placeholder {
+  color: #acacac;
+}
 
 /*---------------------------------------------*/
 button {
-	outline: none !important;
-	border: none;
-	background: transparent;
+  outline: none !important;
+  border: none;
+  background: transparent;
 }
 
 button:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 iframe {
-	border: none !important;
+  border: none !important;
 }
 
 
@@ -367,7 +424,7 @@ iframe {
   color: rgba(211,63,141, 0.6);
 } */
 
-.input100:focus + .focus-input100 {
+.input100:focus+.focus-input100 {
   -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
   animation: anim-shadow 0.5s ease-in-out forwards;
 }
@@ -412,7 +469,7 @@ iframe {
   transition: all 0.4s;
 }
 
-.input100:focus + .focus-input100 + .symbol-input100 {
+.input100:focus+.focus-input100+.symbol-input100 {
   color: #d33f8d;
   /* color: #4ab00c; */
   padding-left: 18px;
@@ -465,7 +522,7 @@ iframe {
   transform: translateY(-50%);
 }
 
-.input-checkbox100:checked + .label-checkbox100::before {
+.input-checkbox100:checked+.label-checkbox100::before {
   color: #d33f8d;
 }
 
@@ -647,6 +704,7 @@ iframe {
     padding-right: 15px;
   }
 }
+
 /*[ FONT SIZE ]
 ///////////////////////////////////////////////////////////
 */
@@ -1539,24 +1597,26 @@ iframe {
   right: 0px;
   bottom: 0px;
 }
+
 /* ban do */
-#bando{
-  border:solid 15px #000000;
+#bando {
+  border: solid 15px #000000;
   -moz-border-radius-topleft: 8px;
-  -moz-border-radius-topright:8px;
-  -moz-border-radius-bottomleft:8px;
-  -moz-border-radius-bottomright:7px;
-  -webkit-border-top-left-radius:8px;
-  -webkit-border-top-right-radius:8px;
-  -webkit-border-bottom-left-radius:8px;
-  -webkit-border-bottom-right-radius:7px;
-  border-top-left-radius:8px;
-  border-top-right-radius:8px;
-  border-bottom-left-radius:8px;
-  border-bottom-right-radius:7px;
+  -moz-border-radius-topright: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  -moz-border-radius-bottomright: 7px;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  -webkit-border-bottom-right-radius: 7px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 7px;
 }
-#bando:hover{
+
+#bando:hover {
   -moz-box-shadow: 1px 2px 5px #000000;
--webkit-box-shadow: 1px 2px 5px #000000;
-box-shadow: 1px 2px 5px #000000;
+  -webkit-box-shadow: 1px 2px 5px #000000;
+  box-shadow: 1px 2px 5px #000000;
 }

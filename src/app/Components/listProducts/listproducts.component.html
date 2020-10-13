@@ -1,232 +1,139 @@
-
-    <div class="container-fluid pt-5">
-      <div class="row">
-        <div class="col-md-4">
-          <h2 class="title text-center">Features Items</h2>
-        </div>
-        <div class="col-md-5">
-          <!-- <div class="ps-products" data-mh="product-listing">
-            <div class="ps-product-action">
-              <div class="ps-pagination">
-                <ul class="pagination" (pageChange)="p = $event">
-                  <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                  <li class="active"><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">...</a></li>
-                  <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div> -->
-          <div id="control">
-           <pagination-controls (pageChange)="p = $event"></pagination-controls>
-          </div>
-        </div>
-        <div class="col-md-3">
-
-        </div>
+<div class="container-fluid pt-5">
+  <div class="row">
+    <div class="col-md-4">
+      <h2 class="title text-center">Features Items</h2>
+    </div>
+    <div class="col-md-5">
+      <div id="control">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
       </div>
-      <div class="row">
-        <div class="col-md-9">
-          <div class="features_items">
-            <div class="row" >
-              <div class="col-sm-3" *ngFor="let product of products | paginate: { itemsPerPage: 20, currentPage: p }" >
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
-                      <img src="https://image2.tin247.com/pictures/2020/02/03/zom1580720495.jpg" alt="" />
-                      <h2> {{product.price}}  oke</h2>
-                      <p>{{ product.name}}</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Chi tiết</a>
-                    </div>
-
-                  </div>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-9">
+      <div class="features_items">
+        <div class="row">
+          <div class="col-sm-3" *ngFor="let product of products | paginate: { itemsPerPage: 20, currentPage: p }">
+            <div class="product-image-wrapper">
+              <div class="single-products">
+                <div class="productinfo text-center">
+                  <img src="https://image2.tin247.com/pictures/2020/02/03/zom1580720495.jpg" alt="" />
+                  <h2> {{product.price}} oke</h2>
+                  <p>{{ product.name}}</p>
+                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Chi tiết</a>
                 </div>
               </div>
             </div>
-        </div>
-           <!-- <div class="row products">
-              <div class="col-md-3" *ngFor="let product of products | paginate: { itemsPerPage: 20, currentPage: p }">
-               <div > <img src="https://image2.tin247.com/pictures/2020/02/03/zom1580720495.jpg" alt="Sản phẩm 1" class="img-circle img-thumbnail">
-                <dl class="dl-horizontal">
-                  <h2>Sản phẩm 1</h2>
-                  <table class="table table-borderless">
-                    <tbody>
-                      <tr>
-                        <th scope="row">Tên sản phẩm:</th>
-                        <td>{{ product.name}}</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Giá:</th>
-                        <td>{{product.price}}</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </dl> <a href="#" class="btn btn-primary" title="Chi tiết">Chi tiết</a>
-               </div>
-              </div>
-          </div> -->
-
-        </div>
-        <div class="ps-sidebar col-md-3" data-mh="product-listing">
-          <aside class="ps-widget--sidebar ps-widget--category">
-            <div class="ps-widget__header">
-              <h3>Danh mục</h3>
-            </div>
-            <div class="ps-widget__content">
-              <ul class="ps-list--checked">
-                <li class="current"><a href="product-listing.html">Đồ điện tử(521)</a></li>
-                <li><a href="product-listing.html">Thời trang nữ(76)</a></li>
-                <li><a href="product-listing.html">Thời trang nam(21)</a></li>
-                <li><a href="product-listing.html">Đồ dân dụng(105)</a></li>
-                <li><a href="product-listing.html">Ô tô - xe máy - xe đạp</a></li>
-                <li><a href="product-listing.html">Sức khỏe và sắc đẹp(47)</a></li>
-                <li><a href="product-listing.html">Vocher và dịch vụ</a></li>
-              </ul>
-            </div>
-          </aside>
-          <aside class="ps-widget--sidebar ps-widget--category">
-            <div class="ps-widget__header">
-              <h3>Hãng giày nổi bật</h3>
-            </div>
-            <div class="ps-widget__content">
-              <ul class="ps-list--checked">
-                <li class="current"><a href="product-listing.html">Nike(521)</a></li>
-                <li><a href="product-listing.html">Adidas(76)</a></li>
-                <li><a href="product-listing.html">Baseball(69)</a></li>
-                <li><a href="product-listing.html">Gucci(36)</a></li>
-                <li><a href="product-listing.html">Dior(108)</a></li>
-                <li><a href="product-listing.html">B&G(108)</a></li>
-                <li><a href="product-listing.html">Louis Vuiton(47)</a></li>
-              </ul>
-            </div>
-          </aside>
-          <div class="ps-sticky desktop">
-            <aside class="ps-widget--sidebar">
-              <div class="ps-widget__header">
-                <h3>Size</h3>
-              </div>
-              <div class="ps-widget__content">
-                <table class="table ps-table--size">
-                  <tbody>
-                    <tr>
-                      <td class="active">3</td>
-                      <td>5.5</td>
-                      <td>8</td>
-                      <td>10.5</td>
-                      <td>13</td>
-                    </tr>
-                    <tr>
-                      <td>3.5</td>
-                      <td>6</td>
-                      <td>8.5</td>
-                      <td>11</td>
-                      <td>13.5</td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td>6.5</td>
-                      <td>9</td>
-                      <td>11.5</td>
-                      <td>14</td>
-                    </tr>
-                    <tr>
-                      <td>4.5</td>
-                      <td>7</td>
-                      <td>9.5</td>
-                      <td>12</td>
-                      <td>14.5</td>
-                    </tr>
-                    <tr>
-                      <td>5</td>
-                      <td>7.5</td>
-                      <td>10</td>
-                      <td>12.5</td>
-                      <td>15</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </aside>
-            <aside class="ps-widget--sidebar">
-              <div class="ps-widget__header">
-                <h3>Color</h3>
-              </div>
-              <div class="ps-widget__content">
-                <ul class="ps-list--color">
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                </ul>
-              </div>
-            </aside>
           </div>
         </div>
       </div>
+
     </div>
-    <div class="container">
-      <!-- <div class="text-center">
-        <h1>ngx-pagination live demo</h1>
-        <h4><small><a href="https://github.com/michaelbromley/ngx-pagination">GitHub Repo</a></small></h4>
-        <p>A bare-bones demo for your experimenting / bug-reproducing pleasure.</p>
+    <div class="ps-sidebar col-md-3" data-mh="product-listing">
+      <aside class="ps-widget--sidebar ps-widget--category">
+        <div class="ps-widget__header">
+          <h3>Danh mục</h3>
+        </div>
+        <div class="ps-widget__content">
+          <ul class="ps-list--checked">
+            <li class="current"><a href="product-listing.html">Đồ điện tử(521)</a></li>
+            <li><a href="product-listing.html">Thời trang nữ(76)</a></li>
+            <li><a href="product-listing.html">Thời trang nam(21)</a></li>
+            <li><a href="product-listing.html">Đồ dân dụng(105)</a></li>
+            <li><a href="product-listing.html">Ô tô - xe máy - xe đạp</a></li>
+            <li><a href="product-listing.html">Sức khỏe và sắc đẹp(47)</a></li>
+            <li><a href="product-listing.html">Vocher và dịch vụ</a></li>
+          </ul>
+        </div>
+      </aside>
+      <aside class="ps-widget--sidebar ps-widget--category">
+        <div class="ps-widget__header">
+          <h3>Hãng giày nổi bật</h3>
+        </div>
+        <div class="ps-widget__content">
+          <ul class="ps-list--checked">
+            <li class="current"><a href="product-listing.html">Nike(521)</a></li>
+            <li><a href="product-listing.html">Adidas(76)</a></li>
+            <li><a href="product-listing.html">Baseball(69)</a></li>
+            <li><a href="product-listing.html">Gucci(36)</a></li>
+            <li><a href="product-listing.html">Dior(108)</a></li>
+            <li><a href="product-listing.html">B&G(108)</a></li>
+            <li><a href="product-listing.html">Louis Vuiton(47)</a></li>
+          </ul>
+        </div>
+      </aside>
+      <div class="ps-sticky desktop">
+        <aside class="ps-widget--sidebar">
+          <div class="ps-widget__header">
+            <h3>Size</h3>
+          </div>
+          <div class="ps-widget__content">
+            <table class="table ps-table--size">
+              <tbody>
+                <tr>
+                  <td class="active">3</td>
+                  <td>5.5</td>
+                  <td>8</td>
+                  <td>10.5</td>
+                  <td>13</td>
+                </tr>
+                <tr>
+                  <td>3.5</td>
+                  <td>6</td>
+                  <td>8.5</td>
+                  <td>11</td>
+                  <td>13.5</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>6.5</td>
+                  <td>9</td>
+                  <td>11.5</td>
+                  <td>14</td>
+                </tr>
+                <tr>
+                  <td>4.5</td>
+                  <td>7</td>
+                  <td>9.5</td>
+                  <td>12</td>
+                  <td>14.5</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>7.5</td>
+                  <td>10</td>
+                  <td>12.5</td>
+                  <td>15</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </aside>
+        <aside class="ps-widget--sidebar">
+          <div class="ps-widget__header">
+            <h3>Color</h3>
+          </div>
+          <div class="ps-widget__content">
+            <ul class="ps-list--color">
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+            </ul>
+          </div>
+        </aside>
       </div>
-      <div class="list">
-        <ul>
-          <li *ngFor="let item of collection | paginate: { itemsPerPage: 10, currentPage: 1 }">{{ item }}</li>
-        </ul>
-
-          <pagination-controls (pageChange)="p = $event"></pagination-controls>
-      </div> -->
-
-      <!-- <pagination-controls  id="some_id"
-                      (pageChange)="pageChanged($event)"
-                      (pageBoundsCorrection)="pageChanged($event)"
-                      maxSize="9"
-                      directionLinks="true"
-                      autoHide="true"
-                      responsive="true"
-                      previousLabel="Previous"
-                      nextLabel="Next"
-                      screenReaderPaginationLabel="Pagination"
-                      screenReaderPageLabel="page"
-                      screenReaderCurrentLabel="You're on page">
-      </pagination-controls> -->
-      <!-- <h2>Products</h2>
-
-      <div *ngFor="let product of products">
-
-        <h3>
-            {{ product.name }}
-        </h3>
-
-      </div>
-    </div> -->
-<!-- <div class="container">
-  <div class="text-center">
-    <h1>ngx-pagination live demo</h1>
-    <h4><small><a href="#">GitHub Repo</a></small></h4>
-    <p>A bare-bones demo for your experimenting / bug-reproducing pleasure.</p>
+    </div>
   </div>
-  <div class="list">
-      <ul>
-        <li *ngFor="let item of collection | paginate: { itemsPerPage: 10, currentPage: p }">{{ item }}</li>
-      </ul>
-
-      <pagination-controls (pageChange)="p = $event"></pagination-controls>
-  </div>
-</div> -->
+</div>
