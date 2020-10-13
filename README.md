@@ -1,4 +1,8 @@
 # ShopDuAn
+https://console.developers.google.com/apis/credentials/consent?project=core-almanac-257312
+
+https://developers.google.com/identity/sign-in/web/sign-in
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
