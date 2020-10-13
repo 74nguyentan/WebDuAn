@@ -1,3 +1,4 @@
+import { ListProductOfUserComponent } from './Components/list-product-of-user/list-product-of-user.component';
 import { ProductDetailComponent } from './Components/product-detail/product-detail.component';
 import { LoginComponentComponent } from './Components/login-component/login-component.component';
 import { ListproductsComponent } from './Components/listProducts/listproducts.component';
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: '',
     component: HomePageComponent,
+  },
+  {
+    path: 'listProUser',
+    component: ListProductOfUserComponent,
   },
   {
     path: 'listNew',

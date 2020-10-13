@@ -17,7 +17,8 @@ import { NgxImgZoomModule  } from 'ngx-img-zoom';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ToSellProductComponent } from './Components/to-sell-product/to-sell-product.component';
-import {RegisterComponentComponent} from './Components/register-component/register-component.component'
+import {RegisterComponentComponent} from './Components/register-component/register-component.component';
+import { ListProductOfUserComponent } from './Components/list-product-of-user/list-product-of-user.component'
 
 @NgModule({
   declarations: [
@@ -33,6 +34,8 @@ import {RegisterComponentComponent} from './Components/register-component/regist
     ProductNewsComponent,
     ToSellProductComponent,
     RegisterComponentComponent,
+    ListProductOfUserComponent
+
   ],
 
   imports: [

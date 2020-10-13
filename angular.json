@@ -42,6 +42,7 @@
               "src/assets/vendor/animate/animate.css",
               "src/assets/vendor/css-hamburgers/hamburgers.min.css",
               "src/assets/vendor/select2/select2.min.css",
+              "src/assets/vendor/perfect-scrollbar/perfect-scrollbar.css",
              "src/assets/fonts/font-awesome-4.7.0/css/icon-font.min.css"
             ],
             "scripts": [
