@@ -4,6 +4,9 @@ https://console.developers.google.com/apis/credentials/consent?project=core-alma
 https://developers.google.com/identity/sign-in/web/sign-in
 
 
+https://developers.facebook.com/docs/facebook-login/web/
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
 ## Development server
