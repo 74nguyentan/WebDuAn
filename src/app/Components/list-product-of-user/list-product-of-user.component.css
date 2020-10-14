@@ -71,20 +71,6 @@ textarea:focus, input:focus {
   border-color: transparent !important;
 }
 
-/* ------------------------------------ */
-button {
-	outline: none !important;
-	border: none;
-	background: transparent;
-}
-
-button:hover {
-	cursor: pointer;
-}
-
-iframe {
-	border: none !important;
-}
 
 /*//////////////////////////////////////////////////////////////////
 [ Scroll bar ]*/
