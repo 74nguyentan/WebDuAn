@@ -50,8 +50,8 @@
               // "node_modules/bootstrap/dist/js/bootstrap.js",
               // "node_modules/bootstrap/dist/js/bootstrap.min.js",
 
+              "src/assets/js/js/zoom-image.js",
               "src/assets/js/main.js",
-
               "src/assets/vendor/bootstrap/js/popper.js",
               "src/assets/vendor/select2/select2.min.js",
               "src/assets/vendor/select2/checklogin.js"

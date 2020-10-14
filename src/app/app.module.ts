@@ -13,7 +13,6 @@ import { NavComponent } from './Layouts/nav/nav.component';
 import { HomePageComponent } from './Components/home-page/home-page.component';
 import { FilterComponent } from './Layouts/filter/filter.component';
 import { AdvertisementComponent } from './Layouts/advertisement/advertisement.component';
-import { NgxImgZoomModule  } from 'ngx-img-zoom';
 import {NgxPaginationModule} from 'ngx-pagination';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -44,7 +43,6 @@ import { UserImpormationComponent } from './Components/user-impormation/user-imp
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    NgxImgZoomModule,
     NgxPaginationModule
   ],
 
