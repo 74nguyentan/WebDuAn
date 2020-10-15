@@ -14,6 +14,7 @@ import { HomePageComponent } from './Components/home-page/home-page.component';
 import { FilterComponent } from './Layouts/filter/filter.component';
 import { AdvertisementComponent } from './Layouts/advertisement/advertisement.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { NgxImageZoomModule } from 'ngx-image-zoom';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ToSellProductComponent } from './Components/to-sell-product/to-sell-product.component';
@@ -43,7 +44,8 @@ import { UserImpormationComponent } from './Components/user-impormation/user-imp
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    NgxImageZoomModule
   ],
 
   providers: [],

@@ -39,7 +39,7 @@
               "src/assets/css/grid.css",
               "src/assets/css/reponsive.css",
 
-              "src/assets/vendor/animate/animate.css",
+              // "src/assets/vendor/animate/animate.css",
               "src/assets/vendor/css-hamburgers/hamburgers.min.css",
               "src/assets/vendor/select2/select2.min.css",
               "src/assets/vendor/perfect-scrollbar/perfect-scrollbar.css",
@@ -50,7 +50,7 @@
               // "node_modules/bootstrap/dist/js/bootstrap.js",
               // "node_modules/bootstrap/dist/js/bootstrap.min.js",
 
-              "src/assets/js/js/zoom-image.js",
+              // "src/assets/js/js/zoom-image.js",
               "src/assets/js/main.js",
               "src/assets/vendor/bootstrap/js/popper.js",
               "src/assets/vendor/select2/select2.min.js",

@@ -41,18 +41,13 @@
               ></a>
             </div>
             <div class="ps-product__image">
-              <!-- <div class="item">
-                <img
-                  class="zoom"
-                  src="../assets/images/images/shoe-detail/1.jpg"
-                  alt=""
-                  data-zoom-image="../assets/images/images/shoe-detail/1.jpg"
-                />
-              </div> -->
-              <div class="img-zoom-container">
-                <img id="myimage" src="//vn-test-11.slatic.net/p/df5c3f569917f9b2d59d802e22ffc485.jpg_340x340q80.jpg_.webp" width="300" height="240">
-                <div id="myresult" class="img-zoom-result"></div>
-              </div>
+
+              <lib-ngx-image-zoom
+              [thumbImage]=myThumbnail
+              [fullImage]=myFullresImage
+              [magnification]="3"
+              [enableScrollZoom]="true"
+          ></lib-ngx-image-zoom>
             </div>
           </div>
           <div class="ps-product__thumbnail--mobile">
