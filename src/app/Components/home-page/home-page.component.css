@@ -287,6 +287,10 @@ body {
   }
 }
 
+img {
+  max-width: 100%;
+}
+
 /* button giảm gia 16 */
 /* 13 */
 .btn-13 {

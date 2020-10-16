@@ -20,7 +20,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ToSellProductComponent } from './Components/to-sell-product/to-sell-product.component';
 import {RegisterComponentComponent} from './Components/register-component/register-component.component';
 import { ListProductOfUserComponent } from './Components/list-product-of-user/list-product-of-user.component';
-import { UserImpormationComponent } from './Components/user-impormation/user-impormation.component'
+import { UserImpormationComponent } from './Components/user-impormation/user-impormation.component';
+import { DemoComponent } from './Components/demo/demo.component'
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { UserImpormationComponent } from './Components/user-impormation/user-imp
     ToSellProductComponent,
     RegisterComponentComponent,
     ListProductOfUserComponent,
-    UserImpormationComponent
+    UserImpormationComponent,
+    DemoComponent
   ],
 
   imports: [

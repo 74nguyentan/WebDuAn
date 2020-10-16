@@ -1,0 +1,6 @@
+.item img{
+  max-width: 100%;
+}
+.ps-product--detail .ps-product__image {
+  width: calc(100% - 106px);
+}
