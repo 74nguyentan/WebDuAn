@@ -20,16 +20,16 @@
             <div class="ps-product__preview">
               <div class="ps-product__variants">
                 <div class="item">
-                  <img src="//vn-test-11.slatic.net/p/df5c3f569917f9b2d59d802e22ffc485.jpg_340x340q80.jpg_.webp"  alt="" />
+                  <img src="{{img_1}}" (mouseover)=" hover()" alt="" />
                 </div>
                 <div class="item">
-                  <img src="//vn-test-11.slatic.net/p/6684de7c5cf45722fce698dfb31eb185.jpg_340x340q80.jpg_.webp"  alt="" />
+                  <img src="{{img_2}}" (mouseover)="hover2()"  alt="" />
                 </div>
                 <div class="item">
-                  <img src="//vn-test-11.slatic.net/p/d9e21933b863bb9670d0bea35b9736dc.jpg_340x340q80.jpg_.webp"  alt="" />
+                  <img src="{{img_3}}" (mouseover)="img_zoom = img_3"  alt="" />
                 </div>
                 <div class="item">
-                  <img src="//vn-test-11.slatic.net/p/0c71728ea3a5a3e2aa7243728de12ef9.jpg_340x340q80.jpg_.webp" alt="" />
+                  <img src="{{img_4}}" (mouseover)="img_zoom = img_4" alt="" />
                 </div>
               </div>
               <a
@@ -45,7 +45,7 @@
 
 
               <lib-ngx-image-zoom
-              [thumbImage]="myThumbnail"
+              [thumbImage]="img_zoom"
               [magnification]="3"
               [enableScrollZoom]="true"
             ></lib-ngx-image-zoom>
@@ -91,40 +91,38 @@
                 <option value="2">5</option></select
               ><a href="#">(Read all 8 reviews)</a>
             </div>
-            <h1>Air strong training</h1>
+            <h1>Tên sản phẩm</h1>
             <p class="ps-product__category">
-              <a href="#"> Men shoes</a>,<a href="#"> Nike</a>,<a href="#">
-                Jordan</a
-              >
+              <a href="#"> Xuất xứ</a>
             </p>
-            <h3 class="ps-product__price">£ 115 <del>£ 330</del></h3>
+            <h3 class="ps-product__price">500 VNĐ <del>330 VNĐ</del></h3>
             <div class="ps-product__block ps-product__quickview">
-              <h4>QUICK REVIEW</h4>
+              <h4>Thông tin tham khảo</h4>
               <p>
-                The Nike Free RN 2017 Men's Running Sky weighs less than
-                previous versions and features an updated knit material…
+                Nike Free RN 2020 Men's Running Sky có trọng lượng nhẹ hơn
+                 các phiên bản trước và có chất liệu dệt kim được cập nhật…
               </p>
             </div>
             <div class="ps-product__block ps-product__style">
               <h4>CHOOSE YOUR STYLE</h4>
               <ul>
                 <li>
-                  <a href="product-detail.html"
-                    ><img src="../assets/images/images/shoe/sidebar/1.jpg" alt=""
+                  <a class="item" href="product-detail.html"
+                    ><img  src="../assets/images/images/shoe/sidebar/1.jpg" alt=""
                   /></a>
                 </li>
                 <li>
-                  <a href="product-detail.html"
+                  <a class="item" href="product-detail.html"
                     ><img src="../assets/images/images/shoe/sidebar/2.jpg" alt=""
                   /></a>
                 </li>
                 <li>
-                  <a href="product-detail.html"
+                  <a class="item" href="product-detail.html"
                     ><img src="../assets/images/images/shoe/sidebar/3.jpg" alt=""
                   /></a>
                 </li>
                 <li>
-                  <a href="product-detail.html"
+                  <a class="item" href="product-detail.html"
                     ><img src="../assets/images/images/shoe/sidebar/2.jpg" alt=""
                   /></a>
                 </li>
