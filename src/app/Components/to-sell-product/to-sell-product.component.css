@@ -22,14 +22,16 @@ form {
 
 .form-group input {
   font-size: 15px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  font-family: tahoma;
   text-align: left;
   margin-bottom: auto;
 }
 
 .form-group .text {
   font-size: 16px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  font-family: tahoma;
   text-align: left;
   margin-bottom: auto;
   padding-left: 20px;
@@ -39,13 +41,15 @@ form {
 #mota,
 #sanpham {
   font-size: 22px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  font-family: tahoma;
   color: darkblue;
 }
 
 #danhmuc,
 #danhmuc option {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  font-family: tahoma;
   font-size: 16px;
 }
 
@@ -107,7 +111,8 @@ i.fas {
 /* sp cu fa ke */
 #back a {
   font-size: 25px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  font-family: tahoma;
   text-align: center;
   color: white;
 }
@@ -147,7 +152,8 @@ i.fas {
   width: 100%;
   border: 1px solid rgb(215, 215, 215);
   position: relative;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: tahoma;
   margin-bottom: 10px;
   overflow: hidden;
 }
@@ -201,7 +207,8 @@ i.fas {
 
 .products .products-details p {
   font-size: 15px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  font-family: tahoma;
 }
 
 .products .products-details .products-header h1,
@@ -212,7 +219,8 @@ i.fas {
   font-weight: 900;
   margin: 0 !important;
   padding: 0 !important;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  font-family: tahoma;
 }
 
 .products .products-details .products-header h3 {
@@ -221,7 +229,8 @@ i.fas {
   font-size: 15px;
   font-weight: 400;
   margin-top: 5px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  font-family: tahoma;
 }
 
 .products .products-details .products-detail .social {
@@ -242,13 +251,15 @@ i.fas {
   /* color: #000000; */
   color: white;
   font-size: 15px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  font-family: tahoma;
 }
 
 #hoantat {
   float: right;
   font-size: 25px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  font-family: tahoma;
 }
 
 #hoantat:hover {
@@ -269,7 +280,8 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  font-family: tahoma;
   justify-content: center;
   /* background: url(https://devforum.info/DEMO/LoginForm1/bg.jpg); */
   background-size: cover;
@@ -290,7 +302,8 @@ header {
   font-size: 40px;
   margin-bottom: 15px;
   margin-top: 30px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  font-family: tahoma;
   color: green;
 }
 
@@ -323,6 +336,7 @@ span.show {
   transform: translateY(-50%);
   font-size: 15px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* font-family: tahoma; */
   font-weight: 550;
 }
 
@@ -343,6 +357,7 @@ span.show {
   user-select: none;
   visibility: hidden;
   font-family: 'Open Sans', sans-serif;
+  /* font-family: tahoma; */
 }
 
 input:valid~span.show {
@@ -391,7 +406,8 @@ form .button {
   color: white;
   font-size: 20px;
   cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: tahoma;
 }
 
 .container .auth {
@@ -402,7 +418,8 @@ form .button {
 
 .signup {
   margin-top: 50px;
-  font-family: 'Noto Sans', sans-serif;
+  /* font-family: 'Noto Sans', sans-serif; */
+  font-family: tahoma;
 }
 
 .signup a {
@@ -422,7 +439,7 @@ form .button {
 div.ex3 {
   /* background-color: lightblue; */
   width: 100%;
-  height: 640px;
+  height: 665px;
   overflow: auto;
 }
 /* anh */
@@ -442,7 +459,8 @@ div.ex3 {
 }
 .wrapperzzz p {
   font-size: 14px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  font-family: tahoma;
   font-weight: 600;
   /* color: black; */
 }

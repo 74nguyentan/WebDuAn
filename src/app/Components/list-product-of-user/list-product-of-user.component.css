@@ -180,7 +180,7 @@ td img{
 }
 
 .column2 {
-  width: 10%;
+  width: 15%;
 }
 
 .column3 {
@@ -192,17 +192,17 @@ td img{
 }
 
 .column5 {
-  width: 10%;
+  width: 15%;
 }
 .column6 {
-  width: 30%;
+  width: 20%;
 }
 .column7{
   width: 10%;
 }
  .column7 a{
-   margin-top: 40px;
-    color: white;
+   margin-top: 20px;
+    color: black;
     width: 90%;
     height: 40px;
     font-size: 15px;

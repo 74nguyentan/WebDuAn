@@ -5,14 +5,15 @@
     </div>
     <div class="col-md-5">
       <div id="control">
-        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        <pagination-controls (pageChange)="p = $event" ></pagination-controls>
       </div>
     </div>
     <div class="col-md-3">
     </div>
   </div>
   <div class="row">
-    <div class="col-md-9">
+    <!-- <div class="col-md-1"></div> -->
+    <div class="col-md-9" style="padding-left: 40px;">
       <div class="features_items">
         <div class="row">
           <div class="col-sm-3" *ngFor="let product of products | paginate: { itemsPerPage: 20, currentPage: p }">
@@ -29,10 +30,13 @@
           </div>
         </div>
       </div>
-
+      <div id="control1">
+        <pagination-controls (pageChange)="p = $event" ></pagination-controls>
+      </div>
     </div>
-    <div class="ps-sidebar col-md-3" data-mh="product-listing">
-      <aside class="ps-widget--sidebar ps-widget--category">
+    <div class="ps-sidebar col-md  " style=" background: white; margin-right: 40px; margin-bottom: 75px; border-radius: 5px;"
+    data-mh="product-listing">
+      <aside class="ps-widget--sidebar ps-widget--category mt-3">
         <div class="ps-widget__header">
           <h3>Danh mục</h3>
         </div>

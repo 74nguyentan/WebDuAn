@@ -3,23 +3,34 @@
   <div class="col-md-1"></div>
   <div class="col-md-10" >
       <div class="container-fluid">
+        <div class="row pt-3 pb-2 mb-2">
+          <div class="ml-1  tittle-home justify-content-center">
+            Thông tin cá nhân
+          </div>
+          <div class=" tittle-right"></div>
+          <hr />
+        </div>
         <div class="row">
           <div class="col-md-9">
 
-            <div class="row mt-3 mb-3">
+            <!-- <div class="row mt-3 mb-2">
               <div class="col-md-12">
-                <div id="tieude1" style="margin-right: 30px;">
+                <div id="tieude1" style="margin-left: -15px;">
                   <span>Thông tin tài khoản</span>
                 </div>
               </div>
-            </div>
+            </div> -->
+
 
             <div class="row">
-              <div class="col-md-12">
-                <table class="table table-bordered" style="background: white;">
+              <div class="col-md-12 pt-4" style="background: white;border-radius: 5px; ">
+                <table class="table table-bordered" style="height: 342px;">
                   <tr>
                     <th>Username:</th>
                     <td>TuongXl</td>
+                    <td class="anhdd" rowspan="6" colspan="1" >
+                      <img src="https://upload.wikimedia.org/wikipedia/vi/archive/f/fe/20201011055543%21MoMo_Logo.png" alt="">
+                    </td>
                   </tr>
                   <tr>
                     <th scope="row">Mật khẩu:</th>
@@ -30,19 +41,9 @@
                     <td>Nguyễn Bá Tương</td>
                   </tr>
                   <tr>
-                    <th scope="row">Địa chỉ:</th>
-                    <td colspan="2"> 86 Nguyễn Sinh Sắc-Hòa Minh-Liên Chiểu-TP Đà Nẵng
-                      <p> * Cung cấp địa chỉ sẽ giúp thuận tiện mua bán. Cập nhật địa chỉ ngay khi bạn thay đến địa chỉ mới *</p>
-                    </td>
+                    <th> Ngày sinh:</th>
+                    <td>99/99/9999</td>
                   </tr>
-
-                </table>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-12">
-                <table class="table table-bordered" style="background: white;">
                   <tr>
                     <th>Điện thoại:</th>
                     <td>0845220400</td>
@@ -52,11 +53,13 @@
                     <td>vansong2204@gmail.com</td>
                   </tr>
                   <tr>
-                    <th> Ngày sinh:</th>
-                    <td>99/99/9999</td>
+                    <th scope="row">Địa chỉ:</th>
+                    <td colspan="3"> 86 Nguyễn Sinh Sắc-Hòa Minh-Liên Chiểu-TP Đà Nẵng
+                      <p> * Cung cấp địa chỉ sẽ giúp thuận tiện mua bán. Cập nhật địa chỉ ngay khi bạn thay đến địa chỉ mới *</p>
+                    </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td >
                       <a (click)="isShowFormUser = true" *ngIf="!isShowFormUser" ><i class="fas fa-edit">Chỉnh sửa</i></a>
                       <p>*Điều chỉnh thông tin cá nhân*</p>
                     </td>
@@ -66,14 +69,14 @@
             </div>
 
           </div>
-          <div class="col-md-3 mt-4">
+          <div class="col-md-3 ">
 
-            <div class="card poly-cart" data-toggle="collapse">
+            <div class="card poly-cart " data-toggle="collapse">
               <div class="card-header" >
                 <!-- <span class="glyphicon glyphicon-th-list"></span> -->
                 <div class="row">
                   <div class="col-md-5">
-                    <img src="https://drive.google.com/uc?export=download&id=1WhbvBn4dpZSRFfKvcVozP3WlbM06WnXd" alt="">
+                    <img style="width: 70px;height: 70px;" src="https://drive.google.com/uc?export=download&id=1ALOnxfEtxHvBG4ZjmwBGGlx3DqJn8TId" alt="">
                   </div>
                   <div class="col-md-7 mt-4" >
                     <strong> Xu Green</strong> <br>
@@ -83,14 +86,10 @@
               </div>
               <div class="card-header">
                 <span class="lnr lnr-gift"></span>
-                <strong> Xu Green Market</strong>
+                <strong> Các gói nạp</strong>
               </div>
-              <div class="list-group" id="">
-                <div ng-repeat="sub in list_subject">
-
-
-                  <a href="#" class="list-group-item"><i class="fas fa-dollar-sign"></i> 1.500.000 xu</a>
-                    <a href="#" class="list-group-item"><i class="fas fa-dollar-sign"></i> 1.000.000 xu</a>
+              <div class="list-group">
+                <div>
                     <a href="#" class="list-group-item"><i class="fas fa-dollar-sign"></i> 500.000 xu</a>
                     <a href="#" class="list-group-item"><i class="fas fa-dollar-sign"></i> 100.000 xu</a>
                     <a href="#" class="list-group-item"><i class="fas fa-dollar-sign"></i> 50.000 xu</a>
@@ -98,7 +97,7 @@
                 </div>
               </div>
               <div class="card-footer">
-                <button type="button" class="btn btn-success">NẠP NGAY</button>
+                <button type="button" class="btn btn-success" style="padding: 9px 0px;">NẠP NGAY</button>
               </div>
             </div>
 
@@ -110,19 +109,27 @@
 
       <!-- form sua tt  -->
       <div *ngIf="isShowFormUser">
-        <div class="row">
-          <div class="col-md-12 ml-4">
+        <!-- <div class="row">
+          <div class="col-md-12 ml-1 mt-5">
             <div id="tieude2">
               <span>Chỉnh sửa thông tin</span>
             </div>
           </div>
+        </div> -->
+
+        <div class="row pt-5 pb-1 mb-1" style="padding-left: 3px;">
+          <div class="ml-4 tittle-home justify-content-center">
+            Chỉnh sửa thông tin
+          </div>
+          <div class="col mr-5 tittle-right" ></div>
+          <hr />
         </div>
 
         <div class="row" >
-          <div class="col-md-12 ml-4">
+          <div class="col-md-12 ml-1">
             <div class="container-login100">
               <div class="wrap-login100  p-r-50  p-b-30 text-center ">
-                <form class="login100-form validate-form">
+                <form class="login100-form validate-form pr-5">
                   <span class="login100-form-title p-b-20 ml-5 mt-5" style="font-family: sans-serif">
 
                   </span>
@@ -146,14 +153,14 @@
                         </span>
                       </div>
 
-                      <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%;"
+                      <!-- <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%;"
                         data-validate="Password is required">
                         <input class="input100" type="password" name="pass" placeholder="Nhập lại mật khẩu">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                           <span class="lnr lnr-lock"></span>
                         </span>
-                      </div>
+                      </div> -->
 
                       <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%;"
                         data-validate="Không được bỏ trống">
@@ -222,45 +229,45 @@
       <!-- form sua tt  -->
       <div class="row">
       <!-- them  -->
-        <div class="bieutuong mt-5">
+        <div class="bieutuong mt-5 mr-5 ml-3 mb-5">
           <div class="row">
             <div class="col-md-2">
-              <img src="https://brasol.vn/public/uploads/1521190030-brasol.vn-logo-vietcombank-logo-vietcombank.jpg" alt="">
+              <img src="https://bachbao.com/wp-content/uploads/2020/07/y-nghia-logo-ngan-hang-vietcombank.png" alt="">
             </div>
             <div class="col-md-2">
-              <img src="https://luzuu.com/wp-content/uploads/2020/09/MOMO.png" alt="">
+              <img src="https://khuyenmaiviet.vn/wp-content/uploads/2020/06/logo-momo.jpg" alt="">
             </div>
             <div class="col-md-2">
-              <img src="https://ccshop.live/wp-content/uploads/2020/04/unnamed-1.png" alt="">
+              <img src="https://i.dlpng.com/static/png/6756548_preview.png" alt="">
             </div>
             <div class="col-md-2">
               <img src="https://luatvietan.vn/wp-content/uploads/2014/07/dich-vu-visa.jpg" alt="">
             </div>
             <div class="col-md-2">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3hC64q8xQC4diaQ7G5vM9KSM8AvmFdkkUpQ&usqp=CAU" alt="">
+              <img src="https://img.topbank.vn/2019/12/24/b8awMTJx/bao-kim-la-gi-aac6.jpg" alt="">
             </div>
             <div class="col-md-2">
-              <img src="https://storage.googleapis.com/reward/userfiles/backend/reward/detail/1448856376_4f1bda18726739c4a9385714e9c758e7617a422b.jpg?v=1601536523" alt="">
+              <img src="https://4.bp.blogspot.com/-39D2ehYaVAQ/WMO3Wvs4kKI/AAAAAAAAAFE/VvRTPY-YmMcJ05n6IdtNaj5Yo-4Tlr4MQCLcB/s1600/dang-ky-tk-ngan-luong-to.png" alt="">
             </div>
           </div>
           <div class="row mt-5">
             <div class="col-md-2">
-              <img src="https://seeklogo.com/images/A/agribank-logo-1CEEE70C76-seeklogo.com.png" >
+              <img src="https://static.ybox.vn/2019/10/6/1572025513859-1571463337209-1570763569837-1568950907085-1.png" >
             </div>
             <div class="col-md-2">
-              <img src="https://profinefilter.com/wp-content/uploads/2018/06/MOCA-1.jpg" alt="">
+              <img src="https://lh3.googleusercontent.com/proxy/UjbfA0ctkICZghtfhnaMEBRIYTsSBohkWwtwXxB3-PwWqaR_ywr7lQfmUmWTgeH5dQ3xqogduCzpvPLTjk4ZiR1WXhJ8C7xRE4c6y6Tol37_Zj77I8y-NJu56g" alt="">
             </div>
             <div class="col-md-2">
-              <img src="https://cdn.airpay.vn/web_resources/airpayvn_v2/media/filer_public_thumbnails/filer_public/b1/8c/b18cd405-3927-460f-a03c-5229199add79/logo-apa_400x400.png__300x300_q95_crop_subsampling-2.png" alt="">
+              <img src="https://infofinance.vn/wp-content/uploads/2020/09/chuyen-tien-qua-airpay-co-mat-phi-khong1.jpg" alt="">
             </div>
             <div class="col-md-2">
-              <img src="https://lh3.googleusercontent.com/lV3APm1GNftfThy3Jr_P5_gMbtOQ64BJTC3Qja1JY43tDAGR-kIe1JygCWY8ggbpYVc" alt="">
+              <img src="https://www.msb.com.vn:8080/razuna/assets/1/EA65B322B235464E98A7D4A148BE9E0C/img/378B4FB6BDF743CBB9C68FDC8C248DB4/deal_1.jpg" alt="">
             </div>
             <div class="col-md-2">
-              <img src="https://pbs.twimg.com/profile_images/1148276766160670720/aZ37u8P-_400x400.png" alt="">
+              <img src="https://stewpot.org/wp-content/uploads/2013/10/BankPlus-2019.png" alt="">
             </div>
             <div class="col-md-2">
-              <img src="https://lh3.googleusercontent.com/proxy/POE-Zn882eRGWiCj2ttAG543JAZTY1tHTMgggPmdE0GVUrJ9SPCnTHcVS4LGzobIeTLFH4ZGNUVa34c2s3cZ3e6zXB5xUHKF5l8quT6shAGf5uY" alt="">
+              <img src="https://coin68.com/wp-content/uploads/2019/11/zalopay.png" alt="">
             </div>
           </div>
         </div>

@@ -1,21 +1,69 @@
 /* .bieutuong{
   background: white;
 } */
+.anhdd img{
+  height: 200px;width: 200px;
+  margin-left: 90px;
+}
+.anhdd img:hover{
+  -moz-box-shadow: 1px 1px 5px #000000;
+  -webkit-box-shadow: 1px 1px 5px #000000;
+  box-shadow: 1px 1px 5px #000000;
+}
+.tittle-home {
+  background-color: #fff;
+  font-family: tahoma;
+  font-size: 23px;
+  color: green;
+  padding: 7px 23px 7px 22px;
+  border: dashed 0px #ffffff;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomleft: 0px;
+  -moz-border-radius-bottomright: 0px;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.tittle-right {
+  border-bottom: solid 4px #ffffff;
+  width: 56.4%;
+}
 
+.card{
+  background: white;
+  border: none;
+}
 .card .card-header{
   font-size: 20px;
   font-family: tahoma;
   color: green;
-  /* text-align: center; */
+  text-align: center;
+  background: white;
 }
-.card .card-header img:hover{
-  /* margin-top: -10px; */
+/* .card .card-header img:hover{
+
   background: url(https://img.icons8.com/emoji/100/000000/money-bag-emoji.png);
-}
+} */
 .card .list-group a{
   text-align: center;
   font-family: tahoma;
   font-size: 15px;
+  background: white;
+  color: black;
+
+}
+.card .list-group a:hover{
+  background-color: rgba(2, 252, 2, 0.3) ;
+  color: black;
+}
+.card .card-footer{
+  background: white;
 }
 .card .card-footer .btn{
   background: green;
@@ -24,8 +72,8 @@
   font-size: 20px;
 }
 .card .card-footer .btn:hover{
-  background: black;
-  color: white;
+  background-color: rgb(23, 182, 23) ;
+  color: black;
 }
 img{
   width: 100%;
@@ -314,7 +362,7 @@ iframe {
   border-radius: 5px;
   /* padding: 0px; */
   /* margin-top: 100px; */
-  /* margin-right: 30px; */
+  /* margin-right: 300px; */
   /* background: rgb(129, 245, 129); */
   /* background: ; */
   background: -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
@@ -349,7 +397,7 @@ iframe {
   background: #fff;
   border-radius: 3px;
   overflow: hidden;
-  margin-right: 30px;
+  margin-right: 20px;
   margin-top: 5px;
 }
 

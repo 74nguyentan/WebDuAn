@@ -1,9 +1,10 @@
 h2.title {
-  color: #FE980F;
-  font-family: 'Roboto', sans-serif;
+  color: green;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: tahoma;
   font-size: 28px;
   font-weight: 700;
-  margin: 0 15px;
+  /* margin: 0 15px; */
   text-transform: uppercase;
   margin-bottom: 30px;
   position: relative;
@@ -40,20 +41,23 @@ h2.title {
 
 .productinfo h2 {
   color: #FE980F;
-  font-family: 'Roboto', sans-serif;
-  font-size: 24px;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: tahoma;
+  font-size: 18px;
   font-weight: 700;
 }
 
 .product-overlay h2 {
   color: rgb(248, 222, 222);
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: tahoma;
   font-size: 54px;
   font-weight: 700;
 }
 
 .productinfo p {
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: tahoma;
   font-size: 14px;
   font-weight: 400;
   color: #696763;
@@ -77,7 +81,8 @@ h2.title {
   border: 0 none;
   border-radius: 0;
   color: #696763;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: tahoma;
   font-size: 15px;
   margin-bottom: 25px;
 }
@@ -103,11 +108,16 @@ h2.title {
 }
 
 /* //phan trang */
-#control {
+#control,#control1 {
   font-size: 20px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  font-family: tahoma;
   /* color: #FE980F; */
   height: auto;
   /* background-color: blueviolet; */
   float: right;
 }
+/* .ngx-pagination .current {
+  background: red;
+  color: yellow;
+} */
