@@ -12,7 +12,6 @@ import { ListproductsComponent } from './Components/listProducts/listproducts.co
 import { NavComponent } from './Layouts/nav/nav.component';
 import { HomePageComponent } from './Components/home-page/home-page.component';
 import { FilterComponent } from './Layouts/filter/filter.component';
-import { AdvertisementComponent } from './Layouts/advertisement/advertisement.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { NgxImageZoomModule } from 'ngx-image-zoom';
 
@@ -21,7 +20,8 @@ import { ToSellProductComponent } from './Components/to-sell-product/to-sell-pro
 import {RegisterComponentComponent} from './Components/register-component/register-component.component';
 import { ListProductOfUserComponent } from './Components/list-product-of-user/list-product-of-user.component';
 import { UserImpormationComponent } from './Components/user-impormation/user-impormation.component';
-import { DemoComponent } from './Components/demo/demo.component'
+import { DemoComponent } from './Components/demo/demo.component';
+import { ContactComponent } from './Components/contact/contact.component'
 
 @NgModule({
   declarations: [
@@ -33,13 +33,13 @@ import { DemoComponent } from './Components/demo/demo.component'
     HomePageComponent,
     FilterComponent,
     ProductDetailComponent,
-    AdvertisementComponent,
     ProductNewsComponent,
     ToSellProductComponent,
     RegisterComponentComponent,
     ListProductOfUserComponent,
     UserImpormationComponent,
-    DemoComponent
+    DemoComponent,
+    ContactComponent
   ],
 
   imports: [

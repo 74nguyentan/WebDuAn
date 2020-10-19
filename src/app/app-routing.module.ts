@@ -1,3 +1,4 @@
+import { ContactComponent } from './Components/contact/contact.component';
 import { ListProductOfUserComponent } from './Components/list-product-of-user/list-product-of-user.component';
 import { ProductDetailComponent } from './Components/product-detail/product-detail.component';
 import { LoginComponentComponent } from './Components/login-component/login-component.component';
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'demo',
     component: DemoComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
   },
   {
     path: 'listNew',

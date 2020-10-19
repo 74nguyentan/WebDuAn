@@ -20,16 +20,16 @@
             <div class="ps-product__preview">
               <div class="ps-product__variants">
                 <div class="item">
-                  <img src="{{img_1}}" (mouseover)=" hover()" alt="" />
+                  <img src="{{img_1}}" (mouseover)="img_zoom = img_1; myFullresImage = img_1" alt="" />
                 </div>
                 <div class="item">
-                  <img src="{{img_2}}" (mouseover)="hover2()"  alt="" />
+                  <img src="{{img_2}}" (mouseover)="img_zoom = img_2; myFullresImage = img_2"  alt="" />
                 </div>
                 <div class="item">
-                  <img src="{{img_3}}" (mouseover)="img_zoom = img_3"  alt="" />
+                  <img src="{{img_3}}" (mouseover)="img_zoom = img_3; myFullresImage = img_3"  alt="" />
                 </div>
                 <div class="item">
-                  <img src="{{img_4}}" (mouseover)="img_zoom = img_4" alt="" />
+                  <img src="{{img_4}}" (mouseover)="img_zoom = img_4; myFullresImage = img_4" alt="" />
                 </div>
               </div>
               <a
@@ -45,7 +45,8 @@
 
 
               <lib-ngx-image-zoom
-              [thumbImage]="img_zoom"
+              [thumbImage]=img_zoom
+              [fullImage]=myFullresImage
               [magnification]="3"
               [enableScrollZoom]="true"
             ></lib-ngx-image-zoom>
