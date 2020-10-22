@@ -2,7 +2,7 @@
 <div class="header--sidebar"></div>
 
 
-<main class="ps-main">
+<main class="ps-main" >
   <div class="test">
     <div class="container">
       <div class="row">
@@ -12,9 +12,9 @@
       </div>
     </div>
   </div>
-  <div class="ps-product--detail pt-60">
+  <div class="ps-product--detail pt-50" >
     <div class="ps-container">
-      <div class="row">
+      <div class="row" style="background: white; padding-top: 50px; margin-bottom: 50px;">
         <div class="col-lg-10 col-md-12 col-lg-offset-1">
           <div class="ps-product__thumbnail">
             <div class="ps-product__preview">
@@ -83,7 +83,7 @@
             </div>
           </div>
           <div class="ps-product__info">
-            <div class="ps-product__rating">
+            <!-- <div class="ps-product__rating">
               <select class="ps-rating">
                 <option value="1">1</option>
                 <option value="1">2</option>
@@ -91,7 +91,7 @@
                 <option value="1">4</option>
                 <option value="2">5</option></select
               ><a href="#">(Read all 8 reviews)</a>
-            </div>
+            </div> -->
             <h1>Tên sản phẩm</h1>
             <p class="ps-product__category">
               <a href="#"> Xuất xứ</a>
@@ -101,7 +101,7 @@
               <h4>Thông tin tham khảo</h4>
               <p>
                 Nike Free RN 2020 Men's Running Sky có trọng lượng nhẹ hơn
-                 các phiên bản trước và có chất liệu dệt kim được cập nhật…
+                các phiên bản trước và có chất liệu dệt kim được cập nhật…
               </p>
             </div>
             <div class="ps-product__block ps-product__style">
@@ -131,7 +131,7 @@
             </div>
             <div class="ps-product__block ps-product__size">
               <h4>CHOOSE SIZE<a href="#">Size chart</a></h4>
-              <select class="ps-select selectpicker">
+              <select class="ps-select selectpicker mt-5">
                 <option value="1">Select Size</option>
                 <option value="2">4</option>
                 <option value="3">4.5</option>
@@ -147,11 +147,11 @@
                 <option value="3">10</option>
               </select>
               <div class="form-group">
-                <input class="form-control" type="number" value="1" />
+                <input style="font-family: tahoma;font-size: 15px;color: brown;" class="form-control" type="number" value="1" />
               </div>
             </div>
             <div class="ps-product__shopping">
-              <a class="ps-btn mb-10" href="cart.html"
+              <a  class="ps-btn mb-10" href="cart.html"
                 >Add to cart<i class="ps-icon-next"></i
               ></a>
               <div class="ps-product__actions">
@@ -170,7 +170,7 @@
                   aria-controls="tab_01"
                   role="tab"
                   data-toggle="tab"
-                  >Overview</a
+                  >Tổng quan</a
                 >
               </li>
               <li>
@@ -179,7 +179,7 @@
                   aria-controls="tab_02"
                   role="tab"
                   data-toggle="tab"
-                  >Review</a
+                  >Đánh giá</a
                 >
               </li>
               <li>
@@ -188,7 +188,7 @@
                   aria-controls="tab_03"
                   role="tab"
                   data-toggle="tab"
-                  >PRODUCT TAG</a
+                  >Sản phẩm</a
                 >
               </li>
               <li>
@@ -197,7 +197,7 @@
                   aria-controls="tab_04"
                   role="tab"
                   data-toggle="tab"
-                  >ADDITIONAL</a
+                  >Bình luận</a
                 >
               </li>
             </ul>
@@ -221,7 +221,7 @@
             </div>
             <div class="tab-pane" role="tabpanel" id="tab_02">
               <p class="mb-20">
-                1 review for <strong>Shoes Air Jordan</strong>
+                1 đánh giá:  <strong>Shoes Air Jordan</strong>
               </p>
               <div class="ps-review">
                 <div class="ps-review__thumbnail">
@@ -229,31 +229,27 @@
                 </div>
                 <div class="ps-review__content">
                   <header>
-                    <select class="ps-rating">
+                    <select>
                       <option value="1">1</option>
-                      <option value="1">2</option>
-                      <option value="1">3</option>
-                      <option value="1">4</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
                       <option value="5">5</option>
                     </select>
-                    <p>By<a href=""> Alena Studio</a> - November 25, 2017</p>
+
+                    <p>Đánh giá của<a href=""> Quang Tèo</a> - 22/10/2020</p>
                   </header>
                   <p>
-                    Soufflé danish gummi bears tart. Pie wafer icing. Gummies
-                    jelly beans powder. Chocolate bar pudding macaroon candy
-                    canes chocolate apple pie chocolate cake. Sweet caramels
-                    sesame snaps halvah bear claw wafer. Sweet roll soufflé
-                    muffin topping muffin brownie. Tart bear claw cake tiramisu
-                    chocolate bar gummies dragée lemon drops brownie.
+                    Sản phẩm dùng được, phù hợp với giá. Giao hàng nhanh chóng
                   </p>
                 </div>
               </div>
               <form class="ps-product__review" action="_action" method="post">
-                <h4>ADD YOUR REVIEW</h4>
+                <h4 style="color: #2AC37D;">Thêm đánh giá của bạn</h4>
                 <div class="row">
                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="form-group">
-                      <label>Name:<span>*</span></label>
+                      <label>Họ Tên:<span>*</span></label>
                       <input class="form-control" type="text" placeholder="" />
                     </div>
                     <div class="form-group">
@@ -261,8 +257,8 @@
                       <input class="form-control" type="email" placeholder="" />
                     </div>
                     <div class="form-group">
-                      <label>Your rating<span></span></label>
-                      <select class="ps-rating">
+                      <label>Đánh giá số sao<span></span></label>
+                      <select style="margin-left: 10px;">
                         <option value="1">1</option>
                         <option value="1">2</option>
                         <option value="1">3</option>
@@ -273,12 +269,12 @@
                   </div>
                   <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
                     <div class="form-group">
-                      <label>Your Review:</label>
+                      <label>Đánh giá:</label>
                       <textarea class="form-control" rows="6"></textarea>
                     </div>
                     <div class="form-group">
                       <button class="ps-btn ps-btn--sm">
-                        Submit<i class="ps-icon-next"></i>
+                        Thêm đánh giá<i class="ps-icon-next"></i>
                       </button>
                     </div>
                   </div>
@@ -286,12 +282,13 @@
               </form>
             </div>
             <div class="tab-pane" role="tabpanel" id="tab_03">
-              <p>Add your tag <span> *</span></p>
+              <p style="font-size: 18px; font-family: tahoma; color: #2AC37D; margin-left: 20px;">Thêm thẻ của bạn <span> *</span></p>
               <form class="ps-product__tags" action="_action" method="post">
                 <div class="form-group">
                   <input class="form-control" type="text" placeholder="" />
-                  <button class="ps-btn ps-btn--sm">Add Tags</button>
+
                 </div>
+                <button style="margin-left: 20px; font-size: 15px; font-family: tahoma;" class="ps-btn ps-btn--sm">Thêm thẻ</button>
               </form>
             </div>
             <div class="tab-pane" role="tabpanel" id="tab_04">
@@ -299,11 +296,11 @@
                 <textarea
                   class="form-control"
                   rows="6"
-                  placeholder="Enter your addition here..."
+                  placeholder="Bình luận của bạn..."
                 ></textarea>
               </div>
               <div class="form-group">
-                <button class="ps-btn" type="button">Submit</button>
+                <button class="ps-btn" type="button">Thêm bình luận</button>
               </div>
             </div>
           </div>

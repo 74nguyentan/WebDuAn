@@ -1,3 +1,62 @@
+.ps-product__info h1{
+  font-family: tahoma;
+  color: green;
+  font-size: 28px;
+}
+
+.ps-product__price,.ps-product__block h4,.ps-product__category a{
+  font-family: tahoma;
+  font-size: 20px;
+}
+.ps-product__block p{
+  font-family: tahoma;
+  font-size: 15px;
+}
+.ps-product__block a{
+  color: red;
+  font-family: tahoma;
+}
+.ps-product__block select option{
+  font-family: tahoma;
+  font-size: 15px;
+  color: brown;
+}
+.ps-product__block select {
+  font-family: tahoma;
+  font-size: 15px;
+  color: brown;
+  padding-bottom: 6px;
+  padding-top: 4px;
+
+}
+.form-group input{
+  padding: -100px 30px;
+  margin-left: 20px;
+  width: 80%;
+}
+.ps-product__shopping a{
+  font-size: 20px;
+  font-family: tahoma;
+}
+.ps-product__shopping a:hover{
+  -moz-box-shadow: 1px 2px 5px #000000;
+  -webkit-box-shadow: 1px 2px 5px #000000;
+  box-shadow: 1px 2px 5px #000000;
+}
+.ps-review__content p,.tab-pane p,.ps-product__review h4,.ps-product__review label,.ps-product__review a{
+  font-size: 15px;
+  font-family: tahoma;
+}
+.ps-review__content header select{
+  font-size: 10px;
+  font-family: tahoma;
+  margin-right: 10px;
+  padding: 2px 0px;
+}
+.ps-product__review{
+  margin-left: 100px
+}
+
 .item img{
   max-width: 100%;
 }

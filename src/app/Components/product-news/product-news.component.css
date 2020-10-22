@@ -1,6 +1,6 @@
 /* menu */
 #menu ul {
-  background: blanchedalmond;
+  background: green;
   width: 252px;
   padding: 0;
   list-style-type: none;
@@ -21,7 +21,8 @@
   display: block;
 }
 #menu ul li:hover{
-  background: cadetblue;
+  /* background: cadetblue; */
+  background: rgb(23, 216, 23);
 }
 #menu #sub ul{
   position: absolute;
@@ -58,6 +59,14 @@
 }
 
 /* menu */
+
+/* tieu de  */
+h3{
+  color: green;
+  font-size: 20px;
+  font-family: tahoma;
+  font-weight: 600;
+}
 
 /* slide */
 .carousel-indicators {
@@ -105,7 +114,7 @@ transition: transform .5s ease;
 }
 
 .col-item .photo:hover img {
-transform: scale(1.5);
+transform: scale(1.1);
 }
 
 .col-item .photo img {
