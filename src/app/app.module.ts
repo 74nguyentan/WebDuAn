@@ -21,8 +21,11 @@ import {RegisterComponentComponent} from './Components/register-component/regist
 import { ListProductOfUserComponent } from './Components/list-product-of-user/list-product-of-user.component';
 import { UserImpormationComponent } from './Components/user-impormation/user-impormation.component';
 import { DemoComponent } from './Components/demo/demo.component';
-import { ContactComponent } from './Components/contact/contact.component'
-
+import { ContactComponent } from './Components/contact/contact.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component'
+import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +42,8 @@ import { ContactComponent } from './Components/contact/contact.component'
     ListProductOfUserComponent,
     UserImpormationComponent,
     DemoComponent,
-    ContactComponent
+    ContactComponent,
+    ConfirmDialogComponent
   ],
 
   imports: [
@@ -47,7 +51,10 @@ import { ContactComponent } from './Components/contact/contact.component'
     AppRoutingModule,
     FontAwesomeModule,
     NgxPaginationModule,
-    NgxImageZoomModule
+    NgxImageZoomModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    MatDialogModule
   ],
 
   providers: [],
