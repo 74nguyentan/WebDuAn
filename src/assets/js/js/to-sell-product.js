@@ -15,3 +15,9 @@ function ImagesFileAsURL() {
 
   }
 }
+
+
+$("#input-fa").fileinput({
+  theme: "fa",
+  uploadUrl: "/file-upload-batch/2"
+});

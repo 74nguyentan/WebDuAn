@@ -17,9 +17,10 @@
       <div class="row" style="background: white; padding-top: 50px; margin-bottom: 50px;">
         <div class="col-lg-10 col-md-12 col-lg-offset-1">
           <div class="ps-product__thumbnail">
+
             <div class="ps-product__preview">
               <div class="ps-product__variants">
-                <div class="item">
+                <div  class="item">
                   <img src="{{img_1}}" (mouseover)="img_zoom = img_1; myFullresImage = img_1" alt="" />
                 </div>
                 <div class="item">
@@ -32,7 +33,7 @@
                   <img src="{{img_4}}" (mouseover)="img_zoom = img_4; myFullresImage = img_4" alt="" />
                 </div>
               </div>
-              <a
+              <a style="width: 85px; height:85px;"
                 class="popup-youtube ps-product__video"
                 href="http://www.youtube.com/watch?v=0O2aH4XLbto"
                 ><img src="../assets/images/images/shoe-detail/1.jpg" alt="" /><i
@@ -40,21 +41,16 @@
                 ></i
               ></a>
             </div>
+
             <div class="ps-product__image">
-
-
-
               <lib-ngx-image-zoom
               [thumbImage]=img_zoom
               [fullImage]=myFullresImage
               [magnification]="3"
               [enableScrollZoom]="true"
             ></lib-ngx-image-zoom>
-
-
-
-
             </div>
+
           </div>
           <div class="ps-product__thumbnail--mobile">
             <div class="ps-product__main-img">
@@ -104,7 +100,8 @@
                 các phiên bản trước và có chất liệu dệt kim được cập nhật…
               </p>
             </div>
-            <div class="ps-product__block ps-product__style">
+            <hr> <br>
+            <!-- <div class="ps-product__block ps-product__style">
               <h4>CHOOSE YOUR STYLE</h4>
               <ul>
                 <li>
@@ -128,8 +125,9 @@
                   /></a>
                 </li>
               </ul>
-            </div>
-            <div class="ps-product__block ps-product__size">
+            </div> -->
+
+            <!-- <div class="ps-product__block ps-product__size">
               <h4>CHOOSE SIZE<a href="#">Size chart</a></h4>
               <select class="ps-select selectpicker mt-5">
                 <option value="1">Select Size</option>
@@ -149,10 +147,21 @@
               <div class="form-group">
                 <input style="font-family: tahoma;font-size: 15px;color: brown;" class="form-control" type="number" value="1" />
               </div>
+            </div> -->
+
+            <div class="div mb-5">
+              <!-- <div class="sc-gZMcBi cRIaeY"><span><img src="https://static.chotot.com.vn/storage/chotot-icons/png/chat_green.png" class="sc-gqjmRU hDIvun"></span><span>CHAT VỚI NHÀ TUYỂN DỤNG</span></div> -->
+
+              <a style="padding-left: 20px;padding-right: 20px; padding-top: 20px;"  href="" class="ps-btn">
+                <!-- <img style="width: 40px; color: white;" src="https://static.chotot.com.vn/storage/chotot-icons/png/chat_green.png" alt=""> -->
+                <img style="width: 40px;" src="https://drive.google.com/uc?export=download&id=1vdzV_8oaOj0ZU3siHGgQ0I13ixK4CtEg" alt="">
+                 &nbsp; &nbsp; Chat với người bán
+              </a>
             </div>
+
             <div class="ps-product__shopping">
               <a  class="ps-btn mb-10" href="cart.html"
-                >Add to cart<i class="ps-icon-next"></i
+                >Liên hệ<i class="ps-icon-next"></i
               ></a>
               <div class="ps-product__actions">
                 <a class="mr-10" href="whishlist.html"
@@ -160,6 +169,7 @@
                 ><a href="compare.html"><i class="ps-icon-share"></i></a>
               </div>
             </div>
+
           </div>
           <div class="clearfix"></div>
           <div class="ps-product__content mt-50">

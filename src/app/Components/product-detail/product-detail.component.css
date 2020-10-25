@@ -61,5 +61,29 @@
   max-width: 100%;
 }
 .ps-product--detail .ps-product__image {
-  width: calc(100% );
+  width: 75%;
+
 }
+.ps-product--detail .ps-product__image .ngxImageZoomContainer {
+ width: 200%;
+ height: 100%;
+ background: rebeccapurple;
+}
+::ng-deep .ngxImageZoomContainer> img {
+  /* max-height: 450px! important;
+   */
+   width: 500px;
+}
+
+.ps-product__thumbnail .ps-product__preview{
+  height: 500px;
+}
+.item{
+  width: 86px;
+}
+/* .ps-product__thumbnail .ps-product__review .ps-product__variants{
+  height: 80px;
+
+} */
+
+

@@ -16,9 +16,11 @@
 }
 #menu ul li a{
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: bold;
   display: block;
+  font-size: 15px;
+  font-family: tahoma;
 }
 #menu ul li:hover{
   /* background: cadetblue; */
@@ -285,3 +287,13 @@ text-transform: uppercase;
 }
 
 /* slide sp */
+::ng-deep .ngx-pagination li:not(.pagination-previous):not(.pagination-next) {
+  display: none;
+}
+::ng-deep .ngx-pagination {
+  text-align: right;
+  font-size: 15px;
+  font-family: tahoma;
+  color: green;
+}
+
