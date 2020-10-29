@@ -56,6 +56,10 @@
 .ps-product__review{
   margin-left: 100px
 }
+/* .ps-product__info{
+  float: right;
+
+} */
 
 .item img{
   max-width: 100%;
@@ -69,11 +73,36 @@
  height: 100%;
  background: rebeccapurple;
 }
-::ng-deep .ngxImageZoomContainer> img {
-  /* max-height: 450px! important;
-   */
-   width: 500px;
+@media screen and (max-width: 1368px) {
+
+  ::ng-deep .ngxImageZoomContainer> img {
+    max-width: 500px;
+    height: 500px;
+  }
+  #oke{
+    padding-left: 150px;
+  }
+  .ps-btn {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    font-size: 15px;
+    /* color: black; */
+  }
 }
+
+@media screen and (max-width: 1920px) {
+  ::ng-deep .ngxImageZoomContainer> img {
+     width: 500px;
+     color: blueviolet;
+  }
+  .ps-btn{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+  }
+
+ }
 
 .ps-product__thumbnail .ps-product__preview{
   height: 500px;
@@ -85,5 +114,4 @@
   height: 80px;
 
 } */
-
 
