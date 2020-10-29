@@ -25,7 +25,7 @@ import { ContactComponent } from './Components/contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConfirmDialogComponent } from './Dialog/confirm-dialog/confirm-dialog.component'
 import { MatDialogModule } from '@angular/material/dialog';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SuccessDialogComponent } from './Dialog/success-dialog/success-dialog.component';
 @NgModule({
   declarations: [
@@ -56,7 +56,8 @@ import { SuccessDialogComponent } from './Dialog/success-dialog/success-dialog.c
     NgxImageZoomModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule
   ],
 
   providers: [],

@@ -4,84 +4,126 @@
       <div class="col-md-8">
         <div class="container">
           <div class="container-login100">
-            <div class="wrap-login100 p-l-5 p-r-50  p-b-30 text-center ml-5">
-              <form class="login100-form validate-form">
+            <div class="wrap-login100 p-l-5 p-r-50 p-b-30 text-center ml-5">
+              <form class="login100-form validate-form" [formGroup]="form">
                 <span class="login100-form-title p-b-20 ml-5 mt-5" style="font-family: tahoma">
                   đăng ký thành viên
                 </span>
                 <div class="row">
                   <div class="col-md-6">
-                    <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%;"
+                    <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%"
                       data-validate="Không được bỏ trống">
-                      <input class="input100" type="text" name="username" placeholder="Username">
+                      <input class="input100" type="text" name="username" formControlName="username"
+                        placeholder="Họ tên" />
                       <span class="focus-input100"></span>
                       <span class="symbol-input100">
                         <span class="lnr lnr-users"></span>
                       </span>
+                      <h5 style="color: red; float: left" *ngIf="
+                          form.hasError('invalidusername', ['username']) &&
+                          form.get('username').touched
+                        ">
+                        Họ và tên không hợp lệ !
+                      </h5>
                     </div>
 
-                    <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%;"
-                      data-validate="Password is required">
-                      <input class="input100" type="password" name="pass" placeholder="Mật khẩu">
-                      <span class="focus-input100"></span>
-                      <span class="symbol-input100">
-                        <span class="lnr lnr-lock"></span>
-                      </span>
-                    </div>
+                    <div formGroupName="pw">
+                      <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%"
+                        data-validate="Password is required">
+                        <input class="input100" type="password" name="pass" placeholder="Mật khẩu"
+                          formControlName="password" />
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                          <span class="lnr lnr-lock"></span>
+                        </span>
+                        <h5 style="color: red; float: left" *ngIf="
+                            form.hasError('invalidusername', ['password']) &&
+                            form.get('password').touched
+                          ">
+                          Mật khẩu không được để trống !
+                        </h5>
 
-                    <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%;"
-                      data-validate="Password is required">
-                      <input class="input100" type="password" name="pass" placeholder="Nhập lại mật khẩu">
-                      <span class="focus-input100"></span>
-                      <span class="symbol-input100">
-                        <span class="lnr lnr-lock"></span>
-                      </span>
-                    </div>
+                        <h5 style="color: red; float: left" role="alert" *ngIf="
+                            form.hasError('passwordnotmatch', 'pw') &&
+                            form.get('pw').touched
+                          ">
+                          Nhập đúng mật khẩu !
+                        </h5>
+                      </div>
 
-                    <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%;"
-                      data-validate="Không được bỏ trống">
-                      <input class="input100" type="text" name="name" placeholder="Họ và tên">
-                      <span class="focus-input100"></span>
-                      <span class="symbol-input100">
-                        <span class="lnr lnr-license"></span>
-                      </span>
+                      <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%"
+                        data-validate="Password is required">
+                        <input class="input100" type="password" name="pass" placeholder="Nhập lại mật khẩu"
+                          formControlName="confirmPassword" />
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                          <span class="lnr lnr-lock"></span>
+                        </span>
+                        <h5 style="color: red; float: left" *ngIf="
+                            form.hasError('invalidusername', [
+                              'confirmPassword'
+                            ]) && form.get('confirmPassword').touched
+                          ">
+                          Nhập lại mật khẩu không được để trống !
+                        </h5>
+
+                        <h5 style="color: red; float: left" role="alert" *ngIf="
+                            form.hasError('passwordnotmatch', 'pw') &&
+                            form.get('pw').touched
+                          ">
+                          Nhập đúng mật khẩu !
+                        </h5>
+                      </div>
                     </div>
                   </div>
+
                   <div class="col-md-6">
-                    <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%;"
+                    <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%"
                       data-validate="Không được bỏ trống">
-                      <input class="input100" type="text" name="dienthoai" placeholder="Điện thoại">
+                      <input class="input100" type="text" name="dienthoai" placeholder="Điện thoại"
+                        formControlName="phone" />
                       <span class="focus-input100"></span>
                       <span class="symbol-input100">
                         <span class="lnr lnr-phone"></span>
                       </span>
+                      <h5 style="color: red; float: left" *ngIf="
+                          form.hasError('invalidusername', ['phone']) &&
+                          form.get('phone').touched
+                        ">
+                        Số điện thoại không được để trống !
+                      </h5>
                     </div>
 
-                    <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%;"
+                    <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%"
                       data-validate="Valid email is required: ex@abc.xyz">
-                      <input class="input100" type="text" name="email" placeholder="Email/Tên đăng nhập">
+                      <input class="input100" type="text" name="email" placeholder="Email" formControlName="email" />
                       <span class="focus-input100"></span>
                       <span class="symbol-input100">
                         <span class="lnr lnr-envelope"></span>
                       </span>
+
+                      <h5 style="color: red; float: left" *ngIf="
+                      form.hasError('invalidusername', ['email']) &&
+                      form.get('email').touched
+                ">
+                        Nhập lại email !
+                      </h5>
                     </div>
 
-                    <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%;"
+                    <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%"
                       data-validate="Password is required">
-                      <input class="input100" type="date" name="date" placeholder="Ngày sinh">
-                      <span class="focus-input100"></span>
-                      <span class="symbol-input100">
-                        <span class="lnr lnr-calendar-full"></span>
-                      </span>
-                    </div>
-
-                    <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%;"
-                      data-validate="Password is required">
-                      <input class="input100" type="text" name="diachi" placeholder="Địa chỉ">
+                      <input class="input100" type="text" name="diachi" placeholder="Địa chỉ"
+                        formControlName="adrest" />
                       <span class="focus-input100"></span>
                       <span class="symbol-input100">
                         <span class="lnr lnr-map"></span>
                       </span>
+                      <h5 style="color: red; float: left" *ngIf="
+                      form.hasError('invalidusername', ['adrest']) &&
+                      form.get('adrest').touched
+                    ">
+                        Nhập lại địa chỉ !
+                      </h5>
                     </div>
                   </div>
                 </div>
@@ -90,18 +132,13 @@
                   <div class="col-md-9"></div>
                   <div class="col-md-3">
                     <div class="container-login100-form-btn p-t-22 ml-4">
-                      <button class="login100-form-btn">
-                        đăng ký
-                      </button>
+                      <button class="login100-form-btn">đăng ký</button>
                     </div>
                   </div>
                 </div>
 
                 <div class="text-center w-full p-t-35 ml-5">
-                  <span class="txt1">
-                    Bạn đã có tài khoản?
-
-                  </span>
+                  <span class="txt1"> Bạn đã có tài khoản? </span>
 
                   <a routerLink="/login" class="txt1 bo1 hov1">
                     Đăng nhập ngay
@@ -111,19 +148,23 @@
             </div>
           </div>
         </div>
-
       </div>
       <div class="col-md-4">
         <div class="row">
-          <div class="_3ZDC1p _19YebX _1N9Ocu "> <img width="invalid-value" height="invalid-value" class="_3XaILN"
-              style="object-fit: contain" src="{{ imageUrLogin }}">
-              <h2  class="_3ZDC1p _19YebX _1N9Ocu" style="text-align: center;">Quyền lợi thành viên</h2>
-              <br><hr><br>
-              <p class="_3ZDC1p _19YebX _1N9Ocu" style="text-align: left; margin-left: 120px; font-family: tahoma">
-                + Mua hàng khắp thế giới cực dễ dàng, nhanh chóng <br>
-                + Theo dõi đơn hàng, hành trình đơn hàng <br>
-                + Nhận nhiều ưu đãi hấp dẫn từ khắp thế giới
-              </p>
+          <div class="_3ZDC1p _19YebX _1N9Ocu">
+            <img width="invalid-value" height="invalid-value" class="_3XaILN" style="object-fit: contain"
+              src="{{ imageUrLogin }}" />
+            <h2 class="_3ZDC1p _19YebX _1N9Ocu" style="text-align: center">
+              Quyền lợi thành viên
+            </h2>
+            <br />
+            <hr />
+            <br />
+            <p class="_3ZDC1p _19YebX _1N9Ocu" style="text-align: left; margin-left: 120px; font-family: tahoma">
+              + Mua hàng khắp thế giới cực dễ dàng, nhanh chóng <br />
+              + Theo dõi đơn hàng, hành trình đơn hàng <br />
+              + Nhận nhiều ưu đãi hấp dẫn từ khắp thế giới
+            </p>
           </div>
         </div>
       </div>

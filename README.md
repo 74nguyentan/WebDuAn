@@ -1,6 +1,8 @@
 # ShopDuAn
 https://console.developers.google.com/apis/credentials/consent?project=core-almanac-257312
 
+https://viblo.asia/p/co-che-dang-nhap-ung-dung-web-app-bang-tai-khoan-googlegmail-code-vi-du-bang-jsp-servletspringmvcspringboot-naQZRw6Xlvx
+
 https://developers.google.com/identity/sign-in/web/sign-in
 
 
