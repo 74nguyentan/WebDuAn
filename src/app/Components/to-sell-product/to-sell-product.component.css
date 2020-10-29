@@ -137,6 +137,7 @@ i.fas {
   border-top-right-radius: 5px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+  margin: 8px 0px;
 }
 
 
@@ -211,8 +212,7 @@ i.fas {
   font-family: tahoma;
 }
 
-.products .products-details .products-header h1,
-.products .products-details .products-header h3 {
+.products .products-details .products-header h1 {
   /* color: rgb(62, 62, 62); */
   color: black;
   font-size: 22px;
@@ -225,12 +225,12 @@ i.fas {
 
 .products .products-details .products-header h3 {
   color: black;
-  /* color: white; */
+  color: white;
   font-size: 15px;
   font-weight: 400;
-  margin-top: 5px;
-  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   font-family: tahoma;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .products .products-details .products-detail .social {
@@ -439,7 +439,7 @@ form .button {
 div.ex3 {
   /* background-color: lightblue; */
   width: 100%;
-  height: 665px;
+  height: 637px;
   overflow: auto;
 }
 /* anh */
