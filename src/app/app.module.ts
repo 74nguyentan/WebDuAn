@@ -27,6 +27,14 @@ import { ConfirmDialogComponent } from './Dialog/confirm-dialog/confirm-dialog.c
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SuccessDialogComponent } from './Dialog/success-dialog/success-dialog.component';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
+
+export function HttpLoaderFactory(http: HttpClient){
+  return new TranslateHttpLoader(http);
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,8 +65,18 @@ import { SuccessDialogComponent } from './Dialog/success-dialog/success-dialog.c
     BrowserAnimationsModule,
     FormsModule,
     MatDialogModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
+
+
 
   providers: [],
   bootstrap: [AppComponent],

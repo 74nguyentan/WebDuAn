@@ -7,15 +7,14 @@
       <div class="row">
         <div class="col-lg-6 col-md-8 col-sm-6 col-xs-12">
           <p>
-            460 Lí Thường Kiệt, Liên Chiểu, Đà Nẵng - Hotline: 804-377-3580 -
-            804-399-3580
+            {{ 'title' | translate }}
           </p>
         </div>
         <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
           <div class="header__actions">
-            <a  *ngIf="!login" routerLink="/login">Đăng nhập <i class="fas fa-sign-in-alt"></i></a>
-            <a href="#"> Ứng dụng <i class="fas fa-long-arrow-alt-down"></i></a>
-            <a href="#">Thông báo <i class="far fa-bell"></i></a>
+            <a  *ngIf="!login" routerLink="/login"> {{ 'login' | translate }}<i class="fas fa-sign-in-alt"></i></a>
+            <a href="#"> {{ 'application' | translate }} <i class="fas fa-long-arrow-alt-down"></i></a>
+            <a href="#">{{ 'notification' | translate }} <i class="far fa-bell"></i></a>
             <div class="btn-group ps-dropdown" style="z-index: 9999999999">
               <a
                 class="dropdown-toggle"
@@ -23,40 +22,41 @@
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
-                >Tài khoản <i class="fas fa-user-cog"></i></a>
+                >{{ 'account' | translate }} <i class="fas fa-user-cog"></i></a>
               <ul class="dropdown-menu">
                 <li>
                   <a routerLink="/listProUser">
-                    <i class="fas fa-tasks"></i> Quản lý sản phẩm</a>
+                    <i class="fas fa-tasks"></i> {{ 'products' | translate }}</a>
                 </li>
                 <li>
-                  <a href="#"><i class="fas fa-coins"></i> Điểm thưởng</a>
+                  <a href="#"><i class="fas fa-coins"></i>{{ 'reward' | translate }}</a>
                 </li>
                 <li>
-                  <a routerLink="/impormation"><i class="fas fa-user-edit"></i> Thông tin</a>
+                  <a routerLink="/impormation"><i class="fas fa-user-edit"></i> {{ 'imformation' | translate }}</a>
                 </li>
                 <li>
-                  <a href="#"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                  <a href="#"><i class="fas fa-sign-out-alt"></i> {{ 'loout' | translate }}</a>
                 </li>
-
               </ul>
-
             </div>
-            <div class="btn-group ps-dropdown" style="z-index: 9999999999">
+            <div class="btn-group ps-dropdown" style="z-index: 9999999999"  >
               <a
                 class="dropdown-toggle"
                 href="#"
                 data-toggle="dropdown"
                 aria-haspopup="true"
-                aria-expanded="false"
-                >Ngôn ngữ <i class="fas fa-globe-americas"></i></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">English</a></li>
-                <li><a href="#"><img src="../assets/images/images/flag/japan.svg" alt="" /> Japanese</a></li>
-                <li><a href="#">Chinese</a></li>
-              </ul>
-            </div>
+                aria-expanded="false" for="">{{ 'language' | translate }} <i class="fas fa-globe-americas"></i></a>
+                <select #langselect (change)="translate.use(langselect.value)">
+                  <option *ngFor="let lang of translate.getLangs()" [value]="lang">{{ lang }}</option>
+                </select>
+              <!-- <ul class="dropdown-menu" #langselect (change)="translate.use(langselect.value)">
+                <li *ngFor="let lang of translate.getLangs()" [value]="lang">{{ lang }}</li> -->
 
+                <!-- <li><a href="#">English</a></li>
+                <li><a href="#"><img src="../assets/images/images/flag/japan.svg" alt="" /> Japanese</a></li>
+                <li><a href="#">Chinese</a></li> -->
+            <!-- </ul> -->
+            </div>
           </div>
         </div>
       </div>
@@ -74,7 +74,7 @@
       <div class="navigation__column center">
         <ul class="main-menu menu">
           <li class="menu-item menu-item-has-children dropdown">
-            <a routerLink="/">Trang chủ</a>
+            <a routerLink="/">{{ 'Homepage' | translate }}</a>
             <!-- <ul class="sub-menu">
               <li class="menu-item"><a href="index.html">Homepage #1</a></li>
               <li class="menu-item"><a href="#">Homepage #2</a></li>
@@ -82,7 +82,7 @@
             </ul> -->
           </li>
           <li class="menu-item menu-item-has-children has-mega-menu">
-            <a href="#">Danh mục</a>
+            <a href="#">{{ 'Category' | translate }}</a>
             <div class="mega-menu">
               <div class="mega-wrap">
                 <div class="mega-column">
@@ -171,9 +171,9 @@
             </div>
           </li>
 
-          <li class="menu-item"><a routerLink="/toSell">Bán hàng</a></li>
+          <li class="menu-item"><a routerLink="/toSell">{{ 'Sell' | translate }}</a></li>
           <li class="menu-item menu-item-has-children dropdown">
-            <a routerLink="/pronews">Hàng mới</a>
+            <a routerLink="/pronews">{{ 'Newproducts' | translate }}</a>
             <!-- <ul class="sub-menu">
               <li class="menu-item menu-item-has-children dropdown">
                 <a href="blog-grid.html">Blog-grid</a>
@@ -190,7 +190,7 @@
             </ul> -->
           </li>
           <li class="menu-item menu-item-has-children dropdown">
-            <a routerLink="/contact">Thông tin</a>
+            <a routerLink="/contact">{{ 'Information' | translate }}</a>
             <!-- <ul class="sub-menu">
               <li class="menu-item">
                 <a href="contact-us.html">Contact Us #1</a>
@@ -207,7 +207,7 @@
           <input
             class="form-control"
             type="text"
-            placeholder="Search Product…"
+            placeholder="{{ 'search' | translate }}"
           />
           <button><i class="ps-icon-search"></i></button>
         </form>

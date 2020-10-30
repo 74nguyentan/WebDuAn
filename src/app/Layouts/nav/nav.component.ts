@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -36,8 +36,16 @@ imageUrl11 = '';
 
 login = false;
 role = 0;
-  constructor() { }
 
+constructor(
+
+  public translate: TranslateService
+) {
+  translate.addLangs(['vi', 'en']);
+  translate.setDefaultLang('vi');
+  const browserLang = translate.getBrowserLang();
+  translate.use(browserLang.match(/vi|en/) ? browserLang : 'vi');
+}
   ngOnInit(): void {
   }
 
