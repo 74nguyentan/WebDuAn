@@ -11,6 +11,7 @@ import {ToSellProductComponent} from './Components/to-sell-product/to-sell-produ
 import {RegisterComponentComponent} from './Components/register-component/register-component.component';
 import {UserImpormationComponent} from './Components/user-impormation/user-impormation.component'
 import { DemoComponent } from './Components/demo/demo.component';
+import {SeenProductComponent} from './Components/seen-product/seen-product.component';
 
 const routes: Routes = [
   {
@@ -56,6 +57,10 @@ const routes: Routes = [
   {
     path: 'impormation',
     component: UserImpormationComponent
+  },
+  {
+    path: 'seen',
+    component: SeenProductComponent
   }
 ];
 
