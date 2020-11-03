@@ -5,7 +5,7 @@
     </div>
     <div class="col-md-5">
       <div id="control">
-        <pagination-controls (pageChange)="p = $event" ></pagination-controls>
+        <!-- <pagination-controls (pageChange)="p = $event" ></pagination-controls> -->
       </div>
     </div>
     <div class="col-md-3">
@@ -16,14 +16,14 @@
     <div class="col-md-9" style="padding-left: 40px;">
       <div class="features_items">
         <div class="row">
-          <div class="col-sm-3" *ngFor="let product of products | paginate: { itemsPerPage: 20, currentPage: p }">
+          <div class="col-sm-3" *ngFor=" let item of product ">
             <div class="product-image-wrapper">
               <div class="single-products">
                 <div class="productinfo text-center">
-                  <img src="https://image2.tin247.com/pictures/2020/02/03/zom1580720495.jpg" alt="" />
-                  <h2> {{product.price}} oke</h2>
-                  <p>{{ product.name}}</p>
-                  <a routerLink="/proDetaill" class="btn btn-default add-to-cart"><i class="fas fa-info-circle"></i> Chi tiết</a>
+                  <img src="{{ item.hinh0 }}" alt="" />
+                  <h2> {{ item.gia }} oke</h2>
+                  <p> {{ item.name }} </p>
+                  <i class="fa fa-list"></i><button (click)="productDetails(item.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
                 </div>
               </div>
             </div>
@@ -31,7 +31,7 @@
         </div>
       </div>
       <div id="control1">
-        <pagination-controls (pageChange)="p = $event" ></pagination-controls>
+        <!-- <pagination-controls (pageChange)="p = $event" ></pagination-controls> -->
       </div>
     </div>
     <div class="ps-sidebar col-md  " style=" background: white; margin-right: 40px; margin-bottom: 75px; border-radius: 5px;"

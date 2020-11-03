@@ -56,6 +56,14 @@ const routes: Routes = [
   {
     path: 'impormation',
     component: UserImpormationComponent
+  },
+  { 
+    path: 'details/:id',
+    component: ProductDetailComponent 
+  },
+  { 
+    path: 'loaihang/:id', 
+    component: ListproductsComponent
   }
 ];
 

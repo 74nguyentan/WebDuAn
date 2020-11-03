@@ -107,7 +107,7 @@
       <div class="controls pull-right hidden-xs">
         <!-- <a class="left fa fa-chevron-left btn btn-success" href="#carousel-example" data-slide="prev"></a>
         <a class="right fa fa-chevron-right btn btn-success" href="#carousel-example" data-slide="next"></a> -->
-        <pagination-controls (pageChange)="p = $event" ></pagination-controls>
+        <!-- <pagination-controls (pageChange)="p = $event" ></pagination-controls> -->
       </div>
     </div>
   </div>
@@ -120,20 +120,19 @@
           <div class="item">
             <div class="row mb-5">
 
-              <div class="col-sm-3" *ngFor="let product of products | paginate: { itemsPerPage: 4, currentPage: p }">
+              <div class="col-sm-3" *ngFor="let product of products | async">
                 <div class="col-item boderr">
                   <i class="iconsprites_payment_0d">Trả góp 0% - Trả trước 0Đ</i>
                   <div class="photo">
-                    <img src="{{ product.image }}" class="img-responsive" alt="a" />
+                    <img src="{{ product.hinh0 }}" class="img-responsive" alt="a" />
                   </div>
                   <div class="info">
                     <div class="row">
                       <div class="price col-md-6">
                         <h5>
-                          {{product.name}} </h5>
+                          {{ product.tenHang }} </h5>
                         <h5 class="price-text-color">
-                          {{product.price}} <sup>đ</sup> </h5>
-                        <span class="price_market"> {{ product.price2}}<sup>đ</sup> </span>
+                          {{ product.gia }} <sup>đ</sup> </h5>
                       </div>
                       <div class="rating hidden-sm col-md-6">
                         <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
@@ -143,10 +142,7 @@
                     </div>
                     <div class="separator clear-left">
                       <p class="btn-add">
-                        <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Thêm
-                          Vào Giỏ</a></p>
-                      <p class="btn-details">
-                        <i class="fa fa-list"></i><a routerLink="/proDetaill" class="hidden-sm">Chi Tiết</a>
+                        <i class="fa fa-list"></i><button (click)="productDetails(product.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
                       </p>
                     </div>
                     <div class="clearfix">
