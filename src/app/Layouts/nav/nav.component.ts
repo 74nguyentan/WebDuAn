@@ -1,11 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CategoryService } from 'src/app/Service/category.service';
 import { TranslateService } from '@ngx-translate/core';
+
+const CATEGORY_API = 'http://localhost:8989/api/category';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
+
+  public category: Array<any>;
 
   imagerUrl =
   'https://cf.shopee.vn/file/687f3967b7c2fe6a134a2c11894eea4b_tn&quot;';
@@ -38,9 +44,13 @@ login = false;
 role = 0;
 
 constructor(
-
+  private CategoryService: CategoryService,
+   private route: ActivatedRoute,private router: Router,
   public translate: TranslateService
 ) {
+  this.CategoryService.getAll(CATEGORY_API).subscribe(data => {
+    this.category = data;
+  })
   translate.addLangs(['vi', 'en']);
   translate.setDefaultLang('vi');
   const browserLang = translate.getBrowserLang();
@@ -49,4 +59,10 @@ constructor(
   ngOnInit(): void {
   }
 
+  idloaihang(id: number){
+    this.router.navigate(['loaihang', id]);
+   this.router.routeReuseStrategy.shouldReuseRoute = function () {
+     return false;
+   }
+}
 }

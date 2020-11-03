@@ -61,6 +61,14 @@ const routes: Routes = [
   {
     path: 'seen',
     component: SeenProductComponent
+  },
+  { 
+    path: 'details/:id',
+     component: ProductDetailComponent 
+  },
+  { 
+    path: 'loaihang/:id', 
+    component: ListproductsComponent 
   }
 ];
 

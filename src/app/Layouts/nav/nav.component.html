@@ -86,14 +86,14 @@
             <div class="mega-menu">
               <div class="mega-wrap">
                 <div class="mega-column">
-                  <ul class="mega-item">
+                  <ul class="mega-item" *ngFor="let item of category">
                     <li>
-                      <a routerLink="/listNew">
-                        <img src="{{ imageUrl6 }}" style="height: 35px" />Thiết
-                        bị điện gia dụng</a
+                      <a (click) = "idloaihang(item.id)" >
+                        <!-- <img src="{{ imageUrl6 }}" style="height: 35px" /> -->
+                        {{item.tenLoaiHang}}</a
                       >
                     </li>
-                    <li>
+                    <!-- <li>
                       <a href="product-listing.html"
                         ><img src="{{ imageUrl7 }}" style="height: 35px" /> Thể
                         thao & du lịch</a
@@ -122,7 +122,7 @@
                         ><img src="{{ imageUrl9 }}" style="height: 35px" />Mẹ &
                         bé</a
                       >
-                    </li>
+                    </li> -->
                   </ul>
                 </div>
 

@@ -1,4 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Category } from 'src/app/model/Category';
+import { Product } from 'src/app/model/Product';
+import { CategoryService } from 'src/app/Service/category.service';
+import { ProductService } from 'src/app/Service/product.service';
+
+// const PRODUCT_API = 'http://localhost:8989/api/mathang';
+// const PRODUCT_API_ID = PRODUCT_API + '/mathangId'
 
 @Component({
   selector: 'app-listproducts',
@@ -6,225 +15,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listproducts.component.css']
 })
 export class ListproductsComponent implements OnInit {
-  products = products;
-  p: number;
-  collection = [];
+  id: number;
+  product: Product;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute,private router: Router,
+    private productserviec: ProductService) { }
 
   ngOnInit(): void {
-  }
+    this.product = new Product();
 
+    this.id = this.route.snapshot.params['id'];
+    
+    this.productserviec.getidloaihang(this.id)
+      .subscribe(data => {
+        console.log(data)
+        this.product = data;
+        console.log(this.product)
+      }, error => console.log(error));
+
+  }
+  productDetails(id: number){
+    this.router.navigate(['details', id]);
+  }
 }
-export const products = [
-  {
-    name: 'Phone XL',
-    price: 799,
-    description: 'A large phone with one of the best screens'
-  },
-  {
-    name: 'Phone Mini',
-    price: 699,
-    description: 'A great phone with one of the best cameras'
-  },
-  {
-    name: 'Phone Standard',
-    price: 599,
-    description: ''
-  },
-  {
-    name: 'Phone Aloock',
-    price: 499,
-    description: ''
-  },
-  {
-    name: 'Phone BuffMax',
-    price: 399,
-    description: ''
-  },
-  {
-    name: 'Phone ConTrol',
-    price: 299,
-    description: ''
-  },
-  {
-    name: 'Phone Massacre',
-    price: 199,
-    description: ''
-  },
-  {
-    name: 'Phone XL',
-    price: 799,
-    description: 'A large phone with one of the best screens'
-  },
-  {
-    name: 'Phone Mini',
-    price: 699,
-    description: 'A great phone with one of the best cameras'
-  },
-  {
-    name: 'Phone Standard',
-    price: 599,
-    description: ''
-  },
-  {
-    name: 'Phone Aloock',
-    price: 499,
-    description: ''
-  },
-  {
-    name: 'Phone BuffMax',
-    price: 399,
-    description: ''
-  },
-  {
-    name: 'Phone ConTrol',
-    price: 299,
-    description: ''
-  },
-  {
-    name: 'Phone Massacre',
-    price: 199,
-    description: ''
-  },
-  {
-    name: 'Phone XL',
-    price: 799,
-    description: 'A large phone with one of the best screens'
-  },
-  {
-    name: 'Phone Mini',
-    price: 699,
-    description: 'A great phone with one of the best cameras'
-  },
-  {
-    name: 'Phone Standard',
-    price: 599,
-    description: ''
-  },
-  {
-    name: 'Phone Aloock',
-    price: 499,
-    description: ''
-  },
-  {
-    name: 'Phone BuffMax',
-    price: 399,
-    description: ''
-  },
-  {
-    name: 'Phone ConTrol',
-    price: 299,
-    description: ''
-  },
-  {
-    name: 'Phone Massacre',
-    price: 199,
-    description: ''
-  },
-  {
-    name: 'Phone XL',
-    price: 799,
-    description: 'A large phone with one of the best screens'
-  },
-  {
-    name: 'Phone Mini',
-    price: 699,
-    description: 'A great phone with one of the best cameras'
-  },
-  {
-    name: 'Phone Standard',
-    price: 599,
-    description: ''
-  },
-  {
-    name: 'Phone Aloock',
-    price: 499,
-    description: ''
-  },
-  {
-    name: 'Phone BuffMax',
-    price: 399,
-    description: ''
-  },
-  {
-    name: 'Phone ConTrol',
-    price: 299,
-    description: ''
-  },
-  {
-    name: 'Phone Massacre',
-    price: 199,
-    description: ''
-  },
-  {
-    name: 'Phone XL',
-    price: 799,
-    description: 'A large phone with one of the best screens'
-  },
-  {
-    name: 'Phone Mini',
-    price: 699,
-    description: 'A great phone with one of the best cameras'
-  },
-  {
-    name: 'Phone Standard',
-    price: 599,
-    description: ''
-  },
-  {
-    name: 'Phone Aloock',
-    price: 499,
-    description: ''
-  },
-  {
-    name: 'Phone BuffMax',
-    price: 399,
-    description: ''
-  },
-  {
-    name: 'Phone ConTrol',
-    price: 299,
-    description: ''
-  },
-  {
-    name: 'Phone Massacre',
-    price: 199,
-    description: ''
-  },
-  {
-    name: 'Phone XL',
-    price: 799,
-    description: 'A large phone with one of the best screens'
-  },
-  {
-    name: 'Phone Mini',
-    price: 699,
-    description: 'A great phone with one of the best cameras'
-  },
-  {
-    name: 'Phone Standard',
-    price: 599,
-    description: ''
-  },
-  {
-    name: 'Phone Aloock',
-    price: 499,
-    description: ''
-  },
-  {
-    name: 'Phone BuffMax',
-    price: 399,
-    description: ''
-  },
-  {
-    name: 'Phone ConTrol',
-    price: 299,
-    description: ''
-  },
-  {
-    name: 'Phone Massacre',
-    price: 199,
-    description: ''
-  },
-];
