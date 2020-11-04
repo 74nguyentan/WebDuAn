@@ -82,14 +82,17 @@ body {
   float: left;
   width: 60%;
   overflow: hidden;
-
+  font-size: tahoma;
   text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 12px;
 }
 .dl-horizontal dd {
   margin-left: 0px;
   text-align: left;
+  font-size: tahoma;
+  font-size: 12px;
 }
 /* menucon */
 
@@ -178,13 +181,14 @@ body {
   box-shadow: 0 0 5px #555;
 }
 
+
 .box img {
   width: 100%;
   height: auto;
 }
 
 .box .box-heading {
-  width: 90%;
+  width: 100%;
   position: absolute;
   bottom: 25px;
   left: 5%;
@@ -192,6 +196,11 @@ body {
   padding: 10px 60px 10px 25px;
   color: #fff;
   transition: all 0.3s ease 0s;
+}
+.box .box-heading h3, .box .box-heading span {
+  font-family: tahoma;
+  font-size: 13px;
+  color: #000000;
 }
 
 .box:hover .box-heading {
@@ -220,10 +229,9 @@ body {
 
 .box .post {
   display: block;
-  font-size: 14px;
-  color: #fff;
   text-transform: capitalize;
   margin-top: 5px;
+  width: 100%;
 }
 
 .box .boxContent {
@@ -236,6 +244,11 @@ body {
   background: rgba(144, 244, 147, 0.7);
 
   transition: all 0.5s ease 0s;
+}
+.box .boxContent p {
+  font-family: tahoma;
+  font-size: 14px;
+  color: #000000;
 }
 
 .box:hover .boxContent {
@@ -252,6 +265,7 @@ body {
   display: inline-block;
   padding: 10px 20px;
   background: #20211c;
+  font-family: tahoma;
   font-size: 14px;
   font-weight: 700;
   color: #fff;

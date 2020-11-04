@@ -1,5 +1,6 @@
 .container{
   background: white;
+  border-radius: 5px;
 }
 .text{
   color: black;

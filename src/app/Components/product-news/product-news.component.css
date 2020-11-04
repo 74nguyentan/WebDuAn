@@ -117,11 +117,10 @@ background: #FFF;
 }
 
 .col-item:hover {
--moz-box-shadow: 1px 6px 20px #000000;
--webkit-box-shadow: 1px 6px 20px #000000;
-box-shadow: 1px 6px 20px #000000;
+  border: 1px solid rgba(104, 99, 99, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
 
-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .col-item .photo {
