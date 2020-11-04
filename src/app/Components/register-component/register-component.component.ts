@@ -1,13 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import {
-  FormGroup,
-  Validators,
-  FormBuilder,
-  AbstractControl,
-} from '@angular/forms';
-
-
-
+import { Component, OnInit, Inject } from '@angular/core';
+import {FormGroup,Validators,FormBuilder, AbstractControl,} from '@angular/forms';
+import { UserServiceService } from './../../Service/user-service.service';
+import { MatDialog } from '@angular/material/dialog';
+import { SuccessDialogComponent } from '../../Dialog/success-dialog/success-dialog.component';
+import { RegistDialogComponent } from '../../Dialog/regist-dialog/regist-dialog.component';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Users } from '../../Model/Users';
 
 export function forbiddenUsername(users = []) {
   return (c: AbstractControl) => {
@@ -17,7 +15,7 @@ export function forbiddenUsername(users = []) {
 
 export function comparePassword(c: AbstractControl) {
   const v = c.value;
-  return v.password === v.confirmPassword ? null: {
+  return v.matKhau === v.confirmPassword ? null: {
     passwordnotmatch: true,
       };
 }
@@ -36,17 +34,26 @@ export class RegisterComponentComponent implements OnInit {
 
   title = 'login-component';
   form: FormGroup;
-  constructor(private fb: FormBuilder) {}
+  Users: Users;
+
+
+  constructor(private fb: FormBuilder,
+    @Inject(MatDialog) public data: any,
+    private route: ActivatedRoute,
+    private router: Router,
+    private dialog: MatDialog,
+    private userService: UserServiceService) {}
 
   ngOnInit() {
+    this.Users = new Users();
     this.form = this.fb.group({
-      username: ['',[Validators.required, forbiddenUsername(['','admin', 'manager'])],],
-      phone: ['',[Validators.required, forbiddenUsername([''])],],
-      adrest: ['',[Validators.required, forbiddenUsername([''])],],
+      hoVaTen: ['',[Validators.required, forbiddenUsername(['','admin', 'manager'])],],
+      dienThoai: ['',[Validators.required, forbiddenUsername([''])],],
+      diaChiUser: ['',[Validators.required, forbiddenUsername([''])],],
       email: ['',[Validators.required, forbiddenUsername([''])],],
       pw: this.fb.group(
         {
-          password: ['',[Validators.required, forbiddenUsername([''])],],
+          matKhau: ['',[Validators.required, forbiddenUsername([''])],],
           confirmPassword: ['',[Validators.required, forbiddenUsername([''])],],
         },
         {
@@ -55,4 +62,38 @@ export class RegisterComponentComponent implements OnInit {
       ),
     });
   }
+  saveOrUpdate() {
+    const confirmDialog = this.dialog.open(RegistDialogComponent, {
+      data: {
+        title: 'CHÍNH SÁCH VÀ ĐIỀU KHOẢN SỬ DỤNG',
+      },
+    });
+    confirmDialog.afterClosed().subscribe((result) => {
+      if (result === true) {
+
+        this.userService.createUser(this.Users).subscribe(
+          (data) => {
+            console.log(data);
+            this.Users = new Users();
+
+            const confirmDialog = this.dialog.open(SuccessDialogComponent, {
+              data: {
+                title: 'Thành Công !',
+              },
+            });
+          },
+          (error) => console.log(error)
+        );
+      }
+    });
+  }
+
+
+
+  onSubmit() {
+    this.saveOrUpdate();
+  }
+  // gotoList() {
+  //   this.router.navigate(['']);
+  // }
 }

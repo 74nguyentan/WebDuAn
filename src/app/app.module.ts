@@ -1,3 +1,4 @@
+import { RegistDialogComponent } from './Dialog/regist-dialog/regist-dialog.component';
 import { ProductNewsComponent } from './Components/product-news/product-news.component';
 import { ProductDetailComponent } from './Components/product-detail/product-detail.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -55,7 +56,8 @@ export function HttpLoaderFactory(http: HttpClient){
     ContactComponent,
     ConfirmDialogComponent,
     SuccessDialogComponent,
-    SeenProductComponent
+    SeenProductComponent,
+    RegistDialogComponent
   ],
 
   imports: [
