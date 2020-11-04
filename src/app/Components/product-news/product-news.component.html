@@ -115,7 +115,7 @@
 
               <div class="col-sm-3" *ngFor="let product of products | paginate: { itemsPerPage: 4, currentPage: p }">
                 <div class="col-item boderr">
-                  <i class="iconsprites_payment_0d">Trả góp 0% - Trả trước 0Đ</i>
+                  <!-- <i class="iconsprites_payment_0d">Trả góp 0% - Trả trước 0Đ</i> -->
                   <div class="photo">
                     <img src="{{ product.image }}" class="img-responsive" alt="a" />
                   </div>
@@ -136,8 +136,7 @@
                     </div>
                     <div class="separator clear-left">
                       <p class="btn-add">
-                        <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Thêm
-                          Vào Giỏ</a></p>
+                        <i class="fas fa-heart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Yêu thích</a></p>
                       <p class="btn-details">
                         <i class="fa fa-list"></i><a routerLink="/proDetaill" class="hidden-sm">Chi Tiết</a>
                       </p>

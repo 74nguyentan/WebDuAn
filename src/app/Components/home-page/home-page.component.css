@@ -140,6 +140,10 @@ body {
   z-index: 99;
   transition: all 0.7s;
 }
+.hover-2-tieude span{
+  font-family: arial;
+  font-size: 15px;
+}
 
 .hover-2-trichdan {
   width: 100%;
