@@ -51,10 +51,10 @@ constructor(
   this.CategoryService.getAll(CATEGORY_API).subscribe(data => {
     this.category = data;
   })
-  translate.addLangs(['vi', 'en']);
-  translate.setDefaultLang('vi');
+  translate.addLangs(['VI', 'EN']);
+  translate.setDefaultLang('VI');
   const browserLang = translate.getBrowserLang();
-  translate.use(browserLang.match(/vi|en/) ? browserLang : 'vi');
+  translate.use(browserLang.match(/VI|EN/) ? browserLang : 'VI');
 }
   ngOnInit(): void {
   }

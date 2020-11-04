@@ -46,6 +46,7 @@
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false" for="">{{ 'language' | translate }} <i class="fas fa-globe-americas"></i></a>
+
                 <select #langselect (change)="translate.use(langselect.value)">
                   <option *ngFor="let lang of translate.getLangs()" [value]="lang">{{ lang }}</option>
                 </select>

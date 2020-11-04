@@ -50,14 +50,14 @@
           alt=""
         />
         <div class="box-heading">
-          <h3 class="title">Áo sơ mi Nam</h3>
-          <span class="post">Giá: 200.000 đ</span>
+          <h3 class="title">{{ 'title1' | translate }}</h3>
+          <span class="post">{{ 'price1' | translate }}</span>
         </div>
         <div class="boxContent">
           <p class="description">
-            Áo sơ mi nam họa tiết chất kate lụa thời trang cao cấp BINSSTORE94 A36
+            {{ 'caption1' | translate }}
           </p>
-          <a routerLink="/proDetaill" class="cart"> Chi tiết</a>
+          <a routerLink="/proDetaill" class="cart">{{ 'detail' | translate }}</a>
         </div>
       </div>
       <div class="box mt-4">
@@ -66,14 +66,14 @@
           alt=""
         />
         <div class="box-heading">
-          <h3 class="title">Đồng hồ nam nữ</h3>
-          <span class="post">Giá: 1.999.999 đ</span>
+          <h3 class="title">{{ 'title2' | translate }}</h3>
+          <span class="post">{{ 'price2' | translate }}</span>
         </div>
         <div class="boxContent">
           <p class="description">
-            Đồng hồ điện tử nam nữ HONHX cá tính MS8633
+            {{ 'caption2' | translate }}
           </p>
-          <a routerLink="/proDetaill" class="cart"> Chi tiết</a>
+          <a routerLink="/proDetaill" class="cart"> {{ 'detail' | translate }}</a>
         </div>
       </div>
       <div class="box mt-4">
@@ -82,15 +82,19 @@
           alt=""
         />
         <div class="box-heading">
-          <h3 class="title">IPhone 11</h3>
-          <span class="post">Giá: 22.000.000 đ</span>
+
+          <!-- <h3 class="title">IPhone 11</h3>
+          <spaUpdatedn class="post">Giá: 22.000.000 đ</spaUpdatedn> -->
+
+          <h3 class="title">{{ 'title3' | translate }}</h3>
+          <span class="post">{{ 'price3' | translate }}</span>
+
         </div>
         <div class="boxContent">
           <p class="description">
-            Bảo Hành 12 Tháng Tại TTBH Apple - Trả Góp lãi suất 0% qua thẻ tín dụng
-            - Màn Hình Liquid Retina HD 6.1inch, Face ID Chống nước
+            {{ 'caption3' | translate }}
           </p>
-          <a routerLink="/proDetaill" class="cart"> Chi tiết</a>
+          <a routerLink="/proDetaill" class="cart"> {{ 'detail' | translate }}</a>
         </div>
       </div>
       <div class="box mt-4">
@@ -99,14 +103,14 @@
           alt=""
         />
         <div class="box-heading">
-          <h3 class="title">Giày thể thao</h3>
-          <span class="post">Giá: 400.000 đ</span>
+          <h3 class="title">{{ 'title4' | translate }}</h3>
+          <span class="post">{{ 'price4' | translate }}</span>
         </div>
         <div class="boxContent">
           <p class="description">
-            Giày thể thao nam,Giày thể thao nam sneaker,Giày nam,Giày nam sneaker Phong Cách Hàn Quốc Taiki - GN106
+            {{ 'caption4' | translate }}
           </p>
-          <a routerLink="/proDetaill" class="cart"> Chi tiết</a>
+          <a routerLink="/proDetaill" class="cart"> {{ 'detail' | translate }}</a>
         </div>
       </div>
       <div class="box mt-4">
@@ -115,14 +119,14 @@
           alt=""
         />
         <div class="box-heading">
-          <h3 class="title">SMART TV 4K UHD Coocaa</h3>
-          <span class="post">Giá: 200.000 đ</span>
+          <h3 class="title">{{ 'title' | translate }}</h3>
+          <span class="post">{{ 'price5' | translate }}</span>
         </div>
         <div class="boxContent">
           <p class="description">
-            SMART TV 4K UHD Coocaa 55 inch - Android 9.0 TV- Wifi - viền mỏng - Model 55S6G - tivi giá rẻ Chân viền kim loại
+            {{ 'caption5' | translate }}
           </p>
-          <a routerLink="/proDetaill" class="cart"> Chi tiết</a>
+          <a routerLink="/proDetaill" class="cart"> {{ 'detail' | translate }}</a>
         </div>
       </div>
     </div>
@@ -134,20 +138,20 @@
           <div class="col-sm-3">
             <!-- <button type="button" class="btn btn-outline-primary w-100"> <a style="font-size: 15px;"><i
                   class="fas fa-address-card p-2 m-2"> Mã Giảm Giá </i></a> </button> -->
-            <button routerLink="/demo" class="custom-btn btn-13">Giá sốc</button>
+            <button routerLink="/demo" class="custom-btn btn-13">{{ 'producttitle1' | translate }}</button>
           </div>
           <div class="col-sm-3">
             <!-- <button type="button" class="btn btn-outline-success w-100"> <a style="font-size: 15px;"><i
                   class="fab fa-adversal p-2 m-2"> Mã Giảm Giá </i></a> </button> -->
-            <button class="custom-btn btn-13">Mã giảm giá</button>
+            <button class="custom-btn btn-13">{{ 'producttitle2' | translate }}</button>
           </div>
           <div class="col-sm-3">
-            <button class="custom-btn btn-13">Sử dụng điểm</button>
+            <button class="custom-btn btn-13">{{ 'producttitle3' | translate }}</button>
             <!-- <button type="button" class="btn btn-outline-danger w-100"> <a style="font-size: 15px;"><i
                   class="fab fa-alipay p-2 m-2"> Mã Giảm Giá </i></a> </button> -->
           </div>
           <div class="col-sm-3">
-            <button class="custom-btn btn-13">Read More</button>
+            <button class="custom-btn btn-13">{{ 'producttitle4' | translate }}</button>
             <!-- <button type="button" class="btn btn-outline-warning w-100"> <a style="font-size: 15px;"><i
                   class="fas fa-anchor p-2 m-2"> Mã Giảm Giá </i></a> </button> -->
           </div>
@@ -156,7 +160,7 @@
         <!-- tieu de cua hang -->
         <div class="row pt-5 pb-2 mb-2">
           <div class="ml-4 tittle-home justify-content-center">
-            Cửa hàng nổi bật
+            {{ 'featured' | translate }}
           </div>
           <div class="col mr-4 tittle-right"></div>
           <hr />
@@ -173,7 +177,7 @@
               <div class="hover-2-noidung px-5 py-4">
                 <h3 class="hover-2-tieude text-uppercase font-weight-bold mb-0">
                   <span class="font-weight-success" style="color: white"
-                    >Mai Anh</span
+                    >{{ 'featured1' | translate }}</span
                   >
                 </h3>
                 <div
@@ -205,7 +209,7 @@
               <div class="hover-2-noidung px-5 py-4">
                 <h3 class="hover-2-tieude text-uppercase font-weight-bold mb-0">
                   <span class="font-weight-success" style="color: white"
-                    >Rồng đen</span
+                    > {{ 'featured2' | translate }}</span
                   >
                 </h3>
                 <div
@@ -237,7 +241,7 @@
               <div class="hover-2-noidung px-5 py-4">
                 <h3 class="hover-2-tieude text-uppercase font-weight-bold mb-0">
                   <span class="font-weight-success" style="color: white"
-                    >Hoàng Ngọc</span
+                    > {{ 'featured3' | translate }}</span
                   >
                 </h3>
                 <div
@@ -269,7 +273,7 @@
               <div class="hover-2-noidung px-5 py-4">
                 <h3 class="hover-2-tieude text-uppercase font-weight-bold mb-0">
                   <span class="font-weight-success" style="color: white"
-                    >Phương Lan</span
+                    >{{ 'featured4' | translate }}</span
                   >
                 </h3>
                 <div
@@ -295,7 +299,7 @@
         <!-- cau hang moi -->
         <div class="row pt-5 pb-2 mb-2">
           <div class="ml-4 tittle-home justify-content-center">
-            Cửa hàng mới
+            {{ 'storenew' | translate }}
           </div>
           <div class="col mr-4 tittle-right"></div>
           <hr />
@@ -311,7 +315,7 @@
               <div class="hover-2-noidung px-5 py-4">
                 <h3 class="hover-2-tieude text-uppercase font-weight-bold mb-0">
                   <span class="font-weight-success" style="color: white"
-                    >Hồng Ánh</span
+                    >{{ 'featured5' | translate }}</span
                   >
                 </h3>
                 <div
@@ -343,7 +347,7 @@
               <div class="hover-2-noidung px-5 py-4">
                 <h3 class="hover-2-tieude text-uppercase font-weight-bold mb-0">
                   <span class="font-weight-success" style="color: white">
-                    Bá Trường
+                    {{ 'featured6' | translate }}
                   </span>
                 </h3>
                 <div
@@ -375,7 +379,7 @@
               <div class="hover-2-noidung px-5 py-4">
                 <h3 class="hover-2-tieude text-uppercase font-weight-bold mb-0">
                   <span class="font-weight-success" style="color: white"
-                    >Xuân Phương</span
+                    > {{ 'featured7' | translate }}</span
                   >
                 </h3>
                 <div
@@ -407,7 +411,7 @@
               <div class="hover-2-noidung px-5 py-4">
                 <h3 class="hover-2-tieude text-uppercase font-weight-bold mb-0">
                   <span class="font-weight-success" style="color: white"
-                    >Diệp Lục</span
+                    >  {{ 'featured8' | translate }}c</span
                   >
                 </h3>
                 <div
@@ -435,22 +439,22 @@
 
         <!-- tieu de -->
         <div class="row pt-5 pb-2 mb-2">
-          <div class="ml-4 tittle-home justify-content-center">Bộ sưu tập</div>
+          <div class="ml-4 tittle-home justify-content-center"> {{ 'collecton' | translate }}</div>
           <div class="col mr-4 tittle-right"></div>
           <hr />
         </div>
         <!-- sp -->
-        <div class="row ml-2 mr-2" >
-          <div class="col-4 bst">
-            <div class="row pt-3 mb-4 justify-content-center"><h3 >Gần bạn</h3></div>
+        <div class="row ml-2 mr-2"  >
+          <div class="col-4 bst" >
+            <div class="row pt-3 mb-4 justify-content-center"><h3 >{{ 'collecton1' | translate }}</h3></div>
             <div class="row pb-3">
               <div class="col-4"><img  src="https://my-live-02.slatic.net/p/f10c890385ad74f9a5ef276becc9da51.jpg" alt=""></div>
-              <div class="col-4"> <img  src="https://vn-test-11.slatic.net/original/5b0c85c5da547eb91269b1f5adf2786d.jpg_80x80q80.jpg_.webp" alt="" ></div>
-              <div class="col-4"> <img  src="https://my-test-11.slatic.net/p/3d1a7f6b83c1c00446d434062d3c349f.jpg_80x80q80.jpg_.webp" alt=""></div>
+              <div class="col-4"> <img  src="https://vn-test-11.slatic.net/original/5b0c85c5da547eb91269b1f5adf2786d.jpg_80x80q80.jpg_.webp" alt=""></div>
+              <div class="col-4"> <img   src="https://my-test-11.slatic.net/p/3d1a7f6b83c1c00446d434062d3c349f.jpg_80x80q80.jpg_.webp" alt=""></div>
             </div>
           </div>
-          <div class="col-4 bst">
-            <div class="row pt-3 mb-4 justify-content-center"><h3 >Hàng 99%</h3></div>
+           <div class="col-4 bst">
+            <div class="row pt-3 mb-4 justify-content-center"><h3 >{{ 'collecton2' | translate }}</h3></div>
             <div class="row pb-3">
               <div class="col-4"><img src="https://vn-test-11.slatic.net/p/12308c8c5cb9c872142f8cf185cc2b44.jpg_80x80q80.jpg_.webp" alt=""></div>
               <div class="col-4"> <img  src="https://vn-test-11.slatic.net/p/facd89ca7ae5130499ed8fd55726ba63.jpg_80x80q80.jpg_.webp" alt="" ></div>
@@ -458,7 +462,7 @@
             </div>
           </div>
           <div class="col-4 bst">
-            <div class="row pt-3 mb-4 justify-content-center"><h3 >Giá rẻ bất ngờ</h3></div>
+            <div class="row pt-3 mb-4 justify-content-center"><h3 >{{ 'collecton3' | translate }}</h3></div>
             <div class="row pb-3">
               <div class="col-4"><img  src="https://vn-test-11.slatic.net/p/6168c093be9c86002bffbc2bb290f9d7.jpg_80x80q80.jpg_.webp" alt=""></div>
               <div class="col-4"> <img  src="https://id-live-02.slatic.net/original/5e4d1d7466a9d57e0fbef6096e302d4e.jpg" alt="" ></div>
@@ -469,15 +473,15 @@
         </div>
         <div class="row ml-2 mr-2 mt-1 "  >
           <div class="col-4 bst">
-            <div class="row pt-3 mb-4 justify-content-center"><h3 >Dành cho Nam</h3></div>
+            <div class="row pt-3 mb-4 justify-content-center"><h3 > {{ 'collecton4' | translate }}</h3></div>
             <div class="row pb-3">
               <div class="col-4"><img  src="https://my-live-02.slatic.net/p/30b9d5966b5451570b8dd47013f11a12.jpg" alt=""></div>
-              <div class="col-4"> <img  src="https://vn-test-11.slatic.net/p/651eebba08afc4c63fa66358f808b957.jpg_80x80q80.jpg_.webp" alt="" ></div>
-              <div class="col-4"> <img  src="https://vn-test-11.slatic.net/p/dc7e8c1c8aeea6fb0ad03da5581fe8e0.jpg_80x80q80.jpg_.webp" alt=""></div>
+              <div class="col-4"> <img  src="https://vn-test-11.slatic.net/p/651eebba08afc4c63fa66358f808b957.jpg_80x80q80.jpg_.webp" alt=""></div>
+              <div class="col-4"> <img   src="https://vn-test-11.slatic.net/p/dc7e8c1c8aeea6fb0ad03da5581fe8e0.jpg_80x80q80.jpg_.webp" alt=""></div>
             </div>
           </div>
-          <div class="col-4 bst">
-            <div class="row pt-3 mb-4 justify-content-center"><h3 >Đồ chơi cho bé</h3></div>
+           <div class="col-4 bst">
+            <div class="row pt-3 mb-4 justify-content-center"><h3 >{{ 'collecton5' | translate }}</h3></div>
             <div class="row pb-3">
               <div class="col-4"><img  src="https://vn-test-11.slatic.net/p/a0c78db6e14fa51f3ed4c5da0328ddc0.jpg_80x80q80.jpg_.webp" alt=""></div>
               <div class="col-4"> <img  src="https://my-live-02.slatic.net/p/43676af1c78eec925c7753ca2fee7d36.jpg" alt="" ></div>
@@ -485,7 +489,7 @@
             </div>
           </div>
           <div class="col-4 bst">
-            <div class="row pt-3 mb-4 justify-content-center"><h3 >Công nghệ</h3></div>
+            <div class="row pt-3 mb-4 justify-content-center"><h3 >{{ 'collecton6' | translate }}</h3></div>
             <div class="row pb-3">
               <div class="col-4"> <img  src="https://my-live-02.slatic.net/p/6b167a1d37b0718bd056819a7b523e08.jpg" alt=""></div>
               <div class="col-4"> <img  src="https://vn-test-11.slatic.net/p/8320c3800a977a672e38508c94875c06.jpg_80x80q80.jpg_.webp" alt="" ></div>
@@ -496,7 +500,7 @@
 
         <div class="row pt-5">
           <div class="ml-4 tittle-home justify-content-center">
-            Sản phẩm nổi bật
+            {{ 'pro' | translate }}
           </div>
           <div class="col mr-4 tittle-right"></div>
           <hr />
@@ -511,18 +515,18 @@
                 alt="Sản phẩm 1"
                 class="img-circle img-thumbnail"
               />
-              <h2>Máy ảnh PS</h2>
+              <h2>{{ 'pro1' | translate }}</h2>
               <dl class="dl-horizontal">
-                <dt>Giá:</dt>
+                <dt>{{ 'price' | translate }}</dt>
                 <dd>999.000đ</dd>
 
-                <dt>Tình trạng:</dt>
+                <dt>{{ 'status' | translate }}</dt>
                 <dd>Còn hàng</dd>
-                <dt>Hãng SX:</dt>
+                <dt>{{ 'manufacturer' | translate }}</dt>
                 <dd>Nhật Bản</dd>
               </dl>
               <a routerLink="/proDetaill" class="btn btn-primary" title="Chi tiết"
-                >Chi tiết »</a
+                >{{ 'detail' | translate }} »</a
               >
             </div>
           </div>
@@ -533,18 +537,18 @@
                 alt="Sản phẩm 2"
                 class="img-circle img-thumbnail"
               />
-              <h2>Bộ đồ thể thao</h2>
+              <h2>{{ 'pro2' | translate }}</h2>
               <dl class="dl-horizontal">
-                <dt>Giá:</dt>
+                <dt>{{ 'price' | translate }}</dt>
                 <dd>100.000 đ</dd>
 
-                <dt>Tình trạng:</dt>
+                <dt>{{ 'status' | translate }}</dt>
                 <dd>Còn hàng</dd>
-                <dt>Hãng SX:</dt>
+                <dt>{{ 'manufacturer' | translate }}</dt>
                 <dd>Nike</dd>
               </dl>
               <a routerLink="/proDetaill" class="btn btn-primary" title="Chi tiết"
-                >Chi tiết »</a
+                >{{ 'detail' | translate }} »</a
               >
             </div>
           </div>
@@ -555,18 +559,18 @@
                 alt="Sản phẩm 3"
                 class="img-circle img-thumbnail"
               />
-              <h2>Chảo chống dính</h2>
+              <h2>{{ 'pro3' | translate }}</h2>
               <dl class="dl-horizontal">
-                <dt>Giá:</dt>
+                <dt>{{ 'price' | translate }}</dt>
                 <dd>300.000 đ</dd>
 
-                <dt>Tình trạng:</dt>
+                <dt>{{ 'status' | translate }}</dt>
                 <dd>Còn hàng</dd>
-                <dt>Hãng SX:</dt>
+                <dt>{{ 'manufacturer' | translate }}</dt>
                 <dd>Napaco</dd>
               </dl>
               <a routerLink="/proDetaill" class="btn btn-primary" title="Chi tiết"
-                >Chi tiết »</a
+                >{{ 'detail' | translate }} »</a
               >
             </div>
           </div>
@@ -577,18 +581,18 @@
                 alt="Sản phẩm 3"
                 class="img-circle img-thumbnail"
               />
-              <h2>Giày thời trang</h2>
+              <h2>{{ 'pro4' | translate }}</h2>
               <dl class="dl-horizontal">
-                <dt>Giá:</dt>
+                <dt>{{ 'price' | translate }}</dt>
                 <dd>123.000 đ</dd>
 
-                <dt>Tình trạng:</dt>
+                <dt>{{ 'status' | translate }}</dt>
                 <dd>Còn hàng</dd>
-                <dt>Hãng SX:</dt>
+                <dt>{{ 'manufacturer' | translate }}</dt>
                 <dd>Naixi</dd>
               </dl>
               <a routerLink="/proDetaill" class="btn btn-primary" title="Chi tiết"
-                >Chi tiết »</a
+                >{{ 'detail' | translate }} »</a
               >
             </div>
           </div>
@@ -600,18 +604,18 @@
                 alt="Sản phẩm 1"
                 class="img-circle img-thumbnail"
               />
-              <h2>Áo sơ mi nam</h2>
+              <h2>{{ 'pro5' | translate }}</h2>
               <dl class="dl-horizontal">
-                <dt>Giá:</dt>
+                <dt>{{ 'price' | translate }}</dt>
                 <dd>20.000đ</dd>
 
-                <dt>Tình trạng:</dt>
+                <dt>{{ 'status' | translate }}</dt>
                 <dd>Còn hàng</dd>
-                <dt>Hãng SX:</dt>
+                <dt>{{ 'manufacturer' | translate }}</dt>
                 <dd>Adidia</dd>
               </dl>
               <a routerLink="/proDetaill" class="btn btn-primary" title="Chi tiết"
-                >Chi tiết »</a
+                >{{ 'detail' | translate }}»</a
               >
             </div>
           </div>
@@ -622,18 +626,18 @@
                 alt="Sản phẩm 2"
                 class="img-circle img-thumbnail"
               />
-              <h2>Cần chỉnh VA</h2>
+              <h2>{{ 'pro6' | translate }}</h2>
               <dl class="dl-horizontal">
-                <dt>Giá:</dt>
+                <dt>{{ 'price' | translate }}</dt>
                 <dd>600.000 đ</dd>
 
-                <dt>Tình trạng:</dt>
+                <dt>{{ 'status' | translate }}</dt>
                 <dd>Còn hàng</dd>
-                <dt>Hãng SX:</dt>
+                <dt>{{ 'manufacturer' | translate }}</dt>
                 <dd>Thiên Nhiên</dd>
               </dl>
               <a routerLink="/proDetaill" class="btn btn-primary" title="Chi tiết"
-                >Chi tiết »</a
+                >{{ 'detail' | translate }} »</a
               >
             </div>
           </div>
@@ -644,18 +648,18 @@
                 alt="Sản phẩm 3"
                 class="img-circle img-thumbnail"
               />
-              <h2>Áo bò Nam</h2>
+              <h2>{{ 'pro7' | translate }}</h2>
               <dl class="dl-horizontal">
-                <dt>Giá:</dt>
+                <dt>{{ 'price' | translate }}</dt>
                 <dd>333.000 đ</dd>
 
-                <dt>Tình trạng:</dt>
+                <dt>{{ 'status' | translate }}</dt>
                 <dd>Còn hàng</dd>
-                <dt>Hãng SX:</dt>
+                <dt>{{ 'manufacturer' | translate }}</dt>
                 <dd>Zolobo</dd>
               </dl>
               <a routerLink="/proDetaill" class="btn btn-primary" title="Chi tiết"
-                >Chi tiết »</a
+                >{{ 'detail' | translate }} »</a
               >
             </div>
           </div>
@@ -666,18 +670,18 @@
                 alt="Sản phẩm 3"
                 class="img-circle img-thumbnail"
               />
-              <h2>Mô hình</h2>
+              <h2>{{ 'pro8' | translate }}</h2>
               <dl class="dl-horizontal">
-                <dt>Giá:</dt>
+                <dt>{{ 'price' | translate }}</dt>
                 <dd>700.000 đ</dd>
 
-                <dt>Tình trạng:</dt>
+                <dt>{{ 'status' | translate }}</dt>
                 <dd>Còn hàng</dd>
-                <dt>Hãng SX:</dt>
+                <dt> {{ 'manufacturer' | translate }}</dt>
                 <dd>Nhật Bản</dd>
               </dl>
               <a routerLink="/proDetaill" class="btn btn-primary" title="Chi tiết"
-                >Chi tiết »</a
+                >{{ 'detail' | translate }} »</a
               >
             </div>
           </div>
@@ -689,7 +693,7 @@
     <!-- qc -->
     <div class="col-sm-2 mt-2 right-layout">
       <img class="iconHopQua" src="../../../assets/images/icons/hopqua1.png" />
-      <div class="endow-t ml-1">Ưu đãi</div>
+      <div class="endow-t ml-1">{{ 'producttitle5' | translate }}</div>
       <ul class="nav nav-tabs ml-1" role="tablist">
         <li class="nav-item" class="active">
           <a
