@@ -53,7 +53,7 @@
 
                       <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%"
                         data-validate="Password is required">
-                        <input class="input100" type="password" name="pass" placeholder="Nhập lại mật khẩu"
+                        <input class="input100" type="password" name="xacNhanMatKhau" id="xacNhanMatKhau" [(ngModel)]="Users.xacNhanMatKhau" placeholder="Nhập lại mật khẩu"
                           formControlName="confirmPassword" />
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
@@ -78,37 +78,47 @@
                   </div>
 
                   <div class="col-md-6">
+                    <div [formGroup]="check">
                     <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%"
                       data-validate="Không được bỏ trống">
-                      <input class="input100" type="text" name="dienthoai" id="dienThoai" [(ngModel)]="Users.dienThoai"  placeholder="Điện thoại"
+                      <input class="input100"  type="text"  [class.is-invalid]="phone.invalid && phone.touched" name="dienthoai" id="dienThoai" [(ngModel)]="Users.dienThoai"  placeholder="Điện thoại"
                         formControlName="dienThoai" />
                       <span class="focus-input100"></span>
                       <span class="symbol-input100">
                         <span class="lnr lnr-phone"></span>
                       </span>
-                      <h5 style="color: red; float: left" *ngIf="
+                      <!-- <h5 style="color: red; float: left" *ngIf="
                           form.hasError('invalidusername', ['dienThoai']) &&
-                          form.get('dienThoai').touched
+                          form.get('dienThoai').touched || sdt
                         ">
                         vui lòng nhập lại Số điện thoại !
-                      </h5>
+                      </h5> -->
+                      <div *ngIf="(phone.invalid && phone.touched) || phone.dirty">
+                        <h5 style="color: red; float: left" *ngIf="phone.errors?.required" >Không được để trống !</h5>
+                        <!--question mark(?) is a safe navigation operator-->
+                        <h5 style="color: red; float: left" *ngIf="phone.errors?.pattern" > Nhập lại số điện thoại !</h5>
+                      </div>
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%"
                       data-validate="Valid email is required: ex@abc.xyz">
-                      <input class="input100" type="text" name="email" id="email" placeholder="Email" [(ngModel)]="Users.email" formControlName="email" />
+                      <input class="input100"  [class.is-invalid]="primEmail.invalid && primEmail.touched" type="email" name="email" id="email" placeholder="Email" [(ngModel)]="Users.email"  formControlName="email" />
                       <span class="focus-input100"></span>
                       <span class="symbol-input100">
                         <span class="lnr lnr-envelope"></span>
                       </span>
 
-                      <h5 style="color: red; float: left" *ngIf="
+                      <!-- <h5 style="color: red; float: left" *ngIf="
                       form.hasError('invalidusername', ['email']) &&
-                      form.get('email').touched
-                ">
+                      form.get('email').touched">
                         Nhập lại email !
-                      </h5>
-                    </div>
+                      </h5> -->
+                      <div *ngIf="(primEmail.invalid && primEmail.touched) || primEmail.dirty">
+                        <h5 style="color: red; float: left" *ngIf="primEmail.errors?.required" >Không được để trống !</h5>
+                        <!--question mark(?) is a safe navigation operator-->
+                        <h5 style="color: red; float: left" *ngIf="primEmail.errors?.pattern" > Nhập lại email !</h5>
+                      </div>
+                    </div> </div>
 
                     <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%"
                       data-validate="Password is required">
