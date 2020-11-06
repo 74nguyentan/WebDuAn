@@ -1,8 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/model/Product';
 import { ProductService } from 'src/app/Service/product.service';
 import { CategoryService } from 'src/app/Service/category.service';
+import { MatDialog } from '@angular/material/dialog';
+import { SuccessDialogComponent } from 'src/app/Dialog/success-dialog/success-dialog.component';
+import { FailDialogComponent } from 'src/app/Dialog/fail-dialog/fail-dialog.component';
 // import { FileUploader } from "angular-file-upload";
 
 const CATEGORY_API = 'http://localhost:8989/api/category';
@@ -18,7 +21,9 @@ export class ToSellProductComponent implements OnInit {
 
   constructor(private router: Router,
     private productserviec: ProductService, private CategoryService: CategoryService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    @Inject(MatDialog) public data: any,
+    private dialog: MatDialog) { }
 
     submitted = false;
   ngOnInit(): void {
@@ -45,8 +50,21 @@ export class ToSellProductComponent implements OnInit {
       console.log(this.products)
       console.log(data)
       this.products = new Product();
+      const confirmDialog = this.dialog.open(SuccessDialogComponent, {
+        data: {
+          title: 'Thành Công !',
+        },
+      });
     }, 
-    error => console.log(error));
+    (error) => {
+      console.log(error);
+      const confirmDialog = this.dialog.open(FailDialogComponent, {
+        data: {
+          title: 'Thất bại !',
+          message: 'Vui lòng nhập đúng thông tin và thử lại !',
+        },
+      });
+    });
   }
 
   onSubmit() {

@@ -33,7 +33,7 @@ export class ProductDetailComponent implements OnInit {
     this.product = new Product();
 
     this.id = this.route.snapshot.params['id'];
-    
+
     this.productserviec.getProduct(this.id)
       .subscribe(data => {
         console.log(data)
@@ -42,24 +42,25 @@ export class ProductDetailComponent implements OnInit {
         this.img_1 = this.product.hinh1;
         this.img_2 = this.product.hinh2;
         this.img_3 = this.product.hinh3;
-        console.log(this.product)
-        this.img_zoom = this.img_1;
+        // console.log(this.product)
+        this.img_zoom = this.img_0;
+        this.myFullresImage=this.img_0;
       }, error => console.log(error));
   }
 
-  hover0() {
-    this.img_zoom = this.img_0;
-  }
-  hover1() {
-    this.img_zoom = this.img_1;
-  }
-  hover2() {
-    this.img_zoom = this.img_2;
-  }
-  hover3() {
-    this.img_zoom = this.img_3;
-  }
+  // hover0() {
+  //   this.img_zoom = this.img_0;
+  // }
+  // hover1() {
+  //   this.img_zoom = this.img_1;
+  // }
   // hover2() {
   //   this.img_zoom = this.img_2;
   // }
+  // hover3() {
+  //   this.img_zoom = this.img_3;
+  // }
+  // // hover2() {
+  // //   this.img_zoom = this.img_2;
+  // // }
 }
