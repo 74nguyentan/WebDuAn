@@ -59,18 +59,26 @@
     "producttitle4": "Read More",
     "producttitle5": "Priority",
 
-    "featured": "HIGHLIGHTS STORE",
-    "featured1": "Store Mai Anh",
-    "featured2": " Store Rong đen",
-    "featured3": "Store Hoang Ngọc",
+    "featured": "Highlights store",
+    "featured1": "Mai Anh",
+    "featured2": " Rong đen",
+    "featured3": " Hoang Ngọc",
     "featured4": "Phuong Lan",
-    "storenew": "NEW SHOP",
-    "featured5": "Store Hong Anh",
-    "featured6": "Store Ba Truong",
-    "featured7": "Store Xuan Phuong",
-    "featured8": "Store Diep Luc",
+    "storenew": "New shop",
+    "featured5": " Hong Anh",
+    "featured6": " Ba Truong",
+    "featured7": "Xuan Phuong",
+    "featured8": " Diep Luc",
+    "reviews1": "Men's and women's clothing shop",
+    "reviews2": "Household supplies",
+    "reviews3": " Korean shirt",
+    "reviews4": "Mobile device",
+    "reviews5": "Skin care cosmetics",
+    "reviews6": "Imported cars",
+    "reviews7": "Electronic components",
+    "reviews8": "Vehicle accessories",
 
-    "collecton": "COLLECTION",
+    "collecton": "Collection",
     "collecton1": "Close to you",
     "collecton2": "99% goods",
     "collecton3": "Surprising cheap price",
@@ -79,7 +87,7 @@
     "collecton6": "Technology",
 
 
-    "pro": "HIGHLIGHTS PRODUCTS",
+    "pro": "Highlights products",
     "pro1": "Camera PS",
     "pro2": "Sportswear",
     "pro3": "Non-stick pan",
@@ -87,10 +95,17 @@
     "pro5": "Men's shirts",
     "pro6": "Need to adjust VA",
     "pro7": "Male cow coat",
-    "pro8": "Paradigm"
+    "pro8": "Paradigm",
 
-
-
-
-
+    "all": "All",
+    "me": "With me",
+    "endowpro1": "Gongcha 50.000 đ",
+    "endowpro2": "Smartphone 1.000.000.000 đ",
+    "endowpro3": "Shampoo 46.000 đ",
+    "endowpro4": "Cocacola 10.000 đ",
+    "endowpro5": "Milk TH 15.000 đ",
+    "endowpro6": "Pen 2.500 đ",
+    "change": "Change now",
+    "Point": "100 point ",
+    "free": "Free shipping"
 }

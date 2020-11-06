@@ -62,18 +62,26 @@
     "producttitle4": "Đọc thêm",
     "producttitle5": "Ưu đãi",
 
-    "featured": "CỬA HÀNG NỔI BẬT",
-    "featured1": "Cửa Hàng Mai Anh",
-    "featured2": "Cửa Hàng Rồng đen",
-    "featured3": "Cửa Hàng Hoàng Ngọc",
-    "featured4": "Cửa Hàng Phương Lan",
-    "storenew": "CỬA HÀNG MỚI",
-    "featured5": "Cửa Hàng Hồng Ánh",
-    "featured6": "Cửa Hàng Bá Trường",
-    "featured7": "Cửa Hàng Xuân Phương",
-    "featured8": "Cửa Hàng Diệp Lục",
+    "featured": "Cửa hàng nổi bật",
+    "featured1": "Mai Anh",
+    "featured2": " Rồng đen",
+    "featured3": " Hoàng Ngọc",
+    "featured4": "Phương Lan",
+    "storenew": "Cửa hàng mới",
+    "featured5": " Hồng Ánh",
+    "featured6": " Bá Trường",
+    "featured7": " Xuân Phương",
+    "featured8": " Diệp Lục",
+    "reviews1": "Shop áo quần nam nữ",
+    "reviews2": "Đồ gia dụng vật tư",
+    "reviews3": "Sơ mi Hàn Quốc",
+    "reviews4": "Thiết bị di động",
+    "reviews5": "Mỹ phẩm chăm sóc da",
+    "reviews6": "Ô tô nhập ngoại",
+    "reviews7": "Linh kiện điện tử",
+    "reviews8": "Phụ kiện xe cộ",
 
-    "collecton": "BỘ SƯU TẬP",
+    "collecton": "Bộ sưu tập",
     "collecton1": "Gần bạn",
     "collecton2": "Hàng 99%",
     "collecton3": "Giá rẻ bất ngờ",
@@ -82,7 +90,7 @@
     "collecton6": "Công nghệ",
 
 
-    "pro": "SẢN PHẨM NỔI BẬT",
+    "pro": "Sane phẩm nổi bật",
     "pro1": "Máy ảnh PS",
     "pro2": "Bộ đồ thể thao",
     "pro3": "Chảo chống dính",
@@ -90,8 +98,19 @@
     "pro5": "Áo sơ mi nam",
     "pro6": "Cần chỉnh VA",
     "pro7": "Áo bò Nam",
-    "pro8": "Mô hình"
+    "pro8": "Mô hình",
 
 
+    "all": "Tất cả",
+    "me": "Với tôi",
+    "endowpro1": "Gongcha 50.000 đ",
+    "endowpro2": "Điện thoại 100.000.000 đ",
+    "endowpro3": "Dầu gội 46.000 đ",
+    "endowpro4": "Cocacola 10.000 đ",
+    "endowpro5": "Sữa TH 15.000 đ",
+    "endowpro6": "Cây bút 2.500  đ",
+    "change": "Đổi ngay",
+    "Point": "100 điểm",
+    "free": "Miễn phí vận chuyển"
 
 }
