@@ -32,7 +32,7 @@ export class ProductDetailComponent implements OnInit {
     this.product = new Product();
 
     this.id = this.route.snapshot.params['id'];
-    
+
     this.productserviec.getProduct(this.id)
       .subscribe(data => {
         console.log(data)
