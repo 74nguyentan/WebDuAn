@@ -9,6 +9,7 @@ import { ProductService } from 'src/app/Service/product.service';
   styleUrls: ['./product-detail.component.css'],
 })
 export class ProductDetailComponent implements OnInit {
+  myFullresImage
   img_zoom: string;
   // img_1: string =
   //   '//vn-test-11.slatic.net/p/df5c3f569917f9b2d59d802e22ffc485.jpg_340x340q80.jpg_.webp';

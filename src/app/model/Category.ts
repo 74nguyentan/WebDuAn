@@ -1,4 +1,4 @@
-export class Category {
+export class loaihang {
     id:number;
    
 }

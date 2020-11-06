@@ -1,3 +1,6 @@
+import { loaihang } from './Category';
+
+
 export class Product {
     id:number;
     tenHang:string;
@@ -10,4 +13,7 @@ export class Product {
     moTa: string;
     diaChiBan: string;
     dienThoai: string;
+    xuatXu: string;
+    trangThai: string;
+    loaiHang: object;
 }

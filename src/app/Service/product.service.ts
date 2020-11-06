@@ -21,4 +21,9 @@ export class ProductService {
   getidloaihang(id: number): Observable<any> {
     return this.http.get(`${this.url}/${id}`);
   }
+
+  createproduct(products: Object): Observable<Object> {
+    console.log(products);
+    return this.http.post(`${this.baseUrl}`, products);
+  }
 }
