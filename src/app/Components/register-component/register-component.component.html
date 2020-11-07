@@ -5,7 +5,7 @@
         <div class="container">
           <div class="container-login100">
             <div class="wrap-login100 p-l-5 p-r-50 p-b-30 text-center ml-5">
-              <form class="login100-form validate-form" [formGroup]="form"  (ngSubmit)="onSubmit()">
+              <form class="login100-form validate-form" [formGroup]="form" (ngSubmit)="onSubmit()">
                 <span class="login100-form-title p-b-20 ml-5 mt-5" style="font-family: tahoma">
                   đăng ký thành viên
                 </span>
@@ -13,8 +13,8 @@
                   <div class="col-md-6">
                     <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%"
                       data-validate="Không được bỏ trống">
-                      <input class="input100" type="text" name="hoVaTen" id="hoVaTen" [(ngModel)]="Users.hoVaTen"  formControlName="hoVaTen"
-                        placeholder="Họ tên" />
+                      <input class="input100" type="text" name="hoVaTen" id="hoVaTen" [(ngModel)]="Users.hoVaTen"
+                        formControlName="hoVaTen" placeholder="Họ tên" />
                       <span class="focus-input100"></span>
                       <span class="symbol-input100">
                         <span class="lnr lnr-users"></span>
@@ -30,8 +30,8 @@
                     <div formGroupName="pw">
                       <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%"
                         data-validate="Password is required">
-                        <input class="input100" type="password" name="matKhau" id="matKhau" [(ngModel)]="Users.matKhau" placeholder="Mật khẩu"
-                          formControlName="matKhau" />
+                        <input class="input100" type="password" name="matKhau" id="matKhau" [(ngModel)]="Users.matKhau"
+                          placeholder="Mật khẩu" formControlName="matKhau" />
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                           <span class="lnr lnr-lock"></span>
@@ -53,7 +53,8 @@
 
                       <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%"
                         data-validate="Password is required">
-                        <input class="input100" type="password" name="xacNhanMatKhau" id="xacNhanMatKhau" [(ngModel)]="Users.xacNhanMatKhau" placeholder="Nhập lại mật khẩu"
+                        <input class="input100" type="password" name="xacNhanMatKhau" id="xacNhanMatKhau"
+                          [(ngModel)]="Users.xacNhanMatKhau" placeholder="Nhập lại mật khẩu"
                           formControlName="confirmPassword" />
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
@@ -79,51 +80,57 @@
 
                   <div class="col-md-6">
                     <div [formGroup]="check">
-                    <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%"
-                      data-validate="Không được bỏ trống">
-                      <input class="input100"  type="text"  [class.is-invalid]="phone.invalid && phone.touched" name="dienthoai" id="dienThoai" [(ngModel)]="Users.dienThoai"  placeholder="Điện thoại"
-                        formControlName="dienThoai" />
-                      <span class="focus-input100"></span>
-                      <span class="symbol-input100">
-                        <span class="lnr lnr-phone"></span>
-                      </span>
-                      <!-- <h5 style="color: red; float: left" *ngIf="
+                      <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%"
+                        data-validate="Không được bỏ trống">
+                        <input class="input100" type="text" [class.is-invalid]="phone.invalid && phone.touched"
+                          name="dienthoai" id="dienThoai" [(ngModel)]="Users.dienThoai" placeholder="Điện thoại"
+                          formControlName="dienThoai" />
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                          <span class="lnr lnr-phone"></span>
+                        </span>
+                        <!-- <h5 style="color: red; float: left" *ngIf="
                           form.hasError('invalidusername', ['dienThoai']) &&
                           form.get('dienThoai').touched || sdt
                         ">
                         vui lòng nhập lại Số điện thoại !
                       </h5> -->
-                      <div *ngIf="(phone.invalid && phone.touched) || phone.dirty">
-                        <h5 style="color: red; float: left" *ngIf="phone.errors?.required" >Không được để trống !</h5>
-                        <!--question mark(?) is a safe navigation operator-->
-                        <h5 style="color: red; float: left" *ngIf="phone.errors?.pattern" > Nhập lại số điện thoại !</h5>
+                        <div *ngIf="(phone.invalid && phone.touched) || phone.dirty">
+                          <h5 style="color: red; float: left" *ngIf="phone.errors?.required">Không được để trống !</h5>
+                          <!--question mark(?) is a safe navigation operator-->
+                          <h5 style="color: red; float: left" *ngIf="phone.errors?.pattern"> Nhập lại số điện thoại !
+                          </h5>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%"
-                      data-validate="Valid email is required: ex@abc.xyz">
-                      <input class="input100"  [class.is-invalid]="primEmail.invalid && primEmail.touched" type="email" name="email" id="email" placeholder="Email" [(ngModel)]="Users.email"  formControlName="email" />
-                      <span class="focus-input100"></span>
-                      <span class="symbol-input100">
-                        <span class="lnr lnr-envelope"></span>
-                      </span>
+                      <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%"
+                        data-validate="Valid email is required: ex@abc.xyz">
+                        <input class="input100" [class.is-invalid]="primEmail.invalid && primEmail.touched" type="email"
+                          name="email" id="email" placeholder="Email" [(ngModel)]="Users.email"
+                          formControlName="email" />
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                          <span class="lnr lnr-envelope"></span>
+                        </span>
 
-                      <!-- <h5 style="color: red; float: left" *ngIf="
+                        <!-- <h5 style="color: red; float: left" *ngIf="
                       form.hasError('invalidusername', ['email']) &&
                       form.get('email').touched">
                         Nhập lại email !
                       </h5> -->
-                      <div *ngIf="(primEmail.invalid && primEmail.touched) || primEmail.dirty">
-                        <h5 style="color: red; float: left" *ngIf="primEmail.errors?.required" >Không được để trống !</h5>
-                        <!--question mark(?) is a safe navigation operator-->
-                        <h5 style="color: red; float: left" *ngIf="primEmail.errors?.pattern" > Nhập lại email !</h5>
+                        <div *ngIf="(primEmail.invalid && primEmail.touched) || primEmail.dirty">
+                          <h5 style="color: red; float: left" *ngIf="primEmail.errors?.required">Không được để trống !
+                          </h5>
+                          <!--question mark(?) is a safe navigation operator-->
+                          <h5 style="color: red; float: left" *ngIf="primEmail.errors?.pattern"> Nhập lại email !</h5>
+                        </div>
                       </div>
-                    </div> </div>
+                    </div>
 
                     <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%"
                       data-validate="Password is required">
-                      <input class="input100" type="text" name="diaChiUser" id="diaChiUser"  [(ngModel)]="Users.diaChiUser" placeholder="Địa chỉ"
-                        formControlName="diaChiUser" />
+                      <input class="input100" type="text" name="diaChiUser" id="diaChiUser"
+                        [(ngModel)]="Users.diaChiUser" placeholder="Địa chỉ" formControlName="diaChiUser" />
                       <span class="focus-input100"></span>
                       <span class="symbol-input100">
                         <span class="lnr lnr-map"></span>
@@ -142,7 +149,7 @@
                   <div class="col-md-9"></div>
                   <div class="col-md-3">
                     <div class="container-login100-form-btn p-t-22 ml-4">
-                      <button  type="submit" class="login100-form-btn">đăng ký</button>
+                      <button type="submit" class="login100-form-btn">đăng ký</button>
                     </div>
                   </div>
                 </div>

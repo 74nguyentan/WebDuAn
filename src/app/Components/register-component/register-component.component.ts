@@ -1,3 +1,4 @@
+import { AuthService } from './../../Service/auth.service';
 import { FailDialogComponent } from './../../Dialog/fail-dialog/fail-dialog.component';
 import { Component, OnInit, Inject } from '@angular/core';
 import {
@@ -67,7 +68,8 @@ export class RegisterComponentComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private dialog: MatDialog,
-    private userService: UserServiceService
+    private userService: UserServiceService,
+    public authService: AuthService
   ) { }
 
   ngOnInit() {
@@ -81,18 +83,8 @@ export class RegisterComponentComponent implements OnInit {
 
     // check form cách 2: check trống và kiểm tra trùng password
     this.form = this.fb.group({
-      hoVaTen: [
-        '',
-        [Validators.required, forbiddenUsername(['', 'admin', 'manager'])],
-      ],
-      diaChiUser: [
-        '',
-        [
-          Validators.required,
-          Validators.pattern(/((09|03|07|08|05)+([0-9]{8})\b)/g),
-          forbiddenUsername(['']),
-        ],
-      ],
+      hoVaTen: ['',[Validators.required, forbiddenUsername(['', 'admin', 'manager'])],],
+      diaChiUser: ['',[Validators.required, forbiddenUsername([''])],],
       // dienThoai: ['',[Validators.required, forbiddenUsername([''])],],
       // email: ['',[Validators.required, forbiddenUsername([''])],],
       pw: this.fb.group(
@@ -122,16 +114,18 @@ export class RegisterComponentComponent implements OnInit {
               this.userService.createUser(this.Users).subscribe(
                 (data) => {
                   console.log(data);
+                  this.authService.SignUp(this.Users.email, this.Users.matKhau);
                   this.Users = new Users();
-
                   const confirmDialog = this.dialog.open(SuccessDialogComponent, {
                     data: {
                       title: 'Thành Công !',
+                      message:'Một email chứa mã xác nhận đã được gửi tới bạn'
                     },
                   });
+                  // this.router.navigate(['login']);
                 },
                 (error) => {
-                  console.log(error);
+                  console.log('error ----> : ' + error);
                   const confirmDialog = this.dialog.open(FailDialogComponent, {
                     data: {
                       title: 'Thất bại !',
