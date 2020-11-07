@@ -3,8 +3,6 @@ a:hover {
 }
 
 form {
-  /* border: 2px solid #b1154a; */
-  /* background: palegreen; */
   border: dashed 0px #000000;
   -moz-border-radius-topleft: 12px;
   -moz-border-radius-topright: 12px;
@@ -22,7 +20,6 @@ form {
 
 .form-group input {
   font-size: 15px;
-  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   font-family: tahoma;
   text-align: left;
   margin-bottom: auto;
@@ -30,7 +27,6 @@ form {
 
 .form-group .text {
   font-size: 16px;
-  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   font-family: tahoma;
   text-align: left;
   margin-bottom: auto;
@@ -41,14 +37,12 @@ form {
 #mota,
 #sanpham {
   font-size: 22px;
-  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   font-family: tahoma;
   color: darkblue;
 }
 
 #danhmuc,
 #danhmuc option {
-  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   font-family: tahoma;
   font-size: 16px;
 }
@@ -62,67 +56,16 @@ form {
   -webkit-box-shadow: 5px 3px 8px #000000;
   box-shadow: 5px 3px 8px #000000;
 }
-
-/* mucluc */
-.left {
-  /* top: 50%; */
-  float: left;
-  /* transform: translateY(100%); */
-  /* position: absolute; */
-  position: fixed;
-  bottom: 250px;
-  left: 5px;
-  z-index: 100;
-}
-
-.left {
-  background: black;
-  display: inline-block;
-  white-space: nowrap;
-  width: 3%;
-  transition: width .5s;
-}
-
-.left:hover {
-  width: 15%;
-}
-
-.item:hover {
-  background-color: #222;
-}
-
-.left .fas {
-  margin: 15px;
-  width: 20px;
-  color: #fff;
-}
-
-i.fas {
-  font-size: 17px;
-  vertical-align: middle !important;
-}
-
-.item {
-  height: 50px;
-  overflow: hidden;
-  color: #fff;
-}
-
 /* sp cu fa ke */
 #back a {
   font-size: 25px;
-  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   font-family: tahoma;
   text-align: center;
   color: white;
 }
 
-/* #back a:hover {
-  text-shadow: -1px 2px 5px #38f20e;
-} */
 
 #back {
-  /* background-color:#4ab00c; */
   text-align: center;
   border: dashed 0px #000000;
   -moz-border-radius-topleft: 5px;
@@ -153,7 +96,6 @@ i.fas {
   width: 100%;
   border: 1px solid rgb(215, 215, 215);
   position: relative;
-  /* font-family: Arial, Helvetica, sans-serif; */
   font-family: tahoma;
   margin-bottom: 10px;
   overflow: hidden;
@@ -161,7 +103,6 @@ i.fas {
 
 .products img {
   width: 100px;
-  /* margin-bottom: 10px; */
 }
 
 .products .products-details {
@@ -208,18 +149,15 @@ i.fas {
 
 .products .products-details p {
   font-size: 15px;
-  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   font-family: tahoma;
 }
 
 .products .products-details .products-header h1 {
-  /* color: rgb(62, 62, 62); */
   color: black;
   font-size: 22px;
   font-weight: 900;
   margin: 0 !important;
   padding: 0 !important;
-  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   font-family: tahoma;
 }
 
@@ -248,17 +186,14 @@ i.fas {
   margin: 0px 5px;
   overflow: hidden;
   text-align: center;
-  /* color: #000000; */
   color: white;
   font-size: 15px;
-  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   font-family: tahoma;
 }
 
 #hoantat {
   float: right;
   font-size: 25px;
-  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   font-family: tahoma;
 }
 
@@ -280,10 +215,8 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   font-family: tahoma;
   justify-content: center;
-  /* background: url(https://devforum.info/DEMO/LoginForm1/bg.jpg); */
   background-size: cover;
   background-position: center;
 }
@@ -292,7 +225,6 @@ body {
   position: relative;
   width: 105%;
   background: white;
-  /* padding: 60px 40px; */
   padding-right: 90px;
   padding-left: 60px;
   height: auto;
@@ -302,7 +234,6 @@ header {
   font-size: 40px;
   margin-bottom: 15px;
   margin-top: 30px;
-  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   font-family: tahoma;
   color: green;
 }
@@ -336,7 +267,6 @@ span.show {
   transform: translateY(-50%);
   font-size: 15px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  /* font-family: tahoma; */
   font-weight: 550;
 }
 
@@ -357,7 +287,6 @@ span.show {
   user-select: none;
   visibility: hidden;
   font-family: 'Open Sans', sans-serif;
-  /* font-family: tahoma; */
 }
 
 input:valid~span.show {
@@ -389,7 +318,6 @@ form .button {
   right: -100%;
   z-index: -1;
   transition: all .4s;
-  /* background: -webkit-linear-gradient(right,#00dbde,#fc00ff,#00dbde,#fc00ff); */
   background: -webkit-linear-gradient(right, #00dbde, #1ff792, #00dbde, #1ff792);
 }
 
@@ -406,7 +334,6 @@ form .button {
   color: white;
   font-size: 20px;
   cursor: pointer;
-  /* font-family: 'Montserrat', sans-serif; */
   font-family: tahoma;
 }
 
@@ -418,7 +345,6 @@ form .button {
 
 .signup {
   margin-top: 50px;
-  /* font-family: 'Noto Sans', sans-serif; */
   font-family: tahoma;
 }
 
@@ -437,7 +363,6 @@ form .button {
 
 /* ?? */
 div.ex3 {
-  /* background-color: lightblue; */
   width: 100%;
   height: 637px;
   overflow: auto;
@@ -459,10 +384,8 @@ div.ex3 {
 }
 .wrapperzzz p {
   font-size: 14px;
-  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   font-family: tahoma;
   font-weight: 600;
-  /* color: black; */
 }
 
 

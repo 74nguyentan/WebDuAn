@@ -9,6 +9,7 @@ import { ProductService } from 'src/app/Service/product.service';
   styleUrls: ['./product-detail.component.css'],
 })
 export class ProductDetailComponent implements OnInit {
+  myFullresImage
   img_zoom: string;
   // img_1: string =
   //   '//vn-test-11.slatic.net/p/df5c3f569917f9b2d59d802e22ffc485.jpg_340x340q80.jpg_.webp';
@@ -41,24 +42,25 @@ export class ProductDetailComponent implements OnInit {
         this.img_1 = this.product.hinh1;
         this.img_2 = this.product.hinh2;
         this.img_3 = this.product.hinh3;
-        console.log(this.product)
-        this.img_zoom = this.img_1;
+        // console.log(this.product)
+        this.img_zoom = this.img_0;
+        this.myFullresImage=this.img_0;
       }, error => console.log(error));
   }
 
-  hover0() {
-    this.img_zoom = this.img_0;
-  }
-  hover1() {
-    this.img_zoom = this.img_1;
-  }
-  hover2() {
-    this.img_zoom = this.img_2;
-  }
-  hover3() {
-    this.img_zoom = this.img_3;
-  }
+  // hover0() {
+  //   this.img_zoom = this.img_0;
+  // }
+  // hover1() {
+  //   this.img_zoom = this.img_1;
+  // }
   // hover2() {
   //   this.img_zoom = this.img_2;
   // }
+  // hover3() {
+  //   this.img_zoom = this.img_3;
+  // }
+  // // hover2() {
+  // //   this.img_zoom = this.img_2;
+  // // }
 }
