@@ -12,6 +12,7 @@ import {RegisterComponentComponent} from './Components/register-component/regist
 import {UserImpormationComponent} from './Components/user-impormation/user-impormation.component'
 import { DemoComponent } from './Components/demo/demo.component';
 import {SeenProductComponent} from './Components/seen-product/seen-product.component';
+import {ShopImpormationComponent} from './Components/shop-impormation/shop-impormation.component'
 
 const routes: Routes = [
   {
@@ -62,13 +63,17 @@ const routes: Routes = [
     path: 'seen',
     component: SeenProductComponent
   },
-  { 
+  {
     path: 'details/:id',
-     component: ProductDetailComponent 
+     component: ProductDetailComponent
   },
-  { 
-    path: 'loaihang/:id', 
-    component: ListproductsComponent 
+  {
+    path: 'loaihang/:id',
+    component: ListproductsComponent
+  },
+  {
+    path: 'shop',
+    component: ShopImpormationComponent
   }
 ];
 

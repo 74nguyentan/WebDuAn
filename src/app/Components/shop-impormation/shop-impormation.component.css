@@ -1,0 +1,103 @@
+.img{
+  width: 100%;
+  border-radius:50%;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+}
+.table{
+  width: 100%;
+  border: none;
+}
+.table th,td{
+  border: none;
+  height: 46px;
+  line-height: 46px;
+}
+.btn{
+  width: 100%;
+}
+/* / menu  */
+nav {
+  margin-top: 0px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  text-align: center;
+  font-family: Raleway;
+  /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); */
+}
+#nav-1 {
+  /* background: #3fa46a; */
+  background: white;
+  width: 100%;
+}
+.link-1 {
+  transition: 0.3s ease;
+  /* background: #3fa46a; */
+  /* color: #ffffff; */
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  /* border-top: 4px solid #3fa46a; */
+  /* border-bottom: 4px solid #3fa46a; */
+  border-top: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+  padding: 15px 0;
+  margin: 0 20px;
+}
+.link-1:hover {
+  border-top: 4px solid #80e0c8;
+  border-bottom: 4px solid #80e0c8;
+  padding: 15px 0;
+}
+/* sp  */
+.products {
+  /* padding: 10px 0px; */
+  text-align: center;
+  margin: 0px 30px 30px;
+}
+
+.products div div {
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: 0.2s;
+  background-color: #fff;
+}
+
+.products div:hover div {
+  margin-top: -10px;
+  border: 1px solid rgba(104, 99, 99, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+  transition: 0.5s;
+  /* background: rgba(200, 200, 200, 0.1); */
+  background-color: #fff;
+
+}
+.dl-horizontal dt {
+  margin-left: 5px;
+  float: left;
+  width: 60%;
+  overflow: hidden;
+
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dl-horizontal dd {
+  margin-left: 0px;
+  text-align: left;
+}
+h1{
+  margin-left: 40px;
+  font-size: 28px;
+  font-family: tahoma;
+  color: green;
+  font-weight: bold;
+}
+#ex3 img{
+  width: 100%;
+}
+#card{
+  background-color: rgb(132, 223, 200);
+  border-radius: 5px;
+}
