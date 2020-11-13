@@ -5,7 +5,7 @@ import { CategoryService } from 'src/app/Service/category.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
-const CATEGORY_API = 'http://localhost:8989/api/category';
+const CATEGORY_API = 'http://localhost:8000/greenmarket/api/category';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
