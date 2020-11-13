@@ -111,6 +111,7 @@ export class RegisterComponentComponent implements OnInit {
           if (emailTest.test(this.Users.email) == true) {
             var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
             if (vnf_regex.test(this.Users.dienThoai) == true) {
+              this.Users.vaiTro = false;
               this.userService.createUser(this.Users).subscribe(
                 (data) => {
                   console.log(data);

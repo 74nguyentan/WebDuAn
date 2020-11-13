@@ -33,15 +33,16 @@
                 </li>
               </ul>
             </div>
-            <div class="btn-group ps-dropdown" style="z-index: 9999999999">
-              <a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                for="">{{ 'language' | translate }} <i class="fas fa-globe-americas"></i></a>
 
-              <ul class="dropdown-menu" #langselect (change)="translate.use(langselect.value)">
-                <li *ngFor="let lang of translate.getLangs()" [value]="lang"><a >{{lang}}</a></li>
-              </ul>
+              <select class="ml-2" style="padding: 10.5px 15px; border: none; border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5;"  #langselect (change)="translate.use(langselect.value)">
+                <option value="VI"> Việt Nam</option>
+                <option value="EN" > English </option>
+              </select>
 
-            </div>
+              <!-- <select #langselect (change)="translate.use(langselect.value)">
+                <option *ngFor="let lang of translate.getLangs()" [value]="lang">{{ lang }}</option>
+              </select> -->
+
           </div>
         </div>
       </div>

@@ -14,9 +14,9 @@ export class UserServiceService {
     return this.http.post(`${this.baseUrl}`, Users);
   }
 
-  // getEmployee(id: number): Observable<any> {
-  //   return this.http.get(`${this.baseUrl}/${id}`);
-  // }
+  getUserById(id: number): Observable<any> {
+    return this.http.get(`${this.baseUrl}/${id}`);
+  }
 
   // updateEmployee(id: number, value: any): Observable<Object> {
   //   return this.http.put(`${this.baseUrl}/${id}`, value);
