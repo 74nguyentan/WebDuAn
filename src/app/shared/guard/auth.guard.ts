@@ -20,7 +20,8 @@ export class AuthGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       if(this.authService.isLoggedIn !== true) {
-        this.router.navigate(['login'])
+        this.router.navigate([])
+        // this.router.navigate(['login'])
         const confirmDialog = this.dialog.open(FailDialogComponent, {
           data: {
             title: 'Bạn chưa đăng nhập !',

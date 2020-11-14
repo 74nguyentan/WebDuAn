@@ -39,6 +39,7 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { ShopImpormationComponent } from './Components/shop-impormation/shop-impormation.component';
+import { ForgetPasswordComponent } from './Dialog/forget-password/forget-password.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -66,6 +67,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     RegistDialogComponent,
     FailDialogComponent,
     ShopImpormationComponent,
+    ForgetPasswordComponent,
   ],
 
   imports: [
