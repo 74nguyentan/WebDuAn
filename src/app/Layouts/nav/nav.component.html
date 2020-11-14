@@ -29,7 +29,7 @@
                   <a routerLink="/impormation"><i class="fas fa-user-edit"></i> {{ 'imformation' | translate }}</a>
                 </li>
                 <li>
-                  <a href="#"><i class="fas fa-sign-out-alt"></i> {{ 'loout' | translate }}</a>
+                  <a (click)="authService.SignOut()"><i class="fas fa-sign-out-alt"></i> {{ 'loout' | translate }}</a>
                 </li>
               </ul>
             </div>

@@ -1,5 +1,6 @@
+import { AuthService } from './../../Service/auth.service';
 import { ComponentShareService } from './../../Service/component-share.service';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CategoryService } from 'src/app/Service/category.service';
 import { TranslateService } from '@ngx-translate/core';
@@ -11,7 +12,7 @@ const CATEGORY_API = 'http://localhost:8000/greenmarket/api/category';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css'],
 })
-export class NavComponent implements OnInit, OnDestroy{
+export class NavComponent implements OnInit, OnDestroy, DoCheck {
   public category: Array<any>;
 
   imagerUrl =
@@ -49,7 +50,8 @@ export class NavComponent implements OnInit, OnDestroy{
     private CategoryService: CategoryService,
     private route: ActivatedRoute,
     private router: Router,
-    public translate: TranslateService
+    public translate: TranslateService,
+    public authService: AuthService
   ) {
     this.CategoryService.getAll(CATEGORY_API).subscribe((data) => {
       this.category = data;});
@@ -57,14 +59,13 @@ export class NavComponent implements OnInit, OnDestroy{
     translate.setDefaultLang('VI');
     const browserLang = translate.getBrowserLang();
     translate.use(browserLang.match(/VI|EN/) ? browserLang : 'VI');
-  }
 
+  }
+  ngDoCheck(){
+    this.login=this.authService.isLoggedIn
+    console.log('auth islogin check  ----------> : '+ this.authService.isLoggedIn)
+  }
   ngOnInit(): void {
-    this.valueFromChildSubscription = this.componentShareService.ValueFromChild.subscribe(
-      (data) => {
-        this.login = data;
-      }
-    );
   }
   public ngOnDestroy() {
     this.valueFromChildSubscription.unsubscribe();

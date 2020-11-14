@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from './../../Service/auth.service';
+import { Component, OnInit, NgZone } from '@angular/core';
 
 @Component({
   selector: 'app-shop-impormation',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShopImpormationComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public authService: AuthService,
+    public router: Router,
+    public ngZone: NgZone
+  ) { }
 
   ngOnInit(): void {
   }

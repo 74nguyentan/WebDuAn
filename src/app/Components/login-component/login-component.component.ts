@@ -15,11 +15,11 @@ isLogin: boolean = false;
 
   constructor(public authService: AuthService, public ComponentShareService: ComponentShareService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
 
   login(userName,userPassword){
-    this.ComponentShareService.notifyCountValue(this.isLogin = true);
     this.authService.SignIn(userName,userPassword);
-
   }
 }

@@ -13,7 +13,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { SuccessDialogComponent } from '../../Dialog/success-dialog/success-dialog.component';
 import { RegistDialogComponent } from '../../Dialog/regist-dialog/regist-dialog.component';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Users } from '../../Model/Users';
+import { Users } from '../../Model/user';
 
 export function forbiddenUsername(users = []) {
   return (c: AbstractControl) => {

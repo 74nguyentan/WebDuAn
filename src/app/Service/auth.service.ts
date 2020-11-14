@@ -1,4 +1,5 @@
-import { Users } from './../Model/Users';
+import { Subject } from 'rxjs';
+import { Users } from './../Model/user';
 import { auth } from 'firebase/app';
 import { Injectable, NgZone } from '@angular/core';
 
@@ -21,9 +22,9 @@ export class AuthService {
   ) {
     /* Saving user data in localstorage when
     logged in and setting up null when logged out */
-    this.afAuth.authState.subscribe(Users => {
-      if (Users) {
-        this.userData = Users;
+    this.afAuth.authState.subscribe( user => {
+      if (user) {
+        this.userData = user;
         localStorage.setItem('user', JSON.stringify(this.userData));
         JSON.parse(localStorage.getItem('user'));
       } else {
@@ -39,6 +40,8 @@ export class AuthService {
       .then((result) => {
         this.ngZone.run(() => {
           this.router.navigate(['']);
+          // console.log('auth islogin login ----------> : '+ this.isLoggedIn)
+
         });
         this.SetUserData(result.user);
       }).catch((error) => {
@@ -80,8 +83,9 @@ export class AuthService {
   // Returns true when user is looged in and email is verified
   get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user'));
-    return (user !== null && user.emailVerified !== false) ? true : false;
+    return user !== null ? true : false;
   }
+
 
   // Sign in with Google
   GoogleAuth() {
@@ -97,26 +101,26 @@ export class AuthService {
         })
       this.SetUserData(result.user);
     }).catch((error) => {
-      window.alert(error)
+      // window.alert(error)
     })
   }
 
   /* Setting up user data when sign in with username/password,
   sign up with username/password and sign in with social auth
   provider in Firestore database using AngularFirestore + AngularFirestoreDocument service */
-  SetUserData(Users) {
-    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${Users.id}`);
+  SetUserData(user) {
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
     const userData: Users = {
-      id: Users.id,
-      email: Users.email,
-      vaiTro: Users.vaiTro,
-      hoVaTen: Users.hoVaTen,
-      hinhAnhUser: Users.hinhAnhUser,
-      diaChiUser: Users.diaChiUser,
-      matKhau: Users.matKhau,
-      xacNhanMatKhau:Users.xacNhanMatKhau,
-      ngayLap:Users.ngayLap,
-      dienThoai:Users.dienThoai
+      uid: user.uid,
+      email: user.email,
+      vaiTro: user.vaiTro,
+      hoVaTen: user.hoVaTen,
+      hinhAnhUser: user.hinhAnhUser,
+      diaChiUser: user.diaChiUser,
+      matKhau: user.matKhau,
+      xacNhanMatKhau:user.xacNhanMatKhau,
+      ngayLap:user.ngayLap,
+      dienThoai:user.dienThoai
     }
     return userRef.set(userData, {
       merge: true
@@ -127,7 +131,7 @@ export class AuthService {
   SignOut() {
     return this.afAuth.auth.signOut().then(() => {
       localStorage.removeItem('user');
-      this.router.navigate(['sign-in']);
+      this.router.navigate(['login']);
     })
   }
 }
