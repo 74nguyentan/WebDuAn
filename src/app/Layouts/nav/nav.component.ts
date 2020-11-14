@@ -1,6 +1,6 @@
 import { AuthService } from './../../Service/auth.service';
 import { ComponentShareService } from './../../Service/component-share.service';
-import { Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CategoryService } from 'src/app/Service/category.service';
 import { TranslateService } from '@ngx-translate/core';
@@ -12,7 +12,7 @@ const CATEGORY_API = 'http://localhost:8000/greenmarket/api/category';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css'],
 })
-export class NavComponent implements OnInit, OnDestroy, DoCheck {
+export class NavComponent implements OnInit, DoCheck {
   public category: Array<any>;
 
   imagerUrl =
@@ -66,9 +66,6 @@ export class NavComponent implements OnInit, OnDestroy, DoCheck {
     console.log('auth islogin check  ----------> : '+ this.authService.isLoggedIn)
   }
   ngOnInit(): void {
-  }
-  public ngOnDestroy() {
-    this.valueFromChildSubscription.unsubscribe();
   }
 
   idloaihang(id: number) {
