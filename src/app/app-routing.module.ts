@@ -11,7 +11,6 @@ import { ProductNewsComponent } from './Components/product-news/product-news.com
 import {ToSellProductComponent} from './Components/to-sell-product/to-sell-product.component';
 import {RegisterComponentComponent} from './Components/register-component/register-component.component';
 import {UserImpormationComponent} from './Components/user-impormation/user-impormation.component'
-import { DemoComponent } from './Components/demo/demo.component';
 import {SeenProductComponent} from './Components/seen-product/seen-product.component';
 import {ShopImpormationComponent} from './Components/shop-impormation/shop-impormation.component'
 
@@ -23,10 +22,6 @@ const routes: Routes = [
   {
     path: 'listProUser',
     component: ListProductOfUserComponent,
-  },
-  {
-    path: 'demo',
-    component: DemoComponent,
   },
   {
     path: 'contact',

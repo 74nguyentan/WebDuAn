@@ -1,6 +1,6 @@
 export class Users{
 // id:number;
- uid: string;
+ id: string;
  hoVaTen: string;
  hinhAnhUser:string;
  vaiTro:boolean;

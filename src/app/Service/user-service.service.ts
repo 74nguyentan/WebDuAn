@@ -19,9 +19,12 @@ export class UserServiceService {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
-  // updateEmployee(id: number, value: any): Observable<Object> {
-  //   return this.http.put(`${this.baseUrl}/${id}`, value);
-  // }
+  getUserByEmail(email: String): Observable<any> {
+    return this.http.get(`${this.baseUrl}/email/${email}`);
+  }
+  updateUser(id: any, value: any): Observable<Object> {
+    return this.http.put(`${this.baseUrl}/${id}`, value);
+  }
 
   // deleteEmployee(id: number): Observable<any> {
   //   return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });

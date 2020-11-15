@@ -22,7 +22,6 @@ import { ToSellProductComponent } from './Components/to-sell-product/to-sell-pro
 import { RegisterComponentComponent } from './Components/register-component/register-component.component';
 import { ListProductOfUserComponent } from './Components/list-product-of-user/list-product-of-user.component';
 import { UserImpormationComponent } from './Components/user-impormation/user-impormation.component';
-import { DemoComponent } from './Components/demo/demo.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConfirmDialogComponent } from './Dialog/confirm-dialog/confirm-dialog.component';
@@ -59,7 +58,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     RegisterComponentComponent,
     ListProductOfUserComponent,
     UserImpormationComponent,
-    DemoComponent,
     ContactComponent,
     ConfirmDialogComponent,
     SuccessDialogComponent,
