@@ -1,5 +1,6 @@
 body {
   padding-top: 50px;
+  font-family: tahoma;
 }
 
 #myCarousel .thumbnail {
@@ -76,23 +77,90 @@ body {
   background-color: #fff;
 
 }
+.products .btn{
+  font-family: tahoma;
+  font-size: 13px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size:16px;
+  font-weight: 400;
+  line-height: 36px;
+  margin: 0 0em;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  background-color:  #2ac37d;
+}
+
+.btn-1 {
+  font-weight: 100;
+  transition: all .25s;
+}
+.btn-1  rect {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-dasharray: 422, 0;
+  transition-delay: none;
+}
+.btn-1 svg {
+  height: 45px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.btn-1:hover {
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+.btn-1:hover rect {
+  stroke-width: 5;
+  stroke-dasharray: 15, 310;
+  stroke-dashoffset: 48;
+  transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn-1.color-green:hover {
+  color: black;
+}
+.btn-1.btn-1.color-green:hover rect {
+  stroke: black;
+}
+.btn-1.color-blue:hover {
+  color: blue;
+}
+.btn-1.color-blue:hover rect {
+  stroke: blue;
+}
+
+.products h2{
+  font-family: tahoma;
+  font-size: 18px;
+  font-weight: 500;
+}
 
 .dl-horizontal dt {
   margin-left: 5px;
   float: left;
   width: 60%;
   overflow: hidden;
-  font-size: tahoma;
+  font-family: tahoma;
   text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 550;
 }
 .dl-horizontal dd {
   margin-left: 0px;
   text-align: left;
-  font-size: tahoma;
-  font-size: 12px;
+  font-family: tahoma;
+  font-size: 13px;
 }
 /* menucon */
 
@@ -140,8 +208,10 @@ body {
   z-index: 99;
   transition: all 0.7s;
 }
-.hover-2-tieude span{
-  font-family: arial;
+.hover-2-tieude .font-weight-success{
+  font-weight: 600;
+  color: #ffffff;
+  font-family: tahoma;
   font-size: 15px;
 }
 
@@ -155,7 +225,12 @@ body {
   z-index: 99;
   transition: all 1.5s;
 }
-
+.hover-2-trichdan p{
+  /* font-weight: 500; */
+  color: #ffffff;
+  font-family: tahoma;
+  font-size: 15px;
+}
 .hover-2:hover .hover-2-tieude {
   transform: translateY(-4.5rem);
 }
@@ -169,15 +244,6 @@ body {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
 }
 
-/* xoay */
-#transition img {
-  transition: 1s ease-in-out;
-}
-#transition:hover img {
-  transform: rotate(3turn);
-  -webkit-transform: rotate(3turn);
-  -moz-transform: rotate(3turn);
-}
 /* sp luot */
 .box {
   position: relative;
@@ -200,12 +266,22 @@ body {
   padding: 10px 60px 10px 25px;
   color: #fff;
   transition: all 0.3s ease 0s;
+  font-family: tahoma;
+  font-weight: 500;
 }
-.box .box-heading h3, .box .box-heading span {
+.box .box-heading span {
   font-family: tahoma;
   font-size: 13px;
   color: #000000;
+  /* font-weight: 500; */
 }
+.box .box-heading h3 {
+  font-family: tahoma;
+  font-size: 15px;
+  color: #000000;
+  font-weight: 500;
+}
+
 
 .box:hover .box-heading {
   left: 100%;
@@ -213,7 +289,7 @@ body {
 
 .box .box-heading:after {
   content: "";
-  font-family: fontawesome;
+  font-family: tahoma;
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -241,6 +317,7 @@ body {
 .box .boxContent {
   width: 100%;
   height: 100%;
+  min-height: 100%;
   position: absolute;
   top: 0;
   left: -100%;
@@ -249,38 +326,37 @@ body {
 
   transition: all 0.5s ease 0s;
 }
-.box .boxContent p {
-  font-family: tahoma;
-  font-size: 14px;
-  color: #000000;
-}
 
 .box:hover .boxContent {
   left: 0;
 }
 
-.box .description {
+.box .boxContent .description {
   font-size: 14px;
   color: black;
   line-height: 25px;
+  font-family: tahoma;
 }
 
-.box .cart {
+.box .boxContent .cart {
   display: inline-block;
   padding: 10px 20px;
   background: #20211c;
   font-family: tahoma;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 500;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  position: absolute;
   transition: all 0.3s ease 0s;
 }
 
-.box .cart:hover {
+.box .boxContent .cart:hover {
   text-decoration: none;
   background: #fff;
   color: #4db110;
+  /* margin-top: 0px; */
 }
 
 .box .cart i {
@@ -348,7 +424,7 @@ img {
   color: #fff;
   border-radius: 5px;
   padding: 15px 25px;
-  font-family: "Lato", sans-serif;
+  font-family: tahoma;
   font-weight: 500;
   font-size: 20px;
   cursor: pointer;
@@ -360,10 +436,10 @@ img {
 }
 .tittle-home {
   background-color: #fff;
-  font-family: "Lato", sans-serif;
+  font-family: tahoma;
   font-size: 23px;
   color: black;
-  padding: 7px 23px 7px 22px;
+  padding: 15px 23px 15px 22px;
   border: dashed 0px #ffffff;
   -moz-border-radius-topleft: 10px;
   -moz-border-radius-topright: 10px;
@@ -414,9 +490,9 @@ img {
 }
 .iconHopQua{
   position: absolute;
-z-index: 50;
-top: -10px;
-left: -3px;
+  z-index: 50;
+  top: -10px;
+  left: -3px;
   width: 60px;
 }
 
@@ -443,4 +519,15 @@ left: -3px;
   border-radius: 5px;
   background-color: #fff;
 
+}
+.git .btn{
+  color: white;
+  font-size: 13px;
+  font-family: tahoma;
+}
+.endow-t {
+  font-family: tahoma;
+}
+.nav-link{
+  font-family: tahoma;
 }
