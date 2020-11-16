@@ -25,20 +25,29 @@ export class UserImpormationComponent implements OnInit {
 
   ngOnInit(): void {
     this.users = new Users();
-    this.UserServiceService.getUserByEmail(
-      this.AuthService.userData.email
-    ).subscribe(
+    this.UserServiceService.getUserByEmail(this.AuthService.userData.email).subscribe(
       (data) => {
         this.users = data;
+        console.log("user ------->>" + this.users);
+        console.log("user dt ------->>" + this.users.dienThoai);
       },
       (error) => console.log('er ---> ' + error)
     );
   }
 
-  UpdateUser() {
+  UpdateUser(id:any, hoVaTen:string, matKhau:string, email:string, dienThoai:string, diaChiUser:string) {
+   this.users.id = id;
+    this.users.hoVaTen = hoVaTen;
+    this.users.matKhau = matKhau;
+    this.users.email=email;
+    this.users.diaChiUser=diaChiUser;
+    this.users.dienThoai=dienThoai;
+    console.log("uppp dc------------------" +this.users.diaChiUser);
+    console.log("uppp------------------" +this.users.dienThoai);
+
+
     this.UserServiceService.updateUser(this.users.id, this.users).subscribe(
       (data) => {
-        console.log(data);
         this.users = new Users();
         this.isShowFormUser = false;
         const confirmDialog = this.dialog.open(SuccessDialogComponent, {
@@ -49,8 +58,8 @@ export class UserImpormationComponent implements OnInit {
       },
       (error) => {
         console.log("er user ---------= "+error);
-        console.log('iddd----' + this.users.id);
-        console.log('iddd name----' + this.users.hoVaTen);
+        console.log('er iddd----' + this.users.id);
+        console.log('er iddd name----' + this.users.hoVaTen);
         const confirmDialog = this.dialog.open(FailDialogComponent, {
           data: {
             title: 'Thất bại !',
@@ -60,23 +69,17 @@ export class UserImpormationComponent implements OnInit {
     );
   }
 
-  saveUser() {
-    this.UserServiceService.createUser(this.users).subscribe(
-      (data) => {
-        console.log(data);
-        this.users = new Users();
-        this.isShowFormUser = false;
-      },
-      (error) => console.log(error)
-    );
-    const confirmDialog = this.dialog.open(SuccessDialogComponent, {
-      data: {
-        title: 'Thành Công !',
-      },
-    });
-  }
 
-  // ngDoCheck() {
-  //   this.users;
-  // }
+  // UpdateUser(id:any, hoVaTen:string, matKhau:string, email:string, dienThoai:string, diaChiUser:string) {
+  //   this.users.id = id;
+  //    this.users.hoVaTen = hoVaTen;
+  //    this.users.matKhau = matKhau;
+  //    this.users.email=email;
+  //    this.users.diaChiUser=diaChiUser;
+  //    this.users.dienThoai=dienThoai;
+  //    console.log("uppp dc------------------" +this.users.diaChiUser);
+  //    console.log("uppp------------------" +this.users.dienThoai);
+
+
+  //    this.UserServiceService.updateUser(this.users.id, this.users).subscribe(
 }

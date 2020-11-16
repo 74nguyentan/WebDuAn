@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserServiceService {
-  private baseUrl = 'http://localhost:8989/greenmarket/users/users';
+  private baseUrl = 'http://localhost:8000/greenmarket/users/users';
 
   constructor(private http: HttpClient) { }
 

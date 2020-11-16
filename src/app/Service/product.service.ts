@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductService {
-  private baseUrl = 'http://localhost:8989/greenmarket/api/mathang';
-  private url = 'http://localhost:8989/greenmarket/api/idloaihang';
+  private baseUrl = 'http://localhost:8000/greenmarket/api/mathang';
+  private url = 'http://localhost:8000/greenmarket/api/idloaihang';
   constructor(private http: HttpClient) { }
 
   getProductList(): Observable<any> {
