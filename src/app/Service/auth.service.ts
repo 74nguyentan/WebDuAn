@@ -91,7 +91,7 @@ export class AuthService {
   // Returns true when user is looged in and email is verified
   get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user'));
-    return user !== null ? true : false;
+    return (user !== null && user.emailVerified !== false) ? true : false;
   }
 
   // Sign in with Google
@@ -123,11 +123,10 @@ export class AuthService {
   sign up with username/password and sign in with social auth
   provider in Firestore database using AngularFirestore + AngularFirestoreDocument service */
   SetUserData(user) {
-    const userRef: AngularFirestoreDocument<any> = this.afs.doc(
-      `users/${user.uid}`
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc( `users/${user.id}`
     );
     const userData: Users = {
-      uid: user.uid,
+      id: user.id,
       email: user.email,
       vaiTro: user.vaiTro,
       hoVaTen: user.hoVaTen,
@@ -137,6 +136,7 @@ export class AuthService {
       xacNhanMatKhau: user.xacNhanMatKhau,
       ngayLap: user.ngayLap,
       dienThoai: user.dienThoai,
+      emailVerified: user.emailVerified,
     };
     return userRef.set(userData, {
       merge: true,

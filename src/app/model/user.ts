@@ -1,6 +1,6 @@
 export class Users{
 // id:number;
- uid: string;
+ id: string;
  hoVaTen: string;
  hinhAnhUser:string;
  vaiTro:boolean;
@@ -10,4 +10,5 @@ export class Users{
  dienThoai:string;
  diaChiUser:string;
  ngayLap:Date;
+ emailVerified: boolean
 }

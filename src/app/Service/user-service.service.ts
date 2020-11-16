@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserServiceService {
-  private baseUrl = 'http://localhost:8989/greenmarket/users/users';
+  private baseUrl = 'http://localhost:8000/greenmarket/users/users';
 
   constructor(private http: HttpClient) { }
 
@@ -19,9 +19,12 @@ export class UserServiceService {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
-  // updateEmployee(id: number, value: any): Observable<Object> {
-  //   return this.http.put(`${this.baseUrl}/${id}`, value);
-  // }
+  getUserByEmail(email: String): Observable<any> {
+    return this.http.get(`${this.baseUrl}/email/${email}`);
+  }
+  updateUser(id: any, value: any): Observable<Object> {
+    return this.http.put(`${this.baseUrl}/${id}`, value);
+  }
 
   // deleteEmployee(id: number): Observable<any> {
   //   return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
