@@ -10,4 +10,5 @@ export class Users{
  dienThoai:string;
  diaChiUser:string;
  ngayLap:Date;
+ emailVerified: boolean
 }

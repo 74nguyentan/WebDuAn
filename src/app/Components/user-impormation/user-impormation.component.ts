@@ -5,7 +5,7 @@ import { AuthService } from './../../Service/auth.service';
 
 import { Users } from './../../Model/user';
 import { UserServiceService } from './../../Service/user-service.service';
-import { Component, OnInit, DoCheck, Inject } from '@angular/core';
+import { Component, OnInit, DoCheck, Inject, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-user-impormation',
@@ -27,28 +27,18 @@ export class UserImpormationComponent implements OnInit {
     this.users = new Users();
     this.UserServiceService.getUserByEmail(this.AuthService.userData.email).subscribe(
       (data) => {
-        this.users = data;
+        this.users = Object.assign({}, ...data);
         console.log("user ------->>" + this.users);
-        console.log("user dt ------->>" + this.users.dienThoai);
       },
       (error) => console.log('er ---> ' + error)
     );
   }
 
-  UpdateUser(id:any, hoVaTen:string, matKhau:string, email:string, dienThoai:string, diaChiUser:string) {
-   this.users.id = id;
-    this.users.hoVaTen = hoVaTen;
-    this.users.matKhau = matKhau;
-    this.users.email=email;
-    this.users.diaChiUser=diaChiUser;
-    this.users.dienThoai=dienThoai;
-    console.log("uppp dc------------------" +this.users.diaChiUser);
-    console.log("uppp------------------" +this.users.dienThoai);
-
-
+  UpdateUser() {
     this.UserServiceService.updateUser(this.users.id, this.users).subscribe(
       (data) => {
-        this.users = new Users();
+        console.log(data);
+        this.ngOnInit();
         this.isShowFormUser = false;
         const confirmDialog = this.dialog.open(SuccessDialogComponent, {
           data: {
@@ -57,9 +47,7 @@ export class UserImpormationComponent implements OnInit {
         });
       },
       (error) => {
-        console.log("er user ---------= "+error);
-        console.log('er iddd----' + this.users.id);
-        console.log('er iddd name----' + this.users.hoVaTen);
+        console.log("error update user ---------> "+error);
         const confirmDialog = this.dialog.open(FailDialogComponent, {
           data: {
             title: 'Thất bại !',
@@ -70,16 +58,4 @@ export class UserImpormationComponent implements OnInit {
   }
 
 
-  // UpdateUser(id:any, hoVaTen:string, matKhau:string, email:string, dienThoai:string, diaChiUser:string) {
-  //   this.users.id = id;
-  //    this.users.hoVaTen = hoVaTen;
-  //    this.users.matKhau = matKhau;
-  //    this.users.email=email;
-  //    this.users.diaChiUser=diaChiUser;
-  //    this.users.dienThoai=dienThoai;
-  //    console.log("uppp dc------------------" +this.users.diaChiUser);
-  //    console.log("uppp------------------" +this.users.dienThoai);
-
-
-  //    this.UserServiceService.updateUser(this.users.id, this.users).subscribe(
 }

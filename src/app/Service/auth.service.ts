@@ -91,7 +91,7 @@ export class AuthService {
   // Returns true when user is looged in and email is verified
   get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user'));
-    return user !== null ? true : false;
+    return (user !== null && user.emailVerified !== false) ? true : false;
   }
 
   // Sign in with Google
@@ -136,6 +136,7 @@ export class AuthService {
       xacNhanMatKhau: user.xacNhanMatKhau,
       ngayLap: user.ngayLap,
       dienThoai: user.dienThoai,
+      emailVerified: user.emailVerified,
     };
     return userRef.set(userData, {
       merge: true,

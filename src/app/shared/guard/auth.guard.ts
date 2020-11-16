@@ -24,8 +24,8 @@ export class AuthGuard implements CanActivate {
         // this.router.navigate(['login'])
         const confirmDialog = this.dialog.open(FailDialogComponent, {
           data: {
-            title: 'Bạn chưa đăng nhập !',
-            message: 'Vui lòng đăng nhập để bán hàng !',
+            title: 'Thất bại !',
+            message: 'Vui lòng đăng nhập hoặc xác nhận tài khoản để bán hàng !',
           },
         })
       }

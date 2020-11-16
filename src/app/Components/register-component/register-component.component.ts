@@ -117,13 +117,13 @@ export class RegisterComponentComponent implements OnInit {
                   console.log(data);
                   this.authService.SignUp(this.Users.email, this.Users.matKhau);
                   this.Users = new Users();
+                  this.router.navigate(['login']);
                   const confirmDialog = this.dialog.open(SuccessDialogComponent, {
                     data: {
                       title: 'Thành Công !',
                       message:'Một email chứa mã xác nhận đã được gửi tới bạn'
                     },
                   });
-                  // this.router.navigate(['login']);
                 },
                 (error) => {
                   console.log('error ----> : ' + error);
