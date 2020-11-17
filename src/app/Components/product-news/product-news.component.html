@@ -94,15 +94,16 @@
 
 
   <!-- day sp 1 -->
-  <div class="row mt-5">
-    <div class="col-md-6" style="padding: 0px;">
-      <h3 >SẢN PHẨM NỔI BẬT </h3>
+  <div class="titlenew row mt-5 mb-3">
+    <div class="col-3 tittle-home justify-content-center">
+      Top hàng mới nhất
     </div>
-    <div class="col-md-6" style="padding: 0px;">
+    <div class="col-9 mt-4">
       <div class="controls pull-right hidden-xs">
         <pagination-controls (pageChange)="p = $event" ></pagination-controls>
       </div>
     </div>
+    <hr>
   </div>
 
   <div class="row">
@@ -114,25 +115,26 @@
             <div class="row mb-5">
 
               <div class="col-sm-3" *ngFor="let product of products | paginate: { itemsPerPage: 4, currentPage: p }">
-                <div class="col-item boderr">
+                <div class="col-item boderr text-justify">
                   <!-- <i class="iconsprites_payment_0d">Trả góp 0% - Trả trước 0Đ</i> -->
                   <div class="photo">
                     <img src="{{ product.image }}" class="img-responsive" alt="a" />
                   </div>
                   <div class="info">
                     <div class="row">
-                      <div class="price col-md-6">
+                      <div class="price col-md-12">
                         <h5>
                           {{product.name}} </h5>
                         <h5 class="price-text-color">
-                          {{product.price}} <sup>đ</sup> </h5>
-                        <span class="price_market"> {{ product.price2}}<sup>đ</sup> </span>
+                          Giá cực sốc: {{product.price}} <sup>đ</sup>
+                        </h5>
+                        <span class="price_market">Giá gốc: {{ product.price2}}<sup>đ</sup> </span>
                       </div>
-                      <div class="rating hidden-sm col-md-6">
+                      <!-- <div class="rating hidden-sm col-md-6">
                         <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
                         </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
                         </i><i class="fa fa-star"></i>
-                      </div>
+                      </div> -->
                     </div>
                     <div class="separator clear-left">
                       <p class="btn-add">
