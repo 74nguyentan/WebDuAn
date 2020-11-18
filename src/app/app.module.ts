@@ -39,6 +39,8 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 
+
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -63,7 +65,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     SuccessDialogComponent,
     SeenProductComponent,
     RegistDialogComponent,
-    FailDialogComponent,
+    FailDialogComponent
+
+
   ],
 
   imports: [

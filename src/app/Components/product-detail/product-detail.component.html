@@ -276,29 +276,40 @@
               <form class="ps-product__tags" action="_action" method="post">
                 <div class="form-group">
                   <input class="form-control" type="text" placeholder="" />
-
                 </div>
                 <button style="margin-left: 20px; font-size: 15px; font-family: tahoma;" class="ps-btn ps-btn--sm">Thêm thẻ</button>
               </form>
             </div>
             <div class="tab-pane" role="tabpanel" id="tab_04">
-              <div class="form-group">
-                <textarea
-                  class="form-control"
-                  rows="6"
-                  placeholder="Bình luận của bạn..."
-                ></textarea>
-              </div>
-              <div class="form-group">
-                <button class="ps-btn" type="button">Thêm bình luận</button>
+              <!-- <h3>Bình Luận</h3> -->
+              <div style="width: 800px;">
+
+                <div *ngFor="let item of comments" action="comment" >
+                  <div class="commentid">
+                   <label for="name">{{item.id}} </label>
+                  </div>
+                  <div class="comment">
+                   <p>{{item.noiDungBinhLuan}}</p>
+                  </div>
+
+               </div>
+                <form (ngSubmit)="save()" >
+                  <div class="form-group">
+                    <label for="name"> id users </label>
+                    <input type="text" class="form-control" id="users"  required [(ngModel)]="comment.users" name="users">
+                    <label for="name"> id mat hang </label>
+                    <input type="text" class="form-control" id="Mathang"  required [(ngModel)]="comment.Mathang" name="Mathang">
+                    <label for="name">Viết bình luận </label>
+                    <input type="text" class="form-control" id="noiDungBinhLuan" required [(ngModel)]="comment.noiDungBinhLuan" name="noiDungBinhLuan">
+                  </div>
+                  <button type="submit" class="btn btn-success">Submit</button>
+                </form>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
 </div>
-
 </main>

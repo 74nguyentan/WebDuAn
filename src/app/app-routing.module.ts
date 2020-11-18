@@ -1,3 +1,4 @@
+
 import { ContactComponent } from './Components/contact/contact.component';
 import { ListProductOfUserComponent } from './Components/list-product-of-user/list-product-of-user.component';
 import { ProductDetailComponent } from './Components/product-detail/product-detail.component';
@@ -12,6 +13,7 @@ import {RegisterComponentComponent} from './Components/register-component/regist
 import {UserImpormationComponent} from './Components/user-impormation/user-impormation.component'
 import { DemoComponent } from './Components/demo/demo.component';
 import {SeenProductComponent} from './Components/seen-product/seen-product.component';
+
 
 const routes: Routes = [
   {
@@ -62,14 +64,16 @@ const routes: Routes = [
     path: 'seen',
     component: SeenProductComponent
   },
-  { 
+  {
     path: 'details/:id',
-     component: ProductDetailComponent 
+     component: ProductDetailComponent
   },
-  { 
-    path: 'loaihang/:id', 
-    component: ListproductsComponent 
-  }
+
+  {
+    path: 'loaihang/:id',
+    component: ListproductsComponent
+  },
+
 ];
 
 @NgModule({
