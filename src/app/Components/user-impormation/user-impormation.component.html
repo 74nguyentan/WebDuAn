@@ -1,5 +1,5 @@
 
-<div class="container-fluid pb-4 mt-5">
+<div class="container-fluid pb-4 mt-5" >
   <div class="col-md-1"></div>
   <div class="col-md-10" >
       <div class="container-fluid">
@@ -29,12 +29,12 @@
 
             <div class="row">
               <div class="col-md-12 col-sm-6 pt-4 pb-2" style="background: white;border-radius: 5px; ">
-                <table class="table table-bordered">
+                <table class="table table-bordered" *ngIf="users">
                   <tr>
-                    <th>Username:</th>
-                    <td>TuongXl</td>
+                    <th scope="row">Họ và tên: </th>
+                    <td>{{users.hoVaTen}}</td>
                     <td class="anhdd" rowspan="6" colspan="1" >
-                      <img src="https://upload.wikimedia.org/wikipedia/vi/archive/f/fe/20201011055543%21MoMo_Logo.png" alt="">
+                      <img src="{{users.hinhAnhUser}}" alt="">
                     </td>
                   </tr>
                   <tr>
@@ -42,26 +42,27 @@
                     <td>********</td>
                   </tr>
                   <tr>
-                    <th scope="row">Họ và tên: </th>
-                    <td>Nguyễn Bá Tương</td>
-                  </tr>
-                  <tr>
-                    <th> Ngày sinh:</th>
-                    <td>99/99/9999</td>
-                  </tr>
-                  <tr>
                     <th>Điện thoại:</th>
-                    <td>0845220400</td>
+                    <td>{{users.dienThoai}}</td>
                   </tr>
                   <tr>
                     <th>Email:</th>
-                    <td>vansong2204@gmail.com</td>
+                    <td>{{users.email}}</td>
+                  </tr>
+                  <tr>
+                    <th> Ngày lập:</th>
+                    <td>{{users.ngayLap}}</td>
                   </tr>
                   <tr>
                     <th scope="row">Địa chỉ:</th>
-                    <td colspan="3"> 86 Nguyễn Sinh Sắc-Hòa Minh-Liên Chiểu-TP Đà Nẵng
-                      <p> * Cung cấp địa chỉ sẽ giúp thuận tiện mua bán. Cập nhật địa chỉ ngay khi bạn thay đến địa chỉ mới *</p>
+                    <td colspan="3">
+                      {{users.diaChiUser}}
                     </td>
+                  </tr>
+                  <tr>
+                    <td>
+                    <i style="font-size: 13px; font-weight: 100;"> *Cung cấp địa chỉ sẽ giúp thuận tiện mua bán. Cập nhật địa chỉ ngay khi bạn chuyển đến địa chỉ mới*</i>
+                  </td>
                   </tr>
                   <tr>
                     <td>
@@ -114,14 +115,6 @@
 
       <!-- form sua tt  -->
       <div *ngIf="isShowFormUser">
-        <!-- <div class="row">
-          <div class="col-md-12 ml-1 mt-5">
-            <div id="tieude2">
-              <span>Chỉnh sửa thông tin</span>
-            </div>
-          </div>
-        </div> -->
-
         <div class="row pt-5 pb-1 mb-1" style="padding-left: 3px;">
           <div class="ml-4 tittle-home justify-content-center">
             Chỉnh sửa thông tin
@@ -134,52 +127,45 @@
           <div class="col-md-12 ml-1">
             <div class="container-login100">
               <div class="wrap-login100  p-r-50  p-b-30 text-center ">
-                <form class="login100-form validate-form pr-5">
+                <form class="login100-form validate-form pr-5" (ngSubmit)="UpdateUser()">
                   <span class="login100-form-title p-b-20 ml-5 mt-5" style="font-family: sans-serif">
-
                   </span>
                   <div class="row">
                     <div class="col-md-6">
+
+                        <label for="hoVaTen" class="float:left">Họ và tên</label>
                       <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%;"
                         data-validate="Không được bỏ trống">
-                        <input class="input100" type="text" name="username" placeholder="Username">
+                        <input class="input100" type="text" name="hoVaTen" id="hoVaTen" required  [(ngModel)]="users.hoVaTen">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
-                          <span class="lnr lnr-users"></span>
+                          <!-- <span class="lnr lnr-users"></span> -->
+                          <img src="https://img.icons8.com/cute-clipart/64/000000/name.png"/>
                         </span>
                       </div>
 
+
                       <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%;"
                         data-validate="Password is required">
-                        <input class="input100" type="password" name="pass" placeholder="Mật khẩu">
+                        <label>Mật khẩu</label>
+                        <input class="input100" type="password" name="pass" required [(ngModel)]="users.matKhau">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                           <span class="lnr lnr-lock"></span>
                         </span>
                       </div>
 
-                      <!-- <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%;"
-                        data-validate="Password is required">
-                        <input class="input100" type="password" name="pass" placeholder="Nhập lại mật khẩu">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-                          <span class="lnr lnr-lock"></span>
-                        </span>
-                      </div> -->
+                      <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%;">
+                      <label>Mật khẩu</label>
+                      <input type="file" name="upload" id="upload" required [(ngModel)]="users.hinhAnhUser"  placeholder="Hình ảnh" multiple />
+                    </div>
 
-                      <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%;"
-                        data-validate="Không được bỏ trống">
-                        <input class="input100" type="text" name="name" placeholder="Họ và tên">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-                          <span class="lnr lnr-license"></span>
-                        </span>
-                      </div>
                     </div>
                     <div class="col-md-6">
                       <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%;"
                         data-validate="Không được bỏ trống">
-                        <input class="input100" type="text" name="dienthoai" placeholder="Điện thoại">
+                        <label for="">Điện thoại</label>
+                        <input class="input100" type="text" name="dienthoai" required [(ngModel)]="users.dienThoai">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                           <span class="lnr lnr-phone"></span>
@@ -188,7 +174,8 @@
 
                       <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%;"
                         data-validate="Valid email is required: ex@abc.xyz">
-                        <input class="input100" type="text" name="email" placeholder="Email/Tên đăng nhập">
+                        <label for="">Email</label>
+                        <input class="input100" type="text" name="email" required [(ngModel)]="users.email">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                           <span class="lnr lnr-envelope"></span>
@@ -197,16 +184,8 @@
 
                       <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%;"
                         data-validate="Password is required">
-                        <input class="input100" type="date" name="date" placeholder="Ngày sinh">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-                          <span class="lnr lnr-calendar-full"></span>
-                        </span>
-                      </div>
-
-                      <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%;"
-                        data-validate="Password is required">
-                        <input class="input100" type="text" name="diachi" placeholder="Địa chỉ">
+                        <label for="">Địa chỉ</label>
+                        <input class="input100" type="text" name="diachi" required [(ngModel)]="users.diaChiUser">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                           <span class="lnr lnr-map"></span>
@@ -219,7 +198,7 @@
                     <div class="col-md-9"></div>
                     <div class="col-md-3">
                       <div class="container-login100-form-btn p-t-22 ml-4">
-                        <button class="login100-form-btn" (click)="isShowFormUser = false" >
+                        <button class="login100-form-btn" type="submit"  >
                           hoàn thành
                         </button>
                       </div>

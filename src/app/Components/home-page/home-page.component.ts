@@ -1,3 +1,4 @@
+import { AuthService } from './../../Service/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -49,9 +50,8 @@ export class HomePageComponent implements OnInit {
 //   }
 
 // ]
-  constructor() { }
+  constructor( public authService: AuthService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

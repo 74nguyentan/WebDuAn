@@ -50,7 +50,7 @@
     "detail": "Detail",
     "price": "Price:",
     "status": "Status:",
-    "manufacturer": "Manufacturer:",
+    "manufacturer": "Made in:",
 
 
     "producttitle1": "Price shock",
@@ -69,7 +69,7 @@
     "featured6": " Ba Truong",
     "featured7": "Xuan Phuong",
     "featured8": " Diep Luc",
-    "reviews1": "Men's and women's clothing shop",
+    "reviews1": "Men's and women's clothing",
     "reviews2": "Household supplies",
     "reviews3": " Korean shirt",
     "reviews4": "Mobile device",
@@ -80,7 +80,7 @@
 
     "collecton": "Collection",
     "collecton1": "Close to you",
-    "collecton2": "99% goods",
+    "collecton2": "99% Goods",
     "collecton3": "Surprising cheap price",
     "collecton4": "For Men",
     "collecton5": "Toys for babies",
@@ -97,6 +97,16 @@
     "pro7": "Male cow coat",
     "pro8": "Paradigm",
 
+    "price1": "Price: 200.000 đ",
+    "price2": "Price: 1.999.999 đ",
+    "price3": "Price: 22.000.000 đ",
+    "price4": "Price: 400.000 đ",
+    "price5": "Price: 200.000 đ",
+    "stocking": "Stocking",
+    "china": "Korea",
+    "viet": "Viet Nam",
+    "japan": "Japan",
+
     "all": "All",
     "me": "With me",
     "endowpro1": "Gongcha 50.000 đ",
@@ -106,6 +116,6 @@
     "endowpro5": "Milk TH 15.000 đ",
     "endowpro6": "Pen 2.500 đ",
     "change": "Change now",
-    "Point": "100 point ",
+    "Point": "100 coin ",
     "free": "Free shipping"
 }

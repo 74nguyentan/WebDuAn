@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+import { AuthGuard } from './shared/guard/auth.guard';
+>>>>>>> b968d231bfc8fdd61f3bef5af3226136ee8064f7
 import { ContactComponent } from './Components/contact/contact.component';
 import { ListProductOfUserComponent } from './Components/list-product-of-user/list-product-of-user.component';
 import { ProductDetailComponent } from './Components/product-detail/product-detail.component';
@@ -11,8 +15,8 @@ import { ProductNewsComponent } from './Components/product-news/product-news.com
 import {ToSellProductComponent} from './Components/to-sell-product/to-sell-product.component';
 import {RegisterComponentComponent} from './Components/register-component/register-component.component';
 import {UserImpormationComponent} from './Components/user-impormation/user-impormation.component'
-import { DemoComponent } from './Components/demo/demo.component';
 import {SeenProductComponent} from './Components/seen-product/seen-product.component';
+import {ShopImpormationComponent} from './Components/shop-impormation/shop-impormation.component'
 
 
 const routes: Routes = [
@@ -23,10 +27,6 @@ const routes: Routes = [
   {
     path: 'listProUser',
     component: ListProductOfUserComponent,
-  },
-  {
-    path: 'demo',
-    component: DemoComponent,
   },
   {
     path: 'contact',
@@ -50,7 +50,7 @@ const routes: Routes = [
   },
   {
     path: 'toSell',
-    component: ToSellProductComponent,
+    component: ToSellProductComponent,canActivate: [AuthGuard]
   },
   {
     path: 'register',
@@ -68,12 +68,22 @@ const routes: Routes = [
     path: 'details/:id',
      component: ProductDetailComponent
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> b968d231bfc8fdd61f3bef5af3226136ee8064f7
   {
     path: 'loaihang/:id',
     component: ListproductsComponent
   },
+<<<<<<< HEAD
 
+=======
+  {
+    path: 'shop',
+    component: ShopImpormationComponent
+  }
+>>>>>>> b968d231bfc8fdd61f3bef5af3226136ee8064f7
 ];
 
 @NgModule({

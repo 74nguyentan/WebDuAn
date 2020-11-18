@@ -7,3 +7,17 @@ a.dark-grey-text:hover{
   color:#21d192;
   font-weight: 500;
 }
+.text-uppercase{
+  font: 400 calc(20px * 0.83)/20px Roboto, "Helvetica Neue", sans-serif;
+}
+p,.dark-grey-text{
+  font-family: 'Roboto', sans-serif;
+}
+.appWrapper-DesktopFooter-address i{
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+h5{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}

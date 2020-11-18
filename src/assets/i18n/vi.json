@@ -31,7 +31,7 @@
     "channel": "Kênh người bán",
     "contact": "LIÊN HỆ",
     "room": "Phòng 1808, Tầng 18, Mê Linh",
-    "footer1": "CÔNG TY TNHH CHỢ XANH - Địa chỉ: Phòng 1808, Tầng 18, Mê Linh Point, 02 Ngô Đức Kế, Phường Bến Nghé, Quận 1, TP Hồ Chí Minh",
+    "footer1": "CÔNG TY TNHH GREEN MARKET - Địa chỉ: Phòng 1808, Tầng 18, Mê Linh Point, 02 Ngô Đức Kế, Phường Bến Nghé, Quận 1, TP Hồ Chí Minh",
     "footer2": "Giấy chứng nhận đăng ký doanh nghiệp số 0312120782 do Sở Kế Hoạch và Đầu Tư TPHCM cấp ngày 11/01/2013 ",
     "footer3": "Email: Choxanh@example.com - Đường dây nóng: (028)38664041",
 
@@ -43,7 +43,7 @@
     "caption1": " Áo sơ mi nam họa tiết chất kate lụa thời trang cao cấp BINSSTORE94 A36",
     "caption2": "Đồng hồ điện tử nam nữ HONHX cá tính MS8633",
     "caption3": "  Bảo Hành 12 Tháng Tại TTBH Apple - Trả Góp lãi suất 0% qua thẻ tín dụng ",
-    "caption4": "Giày thể thao nam,Giày thể thao nam sneaker,Giày nam,Giày nam sneaker Phong Cách Hàn Quốc Taiki - GN106",
+    "caption4": "Giày thể thao nam,Giày thể thao nam sneaker, Giày nam, Giày nam sneaker Phong Cách Hàn Quốc Taiki - GN106",
     "caption5": "SMART TV 4K UHD Coocaa 55 inch - Android 9.0 TV- Wifi - viền mỏng - Model 55S6G - tivi giá rẻ Chân viền kim loại",
     "price1": "Giá: 200.000 đ",
     "price2": "Giá: 1.999.999 đ",
@@ -52,9 +52,14 @@
     "price5": "Giá: 200.000 đ",
 
     "detail": "Chi Tiết",
-    "price": "Sản phẩm:",
+    "price": "Giá:",
     "status": "Tình trạng:",
-    "manufacturer": "Hãng sản xuất: :",
+    "manufacturer": "Xuất xứ:",
+    "stocking": "Còn hàng",
+    "china": "Hàn Quốc",
+    "viet": "Việt Nam",
+    "japan": "Nhật Bản",
+
 
     "producttitle1": "Giá sốc",
     "producttitle2": "Mã giảm giá",
@@ -90,7 +95,7 @@
     "collecton6": "Công nghệ",
 
 
-    "pro": "Sane phẩm nổi bật",
+    "pro": "Sản phẩm nổi bật",
     "pro1": "Máy ảnh PS",
     "pro2": "Bộ đồ thể thao",
     "pro3": "Chảo chống dính",
@@ -110,7 +115,7 @@
     "endowpro5": "Sữa TH 15.000 đ",
     "endowpro6": "Cây bút 2.500  đ",
     "change": "Đổi ngay",
-    "Point": "100 điểm",
+    "Point": "100 xu",
     "free": "Miễn phí vận chuyển"
 
 }

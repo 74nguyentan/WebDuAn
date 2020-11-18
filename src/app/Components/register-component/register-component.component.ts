@@ -13,7 +13,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { SuccessDialogComponent } from '../../Dialog/success-dialog/success-dialog.component';
 import { RegistDialogComponent } from '../../Dialog/regist-dialog/regist-dialog.component';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Users } from '../../Model/Users';
+import { Users } from '../../Model/user';
 
 export function forbiddenUsername(users = []) {
   return (c: AbstractControl) => {
@@ -111,18 +111,19 @@ export class RegisterComponentComponent implements OnInit {
           if (emailTest.test(this.Users.email) == true) {
             var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
             if (vnf_regex.test(this.Users.dienThoai) == true) {
+              this.Users.vaiTro = false;
               this.userService.createUser(this.Users).subscribe(
                 (data) => {
                   console.log(data);
                   this.authService.SignUp(this.Users.email, this.Users.matKhau);
                   this.Users = new Users();
+                  this.router.navigate(['login']);
                   const confirmDialog = this.dialog.open(SuccessDialogComponent, {
                     data: {
                       title: 'Thành Công !',
                       message:'Một email chứa mã xác nhận đã được gửi tới bạn'
                     },
                   });
-                  // this.router.navigate(['login']);
                 },
                 (error) => {
                   console.log('error ----> : ' + error);

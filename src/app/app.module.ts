@@ -22,7 +22,6 @@ import { ToSellProductComponent } from './Components/to-sell-product/to-sell-pro
 import { RegisterComponentComponent } from './Components/register-component/register-component.component';
 import { ListProductOfUserComponent } from './Components/list-product-of-user/list-product-of-user.component';
 import { UserImpormationComponent } from './Components/user-impormation/user-impormation.component';
-import { DemoComponent } from './Components/demo/demo.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConfirmDialogComponent } from './Dialog/confirm-dialog/confirm-dialog.component';
@@ -38,6 +37,8 @@ import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
+import { ShopImpormationComponent } from './Components/shop-impormation/shop-impormation.component';
+import { ForgetPasswordComponent } from './Dialog/forget-password/forget-password.component';
 
 
 
@@ -59,15 +60,20 @@ export function HttpLoaderFactory(http: HttpClient) {
     RegisterComponentComponent,
     ListProductOfUserComponent,
     UserImpormationComponent,
-    DemoComponent,
     ContactComponent,
     ConfirmDialogComponent,
     SuccessDialogComponent,
     SeenProductComponent,
     RegistDialogComponent,
+<<<<<<< HEAD
     FailDialogComponent
 
 
+=======
+    FailDialogComponent,
+    ShopImpormationComponent,
+    ForgetPasswordComponent,
+>>>>>>> b968d231bfc8fdd61f3bef5af3226136ee8064f7
   ],
 
   imports: [

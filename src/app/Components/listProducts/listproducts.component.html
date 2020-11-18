@@ -1,27 +1,29 @@
 <div class="container-fluid pt-5">
-  <div class="row">
-    <div class="col-md-4">
-      <h2 class="title text-center">Features Items</h2>
-    </div>
+  <!-- <div class="row">
     <div class="col-md-5">
       <div id="control">
-        <!-- <pagination-controls (pageChange)="p = $event" ></pagination-controls> -->
+        <pagination-controls (pageChange)="p = $event" ></pagination-controls>
       </div>
     </div>
-    <div class="col-md-3">
-    </div>
-  </div>
+  </div> -->
   <div class="row">
     <!-- <div class="col-md-1"></div> -->
     <div class="col-md-9" style="padding-left: 40px;">
-      <div class="features_items">
+      <div class="row ">
+        <div class="ml-4 tittle-home justify-content-center">
+          {{ 'pro' | translate }}
+        </div>
+        <div class="col mr-4 tittle-right"></div>
+        <hr />
+      </div>
+      <!-- <div class="features_items">
         <div class="row">
           <div class="col-sm-3" *ngFor=" let item of product ">
             <div class="product-image-wrapper">
               <div class="single-products">
                 <div class="productinfo text-center">
                   <img src="{{ item.hinh0 }}" alt="" />
-                  <h2> {{ item.gia }} oke</h2>
+                  <h2> {{ item.gia }} </h2>
                   <p>{{ item.tenHang}}</p>
                   <i class="fa fa-list"></i><button (click)="productDetails(item.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
                 </div>
@@ -29,10 +31,39 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- <div id="control1">
         <pagination-controls (pageChange)="p = $event" ></pagination-controls>
       </div> -->
+      <div class="row products">
+        <div class="col-sm-3 mb-4" *ngFor=" let item of product ">
+          <div>
+            <img
+              src="{{ item.hinh0 }}"
+              alt="Sản phẩm 1"
+              class="img-circle img-thumbnail"
+            />
+            <h2>{{ item.tenHang}}</h2>
+            <dl class="dl-horizontal">
+              <dt>{{ 'price' | translate }}</dt>
+              <dd> {{ item.gia }}</dd>
+
+              <dt>{{ 'status' | translate }}</dt>
+              <dd>{{ 'stocking' | translate }}</dd>
+              <dt>{{ 'manufacturer' | translate }}</dt>
+              <dd>{{ 'viet' | translate }}</dd>
+            </dl>
+            <a routerLink="/proDetaill" class="btn btn-1 color-green">
+              <svg>
+                <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+              </svg>
+              {{ 'detail' | translate }}
+            </a>
+          </div>
+        </div>
+
+      </div>
+
     </div>
     <div class="ps-sidebar col-md  " style=" background: white; margin-right: 40px; margin-bottom: 75px; border-radius: 5px;"
     data-mh="product-listing">
@@ -54,17 +85,17 @@
       </aside>
       <aside class="ps-widget--sidebar ps-widget--category">
         <div class="ps-widget__header">
-          <h3>Hãng giày nổi bật</h3>
+          <h3>Giá tiền</h3>
         </div>
         <div class="ps-widget__content">
           <ul class="ps-list--checked">
-            <li class="current"><a href="product-listing.html">Nike(521)</a></li>
-            <li><a href="product-listing.html">Adidas(76)</a></li>
-            <li><a href="product-listing.html">Baseball(69)</a></li>
-            <li><a href="product-listing.html">Gucci(36)</a></li>
-            <li><a href="product-listing.html">Dior(108)</a></li>
-            <li><a href="product-listing.html">B&G(108)</a></li>
-            <li><a href="product-listing.html">Louis Vuiton(47)</a></li>
+            <li class="current"><a href="product-listing.html">Dưới 100k</a></li>
+            <li><a href="product-listing.html">Từ 100k đến 300k</a></li>
+            <li><a href="product-listing.html">Từ 300k đến 500k</a></li>
+            <li><a href="product-listing.html">Từ 500k đến 1 triệu</a></li>
+            <li><a href="product-listing.html">Trên 1 triệu</a></li>
+            <li><a href="product-listing.html">Trên 5 triệu</a></li>
+            <li><a href="product-listing.html">Trên 10 triệu</a></li>
           </ul>
         </div>
       </aside>

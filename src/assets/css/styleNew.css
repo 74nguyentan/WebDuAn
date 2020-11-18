@@ -940,8 +940,8 @@ textarea {
 }
 
 * {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
 }
 
 h1,
@@ -6198,7 +6198,7 @@ button.ps-btn--gray:before {
 .header__actions {
   float: right;
 }
-.header__actions > a,
+.header__actions > a, .header__actions > select,
 .header__actions .ps-dropdown > a {
   display: inline-block;
   padding: 0 15px;
@@ -6215,11 +6215,12 @@ button.ps-btn--gray:before {
   -ms-box-shadow: none;
   box-shadow: none;
 }
+
 .header__actions > a > i,
 .header__actions .ps-dropdown > a > i {
   margin-left: 5px;
 }
-.header__actions > a:hover,
+.header__actions > a:hover, .header__actions > select:hover,
 .header__actions .ps-dropdown > a:hover {
   background-color: #e5e5e5;
   color: #2ac37d;

@@ -80,12 +80,32 @@
 
 
 /* tieu de  */
-h3{
-  color: green;
-  font-size: 20px;
+.tittle-home {
+  background-color: #fff;
   font-family: tahoma;
-  font-weight: 600;
+  font-size: 23px;
+  color: black;
+  padding: 15px 23px 15px 22px;
+  border: dashed 0px #ffffff;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomleft: 0px;
+  -moz-border-radius-bottomright: 0px;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
+.titlenew {
+  border-bottom: solid 4px #ffffff;
+  width: 102%;
+  margin-bottom: 0px;
+}
+
 
 /* slide */
 .carousel-inner{
@@ -156,18 +176,20 @@ background-color: #F5F5DC;
 }
 
 .col-item .price {
-/*width: 50%;*/
-float: left;
-margin-top: 5px;
+  float: left;
+  margin-top: 5px;
 }
 
 .col-item .price h5 {
-line-height: 30px;
-margin: 0;
+  line-height: 30px;
+  margin: 0;
+  font-family: tahoma;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .price-text-color {
-color: red;
+  color: red;
 }
 
 .col-item .info .rating {
@@ -223,12 +245,28 @@ margin-right: 10px;
 }
 
 .price_market {
-color: #4d4d4f;
-font-size: 14px;
-text-decoration: line-through;
-font-weight: normal;
-height: 26px;
+  color: #4d4d4f;
+  font-size: 14px;
+  text-decoration: line-through;
+  font-weight: normal;
+  height: 26px;
+  font-family: tahoma;
 }
+
+.hidden-sm{
+  font-family: tahoma;
+  font-size: 15px;
+  color: black;
+  font-weight: 500;
+}
+.btn-details:hover .hidden-sm,.btn-details:hover .fa{
+  color: rgb(17, 153, 108);
+}
+.btn-add:hover .hidden-sm,.btn-add:hover .fas{
+  color: rgb(240, 52, 77);
+}
+
+
 
 .iconsprites_payment_0d {
 color: #000;
@@ -238,7 +276,7 @@ font-style: normal;
 border-radius: 5px;
 line-height: 24px;
 padding: 0 5px;
-font-family: initial;
+font-family: tahoma;
 }
 
 .iconsprites_payment_0d {
@@ -293,7 +331,7 @@ display: inline-block;
 font-weight: bold;
 font-size: 22.02px;
 color: #0054a6;
-font-family: futu, Arial, Tahoma, sans-serif;
+font-family: tahoma;
 text-transform: uppercase;
 }
 
@@ -301,7 +339,7 @@ text-transform: uppercase;
 color: #8a8c8e;
 font-weight: bold;
 font-size: 22.02px;
-font-family: futu, Arial, Tahoma, sans-serif;
+font-family: tahoma;
 text-transform: uppercase;
 }
 
@@ -311,7 +349,7 @@ text-transform: uppercase;
 }
 ::ng-deep .ngx-pagination {
   text-align: right;
-  font-size: 15px;
+  font-size: 18px;
   font-family: tahoma;
   color: green;
 }
