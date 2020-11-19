@@ -10,7 +10,7 @@ export class ProductNewsComponent implements OnInit {
   hover1 = false;
   id;
   products = products;
-  p: number;
+  page: number;
   collection = [];
   constructor() {
 

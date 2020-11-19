@@ -27,8 +27,8 @@
             </div> -->
 
 
-            <div class="row">
-              <div class="col-md-12 col-sm-6 pt-4 pb-2" style="background: white;border-radius: 5px; ">
+            <div class="row ">
+              <div class="col-md-12 col-sm-6 pt-4 pb-2" id="manager" >
                 <table class="table table-bordered" *ngIf="users">
                   <tr>
                     <th scope="row">Họ và tên: </th>
@@ -60,9 +60,9 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td colspan="2">
                     <i style="font-size: 13px; font-weight: 100;"> *Cung cấp địa chỉ sẽ giúp thuận tiện mua bán. Cập nhật địa chỉ ngay khi bạn chuyển đến địa chỉ mới*</i>
-                  </td>
+                    </td>
                   </tr>
                   <tr>
                     <td>
@@ -126,28 +126,25 @@
         <div class="row" >
           <div class="col-md-12 ml-1">
             <div class="container-login100">
-              <div class="wrap-login100  p-r-50  p-b-30 text-center ">
+              <div class="wrap-login100  p-r-50  p-b-30  ">
                 <form class="login100-form validate-form pr-5" (ngSubmit)="UpdateUser()">
                   <span class="login100-form-title p-b-20 ml-5 mt-5" style="font-family: sans-serif">
                   </span>
                   <div class="row">
                     <div class="col-md-6">
-
-                        <label for="hoVaTen" class="float:left">Họ và tên</label>
                       <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%;"
                         data-validate="Không được bỏ trống">
+                      <label for="hoVaTen" >Họ và tên</label>
                         <input class="input100" type="text" name="hoVaTen" id="hoVaTen" required  [(ngModel)]="users.hoVaTen">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
-                          <!-- <span class="lnr lnr-users"></span> -->
-                          <img src="https://img.icons8.com/cute-clipart/64/000000/name.png"/>
+                          <span class="lnr lnr-users"></span>
                         </span>
                       </div>
 
-
                       <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%;"
                         data-validate="Password is required">
-                        <label>Mật khẩu</label>
+                      <label >Mật khẩu</label>
                         <input class="input100" type="password" name="pass" required [(ngModel)]="users.matKhau">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
@@ -156,15 +153,15 @@
                       </div>
 
                       <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%;">
-                      <label>Mật khẩu</label>
-                      <input type="file" name="upload" id="upload" required [(ngModel)]="users.hinhAnhUser"  placeholder="Hình ảnh" multiple />
-                    </div>
+                        <label>Hình ảnh</label>
+                        <input type="file" name="upload" id="upload" required [(ngModel)]="users.hinhAnhUser"  placeholder="Hình ảnh" multiple />
+                      </div>
 
                     </div>
                     <div class="col-md-6">
                       <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%;"
                         data-validate="Không được bỏ trống">
-                        <label for="">Điện thoại</label>
+                      <label for="">Điện thoại</label>
                         <input class="input100" type="text" name="dienthoai" required [(ngModel)]="users.dienThoai">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
@@ -174,7 +171,7 @@
 
                       <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%;"
                         data-validate="Valid email is required: ex@abc.xyz">
-                        <label for="">Email</label>
+                      <label for="">Email</label>
                         <input class="input100" type="text" name="email" required [(ngModel)]="users.email">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
@@ -184,7 +181,7 @@
 
                       <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%;"
                         data-validate="Password is required">
-                        <label for="">Địa chỉ</label>
+                      <label for="">Địa chỉ</label>
                         <input class="input100" type="text" name="diachi" required [(ngModel)]="users.diaChiUser">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">

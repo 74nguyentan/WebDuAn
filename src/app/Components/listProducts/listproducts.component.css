@@ -237,4 +237,14 @@ h2.title {
 .tittle-right {
   border-bottom: solid 4px #ffffff;
 }
-
+.titlenew {
+  border-bottom: solid 4px #ffffff;
+  width: 99.5%;
+  margin-bottom: 0px;
+}
+::ng-deep .ngx-pagination {
+  text-align: right;
+  font-size: 15px;
+  font-family: tahoma;
+  color: green;
+}
