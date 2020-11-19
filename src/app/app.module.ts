@@ -65,15 +65,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     SuccessDialogComponent,
     SeenProductComponent,
     RegistDialogComponent,
-<<<<<<< HEAD
-    FailDialogComponent
-
-
-=======
     FailDialogComponent,
     ShopImpormationComponent,
     ForgetPasswordComponent,
->>>>>>> b968d231bfc8fdd61f3bef5af3226136ee8064f7
   ],
 
   imports: [

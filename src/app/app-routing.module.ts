@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 
-=======
 import { AuthGuard } from './shared/guard/auth.guard';
->>>>>>> b968d231bfc8fdd61f3bef5af3226136ee8064f7
+
 import { ContactComponent } from './Components/contact/contact.component';
 import { ListProductOfUserComponent } from './Components/list-product-of-user/list-product-of-user.component';
 import { ProductDetailComponent } from './Components/product-detail/product-detail.component';
@@ -68,22 +66,18 @@ const routes: Routes = [
     path: 'details/:id',
      component: ProductDetailComponent
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> b968d231bfc8fdd61f3bef5af3226136ee8064f7
+
   {
     path: 'loaihang/:id',
     component: ListproductsComponent
   },
-<<<<<<< HEAD
 
-=======
   {
     path: 'shop',
     component: ShopImpormationComponent
   }
->>>>>>> b968d231bfc8fdd61f3bef5af3226136ee8064f7
+
 ];
 
 @NgModule({

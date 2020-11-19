@@ -17,7 +17,7 @@ import { ProductService } from 'src/app/Service/product.service';
 export class ListproductsComponent implements OnInit {
   id: number;
   product: Product;
-
+  p: number;
   constructor(private route: ActivatedRoute,private router: Router,
     private productserviec: ProductService) { }
 

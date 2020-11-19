@@ -1,11 +1,11 @@
 <div class="container-fluid pt-5">
-  <!-- <div class="row">
+  <div class="row">
     <div class="col-md-5">
       <div id="control">
         <pagination-controls (pageChange)="p = $event" ></pagination-controls>
       </div>
     </div>
-  </div> -->
+  </div>
   <div class="row">
     <!-- <div class="col-md-1"></div> -->
     <div class="col-md-9" style="padding-left: 40px;">
@@ -36,7 +36,7 @@
         <pagination-controls (pageChange)="p = $event" ></pagination-controls>
       </div> -->
       <div class="row products">
-        <div class="col-sm-3 mb-4" *ngFor=" let item of product ">
+        <div class="col-sm-3 mb-4" *ngFor=" let item of product | paginate: { itemsPerPage: 20, currentPage: p }">
           <div>
             <img
               src="{{ item.hinh0 }}"
@@ -53,7 +53,7 @@
               <dt>{{ 'manufacturer' | translate }}</dt>
               <dd>{{ 'viet' | translate }}</dd>
             </dl>
-            <a routerLink="/proDetaill" class="btn btn-1 color-green">
+            <a routerLink="/proDetaill" (click)="productDetails(item.id)" class="btn btn-1 color-green">
               <svg>
                 <rect x="0" y="0" fill="none" width="100%" height="100%"/>
               </svg>
