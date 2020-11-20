@@ -67,20 +67,21 @@ form {
 
 #back {
   text-align: center;
-  border: dashed 0px #000000;
+  padding: 10px 0px;
+  border:solid 0px #1ca577;
   -moz-border-radius-topleft: 5px;
-  -moz-border-radius-topright: 5px;
-  -moz-border-radius-bottomleft: 0px;
-  -moz-border-radius-bottomright: 0px;
-  -webkit-border-top-left-radius: 5px;
-  -webkit-border-top-right-radius: 5px;
-  -webkit-border-bottom-left-radius: 0px;
-  -webkit-border-bottom-right-radius: 0px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  margin: 8px 0px;
+  -moz-border-radius-topright:5px;
+  -moz-border-radius-bottomleft:0px;
+  -moz-border-radius-bottomright:0px;
+  -webkit-border-top-left-radius:5px;
+  -webkit-border-top-right-radius:5px;
+  -webkit-border-bottom-left-radius:0px;
+  -webkit-border-bottom-right-radius:0px;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+  border-bottom-left-radius:0px;
+  border-bottom-right-radius:0px;
+  background: rgb(35, 212, 133);
 }
 
 
@@ -152,9 +153,9 @@ form {
   font-family: tahoma;
 }
 
-.products .products-details .products-header h1 {
+.products .products-details .products-header h2 {
   color: black;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 900;
   margin: 0 !important;
   padding: 0 !important;
@@ -163,7 +164,6 @@ form {
 
 .products .products-details .products-header h3 {
   color: black;
-  color: white;
   font-size: 15px;
   font-weight: 400;
   font-family: tahoma;
@@ -246,13 +246,23 @@ form .button {
   width: 110%;
 }
 
-.input-field input {
+.input-field input{
   height: 100%;
   width: 100%;
   border: 1px solid silver;
   padding-left: 15px;
   outline: none;
   font-size: 19px;
+  transition: .4s;
+}
+
+.input-field select {
+  height: 100%;
+  width: 100%;
+  border: 1px solid silver;
+  padding-left: 15px;
+  outline: none;
+  font-size: 15px;
   transition: .4s;
 }
 
@@ -294,6 +304,10 @@ input:valid~span.show {
 }
 
 input:focus~label,
+/* select:focus~label, */
+select:valid~label,
+/* select option:focus~label, */
+/* option:valid~label, */
 input:valid~label,
 textarea:focus~label,
 textarea:valid~label {
@@ -364,15 +378,14 @@ form .button {
 /* ?? */
 div.ex3 {
   width: 100%;
-  height: 810px;
+  height: 785px;
   overflow: auto;
 }
 /* anh */
-#c_anh{
+.c_anh{
   margin: 0px;
   padding: 0px;
   width: 110%;
-
 }
 .wrapperzzz {
   width: 110%;

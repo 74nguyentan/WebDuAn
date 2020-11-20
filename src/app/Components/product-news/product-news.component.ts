@@ -6,8 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-news.component.css']
 })
 export class ProductNewsComponent implements OnInit {
-  hover = false;
-  hover1 = false;
   id;
   products = products;
   page: number;

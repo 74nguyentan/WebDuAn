@@ -3,6 +3,8 @@
   border-radius:50%;
   -moz-border-radius:50%;
   -webkit-border-radius:50%;
+  margin: auto;
+  padding: auto;
 }
 .table{
   width: 100%;
@@ -15,6 +17,94 @@
 }
 .btn{
   width: 100%;
+}
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+.btn-12{
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+  border:none;
+  box-shadow: none;
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+}
+.btn-12 span {
+  background: rgb(0,172,238);
+background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  border-radius: 5px;
+  margin:0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.btn-12 span:nth-child(1) {
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12 span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12:hover span:nth-child(1) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.btn-12:hover span:nth-child(2) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+ color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
 }
 /* / menu  */
 nav {
@@ -49,11 +139,36 @@ nav {
   border-bottom: 4px solid #80e0c8;
   padding: 15px 0;
 }
+/* tieu de */
+.tittle-home {
+  background-color: #fff;
+  font-family: tahoma;
+  font-size: 23px;
+  color: black;
+  padding: 15px 23px 15px 22px;
+  border: dashed 0px #ffffff;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomleft: 0px;
+  -moz-border-radius-bottomright: 0px;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.titlenew {
+  border-bottom: solid 4px #ffffff;
+  width: 102%;
+  margin-bottom: 0px;
+}
 /* sp  */
 .products {
-  /* padding: 10px 0px; */
+  padding: 20px 0;
   text-align: center;
-  margin: 0px 30px 30px;
 }
 
 .products div div {
@@ -73,20 +188,93 @@ nav {
   background-color: #fff;
 
 }
+.products .btn{
+  font-family: tahoma;
+  font-size: 13px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size:16px;
+  font-weight: 400;
+  line-height: 36px;
+  margin: 0 0em;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  background-color:  #2ac37d;
+}
+
+.btn-1 {
+  font-weight: 100;
+  transition: all .25s;
+}
+.btn-1  rect {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-dasharray: 422, 0;
+  transition-delay: none;
+}
+.btn-1 svg {
+  height: 45px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.btn-1:hover {
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+.btn-1:hover rect {
+  stroke-width: 5;
+  stroke-dasharray: 15, 310;
+  stroke-dashoffset: 48;
+  transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn-1.color-green:hover {
+  color: black;
+}
+.btn-1.btn-1.color-green:hover rect {
+  stroke: black;
+}
+.btn-1.color-blue:hover {
+  color: blue;
+}
+.btn-1.color-blue:hover rect {
+  stroke: blue;
+}
+
+.products h2{
+  font-family: tahoma;
+  font-size: 18px;
+  font-weight: 500;
+}
+
 .dl-horizontal dt {
   margin-left: 5px;
   float: left;
   width: 60%;
   overflow: hidden;
-
+  font-family: tahoma;
   text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 13px;
+  font-weight: 550;
 }
 .dl-horizontal dd {
   margin-left: 0px;
   text-align: left;
+  font-family: tahoma;
+  font-size: 13px;
 }
+
+/* page  */
 h1{
   margin-left: 40px;
   font-size: 28px;

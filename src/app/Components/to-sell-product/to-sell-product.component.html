@@ -32,9 +32,11 @@
             <div class="col-md-5">
               <div class="input-field">
                 <select  [(ngModel)]="products.trangThai"  name = "trangThai">
+                  <option>Trạng thái...</option>
                   <option  [ngValue]="0" >Còn hàng</option>
                   <option  [ngValue]="1" >Hết hàng</option>
                 </select>
+                <label for="category">Trạng thái</label>
               </div>
             </div>
           </div>
@@ -52,33 +54,9 @@
                 <label>Điện Thoại</label>
               </div>
             </div>
-
-            <!-- <div class="col-md-5">
-              <div class="input-field">
-                <input class="pswrd" id = "loaiHang" type="text" required [(ngModel)]="products.idloaihang" name = "loaiHang">
-                <label>loai Hang</label>
-              </div>
-            </div> -->
-
-            <div class="form-group" >
-              <label for="category">Category id</label>
-              <select  [(ngModel)]="products.loaiHang"  name="products.id">
-                <option *ngFor="let item of category" [ngValue]="item" >{{ item.tenLoaiHang }}</option>
-              </select>
-            </div>
           </div>
           <div class="row">
-            <div class="col-md-5">
-              <div class="input-field">
-                <textarea class="form-control" id = "moTa" rows="7" required [(ngModel)]="products.moTa" name = "moTa"></textarea>
-                <label>Mô tả</label>
-              </div>
-              <!-- <div class = "file-loading" >
-                <input id = "input-fa" name = "input-fa []" type = "file" multiple >
-              </div> -->
-            </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-5" id="c_anh">
+            <div class="col-md-5 c_anh">
 
               <div class="wrapperzzz">
                 <p>Hình Ảnh</p> <hr>
@@ -97,21 +75,22 @@
                 <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" required [(ngModel)] ="products.hinh3"  placeholder="Hình ảnh" multiple />
               </div>
             </div>
+            <div class="col-md-2"></div>
 
-
-          </div>
-
-          <!-- <div class="row">
             <div class="col-md-5">
-              <select class="form-control" name="" id="brand_select"
-        >
-          <option  *ngFor="let item of category" [(ngModel)]="products.idloaihang" >
-         {{
-          item.tenLoaiHang
-            }}</option>
-        </select>
+                <div class="input-field">
+                  <select  [(ngModel)]="products.loaiHang"  name="products.id">
+                    <option *ngFor="let item of category" [ngValue]="item" >{{ item.tenLoaiHang }}</option>
+                  </select>
+                  <label for="category">Danh mục</label>
+                </div>
+
+                <div class="input-field">
+                  <textarea class="form-control" id = "moTa" rows="15" required [(ngModel)]="products.moTa" name = "moTa"></textarea>
+                  <label>Mô tả</label>
+                </div>
             </div>
-          </div> -->
+          </div>
 
           <div class="row">
             <div class="col-md-12">
@@ -132,7 +111,7 @@
     <!-- sp cu -->
     <div class="col-md-3">
       <div id="trangsp" class="container">
-        <div class="row bg-success"><div class="col-md-12" id="back"><a href="#">Sản phẩm gần đây</a></div></div>
+        <div class="row "><div class="col-md-12" id="back"><a href="#">Sản phẩm gần đây</a></div></div>
         <div class="ex3">
           <div class="col-md-12">
             <div class="products" >
