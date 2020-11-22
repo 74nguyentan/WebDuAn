@@ -9,6 +9,7 @@ import {
   AngularFirestoreDocument,
 } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
+import { UserServiceService } from './user-service.service';
 
 @Injectable({
   providedIn: 'root',
@@ -20,20 +21,32 @@ export class AuthService {
     public afs: AngularFirestore, // Inject Firestore service
     public afAuth: AngularFireAuth, // Inject Firebase auth service
     public router: Router,
-    public ngZone: NgZone // NgZone service to remove outside scope warning
+    public ngZone: NgZone,
+    private UserServiceService: UserServiceService // NgZone service to remove outside scope warning
   ) {
     /* Saving user data in localstorage when
     logged in and setting up null when logged out */
     this.afAuth.authState.subscribe((user) => {
       if (user) {
         this.userData = user;
+
         localStorage.setItem('user', JSON.stringify(this.userData));
-        JSON.parse(localStorage.getItem('user'));
+        let email_user = user.email;
+        let userr; UserServiceService.getUserByEmail(email_user).subscribe(data => {
+          userr = data;
+          sessionStorage.setItem('userr', userr[0].id);
+          JSON.parse(sessionStorage.getItem('userr'));
+        });
       } else {
         localStorage.setItem('user', null);
         JSON.parse(localStorage.getItem('user'));
       }
     });
+  }
+
+  user_id() {
+
+    return sessionStorage.getItem('userr');
   }
 
   // Sign in with email/password
@@ -123,7 +136,7 @@ export class AuthService {
   sign up with username/password and sign in with social auth
   provider in Firestore database using AngularFirestore + AngularFirestoreDocument service */
   SetUserData(user) {
-    const userRef: AngularFirestoreDocument<any> = this.afs.doc( `users/${user.id}`
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.id}`
     );
     const userData: Users = {
       id: user.id,

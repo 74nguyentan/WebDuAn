@@ -60,19 +60,19 @@
 
               <div class="wrapperzzz">
                 <p>Hình Ảnh</p> <hr>
-                <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" [(ngModel)] ="products.hinh0" required   placeholder="Hình ảnh" multiple />
+                <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf" required   placeholder="Hình ảnh" multiple />
               </div>
               <div class="wrapperzzz">
                 <p>Hình Ảnh</p> <hr>
-                <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" required [(ngModel)] ="products.hinh1"  placeholder="Hình ảnh" multiple />
+                <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
               </div>
               <div class="wrapperzzz">
                 <p>Hình Ảnh</p> <hr>
-                <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" required [(ngModel)] ="products.hinh2"  placeholder="Hình ảnh" multiple />
+                <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
               </div>
               <div class="wrapperzzz">
                 <p>Hình Ảnh</p> <hr>
-                <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" required [(ngModel)] ="products.hinh3"  placeholder="Hình ảnh" multiple />
+                <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
               </div>
             </div>
             <div class="col-md-2"></div>

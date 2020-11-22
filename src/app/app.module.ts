@@ -39,6 +39,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { ShopImpormationComponent } from './Components/shop-impormation/shop-impormation.component';
 import { ForgetPasswordComponent } from './Dialog/forget-password/forget-password.component';
+import { CookieService } from 'ngx-cookie-service';
 
 
 
@@ -93,7 +94,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
   ],
 
-  providers: [AuthService],
+  providers: [AuthService, CookieService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

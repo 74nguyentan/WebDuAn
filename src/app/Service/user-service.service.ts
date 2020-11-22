@@ -7,6 +7,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserServiceService {
+  static getUserByEmail(email_user: string) {
+    throw new Error('Method not implemented.');
+  }
   private baseUrl = 'http://localhost:8000/greenmarket/users/users';
 
   constructor(private http: HttpClient) { }
