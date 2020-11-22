@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class ProductService {
   private baseUrl = 'http://localhost:8000/greenmarket/api/mathang';
   private url = 'http://localhost:8000/greenmarket/api/idloaihang';
+  private url_user = 'http://localhost:8000/greenmarket/api/iduser';
   constructor(private http: HttpClient) { }
 
   getProductList(): Observable<any> {
@@ -20,6 +21,10 @@ export class ProductService {
 
   getidloaihang(id: number): Observable<any> {
     return this.http.get(`${this.url}/${id}`);
+  }
+
+  getidusers(id: string): Observable<any> {
+    return this.http.get(`${this.url_user}/${id}`);
   }
 
   createproduct(products: Object): Observable<Object> {
