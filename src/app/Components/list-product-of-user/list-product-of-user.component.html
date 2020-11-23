@@ -1,7 +1,9 @@
 <div class="container-fluid mt-5">
-
+  
   <div class="limiter col-md-12">
     <div class="container-table100">
+        
+
       <div class="row w-100 pb-3">
         <div class="col-md-7 w-100 justify">
           <h1 style="margin-left: 350px;" > Danh sách sản phẩm</h1>
@@ -59,11 +61,11 @@
                   <td class="cell100 column8"><img src={{item.hinh2}} alt=""></td>
                   <td class="cell100 column9"><img src={{item.hinh3}} alt=""></td>
                   <td class="cell100 column10">
-                    <a class="btn btn-success">
-                      <i class="fas fa-edit"></i> Sửa
+                    <a class="btn btn-success" (click)="updateproduct(item.id)">
+                      <i class="fas fa-edit"></i>Sửa
                     </a>
-                    <a class="btn btn-danger">
-                        <i class="fas fa-times"></i> Xóa
+                    <a class="btn btn-danger" (click)="deleteProduct(item.id)" >
+                        <i class="fas fa-times"></i>Xóa
                     </a>
                     <a class="btn btn-warning">
                       <i class="fas fa-clock"></i> Gia hạn
@@ -81,4 +83,4 @@
     </div>
   </div>
 
-</div>
+  

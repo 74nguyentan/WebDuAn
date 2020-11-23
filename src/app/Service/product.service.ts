@@ -31,4 +31,13 @@ export class ProductService {
     console.log(products);
     return this.http.post(`${this.baseUrl}`, products);
   }
+
+  deleteproduct(id: number): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
+  }
+
+  updateProduct(id: number, value: any): Observable<Object> {
+    return this.http.put(`${this.baseUrl}/${id}`, value);
+  }
+
 }

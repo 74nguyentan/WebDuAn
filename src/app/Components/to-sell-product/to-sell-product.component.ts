@@ -23,6 +23,7 @@ export class ToSellProductComponent implements OnInit {
   products: Product = new Product();
   users: Users = new Users();
   public category: Array<any>;
+  id: number;
 
   base64textString = [];
 
@@ -56,6 +57,18 @@ export class ToSellProductComponent implements OnInit {
       this.category = data;
     })
 
+    this.products = new Product();
+ 
+
+    this.id = this.route.snapshot.params['id'];
+
+    this.productserviec.getProduct(this.id)
+      .subscribe(data => {
+        console.log(data)
+        this.products = data;
+      },(error) => {
+        console.log("er-----> : "+ error);
+      });
   }
   scroll(el: HTMLElement) {
 
@@ -78,8 +91,8 @@ export class ToSellProductComponent implements OnInit {
 
     this.productserviec
       .createproduct(this.products).subscribe(data => {
-        console.log(this.products)
-        console.log(data)
+        // console.log(this.products)
+        // console.log(data)
 
         this.products = new Product();
         const confirmDialog = this.dialog.open(SuccessDialogComponent, {
@@ -99,9 +112,40 @@ export class ToSellProductComponent implements OnInit {
         });
   }
 
+  updateproduct() {
+    this.products.hinh0 = this.base64textString[0];
+    this.products.hinh1 = this.base64textString[1];
+    this.products.hinh2 = this.base64textString[2];
+    this.products.hinh3 = this.base64textString[3];
+    this.productserviec.updateProduct(this.id, this.products)
+      .subscribe(data => {
+    this.products = new Product();
+    const confirmDialog = this.dialog.open(SuccessDialogComponent, {
+      data: {
+        title: 'Cập nhật Thành Công !',
+      },
+    });
+  },
+  (error) => {
+    console.log(error);
+    const confirmDialog = this.dialog.open(FailDialogComponent, {
+      data: {
+        title: 'Thất bại !',
+        message: 'Vui lòng nhập đúng thông tin và thử lại !',
+      },
+    });
+  });
+
+}
+
   onSubmit() {
     this.submitted = true;
-    this.save();
+    if(this.products.id = this.products.id){
+      this.updateproduct();
+    }
+    else {
+      this.save();
+    }
   }
 
 }

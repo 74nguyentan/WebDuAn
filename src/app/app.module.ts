@@ -43,6 +43,7 @@ import { CookieService } from 'ngx-cookie-service';
 
 
 
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -92,6 +93,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient],
       },
     }),
+ 
   ],
 
   providers: [AuthService, CookieService],

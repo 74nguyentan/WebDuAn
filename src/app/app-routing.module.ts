@@ -66,6 +66,10 @@ const routes: Routes = [
     path: 'details/:id',
      component: ProductDetailComponent
   },
+  {
+    path: 'update/:id',
+     component: ToSellProductComponent
+  },
 
 
   {
