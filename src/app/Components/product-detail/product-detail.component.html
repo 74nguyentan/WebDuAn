@@ -36,7 +36,7 @@
                 </div>
                 <div class="item">
                   <a class="popup-youtube ps-product__video" href="http://www.youtube.com/watch?v=0O2aH4XLbto">
-                    <img src="../assets/images/images/shoe-detail/1.jpg" alt="" />
+                    <img src="../assets/images/1.jpg" alt="" />
                     <i class="fa fa-play"></i >
                   </a>
                 </div>
@@ -67,7 +67,8 @@
             </div> -->
             <h1>{{ product.tenHang }}</h1>
             <p class="ps-product__category">
-              <a href="#"> {{ product.xuatXu }} </a>
+              <a href="#"> {{ product.xuatXu }} </a> |
+              <a href="#"> {{ product.users.hoVaTen }} </a>
             </p>
             <h3 class="ps-product__price">500 VNĐ <del>330 VNĐ</del></h3>
             <div class="ps-product__block ps-product__quickview">
@@ -135,14 +136,13 @@
               </a>
             </div>
 
-            <div class="ps-product__shopping">
+            <div class="ml-2 row ps-product__shopping">
               <a  class="ps-btn mb-10" href="cart.html"
-                >{{ product.dienThoai }}<i class="ps-icon-next"></i
-              ></a>
+                >{{product.dienThoai}}</a>
               <div class="ps-product__actions">
                 <a class="mr-10" href="whishlist.html"
-                  ><i class="ps-icon-heart"></i></a
-                ><a href="compare.html"><i class="ps-icon-share"></i></a>
+                  ><i class="fas fa-heart"></i></a
+                ><a href="compare.html"><i class="fas fa-share-alt"></i></a>
               </div>
             </div>
 

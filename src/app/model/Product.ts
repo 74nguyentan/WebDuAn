@@ -18,5 +18,6 @@ export class Product {
     loaiHang: object;
     users: {
         id: string;
+        hoVaTen: string;
     };
 }
