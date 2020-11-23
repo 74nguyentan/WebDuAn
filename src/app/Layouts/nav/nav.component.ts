@@ -62,10 +62,12 @@ export class NavComponent implements OnInit, DoCheck {
 
   }
   ngDoCheck(){
-    this.login=this.authService.isLoggedIn
+    this.login=this.authService.isLoggedIn;
+ 
     console.log('auth islogin check  ----------> : '+ this.authService.isLoggedIn)
   }
   ngOnInit(): void {
+   console.log(this.authService.user_id());
   }
 
   idloaihang(id: number) {
@@ -73,5 +75,9 @@ export class NavComponent implements OnInit, DoCheck {
     this.router.routeReuseStrategy.shouldReuseRoute = function () {
       return false;
     };
+  }
+
+  idusers(id: string){
+    this.router.navigate(['mathang', id]);
   }
 }

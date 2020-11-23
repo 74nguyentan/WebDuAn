@@ -66,13 +66,20 @@ const routes: Routes = [
     path: 'details/:id',
      component: ProductDetailComponent
   },
+  {
+    path: 'update/:id',
+     component: ToSellProductComponent
+  },
 
 
   {
     path: 'loaihang/:id',
     component: ListproductsComponent
   },
-
+  {
+    path: 'mathang/:id',
+    component: ListProductOfUserComponent
+  },
   {
     path: 'shop',
     component: ShopImpormationComponent
