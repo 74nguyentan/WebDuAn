@@ -284,14 +284,14 @@
               <!-- <h3>Bình Luận</h3> -->
               <div style="width: 800px;">
 
-                <div *ngFor="let comment of comment" >
+                <div style="background-color: #F1F1F1; padding: 20px; border: 5px; margin-bottom: 20px;" *ngFor="let comment of comment" >
                   <div class="commentid">
-                   <label for="name">{{comment.id}} </label>
+                    <p>Bình luận của <label style="color: #2AC37D;" for="name">{{comment.users.hoVaTen}} </label> | {{comment.ngayLap | date: 'dd/MM/yyyy'}} </p>
+
                   </div>
                   <div class="comment">
                    <p>{{comment.noiDungBinhLuan}}</p>
                   </div>
-
                </div>
                 <form (ngSubmit)="save()" >
                   <div class="form-group">
