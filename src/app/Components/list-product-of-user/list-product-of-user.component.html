@@ -1,8 +1,8 @@
 <div class="container-fluid mt-5">
-  
+
   <div class="limiter col-md-12">
     <div class="container-table100">
-        
+
 
       <div class="row w-100 pb-3">
         <div class="col-md-7 w-100 justify">
@@ -38,9 +38,6 @@
                   <th class="cell100 column4">Trạng thái</th>
                   <th class="cell100 column5">Thời hạn</th>
                   <th class="cell100 column6">Hình ảnh</th>
-                  <th class="cell100 column6">Hình ảnh</th>
-                  <th class="cell100 column6">Hình ảnh</th>
-                  <th class="cell100 column6">Hình ảnh</th>
                   <th class="cell100 column7"></th>
                 </tr>
               </thead>
@@ -56,24 +53,65 @@
                   <td class="cell100 column3">{{item.gia}}</td>
                   <td class="cell100 column4">{{item.trangThai}}</td>
                   <td class="cell100 column5">{{item.thoiHan}}</td>
-                  <td class="cell100 column6"><img src={{item.hinh0}} alt=""></td>
-                  <td class="cell100 column7"><img src={{item.hinh1}} alt=""></td>
-                  <td class="cell100 column8"><img src={{item.hinh2}} alt=""></td>
-                  <td class="cell100 column9"><img src={{item.hinh3}} alt=""></td>
-                  <td class="cell100 column10">
-                    <a class="btn btn-success" (click)="updateproduct(item.id)">
+
+                  <td class="cell100 column6">
+                    <div id="carousel-simple" class="carousel slide" data-ride="carousel" style="width: 100%;">
+                      <!-- Indicators -->
+                      <!-- <ol class="carousel-indicators">
+                        <li data-target="#carousel-simple" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-simple" data-slide-to="1"></li>
+                        <li data-target="#carousel-simple" data-slide-to="2"></li>
+                        <li data-target="#carousel-simple" data-slide-to="3"></li>
+                      </ol> -->
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                          <img
+                            src="{{item.hinh0}}"
+                            alt="" class="d-block w-100" />
+                        </div>
+                        <div class="item">
+                          <img
+                            src="{{item.hinh1}}"
+                            alt="" class="d-block w-100" />
+                        </div>
+                        <div class="item">
+                          <img
+                            src="{{item.hinh2}}"
+                            alt="" class="d-block w-100" />
+                        </div>
+                        <div class="item">
+                          <img
+                            src="{{item.hinh3}}"
+                            alt="" class="d-block w-100" />
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td class="cell100 column7" id="edit">
+                    <!-- <a class="btn btn-success" (click)="updateproduct(item.id)">
                       <i class="fas fa-edit"></i>Sửa
-                    </a>
-                    <a class="btn btn-danger" (click)="deleteProduct(item.id)" >
+                    </a> -->
+                    <button class="custom-btn btn-3 mb-5 mt-2" (click)="updateproduct(item.id)">
+                      <span><i class="fas fa-edit"></i> Sửa</span>
+                    </button>
+                    <button class="custom-btn btn-2 mb-5" (click)="updateproduct(item.id)">
+                      <span><i class="fas fa-times"></i> Xóa</span>
+                    </button>
+                    <button class="custom-btn btn-1" (click)="updateproduct(item.id)">
+                      <span><i class="fas fa-clock"></i> Gia hạn</span>
+                    </button>
+                    <!-- <a class="btn btn-danger" (click)="deleteProduct(item.id)" >
                         <i class="fas fa-times"></i>Xóa
                     </a>
                     <a class="btn btn-warning">
                       <i class="fas fa-clock"></i> Gia hạn
-                    </a>
+                    </a> -->
                   </td>
                 </tr>
 
-               
+
               </tbody>
             </table>
           </div>
@@ -83,4 +121,3 @@
     </div>
   </div>
 
-  
