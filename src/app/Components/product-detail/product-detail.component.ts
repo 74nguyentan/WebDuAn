@@ -76,5 +76,10 @@ export class ProductDetailComponent implements OnInit {
         console.log("er-----> : " + error);
       });
   }
-
+infomationShop(id:number){
+  this.router.navigate(['shop', id]);
+  this.router.routeReuseStrategy.shouldReuseRoute = function () {
+    return false;
+  };
+}
 }
