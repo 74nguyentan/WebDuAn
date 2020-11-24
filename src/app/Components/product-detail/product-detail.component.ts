@@ -17,14 +17,6 @@ import { ProductService } from 'src/app/Service/product.service';
 export class ProductDetailComponent implements OnInit {
   myFullresImage
   img_zoom: string;
-  // img_1: string =
-  //   '//vn-test-11.slatic.net/p/df5c3f569917f9b2d59d802e22ffc485.jpg_340x340q80.jpg_.webp';
-  // img_2: string =
-  //   '//vn-test-11.slatic.net/p/6684de7c5cf45722fce698dfb31eb185.jpg_340x340q80.jpg_.webp';
-  // img_3: string =
-  //   '//vn-test-11.slatic.net/p/d9e21933b863bb9670d0bea35b9736dc.jpg_340x340q80.jpg_.webp';
-  // img_4: string =
-  //   '//vn-test-11.slatic.net/p/0c71728ea3a5a3e2aa7243728de12ef9.jpg_340x340q80.jpg_.webp';
   id: number;
   product: Product;
   comment: Comment;
@@ -33,8 +25,6 @@ export class ProductDetailComponent implements OnInit {
   img_1;
   img_2;
   img_3;
-
-  // submitted = false;
 
   constructor(private route: ActivatedRoute, private router: Router,
     public AuthService: AuthService, public NgZone: NgZone,
@@ -62,7 +52,8 @@ export class ProductDetailComponent implements OnInit {
     // load binh luan
     this.commentservice.get('http://localhost:8000/greenmarket/api/idmathang/', this.id).subscribe(data => {
       console.log(data);
-      this.comment = Object.assign({}, ...data);
+      // this.comment = Object.assign({}, ...data);
+      this.comment=data;
       console.log("------data cmt id--- : " + this.id);
       console.log("------data cmt --- : " + this.comment.noiDungBinhLuan);
     })
@@ -72,9 +63,9 @@ export class ProductDetailComponent implements OnInit {
   save() {
     this.comment.users = {};
     this.comment.users.id = this.AuthService.user_id();
-    this.comment.Mathang = {};
-    this.comment.Mathang.id = this.id;
-    console.log("id mat hang : " +   this.comment.Mathang.id);
+    this.comment.matHang = {};
+    this.comment.matHang.id = this.id;
+    console.log("id mat hang : " +   this.comment.matHang.id);
     console.log("id user : " +  this.comment.users.id);
     console.log("id nd : " + this.comment.noiDungBinhLuan);
     this.commentservice.createComment(this.comment).subscribe(data => {

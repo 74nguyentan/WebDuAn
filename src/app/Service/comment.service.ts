@@ -20,8 +20,9 @@ export class CommentService {
   createComment(Comment: Object): Observable<Object> {
     return this.http.post(`${this.baseUrl1}`, Comment);
   }
-get(url , id ): Observable<any> {
-  return this.http.get(url + id);
-}
+
+  get(url, id): Observable<any> {
+    return this.http.get(url + id);
+  }
 
 }

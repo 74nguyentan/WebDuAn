@@ -81,7 +81,7 @@ const routes: Routes = [
     component: ListProductOfUserComponent
   },
   {
-    path: 'shop',
+    path: 'shop/:id',
     component: ShopImpormationComponent
   },
   {

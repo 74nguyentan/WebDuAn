@@ -3,6 +3,6 @@ export class Comment{
 id:number;
 noiDungBinhLuan:string;
 users:any;
-Mathang:any;
+matHang:any;
 ngayLap:Date;
 }
