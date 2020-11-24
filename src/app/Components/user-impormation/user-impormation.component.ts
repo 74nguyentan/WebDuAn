@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { FailDialogComponent } from './../../Dialog/fail-dialog/fail-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { SuccessDialogComponent } from './../../Dialog/success-dialog/success-dialog.component';
@@ -5,7 +6,7 @@ import { AuthService } from './../../Service/auth.service';
 
 import { Users } from './../../Model/user';
 import { UserServiceService } from './../../Service/user-service.service';
-import { Component, OnInit, DoCheck, Inject, OnChanges } from '@angular/core';
+import { Component, OnInit, DoCheck, Inject, OnChanges, NgZone } from '@angular/core';
 
 @Component({
   selector: 'app-user-impormation',
@@ -20,23 +21,28 @@ export class UserImpormationComponent implements OnInit {
     public UserServiceService: UserServiceService,
     @Inject(MatDialog) public data: any,
     private dialog: MatDialog,
-    public AuthService: AuthService
+    public AuthService: AuthService,
+    public router: Router,
+    public ngZone: NgZone
   ) {}
+
 
   ngOnInit(): void {
     this.users = new Users();
+    console.log("----------------mailllll---- "+ this.AuthService.userData.email);
+
     this.UserServiceService.getUserByEmail(this.AuthService.userData.email).subscribe(
-      (data) => {
+      data => {
         this.users = Object.assign({}, ...data);
         console.log("user ------->>" + this.users);
       },
-      (error) => console.log('er ---> ' + error)
+      error => console.log('er ---> ' + error)
     );
   }
 
   UpdateUser() {
     this.UserServiceService.updateUser(this.users.id, this.users).subscribe(
-      (data) => {
+      data => {
         console.log(data);
         this.ngOnInit();
         this.isShowFormUser = false;
@@ -46,7 +52,7 @@ export class UserImpormationComponent implements OnInit {
           },
         });
       },
-      (error) => {
+      error => {
         console.log("error update user ---------> "+error);
         const confirmDialog = this.dialog.open(FailDialogComponent, {
           data: {

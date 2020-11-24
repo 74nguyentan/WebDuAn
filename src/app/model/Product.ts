@@ -16,9 +16,5 @@ export class Product {
     xuatXu: string;
     trangThai: string;
     loaiHang: object;
-    // users: {
-    //     id: string;
-    //     hoVaTen: string;
-    // };
-    users: any;
+    users: any ;
 }

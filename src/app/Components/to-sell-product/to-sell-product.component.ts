@@ -51,14 +51,14 @@ export class ToSellProductComponent implements OnInit {
 
 
   submitted = false;
-  
+
   ngOnInit(): void {
     this.CategoryService.getAll(CATEGORY_API).subscribe(data => {
       this.category = data;
     })
 
     this.products = new Product();
- 
+
 
     this.id = this.route.snapshot.params['id'];
 
