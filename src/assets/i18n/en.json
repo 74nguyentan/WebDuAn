@@ -118,5 +118,34 @@
     "endowpro6": "Pen 2.500 đ",
     "change": "Change now",
     "Point": "100 coin ",
-    "free": "Free shipping"
+    "free": "Free shipping",
+
+    "username": "Username",
+    "password": "Password",
+    "remember": "Remember password",
+    "Forgot": " Forgot assword?",
+    "or": "Or maybe",
+    "no1": "Not a member?",
+    "no2": "Register now",
+    "review": "E-commerce platform",
+    "review2": "leading in Southeast Asia",
+
+    "retype": "Retype password",
+    "phone": "Phone number",
+    "address": "Address",
+    "registration": "Registration",
+    "no3": "You already have an account",
+    "no4": "Login now",
+    "checkuser": "Invalid login name!",
+    "checkpass": "Import true password! ",
+    "checkaddress": "Re-enter address!",
+    "checkphone": "Re-enter phone number!",
+    "checkall": "Cannot to blank!",
+    "checkemail": "Re-enter email!",
+    "membership": "Membership benefits ",
+    "membership1": "Buying around the world is very easy and fast",
+    "membership2": "Track orders, order journeys",
+    "membership3": "Receive many great deals from around the world"
+
+
 }

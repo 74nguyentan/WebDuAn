@@ -1,10 +1,10 @@
-import { AuthService } from './../../Service/auth.service';
 import { ComponentShareService } from './../../Service/component-share.service';
-import { Component, DoCheck, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CategoryService } from 'src/app/Service/category.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
+import { AuthService } from 'src/app/Service/auth.service';
 
 const CATEGORY_API = 'http://localhost:8000/greenmarket/api/category';
 @Component({
@@ -12,7 +12,7 @@ const CATEGORY_API = 'http://localhost:8000/greenmarket/api/category';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css'],
 })
-export class NavComponent implements OnInit, DoCheck {
+export class NavComponent implements OnInit, OnDestroy{
   public category: Array<any>;
 
   imagerUrl =
@@ -55,19 +55,34 @@ export class NavComponent implements OnInit, DoCheck {
   ) {
     this.CategoryService.getAll(CATEGORY_API).subscribe((data) => {
       this.category = data;});
-    translate.addLangs(['VI', 'EN']);
-    translate.setDefaultLang('VI');
+    translate.addLangs(['vi', 'en']);
+    translate.setDefaultLang('vi');
     const browserLang = translate.getBrowserLang();
-    translate.use(browserLang.match(/VI|EN/) ? browserLang : 'VI');
+    translate.use(browserLang.match(/vi|en/) ? browserLang : 'vi');
+
 
   }
   ngDoCheck(){
     this.login=this.authService.isLoggedIn;
- 
+
     console.log('auth islogin check  ----------> : '+ this.authService.isLoggedIn)
+
+
   }
+
   ngOnInit(): void {
+
    console.log(this.authService.user_id());
+
+    this.valueFromChildSubscription = this.componentShareService.ValueFromChild.subscribe(
+      (data) => {
+        this.login = data;
+      }
+    );
+  }
+  public ngOnDestroy() {
+    this.valueFromChildSubscription.unsubscribe();
+
   }
 
   idloaihang(id: number) {

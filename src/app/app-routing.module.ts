@@ -72,10 +72,15 @@ const routes: Routes = [
   },
 
 
+
+
+
+
   {
     path: 'loaihang/:id',
     component: ListproductsComponent
   },
+
   {
     path: 'mathang/:id',
     component: ListProductOfUserComponent

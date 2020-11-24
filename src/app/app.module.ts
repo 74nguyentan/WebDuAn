@@ -68,10 +68,19 @@ export function HttpLoaderFactory(http: HttpClient) {
     SuccessDialogComponent,
     SeenProductComponent,
     RegistDialogComponent,
+
     FailDialogComponent,
     ShopImpormationComponent,
     ForgetPasswordComponent,
+
     AllProductsComponent,
+
+
+    FailDialogComponent,
+    ShopImpormationComponent,
+
+
+
   ],
 
   imports: [
@@ -95,7 +104,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient],
       },
     }),
- 
+
   ],
 
   providers: [AuthService, CookieService],
