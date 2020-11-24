@@ -29,10 +29,10 @@ export class AuthService {
     this.afAuth.authState.subscribe((user) => {
       if (user) {
         this.userData = user;
-
         localStorage.setItem('user', JSON.stringify(this.userData));
         let email_user = user.email;
-        let userr; UserServiceService.getUserByEmail(email_user).subscribe(data => {
+        let userr;
+        UserServiceService.getUserByEmail(email_user).subscribe(data => {
           userr = data;
           sessionStorage.setItem('userr', userr[0].id);
           JSON.parse(sessionStorage.getItem('userr'));
@@ -45,7 +45,6 @@ export class AuthService {
   }
 
   user_id() {
-
     return sessionStorage.getItem('userr');
   }
 

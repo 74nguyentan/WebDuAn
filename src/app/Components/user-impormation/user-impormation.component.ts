@@ -29,12 +29,10 @@ export class UserImpormationComponent implements OnInit {
 
   ngOnInit(): void {
     this.users = new Users();
-    console.log("----------------mailllll---- "+ this.AuthService.userData.email);
-
-    this.UserServiceService.getUserByEmail(this.AuthService.userData.email).subscribe(
+    this.UserServiceService.getUserById(this.AuthService.user_id()).subscribe(
       data => {
-        this.users = Object.assign({}, ...data);
-        console.log("user ------->>" + this.users);
+        // this.users = Object.assign({}, ...data);
+      this.users = data;
       },
       error => console.log('er ---> ' + error)
     );

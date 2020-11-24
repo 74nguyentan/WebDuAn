@@ -1,7 +1,10 @@
+import { UserServiceService } from './../../Service/user-service.service';
+import { Users } from './../../Model/user';
+import { AuthService } from './../../Service/auth.service';
 import { Comment } from './../../model/Comment';
 import { CommentService } from './../../Service/comment.service';
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/model/Product';
 import { ProductService } from 'src/app/Service/product.service';
@@ -25,7 +28,7 @@ export class ProductDetailComponent implements OnInit {
   id: number;
   product: Product;
   comment: Comment;
-  comments:[];
+  Users: Users;
   img_0;
   img_1;
   img_2;
@@ -34,14 +37,16 @@ export class ProductDetailComponent implements OnInit {
   // submitted = false;
 
   constructor(private route: ActivatedRoute, private router: Router,
+    public AuthService: AuthService, public NgZone: NgZone,
+    public UserServiceService: UserServiceService,
     private productserviec: ProductService, private commentservice: CommentService) { }
 
   ngOnInit() {
     this.product = new Product();
     this.comment = new Comment();
+    this.Users = new Users();
 
     this.id = this.route.snapshot.params['id'];
-
     this.productserviec.getProduct(this.id)
       .subscribe(data => {
         console.log(data)
@@ -54,43 +59,31 @@ export class ProductDetailComponent implements OnInit {
         this.img_zoom = this.img_0;
         this.myFullresImage = this.img_0;
       }, error => console.log(error));
+    // load binh luan
     this.commentservice.get('http://localhost:8000/greenmarket/api/idmathang/', this.id).subscribe(data => {
       console.log(data);
-      this.comments = data;
+      this.comment = Object.assign({}, ...data);
+      console.log("------data cmt id--- : " + this.id);
+      console.log("------data cmt --- : " + this.comment.noiDungBinhLuan);
     })
 
   }
 
   save() {
-    console.log( "idUse____>>>" + this.comment.users);
-    console.log( "idmh____>>>" + this.comment.Mathang);
-    console.log( "nd____>>>" + this.comment.noiDungBinhLuan);
-
+    this.comment.users = {};
+    this.comment.users.id = this.AuthService.user_id();
+    this.comment.Mathang = {};
+    this.comment.Mathang.id = this.id;
+    console.log("id mat hang : " +   this.comment.Mathang.id);
+    console.log("id user : " +  this.comment.users.id);
+    console.log("id nd : " + this.comment.noiDungBinhLuan);
     this.commentservice.createComment(this.comment).subscribe(data => {
-      console.log("us---->" +this.comment.users)
-      console.log(data)
+      console.log("data-- " + data)
       this.comment = new Comment();
     },
-    (error) => {
-      console.log("er-----> : "+ error);
-    });
+      (error) => {
+        console.log("er-----> : " + error);
+      });
   }
 
-
-
-  // hover0() {
-  //   this.img_zoom = this.img_0;
-  // }
-  // hover1() {
-  //   this.img_zoom = this.img_1;
-  // }
-  // hover2() {
-  //   this.img_zoom = this.img_2;
-  // }
-  // hover3() {
-  //   this.img_zoom = this.img_3;
-  // }
-  // // hover2() {
-  // //   this.img_zoom = this.img_2;
-  // // }
 }

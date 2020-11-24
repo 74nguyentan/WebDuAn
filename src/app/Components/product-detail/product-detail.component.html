@@ -284,21 +284,17 @@
               <!-- <h3>Bình Luận</h3> -->
               <div style="width: 800px;">
 
-                <div *ngFor="let item of comments" action="comment" >
+                <div *ngIf="comment" >
                   <div class="commentid">
-                   <label for="name">{{item.id}} </label>
+                   <label for="name">{{comment.id}} </label>
                   </div>
                   <div class="comment">
-                   <p>{{item.noiDungBinhLuan}}</p>
+                   <p>{{comment.noiDungBinhLuan}}</p>
                   </div>
 
                </div>
                 <form (ngSubmit)="save()" >
                   <div class="form-group">
-                    <label for="name"> id users </label>
-                    <input type="text" class="form-control" id="users"  required [(ngModel)]="comment.users" name="users">
-                    <label for="name"> id mat hang </label>
-                    <input type="text" class="form-control" id="Mathang"  required [(ngModel)]="comment.Mathang" name="Mathang">
                     <label for="name">Viết bình luận </label>
                     <input type="text" class="form-control" id="noiDungBinhLuan" required [(ngModel)]="comment.noiDungBinhLuan" name="noiDungBinhLuan">
                   </div>
