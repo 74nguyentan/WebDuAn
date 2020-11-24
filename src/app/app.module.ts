@@ -40,6 +40,7 @@ import { environment } from '../environments/environment';
 import { ShopImpormationComponent } from './Components/shop-impormation/shop-impormation.component';
 import { ForgetPasswordComponent } from './Dialog/forget-password/forget-password.component';
 import { CookieService } from 'ngx-cookie-service';
+import { AllProductsComponent } from './Components/all-products/all-products.component';
 
 
 
@@ -70,6 +71,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     FailDialogComponent,
     ShopImpormationComponent,
     ForgetPasswordComponent,
+    AllProductsComponent,
   ],
 
   imports: [

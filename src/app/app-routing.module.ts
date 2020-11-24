@@ -15,7 +15,7 @@ import {RegisterComponentComponent} from './Components/register-component/regist
 import {UserImpormationComponent} from './Components/user-impormation/user-impormation.component'
 import {SeenProductComponent} from './Components/seen-product/seen-product.component';
 import {ShopImpormationComponent} from './Components/shop-impormation/shop-impormation.component'
-
+import { AllProductsComponent } from './Components/all-products/all-products.component'
 
 const routes: Routes = [
   {
@@ -83,8 +83,11 @@ const routes: Routes = [
   {
     path: 'shop',
     component: ShopImpormationComponent
+  },
+  {
+    path: 'all-products',
+    component: AllProductsComponent
   }
-
 ];
 
 @NgModule({

@@ -525,9 +525,73 @@ img {
   font-size: 13px;
   font-family: tahoma;
 }
+.git .h3{
+  color: red;
+  font-size: 15px;
+  font-family: tahoma;
+}
 .endow-t {
   font-family: tahoma;
 }
 .nav-link{
   font-family: tahoma;
 }
+
+/* // button xem them  */
+.wrapper {
+  margin: 150px auto;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+.btn3{
+  padding: 15px 100px;
+  margin:10px 4px;
+  color: black;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  display:inline-block;
+  font-family: tahoma;
+  font-size: 18px;
+  border:solid 2px #000000;
+  border:solid 1px #000000;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright:5px;
+  -moz-border-radius-bottomleft:5px;
+  -moz-border-radius-bottomright:5px;
+  -webkit-border-top-left-radius:5px;
+  -webkit-border-top-right-radius:5px;
+  -webkit-border-bottom-left-radius:5px;
+  -webkit-border-bottom-right-radius:5px;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+}
+.btn3::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #000;
+  -webkit-transform: scaleX(.3);
+  transform: scaleX(.3);
+  opacity: 0;
+  transition: all .3s
+}
+.btn3:hover::before{
+  opacity: 1;
+  background-color: rgb(42, 195, 125);
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  transition: -webkit-transform .6s cubic-bezier(.08, .35, .13, 1.02), opacity .4s;
+  transition: transform .6s cubic-bezier(.08, .35, .13, 1.02), opacity
+}
+
