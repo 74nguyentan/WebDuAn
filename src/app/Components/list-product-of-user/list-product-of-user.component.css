@@ -96,6 +96,7 @@ textarea:focus, input:focus {
   color: green;
   font-weight: 700;
   font-size: 30px;
+  font-family: tahoma;
 }
 .wrap-table100 {
   width: 100%;
@@ -148,7 +149,7 @@ td img{
     height: 40px;
     font-size: 15px;
     text-align: center;
-    font-family: Tahoma;
+    font-family: tahoma;
     font-weight: 600;
  }
  .column7 a i {
@@ -432,4 +433,131 @@ td img{
   border: none;
   outline: none;
   box-shadow: none;
+}
+/* slide product image  */
+.carousel-inner{
+  border-radius: 0px 5px 5px 0px;
+}
+.carousel-indicators {
+bottom: 0px;
+}
+.carousel-indicators li {
+border-radius: 10px;
+width: 10px;
+height: 10px;
+background: #ccc;
+border: 1px solid #ccc;
+}
+.carousel-indicators .active {
+width: 12px;
+height: 12px;
+background: #3276b1;
+border-color: #3276b1;
+}
+/* button  */
+.custom-btn {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-family: tahoma;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+}
+.btn-3 {
+  background: rgb(0,172,238);
+background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+
+}
+.btn-1 {
+  background: rgb(238, 222, 0);
+  background: linear-gradient(0deg, rgb(238, 222, 0) 0%, rgb(251, 234, 2) 100%);
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+
+}
+.btn-2 {
+  background: rgb(238, 0, 0);
+  background: linear-gradient(0deg, rgb(238, 8, 0) 0%, rgb(251, 2, 2) 100%);
+
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+
+}
+.btn-3,.btn-2,.btn-1 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-3:before,.btn-2:before,.btn-1:before,
+.btn-3:after,.btn-2:after,.btn-1:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+   background: rgb(8, 8, 8);
+  transition: all 0.3s ease;
+}
+.btn-3:before,.btn-2:before,.btn-1:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-3:after,.btn-2:after,.btn-1:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3:hover,.btn-2:hover,.btn-1:hover{
+   background: transparent;
+  box-shadow: none;
+}
+.btn-3:hover:before,.btn-2:hover:before,.btn-1:hover:before {
+  height: 100%;
+}
+.btn-3:hover:after,.btn-2:hover:after,.btn-1:hover:after {
+  width: 100%;
+}
+.btn-3 span:hover,.btn-2 span:hover,.btn-1 span:hover{
+   color: rgb(3, 119, 109);
+}
+.btn-3 span:before,.btn-2 span:before,.btn-1 span:before,
+.btn-3 span:after,.btn-2 span:after,.btn-1 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+   background: rgb(12, 12, 12);
+  transition: all 0.3s ease;
+}
+.btn-3 span:before,.btn-2 span:before,.btn-1 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-3 span:after ,.btn-2 span:after,.btn-1 span:after{
+  width: 0%;
+  height: 2px;
+}
+.btn-3 span:hover:before,.btn-2 span:hover:before,.btn-1 span:hover:before {
+  height: 100%;
+}
+.btn-3 span:hover:after,.btn-2 span:hover:after,.btn-1 span:hover:after {
+  width: 100%;
 }

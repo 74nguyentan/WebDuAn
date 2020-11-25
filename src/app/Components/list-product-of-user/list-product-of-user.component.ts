@@ -29,7 +29,7 @@ export class ListProductOfUserComponent implements OnInit {
     this.product = new Product();
 
     this.id = this.authService.user_id();
-    
+
     this.productserviec.getidusers(this.id)
       .subscribe(data => {
         console.log(data);
@@ -57,7 +57,7 @@ export class ListProductOfUserComponent implements OnInit {
       }
 });
 
- 
+
   }
 
   updateproduct(id: number){

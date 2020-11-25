@@ -673,7 +673,7 @@
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
 html {
-  font-family: sans-serif;
+  font-family: tahoma;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -940,7 +940,7 @@ textarea {
 }
 
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: tahoma;
   font-weight: normal;
 }
 
@@ -2895,9 +2895,9 @@ button.ps-btn--gray:before {
   margin-bottom: 25px;
 }
 .ps-widget--sidebar .ps-widget__header h3 {
-  font-family: "Archivo Narrow", sans-serif;
+  font-family: tahoma;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
   color: #626262;
   text-transform: uppercase;
 }

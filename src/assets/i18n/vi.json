@@ -117,6 +117,37 @@
     "endowpro6": "Cây bút 2.500  đ",
     "change": "Đổi ngay",
     "Point": "100 xu",
-    "free": "Miễn phí vận chuyển"
+    "free": "Miễn phí vận chuyển",
+
+    "username": "Tên đăng nhập",
+    "password": "Mật khẩu",
+    "remember": "Nhớ mật khẩu",
+    "Forgot": " Quên mật khẩu",
+    "or": "Hoặc",
+    "no1": "Không phải là thành viên?",
+    "no2": "Đăng kí ngay",
+    "review": "Nền tảng  thương mại điện tử ",
+    "review2": "Hàng đầu Đông Nam Á",
+
+    "retype": "Nhập lại mật khẩu",
+    "phone": "Số điện thoại",
+    "address": "Địa chỉ",
+    "registration": "Đăng ký",
+    "no3": "Bạn đã có tài khoản?",
+    "no4": "Đăng nhập ngay",
+    "checkuser": "Tên đăng nhập không hợp lệ!",
+    "checkpass": "Nhập đúng mật khẩu !    ",
+    "checkaddress": "Nhập lại địa chỉ !",
+    "checkphone": "Nhập lại số điện thoại!",
+    "checkall": "Không được để trống !",
+    "checkemail": "Nhập lại email!",
+    "membership": "Quyền lợi thành viên",
+    "membership1": "Mua hàng khắp thế giới cực dễ dàng, nhanh chóng",
+    "membership2": "Theo dõi đơn hàng, hành trình đơn hàng",
+    "membership3": "Nhận nhiều ưu đãi hấp dẫn từ khắp thế giới"
+
+
+
+
 
 }
