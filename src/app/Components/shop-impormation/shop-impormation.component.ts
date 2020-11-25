@@ -1,4 +1,8 @@
-import { Router } from '@angular/router';
+import { Product } from 'src/app/model/Product';
+import { ProductService } from './../../Service/product.service';
+import { UserServiceService } from './../../Service/user-service.service';
+import { Users } from './../../Model/user';
+import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from './../../Service/auth.service';
 import { Component, OnInit, NgZone } from '@angular/core';
 
@@ -8,120 +12,39 @@ import { Component, OnInit, NgZone } from '@angular/core';
   styleUrls: ['./shop-impormation.component.css']
 })
 export class ShopImpormationComponent implements OnInit {
-  products = products;
+  // products = products;
+  product: Product;
+  Users: Users;
   page: number;
+  id: number;
   constructor(
     public authService: AuthService,
+    public Router: ActivatedRoute,
     public router: Router,
-    public ngZone: NgZone
+    public ngZone: NgZone,
+    public UserServiceService: UserServiceService,
+    public ProductService: ProductService
   ) { }
 
   ngOnInit(): void {
+    this.product = new Product();
+    this.Users = new Users();
+    this.id = this.Router.snapshot.params['id'];
+    // load user theo id
+    this.UserServiceService.getUserById(this.id).subscribe(data => {
+      this.Users = data;
+    },
+      error => console.log(error)
+    )
+    // load san pham theo id user
+    this.ProductService.getidusers(this.id).subscribe(
+      data => {
+        this.product = data;
+      },
+      error => console.log(error)
+    )
   }
-
+  productDetails(id: number){
+    this.router.navigate(['details', id]);
+  }
 }
-export const products = [
-
-  {
-    image:'../../../assets/images/images/pronews/sofa.jpg',
-    name: 'Điện Thoại Oppo Oppo F9 Pro 2 Sim',
-    price: '5.000.000',
-    price2: '8.000.000'
-  },
-  {
-    image:'../../../assets/images/images/pronews/ghe cafe.jpg',
-    name: 'iPhone 11 - Chính Hãng VN/A',
-    price: '1.000.000',
-    price2: '1.500.000'
-  },
-  {
-    image:'../../../assets/images/images/pronews/tulanh.png',
-    name: 'Điện Thoại Siêu Nhỏ 2 Sim 3310mini',
-    price: '3.000.000',
-    price2: '4.000.000'
-  },
-  {
-    image:'../../../assets/images/images/pronews/tv.jpg',
-    name: 'Điện Thoại Siêu Nhỏ 2 Sim 3310mini',
-    price: '4.000.000',
-    price2: '5.000.000'
-  },
-  {
-    image:'../../../assets/images/images/pronews/tv.jpg',
-    name: 't sẽ thêm hiệu ứng ',
-    price: '4.000.000',
-    price2: '5.000.000'
-  },
-  {
-    image:'../../../assets/images/images/pronews/ghe cafe.jpg',
-    name: 'Bộ Bàn Ghế Cafe 1',
-    price: '1.000.000',
-    price2: '1.500.000'
-  },
-  {
-    image:'../../../assets/images/images/pronews/tulanh.png',
-    name: 'Tủ Lạnh Sanaky 140 Lít 2',
-    price: '3.000.000',
-    price2: '4.000.000'
-  },
-  {
-    image:'../../../assets/images/images/pronews/tv.jpg',
-    name: 'Smart Tivi Led LG 43 inch 3',
-    price: '4.000.000',
-    price2: '5.000.000'
-  },
-  {
-    image:'../../../assets/images/images/pronews/tv.jpg',
-    name: 'Smart Tivi Led LG 43 inch 4',
-    price: '4.000.000',
-    price2: '5.000.000'
-  },
-  {
-    image:'../../../assets/images/images/pronews/ghe cafe.jpg',
-    name: 'Bộ Bàn Ghế Cafe 5',
-    price: '1.000.000',
-    price2: '1.500.000'
-  },
-  {
-    image:'../../../assets/images/images/pronews/tulanh.png',
-    name: 'Tủ Lạnh Sanaky 140 Lít 6',
-    price: '3.000.000',
-    price2: '4.000.000'
-  },
-  {
-    image:'../../../assets/images/images/pronews/tv.jpg',
-    name: 'Smart Tivi Led LG 43 inch 7',
-    price: '4.000.000',
-    price2: '5.000.000'
-  },
-  {
-    image:'../../../assets/images/images/pronews/tv.jpg',
-    name: 'Smart Tivi Led LG 43 inch 8',
-    price: '4.000.000',
-    price2: '5.000.000'
-  },
-  {
-    image:'../../../assets/images/images/pronews/ghe cafe.jpg',
-    name: 'Bộ Bàn Ghế Cafe 9',
-    price: '1.000.000',
-    price2: '1.500.000'
-  },
-  {
-    image:'../../../assets/images/images/pronews/tulanh.png',
-    name: 'Tủ Lạnh Sanaky 140 Lít 10',
-    price: '3.000.000',
-    price2: '4.000.000'
-  },
-  {
-    image:'../../../assets/images/images/pronews/tv.jpg',
-    name: 'Smart Tivi Led LG 43 inch 11',
-    price: '4.000.000',
-    price2: '5.000.000'
-  },
-  {
-    image:'../../../assets/images/images/pronews/tv.jpg',
-    name: 'Smart Tivi Led LG 43 inch 12',
-    price: '4.000.000',
-    price2: '5.000.000'
-  }
-  ];

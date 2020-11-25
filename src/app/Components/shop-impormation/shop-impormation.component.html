@@ -1,15 +1,15 @@
 <div class="container-fluid mb-5">
-  <div class="row pt-5" style="background-color: white;">
+  <div class="row pt-5" style="background-color: white;" *ngIf="Users">
     <div class="container">
       <div class="row">
         <div class="col-md-4 mb-4" id="card">
           <div class="container-fluid mt-4">
             <div class="row">
               <div class="col-md-4 pt-2" style="background-color: white;">
-                <img class="img" src="https://cdn.printgo.vn/uploads/media/772948/thiet-ke-logo-noi-that-dep-doc-la-voi-nhieu-uu-dai-2_1584000050.jpg" alt="">
+                <img class="img" src="{{Users.hinhAnhUser}}" alt="">
               </div>
               <div class="col-md-8 pt-4 text-center" style="background-color: white;" >
-                <h2>XƯỞNG MAY FURNITURE</h2>
+                <h2>{{Users.hoVaTen}}</h2>
               </div>
             </div>
             <div class="row mt-3">
@@ -26,19 +26,19 @@
           <table class="table table-bordered" style="background: white;border-radius: 5px;" >
               <tr>
                 <th scope="col">Điện thoại: </th>
-                <td scope="col">0854220400 </td>
+                <td scope="col">{{Users.dienThoai}} </td>
                 <th scope="col">Đánh giá: </th>
-                <td scope="col">10đ </td>
+                <td scope="col">10đ</td>
               </tr>
               <tr>
                 <th >Email: </th>
-                <td>vansong2204@gmail.com</td>
+                <td>{{Users.email}}</td>
                 <th>Tham gia: </th>
-                <td>17 tháng</td>
+                <td>{{Users.ngayLap | date: 'dd//MM/yyyy'}}</td>
               </tr>
               <tr>
                 <th >Địa chỉ:</th>
-                <td>460 Lý Thường Kiệt, Liên Chiểu, Đà Nẵng </td>
+                <td>{{Users.diaChiUser}}</td>
                 <th >Sản phẩm: </th>
                 <td >123</td>
               </tr>
@@ -58,7 +58,7 @@
   <div class="container">
     <div class="titlenew row mt-5 mb-3">
       <div class="col-3 tittle-home justify-content-center">
-        Top hàng mới nhất
+       Danh sách sản phẩm
       </div>
       <div class="col-9 mt-4">
         <div class="controls pull-right hidden-xs">
@@ -67,25 +67,25 @@
       </div>
       <hr>
     </div>
-    <div class="row products mb-5">
-      <div class="col-sm-3" *ngFor="let product of products | paginate: { itemsPerPage: 4, currentPage: page }">
+    <div class="row products mb-2" >
+      <div class="col-sm-3 mb-5 "  *ngFor="let product of product  | paginate: { itemsPerPage: 20, currentPage: page }">
         <div>
           <img
-            src="{{ product.image }}"
+            src="{{product.hinh0}}"
             alt="Sản phẩm 1"
             class="img-circle img-thumbnail"
           />
-          <h2>{{product.name}}</h2>
+          <h2>{{product.tenHang}}</h2>
           <dl class="dl-horizontal">
             <dt>{{ 'price' | translate }}</dt>
-            <dd> {{product.price}}</dd>
+            <dd> {{product.gia}}</dd>
 
             <dt>{{ 'status' | translate }}</dt>
             <dd>{{ 'stocking' | translate }}</dd>
             <dt>{{ 'manufacturer' | translate }}</dt>
             <dd>{{ 'viet' | translate }}</dd>
           </dl>
-          <a routerLink="/proDetaill"  class="btn btn-1 color-green">
+          <a routerLink="/proDetaill"  (click)="productDetails(product.id)"  class="btn btn-1 color-green">
             <svg>
               <rect x="0" y="0" fill="none" width="100%" height="100%"/>
             </svg>
