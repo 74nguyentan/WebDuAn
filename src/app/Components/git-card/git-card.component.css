@@ -1,0 +1,12 @@
+
+.header img{
+  width: 100%;
+  height: auto;
+}
+.title h3{
+  font-family: tahoma;
+  font-size: 20px;
+}
+.package h4 ,.package h3  {
+ font-family: tahoma;
+}

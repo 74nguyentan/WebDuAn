@@ -551,8 +551,8 @@ img {
   font-size: 15px;
 }
 .btn-4 {
-  background-color: #4dccc6;
-background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  background-color: rgb(42, 195, 125);
+background-image: linear-gradient(315deg, rgb(42, 195, 125) 0%, rgb(42, 195, 125) 74%);
   line-height: 30px;
   padding: 0;
   border: none;
@@ -560,8 +560,8 @@ background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
   font-size: 15px;
 }
 .btn-4:hover{
-  background-color: #89d8d3;
-background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+  background-color: rgb(42, 195, 125);
+background-image: linear-gradient(315deg, rgb(42, 195, 125) 0%, rgb(42, 195, 125) 74%);
 }
 .btn-4 span {
   position: relative;
@@ -632,14 +632,9 @@ background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
 }
 
 /* // button xem them  */
-.wrapper {
-  margin: 150px auto;
-  text-align: center;
-  width: 100%;
-  position: relative;
-}
+
 .btn3{
-  padding: 15px 100px;
+  padding: 15px 10px;
   margin:10px 4px;
   color: black;
   font-family: sans-serif;
@@ -648,6 +643,7 @@ background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
   position: relative;
   text-decoration: none;
   display:inline-block;
+  width: 100%;
   font-family: tahoma;
   font-size: 18px;
   border:solid 2px #000000;
@@ -682,10 +678,13 @@ background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
 }
 .btn3:hover::before{
   opacity: 1;
-  background-color: rgb(42, 195, 125);
+  background-color: #2AC37D;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
   transition: -webkit-transform .6s cubic-bezier(.08, .35, .13, 1.02), opacity .4s;
   transition: transform .6s cubic-bezier(.08, .35, .13, 1.02), opacity
+}
+.btn3:hover{
+  color: white;
 }
 

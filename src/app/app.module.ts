@@ -41,6 +41,8 @@ import { ShopImpormationComponent } from './Components/shop-impormation/shop-imp
 import { ForgetPasswordComponent } from './Dialog/forget-password/forget-password.component';
 import { CookieService } from 'ngx-cookie-service';
 import { AllProductsComponent } from './Components/all-products/all-products.component';
+import { GitCardComponent } from './Components/git-card/git-card.component';
+import { DiscountCodeComponent } from './Components/discount-code/discount-code.component';
 
 
 
@@ -78,6 +80,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 
     FailDialogComponent,
     ShopImpormationComponent,
+    GitCardComponent,
+    DiscountCodeComponent,
 
 
 
