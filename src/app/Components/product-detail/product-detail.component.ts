@@ -70,13 +70,7 @@ export class ProductDetailComponent implements OnInit {
       // console.log(data);
       // this.comment = Object.assign({}, ...data);
       // this.comment= data;
-<<<<<<< HEAD
-      this.comments = data;
-      console.log("------data cmt id--- : " + this.id);
-      console.log("------data cmt --- : " + this.comments);
-=======
       this.comments =data;
->>>>>>> 2e765b3bc6ae91539c70f4e2f63a399cb3414318
     })
 
   }
@@ -99,7 +93,7 @@ export class ProductDetailComponent implements OnInit {
       });
   }
 
-  
+
   savehistory(){
     this.history = new History();
     this.history.users = {};
@@ -114,7 +108,7 @@ export class ProductDetailComponent implements OnInit {
     (error) => {
       console.log("er-----> : " + error);
     });
-    
+
   }
 
   updatehistory(){
@@ -131,7 +125,7 @@ export class ProductDetailComponent implements OnInit {
     (error) => {
       console.log("er-----> : " + error);
     });
-    
+
   }
 
 
@@ -142,11 +136,7 @@ infomationShop(id:number){
   };
 }
 
-<<<<<<< HEAD
 favourite(){
   this.clickFavourite = true;
 }
-=======
-
->>>>>>> 2e765b3bc6ae91539c70f4e2f63a399cb3414318
 }
