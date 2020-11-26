@@ -68,11 +68,8 @@
             <h1>{{ product.tenHang }}</h1>
             <p class="ps-product__category">
               <a href="#"> {{ product.xuatXu }} </a> |
-<<<<<<< HEAD
               <!-- <a href="#" (click)="infomationShop(product.users.id)"> {{ product.users.hoVaTen }} </a> -->
-=======
               <a (click)="infomationShop(product.users.id)"> {{ product.users.hoVaTen }} </a>
->>>>>>> a5e88a006971b9a0652022a4863fb1a6f644621d
             </p>
             <h3 class="ps-product__price">500 VNĐ <del>330 VNĐ</del></h3>
             <div class="ps-product__block ps-product__quickview">
@@ -141,12 +138,12 @@
             </div>
 
             <div class="ml-2 row ps-product__shopping">
-              <a  class="ps-btn mb-10" href="cart.html"
-                >{{product.dienThoai}}</a>
+              <a  class="ps-btn mb-10" style="color: white;" *ngIf="lienhe" (click)="lienhe = false" >Liên hệ</a>
+              <a  class="ps-btn mb-10" style="color: white;" *ngIf="!lienhe">{{product.dienThoai}}</a>
               <div class="ps-product__actions">
-                <a class="mr-10" href="whishlist.html"
-                  ><i class="fas fa-heart"></i></a
-                ><a href="compare.html"><i class="fas fa-share-alt"></i></a>
+                <a class="mr-10" style="color: white;" (click)="favourite()" [class.favourite]="true">
+                  <i class="fas fa-heart mt-1"></i></a>
+                <a  style="color: white;"><i class="fas fa-share-alt"></i></a>
               </div>
             </div>
 
@@ -215,7 +212,7 @@
             </div>
             <div class="tab-pane" role="tabpanel" id="tab_02">
               <p class="mb-20">
-                1 đánh giá:  <strong>Shoes Air Jordan</strong>
+                1 đánh giá:  <strong>{{ product.tenHang }}</strong>
               </p>
               <div class="ps-review">
                 <div class="ps-review__thumbnail">
@@ -231,7 +228,7 @@
                       <option value="5">5</option>
                     </select>
 
-                    <p>Đánh giá của<a href=""> Quang Tèo</a> - 22/10/2020</p>
+                    <p>Đánh giá của<a href="">Nguyen Ba Tuong</a> - 22/10/2020</p>
                   </header>
                   <p>
                     Sản phẩm dùng được, phù hợp với giá. Giao hàng nhanh chóng

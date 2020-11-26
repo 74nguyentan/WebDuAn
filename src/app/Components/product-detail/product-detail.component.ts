@@ -18,6 +18,7 @@ export class ProductDetailComponent implements OnInit {
   myFullresImage
   img_zoom: string;
   id: number;
+  lienhe:boolean = true;
   product: Product;
   comments: Comment = new Comment();
   Users: Users;
@@ -25,6 +26,7 @@ export class ProductDetailComponent implements OnInit {
   img_1;
   img_2;
   img_3;
+  clickFavourite = false;
 
   constructor(private route: ActivatedRoute, private router: Router,
     public AuthService: AuthService, public NgZone: NgZone,
@@ -59,7 +61,7 @@ export class ProductDetailComponent implements OnInit {
       // console.log(data);
       // this.comment = Object.assign({}, ...data);
       // this.comment= data;
-      this.comments =data;
+      this.comments = data;
       console.log("------data cmt id--- : " + this.id);
       console.log("------data cmt --- : " + this.comments);
     })
@@ -90,4 +92,7 @@ infomationShop(id:number){
   };
 }
 
+favourite(){
+  this.clickFavourite = true;
+}
 }
