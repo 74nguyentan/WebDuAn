@@ -8,6 +8,8 @@ import { Component, OnInit, NgZone } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/model/Product';
 import { ProductService } from 'src/app/Service/product.service';
+import { History } from 'src/app/model/History';
+import { HistoryService } from 'src/app/Service/history.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -20,6 +22,7 @@ export class ProductDetailComponent implements OnInit {
   id: number;
   product: Product;
   comments: Comment = new Comment();
+  history: History = new History();
   Users: Users;
   img_0;
   img_1;
@@ -29,7 +32,7 @@ export class ProductDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router,
     public AuthService: AuthService, public NgZone: NgZone,
     public UserServiceService: UserServiceService,
-    private productserviec: ProductService, private commentservice: CommentService) { }
+    private productserviec: ProductService, private commentservice: CommentService, private historyservice: HistoryService) { }
 
   ngOnInit() {
     this.product = new Product();
@@ -39,7 +42,7 @@ export class ProductDetailComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     this.productserviec.getProduct(this.id)
       .subscribe(data => {
-        console.log(data)
+        // console.log(data)
         this.product = data;
         this.img_0 = this.product.hinh0;
         this.img_1 = this.product.hinh1;
@@ -49,6 +52,12 @@ export class ProductDetailComponent implements OnInit {
         this.img_zoom = this.img_0;
         this.myFullresImage = this.img_0;
       }, error => console.log(error));
+
+    //save history
+    console.log("dfghjkdfghj"+ this.AuthService.user_id())
+    if(this.AuthService.user_id() != null){
+      this.savehistory();
+    }
     // load binh luan
     this.load();
   }
@@ -60,8 +69,6 @@ export class ProductDetailComponent implements OnInit {
       // this.comment = Object.assign({}, ...data);
       // this.comment= data;
       this.comments =data;
-      console.log("------data cmt id--- : " + this.id);
-      console.log("------data cmt --- : " + this.comments);
     })
 
   }
@@ -83,11 +90,49 @@ export class ProductDetailComponent implements OnInit {
         console.log("er-----> : " + error);
       });
   }
+
+  
+  savehistory(){
+    this.history = new History();
+    this.history.users = {};
+    this.history.users.id = this.AuthService.user_id();
+    this.history.matHang = {};
+    this.history.matHang.id = this.id;
+    console.log(this.history);
+    this.historyservice.createhistory(this.history).subscribe(data =>{
+      console.log(data);
+      this.history = new History();
+    },
+    (error) => {
+      console.log("er-----> : " + error);
+    });
+    
+  }
+
+  updatehistory(){
+    this.history = new History();
+    this.history.users = {};
+    this.history.users.id = this.AuthService.user_id();
+    this.history.matHang = {};
+    this.history.matHang.id = this.id;
+    console.log(this.history);
+    this.historyservice.updatehistory(this.id, history).subscribe(data =>{
+      console.log(data);
+      this.history = new History();
+    },
+    (error) => {
+      console.log("er-----> : " + error);
+    });
+    
+  }
+
+
 infomationShop(id:number){
   this.router.navigate(['shop', id]);
   this.router.routeReuseStrategy.shouldReuseRoute = function () {
     return false;
   };
 }
+
 
 }
