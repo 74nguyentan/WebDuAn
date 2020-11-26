@@ -19,7 +19,7 @@ export class ProductDetailComponent implements OnInit {
   img_zoom: string;
   id: number;
   product: Product;
-  comment: Comment;
+  comments: Comment = new Comment();
   Users: Users;
   img_0;
   img_1;
@@ -33,8 +33,8 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit() {
     this.product = new Product();
-    this.comment = new Comment();
     this.Users = new Users();
+    this.comments = new Comment();
 
     this.id = this.route.snapshot.params['id'];
     this.productserviec.getProduct(this.id)
@@ -50,27 +50,34 @@ export class ProductDetailComponent implements OnInit {
         this.myFullresImage = this.img_0;
       }, error => console.log(error));
     // load binh luan
-    this.commentservice.get('http://localhost:8000/greenmarket/api/idmathang/', this.id).subscribe(data => {
-      console.log(data);
+    this.load();
+  }
+
+  load(){
+    this.comments = new Comment();
+    this.commentservice.getComment(this.id).subscribe(data => {
+      // console.log(data);
       // this.comment = Object.assign({}, ...data);
-      this.comment=data;
+      // this.comment= data;
+      this.comments =data;
       console.log("------data cmt id--- : " + this.id);
-      console.log("------data cmt --- : " + this.comment.noiDungBinhLuan);
+      console.log("------data cmt --- : " + this.comments);
     })
 
   }
 
   save() {
-    this.comment.users = {};
-    this.comment.users.id = this.AuthService.user_id();
-    this.comment.matHang = {};
-    this.comment.matHang.id = this.id;
-    console.log("id mat hang : " +   this.comment.matHang.id);
-    console.log("id user : " +  this.comment.users.id);
-    console.log("id nd : " + this.comment.noiDungBinhLuan);
-    this.commentservice.createComment(this.comment).subscribe(data => {
-      console.log("data-- " + data)
-      this.comment = new Comment();
+    var nd = this.comments.noiDungBinhLuan;
+    this.comments = new Comment();
+    this.comments.noiDungBinhLuan =  nd;
+    this.comments.users = {};
+    this.comments.users.id = this.AuthService.user_id();
+    this.comments.matHang = {};
+    this.comments.matHang.id = this.id;
+    this.commentservice.createcomment(this.comments).subscribe(data => {
+      // console.log(this.comments)
+      console.log(data);
+      this.load();
     },
       (error) => {
         console.log("er-----> : " + error);
@@ -82,4 +89,5 @@ infomationShop(id:number){
     return false;
   };
 }
+
 }

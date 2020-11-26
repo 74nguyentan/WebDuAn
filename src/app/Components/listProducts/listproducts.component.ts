@@ -28,10 +28,8 @@ export class ListproductsComponent implements OnInit {
     
     this.productserviec.getidloaihang(this.id)
       .subscribe(data => {
-        console.log(data)
         this.product = data;
-        console.log(this.product)
-      }, error => console.log(error));
+       }, error => console.log(error));
 
   }
   productDetails(id: number){
