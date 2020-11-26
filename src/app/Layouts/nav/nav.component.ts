@@ -5,6 +5,9 @@ import { CategoryService } from 'src/app/Service/category.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/Service/auth.service';
+import { HistoryService } from 'src/app/Service/history.service';
+import { History } from 'src/app/model/History';
+
 
 const CATEGORY_API = 'http://localhost:8000/greenmarket/api/category';
 @Component({
@@ -14,6 +17,8 @@ const CATEGORY_API = 'http://localhost:8000/greenmarket/api/category';
 })
 export class NavComponent implements OnInit, OnDestroy{
   public category: Array<any>;
+  history: History = new History();
+  id: string;
 
   imagerUrl =
     'https://cf.shopee.vn/file/687f3967b7c2fe6a134a2c11894eea4b_tn&quot;';
@@ -51,7 +56,8 @@ export class NavComponent implements OnInit, OnDestroy{
     private route: ActivatedRoute,
     private router: Router,
     public translate: TranslateService,
-    public authService: AuthService
+    public authService: AuthService,
+    private historyservice: HistoryService
   ) {
     this.CategoryService.getAll(CATEGORY_API).subscribe((data) => {
       this.category = data;});
@@ -79,6 +85,7 @@ export class NavComponent implements OnInit, OnDestroy{
         this.login = data;
       }
     );
+    this.reload();
   }
   public ngOnDestroy() {
     this.valueFromChildSubscription.unsubscribe();
@@ -95,4 +102,18 @@ export class NavComponent implements OnInit, OnDestroy{
   idusers(id: string){
     this.router.navigate(['mathang', id]);
   }
+
+  reload(){
+    this.history = new History();
+    this.id = this.authService.user_id();
+    this.historyservice.getHistory(this.id).subscribe(data => {
+      this.history = data;
+      console.log(this.history);
+    }, error => console.log(error));
+  }
+
+  productDetails(id: number){
+    this.router.navigate(['details', id]);
+  }
+
 }

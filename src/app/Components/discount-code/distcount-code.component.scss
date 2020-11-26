@@ -1,0 +1,100 @@
+#item-card {
+  width: 300px;
+  height: 400px;
+  .img-container {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 50%;
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      -webkit-transform: translateY(50%);
+          -ms-transform: translateY(50%);
+              transform: translateY(50%);
+      .img-inner {
+          opacity: .2;
+          -webkit-transition: .5s;
+          -o-transition: .5s;
+          transition: .5s;
+      }
+      i {
+          font-size: 50px;
+          line-height: 50px;
+      }
+  }
+  .text-container {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 50%;
+      position: relative;
+      background-color: #fff;
+      padding: 20px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+              box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s;
+      .des {
+          margin-top: 10px;
+          margin-bottom: 15px;
+      }
+      a {
+          display: inline-block;
+          font-weight: bold;
+          color: #333;
+          padding: 5px;
+          border:1px solid #333;
+          -webkit-transition: .5s;
+          -o-transition: .5s;
+          transition: .5s;
+          &:hover {
+              background-color: #333;
+              color: #fff;
+          }
+      }
+  }
+  &:hover {
+      .img-container {
+          -webkit-transform: translateY(0%);
+              -ms-transform: translateY(0%);
+                  transform: translateY(0%);
+          background-color: #ff0057;
+          .img-inner {
+              opacity: 1;
+          }
+      }
+      .text-container {
+          -webkit-transform: translateY(0%);
+              -ms-transform: translateY(0%);
+                  transform: translateY(0%);
+      }
+  }
+}

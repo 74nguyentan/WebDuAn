@@ -1,12 +1,52 @@
 
-.header img{
+.heder img{
   width: 100%;
-  height: auto;
+  /* height: auto; */
+  border-radius: 5px ;
+}
+.the{
+  background: white;
+  border-radius: 5px;
 }
 .title h3{
   font-family: tahoma;
   font-size: 20px;
 }
-.package h4 ,.package h3  {
- font-family: tahoma;
+
+.content {
+  margin-bottom: 20px;
+  position: relative;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  min-height: 95px;
+}
+.content:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.content .contentText {
+  float: left;
+  width: calc(100% - 50px);
+}
+.content .contentText .contentPriceText {
+  color: #589f39;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+.content .contentText .contentDescription {
+  font-size: 12px;
+  opacity: .5;
+}
+.content .contentIcon img {
+  display: inline-block;
+}
+img {
+  vertical-align: middle;
+}
+.content .contentText .contentName {
+  margin-bottom: 5px;
 }
