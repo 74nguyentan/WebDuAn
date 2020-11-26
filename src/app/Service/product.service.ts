@@ -23,7 +23,7 @@ export class ProductService {
     return this.http.get(`${this.url}/${id}`);
   }
 
-  getidusers(id: string): Observable<any> {
+  getidusers(id: any): Observable<any> {
     return this.http.get(`${this.url_user}/${id}`);
   }
 

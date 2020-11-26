@@ -14,8 +14,10 @@ import {ToSellProductComponent} from './Components/to-sell-product/to-sell-produ
 import {RegisterComponentComponent} from './Components/register-component/register-component.component';
 import {UserImpormationComponent} from './Components/user-impormation/user-impormation.component'
 import {SeenProductComponent} from './Components/seen-product/seen-product.component';
-import {ShopImpormationComponent} from './Components/shop-impormation/shop-impormation.component'
-import { AllProductsComponent } from './Components/all-products/all-products.component'
+import {ShopImpormationComponent} from './Components/shop-impormation/shop-impormation.component';
+import { AllProductsComponent } from './Components/all-products/all-products.component';
+import { GitCardComponent } from './Components/git-card/git-card.component';
+import { DiscountCodeComponent } from './Components/discount-code/discount-code.component';
 
 const routes: Routes = [
   {
@@ -70,12 +72,6 @@ const routes: Routes = [
     path: 'update/:id',
      component: ToSellProductComponent
   },
-
-
-
-
-
-
   {
     path: 'loaihang/:id',
     component: ListproductsComponent
@@ -92,7 +88,16 @@ const routes: Routes = [
   {
     path: 'all-products',
     component: AllProductsComponent
+  },
+  {
+    path: 'git-card',
+    component: GitCardComponent
+  },
+  {
+    path: 'discout-code',
+    component: DiscountCodeComponent
   }
+
 ];
 
 @NgModule({
