@@ -1,3 +1,4 @@
+import { ProductFavouriteComponent } from './Components/product-favourite/product-favourite.component';
 
 import { AuthGuard } from './shared/guard/auth.guard';
 
@@ -96,6 +97,10 @@ const routes: Routes = [
   {
     path: 'discout-code',
     component: DiscountCodeComponent
+  },
+  {
+    path: 'productFavourite',
+    component: ProductFavouriteComponent
   }
 
 ];

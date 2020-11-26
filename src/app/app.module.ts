@@ -43,6 +43,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { AllProductsComponent } from './Components/all-products/all-products.component';
 import { GitCardComponent } from './Components/git-card/git-card.component';
 import { DiscountCodeComponent } from './Components/discount-code/discount-code.component';
+import { ProductFavouriteComponent } from './Components/product-favourite/product-favourite.component';
 
 
 
@@ -82,6 +83,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ShopImpormationComponent,
     GitCardComponent,
     DiscountCodeComponent,
+    ProductFavouriteComponent,
 
 
 
