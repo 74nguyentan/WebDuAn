@@ -12,41 +12,103 @@
   font-family: tahoma;
   font-size: 20px;
 }
-
-.content {
-  margin-bottom: 20px;
-  position: relative;
+/* form  */
+.test{
   border: 1px solid #ebebeb;
   border-radius: 4px;
-  padding: 10px;
-  cursor: pointer;
-  min-height: 95px;
+  /* margin: 0px 8px; */
+  margin: 0px 1px;
+  min-height: 111px;
 }
-.content:after {
-    content: "";
-    clear: both;
-    display: block;
+.test_name{
+  font-family: tahoma;
+  font-size: 15px;
 }
-.content .contentText {
-  float: left;
-  width: calc(100% - 50px);
+.test_desc{
+  font-family: tahoma;
+  font-size: 14px;
+  color:#589f39 ;
 }
-.content .contentText .contentPriceText {
-  color: #589f39;
-  font-weight: 700;
-  margin-bottom: 10px;
+.test_cmt{
+  font-family: tahoma;
   font-size: 13px;
 }
-.content .contentText .contentDescription {
-  font-size: 12px;
-  opacity: .5;
-}
-.content .contentIcon img {
+.test_no .custom-btn {
+  width: 100%;
+  color: #fff;
+  border-radius: 5px;
+  padding: -5px;
+  font-family: tahoma;
+  font-size: 13px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
   display: inline-block;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
 }
-img {
-  vertical-align: middle;
+.test_no .btn-11 {
+  border: none;
+  background: rgb(88, 159, 57);
+  background: linear-gradient(0deg, rgb(88, 159, 57) 0%, rgb(88, 159, 57) 100%);
+  color: #fff;
+  overflow: hidden;
 }
-.content .contentText .contentName {
-  margin-bottom: 5px;
+.test_no .btn-11:hover {
+    text-decoration: none;
+    color: #fff;
+}
+.test_no .btn-11:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 3s ease-in-out infinite;
+}
+.test_no .btn-11:hover{
+  opacity: .7;
+}
+/* goinap */
+.card{
+  width: 95%;
+  text-align: center;
+}
+.card-header{
+  font-size: 15px;
+}
+.card-header h3{
+  font-family: tahoma;
+  font-size: 18px;
+  margin: 0px;
+  font-weight: 600;
+}
+.list-group a:hover{
+  background-color: rgba(2, 252, 2, 0.3) ;
+  color: black;
+}
+.card .card-footer{
+  background: white;
+}
+.card .card-footer .btn{
+  background: rgb(88, 159, 57);
+  width: 100%;
+  margin: auto;
+  font-size: 20px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+   color: white;
+}
+
+.card .card-footer .btn:hover{
+  background-color: rgb(23, 182, 23) ;
+  opacity: .7;
+  color: white;
 }

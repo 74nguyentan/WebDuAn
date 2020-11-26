@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./discount-code.component.css','./distcount-code.component.scss']
 })
 export class DiscountCodeComponent implements OnInit {
-
+  id: "active"
   constructor() { }
 
   ngOnInit(): void {
