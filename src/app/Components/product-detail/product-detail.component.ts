@@ -1,3 +1,5 @@
+import { productFavourite } from './../../model/productFavourite';
+import { ProductFavouriteService } from './../../Service/product-favourite.service';
 import { UserServiceService } from './../../Service/user-service.service';
 import { Users } from './../../Model/user';
 import { AuthService } from './../../Service/auth.service';
@@ -24,6 +26,7 @@ export class ProductDetailComponent implements OnInit {
   product: Product;
   comments: Comment = new Comment();
   history: History = new History();
+  productFavourite: productFavourite;
   Users: Users;
   img_0;
   img_1;
@@ -34,12 +37,15 @@ export class ProductDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router,
     public AuthService: AuthService, public NgZone: NgZone,
     public UserServiceService: UserServiceService,
-    private productserviec: ProductService, private commentservice: CommentService, private historyservice: HistoryService) { }
+    private productserviec: ProductService, private commentservice: CommentService,
+    private ProductFavouriteService: ProductFavouriteService,
+    private historyservice: HistoryService) { }
 
   ngOnInit() {
     this.product = new Product();
     this.Users = new Users();
     this.comments = new Comment();
+    this.productFavourite = new productFavourite();
 
     this.id = this.route.snapshot.params['id'];
     this.productserviec.getProduct(this.id)
@@ -54,7 +60,10 @@ export class ProductDetailComponent implements OnInit {
         this.img_zoom = this.img_0;
         this.myFullresImage = this.img_0;
       }, error => console.log(error));
-
+this.ProductFavouriteService.getidusers(this.id).subscribe(data=>{
+  this.productFavourite = data;
+  this.clickFavourite = this.productFavourite.yeuThich;
+})
     //save history
     console.log("dfghjkdfghj"+ this.AuthService.user_id())
     if(this.AuthService.user_id() != null){

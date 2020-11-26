@@ -68,6 +68,7 @@
             <h1>{{ product.tenHang }}</h1>
             <p class="ps-product__category">
               <a href="#"> {{ product.xuatXu }} </a> |
+              <!-- <a href="#" (click)="infomationShop(product.users.id)"> {{ product.users.hoVaTen }} </a> -->
               <a (click)="infomationShop(product.users.id)"> {{ product.users.hoVaTen }} </a>
             </p>
             <h3 class="ps-product__price">500 VNĐ <del>330 VNĐ</del></h3>
@@ -149,8 +150,8 @@
           </div>
 
         </div>
-
-        <div class="col-lg-10 col-md-12 col-lg-offset-1">
+<!-- <br><br> -->
+        <div class="col-lg-10 col-md-12 col-lg-offset-1 mt-5">
           <div class="clearfix"></div>
           <div class="ps-product__content mt-50">
             <ul class="tab-list" role="tablist">
@@ -211,7 +212,7 @@
             </div>
             <div class="tab-pane" role="tabpanel" id="tab_02">
               <p class="mb-20">
-                1 đánh giá:  <strong>{{ product.tenHang }}</strong>
+                1 đánh giá:  <strong>Shoes Air Jordan</strong>
               </p>
               <div class="ps-review">
                 <div class="ps-review__thumbnail">
@@ -227,7 +228,7 @@
                       <option value="5">5</option>
                     </select>
 
-                    <p>Đánh giá của<a href="">Nguyen Ba Tuong</a> - 22/10/2020</p>
+                    <p>Đánh giá của<a href=""> Quang Tèo</a> - 22/10/2020</p>
                   </header>
                   <p>
                     Sản phẩm dùng được, phù hợp với giá. Giao hàng nhanh chóng

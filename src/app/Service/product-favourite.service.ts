@@ -1,3 +1,6 @@
+import { Observable } from 'rxjs';
+import { productFavourite } from './../model/productFavourite';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +8,19 @@ import { Injectable } from '@angular/core';
 })
 export class ProductFavouriteService {
 
-  constructor() { }
+  private url = 'http://localhost:8000/greenmarket/favourite/favourite';
+  constructor(private http: HttpClient) { }
+
+createFavoute(productFavourite:productFavourite){
+  return this.http.post(`${this.url}`,productFavourite);
+}
+
+getidusers(id: any): Observable<any> {
+  return this.http.get(`${this.url}/${id}`);
+}
+
+deleteFavourite(id:number):Observable<any>{
+  return this.http.delete(`${this.url}/${id}`,{responseType: 'text'});
+}
+
 }
