@@ -100,6 +100,11 @@ export class ToSellProductComponent implements OnInit {
             title: 'Thành Công !',
           },
         });
+        confirmDialog.afterClosed().subscribe((result) => {
+          if (result === false) {
+            // this.refresh();
+          }
+    });
       },
         (error) => {
           console.log(error);
@@ -147,5 +152,9 @@ export class ToSellProductComponent implements OnInit {
       this.save();
     }
   }
+
+  refresh(): void {
+    window.location.reload();
+}
 
 }

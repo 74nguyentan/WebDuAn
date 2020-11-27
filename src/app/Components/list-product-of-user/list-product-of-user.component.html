@@ -5,12 +5,12 @@
 
 
       <div class="row w-100 pb-3">
-        <div class="col-md-7 w-100 justify">
-          <h1 style="margin-left: 350px;" > Danh sách sản phẩm</h1>
+        <div class="col-md-9 w-100 text-center">
+          <h1 > Danh sách sản phẩm</h1>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-3">
 
-          <form class="card card-sm" style="width: 50%; float: right;">
+          <form class="card card-sm" style="width: 100%; ">
             <div class="card-body row no-gutters align-items-center" >
                 <div class="col-auto">
                     <i class="fas fa-search h4 text-body"></i>
@@ -90,7 +90,7 @@
                   </td>
 
                   <td class="cell100 column7" id="edit">
-                    <button class="custom-btn btn-3 mb-5 mt-2" (click)="updateproduct(item.id)">
+                    <button class="custom-btn btn-3 mb-5 mt-3" (click)="updateproduct(item.id)">
                       <span><i class="fas fa-edit"></i> Sửa</span>
                     </button>
                     <button class="custom-btn btn-2 mb-5" (click)="deleteProduct(item.id)">

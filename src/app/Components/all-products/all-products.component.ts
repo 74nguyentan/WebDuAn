@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Product } from 'src/app/model/Product';
+import { ProductService } from 'src/app/Service/product.service';
 
 @Component({
   selector: 'app-all-products',
@@ -8,36 +11,43 @@ import { Component, OnInit } from '@angular/core';
 export class AllProductsComponent implements OnInit {
   // product: products;
   p: number;
-  constructor() { }
+  products: Product = new Product();
+  constructor(private productservice: ProductService , private router: Router) { }
 
   ngOnInit(): void {
+    this.loadall();
   }
 
-  // mảng test form
-  product = [
-    {
-      image:'https://i.pinimg.com/564x/f3/60/31/f36031f081af4dcfd7f25476c7e9f56b.jpg',
-      name: 'Ghế Sofa GH-8269 ',
-      price: '5.000.000',
-    },
-    {
-      image:'https://i.pinimg.com/564x/f3/60/31/f36031f081af4dcfd7f25476c7e9f56b.jpg',
-      name: 'Bộ Bàn Ghế Cafe',
-      price: '1.000.000',
-    },
-    {
-      image:'https://i.pinimg.com/564x/f3/60/31/f36031f081af4dcfd7f25476c7e9f56b.jpg',
-      name: 'Tủ Lạnh Sanaky 140 Lít',
-      price: '3.000.000',
-    },
-    {
-      image:'https://i.pinimg.com/564x/f3/60/31/f36031f081af4dcfd7f25476c7e9f56b.jpg',
-      name: 'Smart Tivi Led LG 43 inch',
-      price: '4.000.000',
+  loadall(){
+    this.productservice.getProductList().subscribe(data => {
+      // this.products = data;
+      this.products = this.shuffle(data);
+      console.log(this.products);
+    });
+  }
+
+  productDetails(id: number){
+    this.router.navigate(['details', id]);
+  }
+
+  shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+   
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+   
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+   
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
     }
-
-
-  ]
+   
+    return array;
+  }
 
 }
 

@@ -26,6 +26,7 @@ export class ProductService {
   getidloaihang(id: number): Observable<any> {
     return this.http.get(`${this.url}/${id}`);
   }
+<<<<<<< HEAD
   getfitler(id: any): Observable<any> {
     return this.http.get(`${this.url_}/${id}`);
   }
@@ -39,6 +40,10 @@ export class ProductService {
     return this.http.get(`${this.url1000}/${id}`);
   }
   getidusers(id: string): Observable<any> {
+=======
+
+  getidusers(id: any): Observable<any> {
+>>>>>>> 74994219bc3ef951025248f68b2004f499702edc
     return this.http.get(`${this.url_user}/${id}`);
   }
 

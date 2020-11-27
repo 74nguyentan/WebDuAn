@@ -97,6 +97,7 @@
     "pro7": "Male cow coat",
     "pro8": "Paradigm",
     "pro9": "All Products",
+    "10": "Favorite product",
 
     "price1": "Price: 200.000 đ",
     "price2": "Price: 1.999.999 đ",
@@ -145,7 +146,8 @@
     "membership": "Membership benefits ",
     "membership1": "Buying around the world is very easy and fast",
     "membership2": "Track orders, order journeys",
-    "membership3": "Receive many great deals from around the world"
+    "membership3": "Receive many great deals from around the world",
+    "productFavourite": "Products Favourite"
 
 
 }

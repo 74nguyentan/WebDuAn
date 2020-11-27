@@ -68,6 +68,7 @@
             <h1>{{ product.tenHang }}</h1>
             <p class="ps-product__category">
               <a href="#"> {{ product.xuatXu }} </a> |
+              <!-- <a href="#" (click)="infomationShop(product.users.id)"> {{ product.users.hoVaTen }} </a> -->
               <a (click)="infomationShop(product.users.id)"> {{ product.users.hoVaTen }} </a>
             </p>
             <h3 class="ps-product__price">500 VNĐ <del>330 VNĐ</del></h3>
@@ -137,20 +138,20 @@
             </div>
 
             <div class="ml-2 row ps-product__shopping">
-              <a  class="ps-btn mb-10" href="cart.html"
-                >{{product.dienThoai}}</a>
+              <a  class="ps-btn mb-10" style="color: white;" *ngIf="lienhe" (click)="lienhe = false" >Liên hệ</a>
+              <a  class="ps-btn mb-10" style="color: white;" *ngIf="!lienhe">{{product.dienThoai}}</a>
               <div class="ps-product__actions">
-                <a class="mr-10" href="whishlist.html"
-                  ><i class="fas fa-heart"></i></a
-                ><a href="compare.html"><i class="fas fa-share-alt"></i></a>
+                <a class="mr-10" style="color: white;" (click)="favourite()" [class.favourite]="true">
+                  <i class="fas fa-heart mt-1"></i></a>
+                <a  style="color: white;"><i class="fas fa-share-alt"></i></a>
               </div>
             </div>
 
           </div>
 
         </div>
-
-        <div class="col-lg-10 col-md-12 col-lg-offset-1">
+<!-- <br><br> -->
+        <div class="col-lg-10 col-md-12 col-lg-offset-1 mt-5">
           <div class="clearfix"></div>
           <div class="ps-product__content mt-50">
             <ul class="tab-list" role="tablist">
@@ -284,19 +285,19 @@
               <!-- <h3>Bình Luận</h3> -->
               <div style="width: 800px;">
 
-                <div style="background-color: #F1F1F1; padding: 20px; border: 5px; margin-bottom: 20px;" *ngFor="let comment of comment" >
+                <div style="background-color: #F1F1F1; padding: 20px; border: 5px; margin-bottom: 20px;" *ngFor="let cm of comments" >
                   <div class="commentid">
-                    <p>Bình luận của <label style="color: #2AC37D;" for="name">{{comment.users.hoVaTen}} </label> | {{comment.ngayLap | date: 'dd/MM/yyyy'}} </p>
+                    <p>Bình luận của <label style="color: #2AC37D;" for="name">{{cm.users.hoVaTen}} </label> | {{cm.ngayLap | date: 'dd/MM/yyyy'}} </p>
 
                   </div>
                   <div class="comment">
-                   <p>{{comment.noiDungBinhLuan}}</p>
+                   <p>{{cm.noiDungBinhLuan}}</p>
                   </div>
                </div>
                 <form (ngSubmit)="save()" >
                   <div class="form-group">
                     <label for="name">Viết bình luận </label>
-                    <input type="text" class="form-control" id="noiDungBinhLuan" required [(ngModel)]="comment.noiDungBinhLuan" name="noiDungBinhLuan">
+                    <input type="text" class="form-control" id="noiDungBinhLuan" required [(ngModel)]="comments.noiDungBinhLuan" name="noiDungBinhLuan">
                   </div>
                   <button type="submit" class="btn btn-success">Submit</button>
                 </form>

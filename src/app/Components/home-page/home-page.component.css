@@ -459,11 +459,9 @@ img {
 }
 
 .endow-t {
-  font-size: 21px;
   background-color: #4dccc6;
   background-image: linear-gradient(315deg, #c2f3ca 0%, #69e65e 74%);
-  color: #fff;
-  padding: 10px 0px 10px 65px;
+  padding: 13.5px 0px 13.5px 75px;
   border: dashed 0px #000000;
   -moz-border-radius-topleft: 5px;
   -moz-border-radius-topright: 5px;
@@ -479,7 +477,11 @@ img {
   border-bottom-right-radius: 0px;
 
 }
-
+.endow-t a {
+  font-size: 20px;
+  font-family: tahoma;
+  color: white;
+}
 .endow-t:hover{
   background-color: #89d8d3;
   background-image: linear-gradient(315deg, #69e65e 0%, #c2f3ca 74%);
@@ -551,8 +553,8 @@ img {
   font-size: 15px;
 }
 .btn-4 {
-  background-color: #4dccc6;
-background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  background-color: rgb(42, 195, 125);
+background-image: linear-gradient(315deg, rgb(42, 195, 125) 0%, rgb(42, 195, 125) 74%);
   line-height: 30px;
   padding: 0;
   border: none;
@@ -560,8 +562,8 @@ background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
   font-size: 15px;
 }
 .btn-4:hover{
-  background-color: #89d8d3;
-background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+  background-color: rgb(42, 195, 125);
+background-image: linear-gradient(315deg, rgb(42, 195, 125) 0%, rgb(42, 195, 125) 74%);
 }
 .btn-4 span {
   position: relative;
@@ -632,14 +634,9 @@ background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
 }
 
 /* // button xem them  */
-.wrapper {
-  margin: 150px auto;
-  text-align: center;
-  width: 100%;
-  position: relative;
-}
+
 .btn3{
-  padding: 15px 100px;
+  padding: 15px 10px;
   margin:10px 4px;
   color: black;
   font-family: sans-serif;
@@ -648,6 +645,7 @@ background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
   position: relative;
   text-decoration: none;
   display:inline-block;
+  width: 100%;
   font-family: tahoma;
   font-size: 18px;
   border:solid 2px #000000;
@@ -682,10 +680,13 @@ background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
 }
 .btn3:hover::before{
   opacity: 1;
-  background-color: rgb(42, 195, 125);
+  background-color: #2AC37D;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
   transition: -webkit-transform .6s cubic-bezier(.08, .35, .13, 1.02), opacity .4s;
   transition: transform .6s cubic-bezier(.08, .35, .13, 1.02), opacity
+}
+.btn3:hover{
+  color: white;
 }
 

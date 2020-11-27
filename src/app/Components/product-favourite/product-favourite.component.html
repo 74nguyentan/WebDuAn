@@ -5,7 +5,7 @@
 
       <div class="titlenew row mb-2 ml-1">
         <div class="col-3 tittle-home text-center">
-          {{ 'pro9' | translate }}
+          {{ 'pro10' | translate }}
         </div>
         <div class="col-9 mt-4">
           <div class="controls pull-right hidden-xs">
@@ -16,24 +16,24 @@
       </div>
 
       <div class="row products">
-        <div class="col-sm-3 mb-4" *ngFor=" let item of products | paginate: { itemsPerPage: 20, currentPage: p }">
+        <div class="col-sm-3 mb-4" *ngFor=" let item of product | paginate: { itemsPerPage: 20, currentPage: p }">
           <div>
             <img
-              src="{{ item.hinh0 }}"
+              src="{{ item.image }}"
               alt="Sản phẩm 1"
               class="img-circle img-thumbnail"
             />
-            <h2>{{item.tenHang}}</h2>
+            <h2>{{item.name}}</h2>
             <dl class="dl-horizontal">
               <dt>{{ 'price' | translate }}</dt>
-              <dd> {{ item.gia }}</dd>
+              <dd> {{ item.price }}</dd>
 
               <dt>{{ 'status' | translate }}</dt>
               <dd>{{ 'stocking' | translate }}</dd>
               <dt>{{ 'manufacturer' | translate }}</dt>
               <dd>{{ 'viet' | translate }}</dd>
             </dl>
-            <a routerLink="/proDetaill" (click)="productDetails(item.id)"  class="btn btn-1 color-green">
+            <a routerLink="/proDetaill"  class="btn btn-1 color-green">
               <svg>
                 <rect x="0" y="0" fill="none" width="100%" height="100%"/>
               </svg>

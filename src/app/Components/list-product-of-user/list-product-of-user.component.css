@@ -93,7 +93,7 @@ textarea:focus, input:focus {
   border-radius: 5px;
 }
 .container-table100 h1{
-  color: green;
+  color: #00ad5f;
   font-weight: 700;
   font-size: 30px;
   font-family: tahoma;
@@ -472,29 +472,29 @@ border-color: #3276b1;
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
 }
 .btn-3 {
-  background: rgb(0,172,238);
-background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  /* background: rgb(241, 241, 241);
+  background: linear-gradient(0deg, rgb(250, 250, 250) 0%, rgb(255, 255, 255) 100%); */
+  background-color: #00ad5f;
   width: 130px;
   height: 40px;
   line-height: 42px;
   padding: 0;
   border: none;
-
 }
 .btn-1 {
-  background: rgb(238, 222, 0);
-  background: linear-gradient(0deg, rgb(238, 222, 0) 0%, rgb(251, 234, 2) 100%);
+  /* background: rgb(238, 222, 0);
+  background: linear-gradient(0deg, rgb(238, 222, 0) 0%, rgb(251, 234, 2) 100%); */
   width: 130px;
   height: 40px;
   line-height: 42px;
   padding: 0;
   border: none;
-
+  background-color: #00ad5f;
 }
 .btn-2 {
-  background: rgb(238, 0, 0);
-  background: linear-gradient(0deg, rgb(238, 8, 0) 0%, rgb(251, 2, 2) 100%);
-
+  /* background: rgb(238, 0, 0);
+  background: linear-gradient(0deg, rgb(238, 8, 0) 0%, rgb(251, 2, 2) 100%); */
+  background-color: #00ad5f;
   width: 130px;
   height: 40px;
   line-height: 42px;
@@ -502,11 +502,12 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
   border: none;
 
 }
-.btn-3,.btn-2,.btn-1 span {
+.btn-3 span ,.btn-2 span, .btn-1 span{
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
+  /* background-color: #00ad5f; */
 }
 .btn-3:before,.btn-2:before,.btn-1:before,
 .btn-3:after,.btn-2:after,.btn-1:after {
@@ -514,7 +515,8 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
   content: "";
   right: 0;
   top: 0;
-   background: rgb(8, 8, 8);
+   /* background: rgb(8, 8, 8); */
+   background: #00ad5f;
   transition: all 0.3s ease;
 }
 .btn-3:before,.btn-2:before,.btn-1:before {
@@ -536,7 +538,8 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
   width: 100%;
 }
 .btn-3 span:hover,.btn-2 span:hover,.btn-1 span:hover{
-   color: rgb(3, 119, 109);
+   /* color: rgb(3, 119, 109); */
+   color:  #00ad5f;
 }
 .btn-3 span:before,.btn-2 span:before,.btn-1 span:before,
 .btn-3 span:after,.btn-2 span:after,.btn-1 span:after {
@@ -544,7 +547,8 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
   content: "";
   left: 0;
   bottom: 0;
-   background: rgb(12, 12, 12);
+   /* background: rgb(12, 12, 12); */
+  background: #00ad5f;
   transition: all 0.3s ease;
 }
 .btn-3 span:before,.btn-2 span:before,.btn-1 span:before {

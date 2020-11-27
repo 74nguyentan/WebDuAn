@@ -3,7 +3,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { loaihang } from 'src/app/model/Category';
 import { Product } from 'src/app/model/Product';
+import { Users } from 'src/app/Model/user';
 import { CategoryService } from 'src/app/Service/category.service';
+import { HistoryService } from 'src/app/Service/history.service';
 import { ProductService } from 'src/app/Service/product.service';
 
 // const PRODUCT_API = 'http://localhost:8989/api/mathang';
@@ -28,8 +30,13 @@ export class ListproductsComponent implements OnInit {
     this.productserviec.getidloaihang(this.id)
       .subscribe(data => {
         this.product = data;
+<<<<<<< HEAD
         console.log(this.product)
       }, error => console.log(error));
+=======
+       }, error => console.log(error));
+
+>>>>>>> 74994219bc3ef951025248f68b2004f499702edc
   }
   getProduct(id:number){
     this.productserviec.getfitler(id)
@@ -57,6 +64,11 @@ getPrice1000(id:number){
 }
   productDetails(id: number){
     this.router.navigate(['details', id]);
+
   }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 74994219bc3ef951025248f68b2004f499702edc
