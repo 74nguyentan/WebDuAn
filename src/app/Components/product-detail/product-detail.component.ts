@@ -65,10 +65,12 @@ this.ProductFavouriteService.getidusers(this.id).subscribe(data=>{
   this.clickFavourite = this.productFavourite.yeuThich;
 })
     //save history
-    console.log("dfghjkdfghj"+ this.AuthService.user_id())
-    if(this.AuthService.user_id() != null){
-      this.savehistory();
-    }
+    // console.log("dfghjkdfghj"+ this.AuthService.user_id())
+    // if(this.AuthService.user_id() != null){
+    //   this.savehistory();
+    // }else{
+    //   this.history = new History();
+    // }
     // load binh luan
     this.load();
   }
@@ -103,39 +105,39 @@ this.ProductFavouriteService.getidusers(this.id).subscribe(data=>{
   }
 
 
-  savehistory(){
-    this.history = new History();
-    this.history.users = {};
-    this.history.users.id = this.AuthService.user_id();
-    this.history.matHang = {};
-    this.history.matHang.id = this.id;
-    console.log(this.history);
-    this.historyservice.createhistory(this.history).subscribe(data =>{
-      console.log(data);
-      this.history = new History();
-    },
-    (error) => {
-      console.log("er-----> : " + error);
-    });
+  // savehistory(){
+  //   this.history = new History();
+  //   this.history.users = {};
+  //   this.history.users.id = this.AuthService.user_id();
+  //   this.history.matHang = {};
+  //   this.history.matHang.id = this.id;
+  //   console.log(this.history);
+  //   this.historyservice.createhistory(this.history).subscribe(data =>{
+  //     console.log(data);
+  //     this.history = new History();
+  //   },
+  //   (error) => {
+  //     console.log("er-----> : " + error);
+  //   });
 
-  }
+  // }
 
-  updatehistory(){
-    this.history = new History();
-    this.history.users = {};
-    this.history.users.id = this.AuthService.user_id();
-    this.history.matHang = {};
-    this.history.matHang.id = this.id;
-    console.log(this.history);
-    this.historyservice.updatehistory(this.id, history).subscribe(data =>{
-      console.log(data);
-      this.history = new History();
-    },
-    (error) => {
-      console.log("er-----> : " + error);
-    });
+  // updatehistory(){
+  //   this.history = new History();
+  //   this.history.users = {};
+  //   this.history.users.id = this.AuthService.user_id();
+  //   this.history.matHang = {};
+  //   this.history.matHang.id = this.id;
+  //   console.log(this.history);
+  //   this.historyservice.updatehistory(this.id, history).subscribe(data =>{
+  //     console.log(data);
+  //     this.history = new History();
+  //   },
+  //   (error) => {
+  //     console.log("er-----> : " + error);
+  //   });
 
-  }
+  // }
 
 
 infomationShop(id:number){

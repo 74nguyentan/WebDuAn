@@ -33,7 +33,7 @@
                 </li>
 
                 <li>
-                  <a (click)="authService.SignOut()"><i class="fas fa-sign-out-alt"></i> {{ 'loout' | translate }}</a>
+                  <a (click)="authService.SignOut()" ><i class="fas fa-sign-out-alt"></i> {{ 'loout' | translate }}</a>
                 </li>
               </ul>
             </div>
@@ -196,9 +196,10 @@
           <button><i class="ps-icon-search"></i></button>
         </form>
         <div class="ps-cart">
-          <a class="ps-cart__toggle" href="#"><span><i>20</i></span><i class="far fa-eye"></i></a>
+          <a class="ps-cart__toggle" href="#"><span><i>{{count}}</i></span><i class="far fa-eye"></i></a>
           <div class="ps-cart__listing">
             <div class="ps-cart__content" *ngFor=" let items of history">
+
               <div class="ps-cart-item">
                 <a class="ps-cart-item__close" href="#"></a>
                 <div class="ps-cart-item__thumbnail">

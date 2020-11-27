@@ -4,9 +4,11 @@ import { Observable } from 'rxjs';
 import { loaihang } from 'src/app/model/Category';
 import { Product } from 'src/app/model/Product';
 import { Users } from 'src/app/Model/user';
+import { History } from 'src/app/model/History';
 import { CategoryService } from 'src/app/Service/category.service';
 import { HistoryService } from 'src/app/Service/history.service';
 import { ProductService } from 'src/app/Service/product.service';
+import { AuthService } from './../../Service/auth.service';
 
 // const PRODUCT_API = 'http://localhost:8989/api/mathang';
 // const PRODUCT_API_ID = PRODUCT_API + '/mathangId'
@@ -20,8 +22,10 @@ export class ListproductsComponent implements OnInit {
   id: number;
   product: Product;
   p: number;
-  constructor(private route: ActivatedRoute,private router: Router,
-    private productserviec: ProductService) { }
+  history: History = new History();
+  Users: Users;
+  constructor(private route: ActivatedRoute,private router: Router, public AuthService: AuthService,
+    private productserviec: ProductService, private historyservice: HistoryService) { }
 
   ngOnInit(): void {
     this.product = new Product();
@@ -36,7 +40,24 @@ export class ListproductsComponent implements OnInit {
   }
   productDetails(id: number){
     this.router.navigate(['details', id]);
+    this.history = new History();
+    this.history.users = {};
+    this.history.users.id = this.AuthService.user_id();
+    this.history.matHang = {};
+    this.history.matHang.id = id;
+    console.log(this.history);
+    this.historyservice.createhistory(this.history).subscribe(data =>{
+      console.log(data);
+      this.history = new History();
+      this.refresh();
+    },
+    (error) => {
+      console.log("er-----> : " + error);
+    });
 
   }
-
+  refresh(): void {
+    window.location.reload();
 }
+}
+

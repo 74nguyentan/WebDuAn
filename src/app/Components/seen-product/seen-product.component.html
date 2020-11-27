@@ -173,274 +173,40 @@
           <h1>Sản phẩm gần  đây của bạn</h1>
         </div>
       </div>
+      <div class="titlenew row mb-2 ml-1">
+        <div class="col-3 tittle-home text-center">
+        
+        </div>
+        <div class="col-9 mt-4">
+          <div class="controls pull-right hidden-xs">
+            <pagination-controls (pageChange)="p = $event" ></pagination-controls>
+          </div>
+        </div>
+        <hr>
+      </div>
       <div class="row products">
-        <div class="col-sm-3 mb-4">
+        <div class="col-sm-3 mb-4" *ngFor=" let items of history | paginate: { itemsPerPage: 16, currentPage: p }" >
           <div>
             <img
-              src="//ph-test-11.slatic.net/p/d2a5e8400b57e1e0fec2dbd0baa1cc95.jpg_340x340q80.jpg_.webp"
+              src="{{items.matHang.hinh0}}"
               alt="Sản phẩm 1"
               class="img-circle img-thumbnail"
             />
-            <h2>Máy ảnh PS</h2>
+            <h2>{{items.matHang.tenHang}}</h2>
             <dl class="dl-horizontal">
               <dt>{{ 'price' | translate }}</dt>
-              <dd>999.000đ</dd>
+              <dd>{{items.matHang.gia}}đ</dd>
 
               <dt>{{ 'status' | translate }}</dt>
-              <dd>Còn hàng</dd>
+              <dd>{{items.matHang.trangThai}} || </dd>
               <dt>{{ 'manufacturer' | translate }}</dt>
-              <dd>Nhật Bản</dd>
+              <dd>{{items.matHang.xuatXu}}</dd>
             </dl>
-            <a routerLink="/proDetaill" class="btn btn-primary" title="Chi tiết"
+            <a routerLink="/proDetaill" (click)="productDetails(items.matHang.id)" class="btn btn-primary" title="Chi tiết"
               >{{ 'detail' | translate }} »</a
             >
           </div>
         </div>
-        <div class="col-sm-3 mb-4">
-          <div>
-            <img
-              src="//vn-test-11.slatic.net/p/4d12133fb58cf93ef302691c6e7d5ceb.jpg_340x340q80.jpg_.webp"
-              alt="Sản phẩm 2"
-              class="img-circle img-thumbnail"
-            />
-            <h2>Bộ đồ thể thao</h2>
-            <dl class="dl-horizontal">
-              <dt>{{ 'price' | translate }}</dt>
-              <dd>100.000 đ</dd>
-
-              <dt>{{ 'status' | translate }}</dt>
-              <dd>Còn hàng</dd>
-              <dt>{{ 'manufacturer' | translate }}</dt>
-              <dd>Nike</dd>
-            </dl>
-            <a routerLink="/proDetaill" class="btn btn-primary" title="Chi tiết"
-              >{{ 'detail' | translate }} »</a
-            >
-          </div>
-        </div>
-        <div class="col-sm-3 mb-4">
-          <div>
-            <img
-              src="http://vn-test-11.slatic.net/p/66dbc9d236326be453545dbff2c5241e.jpg_340x340q80.jpg_.webp"
-              alt="Sản phẩm 3"
-              class="img-circle img-thumbnail"
-            />
-            <h2>Chảo chống dính</h2>
-            <dl class="dl-horizontal">
-              <dt>{{ 'price' | translate }}</dt>
-              <dd>300.000 đ</dd>
-
-              <dt>{{ 'status' | translate }}</dt>
-              <dd>Còn hàng</dd>
-              <dt>{{ 'manufacturer' | translate }}</dt>
-              <dd>Napaco</dd>
-            </dl>
-            <a routerLink="/proDetaill" class="btn btn-primary" title="Chi tiết"
-              >{{ 'detail' | translate }} »</a
-            >
-          </div>
-        </div>
-        <div class="col-sm-3 mb-4">
-          <div>
-            <img
-              src="//vn-test-11.slatic.net/p/1a1ef634fef23de8822c844ac73befce.jpg_340x340q80.jpg_.webp"
-              alt="Sản phẩm 3"
-              class="img-circle img-thumbnail"
-            />
-            <h2>Giày thời trang</h2>
-            <dl class="dl-horizontal">
-              <dt>{{ 'price' | translate }}</dt>
-              <dd>123.000 đ</dd>
-
-              <dt>{{ 'status' | translate }}</dt>
-              <dd>Còn hàng</dd>
-              <dt>{{ 'manufacturer' | translate }}</dt>
-              <dd>Naixi</dd>
-            </dl>
-            <a routerLink="/proDetaill" class="btn btn-primary" title="Chi tiết"
-              >{{ 'detail' | translate }} »</a
-            >
-          </div>
-        </div>
-
-        <div class="col-sm-3 mb-4">
-          <div>
-            <img
-              src="//vn-test-11.slatic.net/p/445288dee1084c05efb711fcb8669dd3.jpg_340x340q80.jpg_.webp"
-              alt="Sản phẩm 1"
-              class="img-circle img-thumbnail"
-            />
-            <h2>Áo sơ mi nam</h2>
-            <dl class="dl-horizontal">
-              <dt>{{ 'price' | translate }}</dt>
-              <dd>20.000đ</dd>
-
-              <dt>{{ 'status' | translate }}</dt>
-              <dd>Còn hàng</dd>
-              <dt>{{ 'manufacturer' | translate }}</dt>
-              <dd>Adidia</dd>
-            </dl>
-            <a routerLink="/proDetaill" class="btn btn-primary" title="Chi tiết"
-              >{{ 'detail' | translate }} »</a
-            >
-          </div>
-        </div>
-        <div class="col-sm-3 mb-4">
-          <div>
-            <img
-              src="//my-test-11.slatic.net/p/1d0372ffa54698c31a8ca5a0bdc6c63e.jpg_340x340q80.jpg_.webp"
-              alt="Sản phẩm 2"
-              class="img-circle img-thumbnail"
-            />
-            <h2>Cần chỉnh VA</h2>
-            <dl class="dl-horizontal">
-              <dt>{{ 'price' | translate }}</dt>
-              <dd>600.000 đ</dd>
-
-              <dt>{{ 'status' | translate }}</dt>
-              <dd>Còn hàng</dd>
-              <dt>{{ 'manufacturer' | translate }}</dt>
-              <dd>Thiên Nhi</dd>
-            </dl>
-            <a routerLink="/proDetaill" class="btn btn-primary" title="Chi tiết"
-              >{{ 'detail' | translate }} »</a
-            >
-          </div>
-        </div>
-        <div class="col-sm-3 mb-4">
-          <div>
-            <img
-              src="//vn-test-11.slatic.net/p/e77331c6769e5a24fc88ff4f72a30503.jpg_340x340q80.jpg_.webp"
-              alt="Sản phẩm 3"
-              class="img-circle img-thumbnail"
-            />
-            <h2>Áo bò Nam</h2>
-            <dl class="dl-horizontal">
-              <dt>{{ 'price' | translate }}</dt>
-              <dd>333.000 đ</dd>
-
-              <dt> {{ 'status' | translate }}</dt>
-              <dd>Còn hàng</dd>
-              <dt>{{ 'manufacturer' | translate }}</dt>
-              <dd>Zolobo</dd>
-            </dl>
-            <a routerLink="/proDetaill" class="btn btn-primary" title="Chi tiết"
-              >{{ 'detail' | translate }} »</a
-            >
-          </div>
-        </div>
-        <div class="col-sm-3 mb-4">
-          <div>
-            <img
-              src="//my-test-11.slatic.net/p/a985e8b45da0ba58c1c00808feb74985.jpg_340x340q80.jpg_.webp"
-              alt="Sản phẩm 3"
-              class="img-circle img-thumbnail"
-            />
-            <h2>Mô hình</h2>
-            <dl class="dl-horizontal">
-              <dt>{{ 'price' | translate }}</dt>
-              <dd>700.000 đ</dd>
-
-              <dt> {{ 'status' | translate }}</dt>
-              <dd>Còn hàng</dd>
-              <dt>{{ 'manufacturer' | translate }}</dt>
-              <dd>Nhật Bản</dd>
-            </dl>
-            <a routerLink="/proDetaill" class="btn btn-primary" title="Chi tiết"
-              >{{ 'detail' | translate }} »</a
-            >
-          </div>
-        </div>
-
-        <div class="col-sm-3 mb-4">
-          <div>
-            <img
-              src="//ph-test-11.slatic.net/p/d2a5e8400b57e1e0fec2dbd0baa1cc95.jpg_340x340q80.jpg_.webp"
-              alt="Sản phẩm 1"
-              class="img-circle img-thumbnail"
-            />
-            <h2>Máy ảnh PS</h2>
-            <dl class="dl-horizontal">
-              <dt>{{ 'price' | translate }}</dt>
-              <dd>999.000đ</dd>
-
-              <dt> {{ 'status' | translate }}</dt>
-              <dd>Còn hàng</dd>
-              <dt>{{ 'manufacturer' | translate }}</dt>
-              <dd>Nhật Bản</dd>
-            </dl>
-            <a routerLink="/proDetaill" class="btn btn-primary" title="Chi tiết"
-              >{{ 'detail' | translate }} »</a
-            >
-          </div>
-        </div>
-        <div class="col-sm-3 mb-4">
-          <div>
-            <img
-              src="//vn-test-11.slatic.net/p/4d12133fb58cf93ef302691c6e7d5ceb.jpg_340x340q80.jpg_.webp"
-              alt="Sản phẩm 2"
-              class="img-circle img-thumbnail"
-            />
-            <h2>Bộ đồ thể thao</h2>
-            <dl class="dl-horizontal">
-              <dt>{{ 'price' | translate }}</dt>
-              <dd>100.000 đ</dd>
-
-              <dt> {{ 'status' | translate }}</dt>
-              <dd>Còn hàng</dd>
-              <dt>{{ 'manufacturer' | translate }}</dt>
-              <dd>Nike</dd>
-            </dl>
-            <a routerLink="/proDetaill" class="btn btn-primary" title="Chi tiết"
-              >{{ 'detail' | translate }} »</a
-            >
-          </div>
-        </div>
-        <div class="col-sm-3 mb-4">
-          <div>
-            <img
-              src="http://vn-test-11.slatic.net/p/66dbc9d236326be453545dbff2c5241e.jpg_340x340q80.jpg_.webp"
-              alt="Sản phẩm 3"
-              class="img-circle img-thumbnail"
-            />
-            <h2>Chảo chống dính</h2>
-            <dl class="dl-horizontal">
-              <dt>{{ 'price' | translate }}</dt>
-              <dd>300.000 đ</dd>
-
-              <dt>{{ 'status' | translate }}</dt>
-              <dd>Còn hàng</dd>
-              <dt>{{ 'manufacturer' | translate }}</dt>
-              <dd>Napaco</dd>
-            </dl>
-            <a routerLink="/proDetaill" class="btn btn-primary" title="Chi tiết"
-              >{{ 'detail' | translate }} »</a
-            >
-          </div>
-        </div>
-        <div class="col-sm-3 mb-4">
-          <div>
-            <img
-              src="//vn-test-11.slatic.net/p/1a1ef634fef23de8822c844ac73befce.jpg_340x340q80.jpg_.webp"
-              alt="Sản phẩm 3"
-              class="img-circle img-thumbnail"
-            />
-            <h2>Giày thời trang</h2>
-            <dl class="dl-horizontal">
-              <dt>{{ 'price' | translate }}</dt>
-              <dd>123.000 đ</dd>
-
-              <dt>{{ 'status' | translate }}</dt>
-              <dd>Còn hàng</dd>
-              <dt>{{ 'manufacturer' | translate }}</dt>
-              <dd>Naixi</dd>
-            </dl>
-            <a routerLink="/proDetaill" class="btn btn-primary" title="Chi tiết"
-              >{{ 'detail' | translate }} »</a
-            >
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
