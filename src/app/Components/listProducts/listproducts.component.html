@@ -53,13 +53,18 @@
         </div>
         <div class="ps-widget__content">
           <ul class="ps-list--checked">
-            <li class="current"><a href="product-listing.html">Đồ điện tử(521)</a></li>
-            <li><a href="product-listing.html">Thời trang nữ(76)</a></li>
-            <li><a href="product-listing.html">Thời trang nam(21)</a></li>
-            <li><a href="product-listing.html">Đồ dân dụng(105)</a></li>
-            <li><a href="product-listing.html">Ô tô - xe máy - xe đạp</a></li>
-            <li><a href="product-listing.html">Sức khỏe và sắc đẹp(47)</a></li>
-            <li><a href="product-listing.html">Vocher và dịch vụ</a></li>
+            <li><a (click)="getProduct(1)">Đồ gia dụng</a></li>
+            <li><a (click)="getProduct(2)">Thể thao</a></li>
+            <li><a (click)="getProduct(3)">Đồ điện tử</a></li>
+            <li><a (click)="getProduct(4)">Điện lạnh</a></li>
+            <li><a (click)="getProduct(5)">Thời trang nam</a></li>
+            <li><a (click)="getProduct(6)">Đồ chơi trẻ em</a></li>
+            <li><a (click)="getProduct(7)">Thời trang nữ</a></li>
+            <li><a (click)="getProduct(8)">Trang sức</a></li>
+            <li><a (click)="getProduct(9)">Giày</a></li>
+            <li><a (click)="getProduct(10)">Đồ dùng thú cưng</a></li>
+            <li><a (click)="getProduct(11)">Thiết bị quay phim</a></li>
+            <li><a (click)="getProduct(12)">Mỹ phẩm</a></li>
           </ul>
         </div>
       </aside>
@@ -69,13 +74,10 @@
         </div>
         <div class="ps-widget__content">
           <ul class="ps-list--checked">
-            <li class="current"><a href="product-listing.html">Dưới 100k</a></li>
-            <li><a href="product-listing.html">Từ 100k đến 300k</a></li>
-            <li><a href="product-listing.html">Từ 300k đến 500k</a></li>
-            <li><a href="product-listing.html">Từ 500k đến 1 triệu</a></li>
-            <li><a href="product-listing.html">Trên 1 triệu</a></li>
-            <li><a href="product-listing.html">Trên 5 triệu</a></li>
-            <li><a href="product-listing.html">Trên 10 triệu</a></li>
+            <li ><a (click)="getPrice(100)" >Dưới 100k</a></li>
+            <li><a (click)="getPrice300(100)">Từ 100k đến 300k</a></li>
+            <li><a (click)="getPrice1000(300)">Từ 300k đến 1000k</a></li>
+
           </ul>
         </div>
       </aside>
