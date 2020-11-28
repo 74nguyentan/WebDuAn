@@ -203,7 +203,7 @@
               <div class="ps-cart-item">
                 <a class="ps-cart-item__close" href="#"></a>
                 <div class="ps-cart-item__thumbnail">
-                  <a></a><img src="{{items.matHang.hinh0}}" alt="" />
+                  <a (click)="productDetails(items.matHang.id)"><img src="{{items.matHang.hinh0}}" width="80px" height="80px"  alt="" /></a>
                 </div>
                 <div class="ps-cart-item__content">
                   <a class="ps-cart-item__title" (click)="productDetails(items.matHang.id)">{{items.matHang.tenHang}}</a>

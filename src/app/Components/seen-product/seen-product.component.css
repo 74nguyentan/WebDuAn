@@ -5,44 +5,7 @@ h1{
   color: green;
   font-weight: bold;
 }
-.products {
-  /* padding: 10px 0px; */
-  text-align: center;
-  margin: 0px 30px 30px;
-}
 
-.products div div {
-  padding: 10px;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  transition: 0.2s;
-  background-color: #fff;
-}
-
-.products div:hover div {
-  margin-top: -10px;
-  border: 1px solid rgba(104, 99, 99, 0.1);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
-  transition: 0.5s;
-  /* background: rgba(200, 200, 200, 0.1); */
-  background-color: #fff;
-
-}
-
-.dl-horizontal dt {
-  margin-left: 5px;
-  float: left;
-  width: 60%;
-  overflow: hidden;
-
-  text-align: left;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.dl-horizontal dd {
-  margin-left: 0px;
-  text-align: left;
-}
 .img{
   width: 100%;
 }
@@ -198,4 +161,155 @@ h1{
 .tpk_card .social-icons a:hover
 {
   background: #e91e63;
+}
+
+
+/* sp  */
+.products {
+  padding: 20px 0;
+  text-align: center;
+  margin-left: 50px;
+}
+
+.products div div {
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: 0.2s;
+  background-color: #fff;
+}
+
+.products div:hover div {
+  margin-top: -10px;
+  border: 1px solid rgba(104, 99, 99, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+  transition: 0.5s;
+  /* background: rgba(200, 200, 200, 0.1); */
+  background-color: #fff;
+
+}
+.products .btn{
+  font-family: tahoma;
+  font-size: 13px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size:16px;
+  font-weight: 400;
+  line-height: 36px;
+  margin: 0 0em;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  background-color:  #2ac37d;
+}
+
+.products h2{
+  font-family: tahoma;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.dl-horizontal dt {
+  margin-left: 5px;
+  float: left;
+  width: 60%;
+  overflow: hidden;
+  font-family: tahoma;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 550;
+}
+.dl-horizontal dd {
+  margin-left: 0px;
+  text-align: left;
+  font-family: tahoma;
+  font-size: 13px;
+}
+/* tieu de  */
+.tittle-home {
+  background-color: #fff;
+  font-family: tahoma;
+  font-size: 23px;
+  color: black;
+  padding: 15px 23px 15px 22px;
+  border: dashed 0px #ffffff;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomleft: 0px;
+  -moz-border-radius-bottomright: 0px;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.tittle-right {
+  border-bottom: solid 4px #ffffff;
+}
+.titlenew {
+  border-bottom: solid 4px #ffffff;
+  width: 95%;
+  margin-bottom: 0px;
+  margin-left: 50px;
+}
+::ng-deep .ngx-pagination a ,::ng-deep .ngx-pagination span{
+  text-align: right;
+  font-size: 16px;
+  font-family: tahoma;
+  color: black;
+}
+::ng-deep .ngx-pagination a:hover ,::ng-deep .ngx-pagination span:hover{
+  color: green;
+}
+/* //button  */
+
+.btn-1 {
+  font-weight: 100;
+  transition: all .25s;
+}
+.btn-1  rect {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-dasharray: 422, 0;
+  transition-delay: none;
+}
+.btn-1 svg {
+  height: 45px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.btn-1:hover {
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+.btn-1:hover rect {
+  stroke-width: 5;
+  stroke-dasharray: 15, 310;
+  stroke-dashoffset: 48;
+  transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn-1.color-green:hover {
+  color: black;
+}
+.btn-1.btn-1.color-green:hover rect {
+  stroke: black;
+}
+.btn-1.color-blue:hover {
+  color: blue;
+}
+.btn-1.color-blue:hover rect {
+  stroke: blue;
 }

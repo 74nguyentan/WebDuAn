@@ -168,24 +168,21 @@
 
     </div>
     <div class="col-md-9">
-      <div class="row">
-        <div class="col-md-12">
-          <h1>Sản phẩm gần  đây của bạn</h1>
+
+      <div class="titlenew row mb-2">
+        <div class="col-5 tittle-home text-center">
+          {{ 'pro11' | translate }}
         </div>
-      </div>
-      <div class="titlenew row mb-2 ml-1">
-        <div class="col-3 tittle-home text-center">
-        
-        </div>
-        <div class="col-9 mt-4">
+        <div class="col-7 mt-4">
           <div class="controls pull-right hidden-xs">
             <pagination-controls (pageChange)="p = $event" ></pagination-controls>
           </div>
         </div>
         <hr>
       </div>
+
       <div class="row products">
-        <div class="col-sm-3 mb-4" *ngFor=" let items of history | paginate: { itemsPerPage: 16, currentPage: p }" >
+        <div class="col-sm-3 mb-4" *ngFor=" let items of history | paginate: { itemsPerPage: 16, currentPage: p }">
           <div>
             <img
               src="{{items.matHang.hinh0}}"
@@ -202,12 +199,17 @@
               <dt>{{ 'manufacturer' | translate }}</dt>
               <dd>{{items.matHang.xuatXu}}</dd>
             </dl>
-            <a routerLink="/proDetaill" (click)="productDetails(items.matHang.id)" class="btn btn-primary" title="Chi tiết"
-              >{{ 'detail' | translate }} »</a
-            >
+            <a routerLink="/proDetaill"  class="btn btn-1 color-green">
+              <svg>
+                <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+              </svg>
+              {{ 'detail' | translate }}
+            </a>
           </div>
         </div>
+
       </div>
+
     </div>
   </div>
 </div>
