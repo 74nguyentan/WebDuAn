@@ -113,6 +113,9 @@ export class NavComponent implements OnInit, OnDestroy{
       this.history = data.filter((value,i) => i <= 2);
       console.log(this.history);
     }, error => console.log(error));
+    this.router.routeReuseStrategy.shouldReuseRoute = function () {
+      return false;
+    };
   }
 
   productDetails(id: number){

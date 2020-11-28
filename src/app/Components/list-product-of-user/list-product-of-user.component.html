@@ -16,10 +16,10 @@
                     <i class="fas fa-search h4 text-body"></i>
                 </div>
                 <div class="col">
-                    <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Nhập để tìm kiếm">
+                    <input class="form-control form-control-lg form-control-borderless" (keyup)="onKey($event.target.value)"  type="search" placeholder="Nhập để tìm kiếm">
                 </div>
                 <div class="col-auto" >
-                    <button class="btn btn-lg btn-success" type="submit">Tìm kiếm</button>
+                    <!-- <button class="btn btn-lg btn-success" type="submit">Tìm kiếm</button> -->
                 </div>
             </div>
         </form>
