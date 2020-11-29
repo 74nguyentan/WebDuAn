@@ -25,16 +25,16 @@ export class ListproductsComponent implements OnInit {
   p: number;
   history: History = new History();
   Users: Users;
-  clickCurrent:boolean = false;
-  clickCurrent1:boolean = false;
-  clickCurrent2:boolean = false;
-   clickCurrent3:boolean = false;
-   clickCurrent4:boolean = false;
-click = false;
+  clickCurrent: boolean = false;
+  clickCurrent1: boolean = false;
+  clickCurrent2: boolean = false;
+  clickCurrent3: boolean = false;
+  clickCurrent4: boolean = false;
+  click = false;
 
   constructor(
     private CategoryService: CategoryService,
-    private route: ActivatedRoute,private router: Router, public AuthService: AuthService,
+    private route: ActivatedRoute, private router: Router, public AuthService: AuthService,
     private productserviec: ProductService, private historyservice: HistoryService) { }
 
   ngOnInit(): void {
@@ -44,36 +44,37 @@ click = false;
       .subscribe(data => {
         this.product = data;
 
-       }, error => console.log(error));
+      }, error => console.log(error));
 
-       this.CategoryService.getAll(CATEGORY_API).subscribe((data) => {
-        this.category = data;});
+    this.CategoryService.getAll(CATEGORY_API).subscribe((data) => {
+      this.category = data;
+    });
   }
-  getProduct(id:number){
+  getProduct(id: number) {
     this.productserviec.getfitler(id)
       .subscribe(data => {
         this.product = data;
       }, error => console.log(error));
   }
-getPrice(id:number){
-  this.productserviec.getprice(id)
-    .subscribe(data => {
-      this.product = data;
-    }, error => console.log(error));
-}
-getPrice300(id:number){
-  this.productserviec.getprice300(id)
-    .subscribe(data => {
-      this.product = data;
-    }, error => console.log(error));
-}
-getPrice1000(id:number){
-  this.productserviec.getprice1000(id)
-    .subscribe(data => {
-      this.product = data;
-    }, error => console.log(error));
-}
-  productDetails(id: number){
+  getPrice(id: number) {
+    this.productserviec.getprice(id)
+      .subscribe(data => {
+        this.product = data;
+      }, error => console.log(error));
+  }
+  getPrice300(id: number) {
+    this.productserviec.getprice300(id)
+      .subscribe(data => {
+        this.product = data;
+      }, error => console.log(error));
+  }
+  getPrice1000(id: number) {
+    this.productserviec.getprice1000(id)
+      .subscribe(data => {
+        this.product = data;
+      }, error => console.log(error));
+  }
+  productDetails(id: number) {
     this.router.navigate(['details', id]);
     this.history = new History();
     this.history.users = {};
@@ -81,14 +82,14 @@ getPrice1000(id:number){
     this.history.matHang = {};
     this.history.matHang.id = id;
     console.log(this.history);
-    this.historyservice.createhistory(this.history).subscribe(data =>{
+    this.historyservice.createhistory(this.history).subscribe(data => {
       console.log(data);
       this.history = new History();
       this.refresh();
     },
-    (error) => {
-      console.log("er-----> : " + error);
-    });
+      (error) => {
+        console.log("er-----> : " + error);
+      });
 
   }
   refresh(): void {
