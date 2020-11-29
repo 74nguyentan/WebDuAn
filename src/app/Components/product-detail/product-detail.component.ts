@@ -19,6 +19,10 @@ import { HistoryService } from 'src/app/Service/history.service';
   styleUrls: ['./product-detail.component.css'],
 })
 export class ProductDetailComponent implements OnInit {
+  // fronend
+  boxpeople = false;
+  boxmess = false;
+  //fronend
   myFullresImage;
   img_zoom: string;
   id: number;
