@@ -12,13 +12,14 @@ import { AuthService } from './../../Service/auth.service';
 
 // const PRODUCT_API = 'http://localhost:8989/api/mathang';
 // const PRODUCT_API_ID = PRODUCT_API + '/mathangId'
-
+const CATEGORY_API = 'http://localhost:8000/greenmarket/api/category';
 @Component({
   selector: 'app-listproducts',
   templateUrl: './listproducts.component.html',
   styleUrls: ['./listproducts.component.css']
 })
 export class ListproductsComponent implements OnInit {
+  public category: Array<any>;
   id: number;
   product: Product;
   p: number;
@@ -31,7 +32,9 @@ export class ListproductsComponent implements OnInit {
    clickCurrent4:boolean = false;
 click = false;
 
-  constructor(private route: ActivatedRoute,private router: Router, public AuthService: AuthService,
+  constructor(
+    private CategoryService: CategoryService,
+    private route: ActivatedRoute,private router: Router, public AuthService: AuthService,
     private productserviec: ProductService, private historyservice: HistoryService) { }
 
   ngOnInit(): void {
@@ -43,6 +46,8 @@ click = false;
 
        }, error => console.log(error));
 
+       this.CategoryService.getAll(CATEGORY_API).subscribe((data) => {
+        this.category = data;});
   }
   getProduct(id:number){
     this.productserviec.getfitler(id)

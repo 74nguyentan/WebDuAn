@@ -52,7 +52,7 @@
           <h3>Danh mục</h3>
         </div>
         <div class="ps-widget__content">
-          <ul class="ps-list--checked">
+          <!-- <ul class="ps-list--checked">
             <li [class.current]="clickCurrent"><a (click)="getProduct(1); clickCurrent = true">Đồ gia dụng</a></li>
             <li [class.current]="clickCurrent1"><a (click)="getProduct(2); clickCurrent1 =true">Thể thao</a></li>
             <li [class.current]="clickCurrent2"><a (click)="getProduct(3); clickCurrent2 =true">Đồ điện tử</a></li>
@@ -65,7 +65,12 @@
             <li  ><a (click)="getProduct(10)">Đồ dùng thú cưng</a></li>
             <li ><a (click)="getProduct(11)">Thiết bị quay phim</a></li>
             <li ><a (click)="getProduct(12)">Mỹ phẩm</a></li>
-          </ul>
+          </ul> -->
+          <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
+          <mat-radio-button class="example-radio-button" *ngFor="let item of category" (click)="getProduct(item.id)" >
+            {{item.tenLoaiHang}}
+          </mat-radio-button>
+        </mat-radio-group>
         </div>
       </aside>
       <aside class="ps-widget--sidebar ps-widget--category">
@@ -73,12 +78,22 @@
           <h3>Giá tiền</h3>
         </div>
         <div class="ps-widget__content">
-          <ul class="ps-list--checked">
+          <!-- <ul class="ps-list--checked">
             <li ><a (click)="getPrice(100)" >Dưới 100k</a></li>
             <li><a (click)="getPrice300(100)">Từ 100k đến 300k</a></li>
             <li><a (click)="getPrice1000(300)">Từ 300k đến 1000k</a></li>
-
-          </ul>
+          </ul> -->
+          <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
+            <mat-radio-button class="example-radio-button" (click)="getPrice(100)" >
+              Dưới 100k
+            </mat-radio-button>
+            <mat-radio-button class="example-radio-button" (click)="getPrice300(100)" >
+              Từ 100k đến 300k
+            </mat-radio-button>
+            <mat-radio-button class="example-radio-button" (click)="getPrice1000(300)" >
+              Từ 300k đến 1000k
+            </mat-radio-button>
+          </mat-radio-group>
         </div>
       </aside>
       <div class="ps-sticky desktop">

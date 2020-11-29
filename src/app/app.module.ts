@@ -4,6 +4,7 @@ import { ProductNewsComponent } from './Components/product-news/product-news.com
 import { ProductDetailComponent } from './Components/product-detail/product-detail.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {MatRadioModule} from '@angular/material/radio';
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -100,6 +101,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatDialogModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatRadioModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
