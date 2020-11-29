@@ -6770,7 +6770,7 @@ button.ps-btn--gray:before {
   display: inline-block;
   width: 55px;
   height: 55px;
-  background-color: #999999;
+  /* background-color: #999999; */
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;

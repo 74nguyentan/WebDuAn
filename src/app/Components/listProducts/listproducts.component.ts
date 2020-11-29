@@ -24,6 +24,13 @@ export class ListproductsComponent implements OnInit {
   p: number;
   history: History = new History();
   Users: Users;
+  clickCurrent:boolean = false;
+  clickCurrent1:boolean = false;
+  clickCurrent2:boolean = false;
+   clickCurrent3:boolean = false;
+   clickCurrent4:boolean = false;
+click = false;
+
   constructor(private route: ActivatedRoute,private router: Router, public AuthService: AuthService,
     private productserviec: ProductService, private historyservice: HistoryService) { }
 

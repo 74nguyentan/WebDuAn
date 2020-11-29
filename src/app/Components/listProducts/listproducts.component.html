@@ -53,18 +53,18 @@
         </div>
         <div class="ps-widget__content">
           <ul class="ps-list--checked">
-            <li><a (click)="getProduct(1)">Đồ gia dụng</a></li>
-            <li><a (click)="getProduct(2)">Thể thao</a></li>
-            <li><a (click)="getProduct(3)">Đồ điện tử</a></li>
-            <li><a (click)="getProduct(4)">Điện lạnh</a></li>
-            <li><a (click)="getProduct(5)">Thời trang nam</a></li>
-            <li><a (click)="getProduct(6)">Đồ chơi trẻ em</a></li>
-            <li><a (click)="getProduct(7)">Thời trang nữ</a></li>
-            <li><a (click)="getProduct(8)">Trang sức</a></li>
-            <li><a (click)="getProduct(9)">Giày</a></li>
-            <li><a (click)="getProduct(10)">Đồ dùng thú cưng</a></li>
-            <li><a (click)="getProduct(11)">Thiết bị quay phim</a></li>
-            <li><a (click)="getProduct(12)">Mỹ phẩm</a></li>
+            <li [class.current]="clickCurrent"><a (click)="getProduct(1); clickCurrent = true">Đồ gia dụng</a></li>
+            <li [class.current]="clickCurrent1"><a (click)="getProduct(2); clickCurrent1 =true">Thể thao</a></li>
+            <li [class.current]="clickCurrent2"><a (click)="getProduct(3); clickCurrent2 =true">Đồ điện tử</a></li>
+            <li [class.current]="clickCurrent3"><a (click)="getProduct(4); clickCurrent3 =true">Điện lạnh</a></li>
+            <li [class.current]="clickCurrent4"><a (click)="getProduct(5); clickCurrent4 =true">Thời trang nam</a></li>
+            <li  ><a (click)="getProduct(6)">Đồ chơi trẻ em</a></li>
+            <li  ><a (click)="getProduct(7)">Thời trang nữ</a></li>
+            <li  ><a (click)="getProduct(8)">Trang sức</a></li>
+            <li  ><a (click)="getProduct(9)">Giày</a></li>
+            <li  ><a (click)="getProduct(10)">Đồ dùng thú cưng</a></li>
+            <li ><a (click)="getProduct(11)">Thiết bị quay phim</a></li>
+            <li ><a (click)="getProduct(12)">Mỹ phẩm</a></li>
           </ul>
         </div>
       </aside>
