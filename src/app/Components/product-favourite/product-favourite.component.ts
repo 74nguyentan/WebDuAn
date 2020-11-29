@@ -1,3 +1,7 @@
+import { Router } from '@angular/router';
+import { AuthService } from './../../Service/auth.service';
+import { ProductFavouriteService } from './../../Service/product-favourite.service';
+import { productFavourite } from './../../model/productFavourite';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,32 +12,25 @@ import { Component, OnInit } from '@angular/core';
 export class ProductFavouriteComponent implements OnInit {
 
   p: number;
-  constructor() { }
+productFavourite: productFavourite;
+
+  constructor(
+    private router: Router,
+    private productFavouriteService: ProductFavouriteService,
+    private AuthService: AuthService
+  ) { }
 
   ngOnInit(): void {
+    this.productFavourite = new productFavourite();
+    this.productFavouriteService.getidusers(this.AuthService.user_id()).subscribe(data=>{
+      console.log(data);
+      // this.productFavourite = Object.assign({}, ...data)
+      this.productFavourite  = data
+    })
   }
-  product = [
-    {
-      image:'https://i.pinimg.com/564x/f3/60/31/f36031f081af4dcfd7f25476c7e9f56b.jpg',
-      name: 'Ghế Sofa GH-8269 ',
-      price: '5.000.000',
-    },
-    {
-      image:'https://i.pinimg.com/564x/f3/60/31/f36031f081af4dcfd7f25476c7e9f56b.jpg',
-      name: 'Bộ Bàn Ghế Cafe',
-      price: '1.000.000',
-    },
-    {
-      image:'https://i.pinimg.com/564x/f3/60/31/f36031f081af4dcfd7f25476c7e9f56b.jpg',
-      name: 'Tủ Lạnh Sanaky 140 Lít',
-      price: '3.000.000',
-    },
-    {
-      image:'https://i.pinimg.com/564x/f3/60/31/f36031f081af4dcfd7f25476c7e9f56b.jpg',
-      name: 'Smart Tivi Led LG 43 inch',
-      price: '4.000.000',
-    }
+  productDetails(id: number){
+    this.router.navigate(['details', id]);
 
+  }
 
-  ]
 }

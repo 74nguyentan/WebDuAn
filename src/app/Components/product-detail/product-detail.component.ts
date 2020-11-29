@@ -70,7 +70,7 @@ export class ProductDetailComponent implements OnInit {
 // san pham yeu thich
     this.ProductFavouriteService.getidMatHang(this.id).subscribe((data) => {
       this.productFavourite = Object.assign({}, ...data);
-      console.log("-- favori -- yt : " + this.productFavourite.yeuThich);
+      console.log("-- favori -- idd : " + this.productFavourite.id);
 
       if (this.productFavourite.yeuThich == true) {
         this.clickFavourite = this.productFavourite.yeuThich;
@@ -122,14 +122,14 @@ export class ProductDetailComponent implements OnInit {
 
   favourite() {
     console.log(
-      '-------------------->>>> clickFavourite == ' + this.clickFavourite
+      '-------------------->>>> clickFavourite => :' + this.clickFavourite
     );
 
-    if ((this.clickFavourite == true)) {
+    if (this.clickFavourite == true) {
       // this.productFavourite = this.product
-      console.log(' delete -------------------->>>>');
+      console.log(' delete -----id -- >>:' +this.id);
 
-      this.ProductFavouriteService.deleteFavourite(this.id).subscribe(
+      this.ProductFavouriteService.deleteFavourite(this.productFavourite.id).subscribe(
         (data) => {
           console.log(data);
           this.clickFavourite = !this.clickFavourite;
