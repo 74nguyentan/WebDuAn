@@ -1,5 +1,5 @@
 /* Ring phone */
-/* .wrapper {
+ .wrapper {
   position: fixed;
   bottom: 10px;
   right: -65px;
@@ -106,7 +106,7 @@
 .coccoc-alo-phone.coccoc-alo-green.coccoc-alo-hover .coccoc-alo-ph-img-circle,
 .coccoc-alo-phone.coccoc-alo-green:hover .coccoc-alo-ph-img-circle {
   background-color: #75eb50;
-} */
+}
 
 @-moz-keyframes coccoc-alo-circle-anim {
   0% {
@@ -328,7 +328,7 @@
 
 
 
-
+/*
 .chat-btn {
   position: absolute;
   right: 14px;
@@ -488,5 +488,5 @@ background: #c1c1c1;
 	cursor: pointer;
 	font-size: 20px;
 	margin-right: 6px;
-}
+} */
 
