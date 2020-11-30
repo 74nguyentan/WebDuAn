@@ -15,6 +15,9 @@ export class ListProductOfUserComponent implements OnInit {
   id: string;
   product: Product;
 
+  onKey(tenHang: any) { // without type info
+    this.findbyname(tenHang);
+  }
 
   constructor(private route: ActivatedRoute,private router: Router,
     @Inject(MatDialog) public data: any,
@@ -64,4 +67,15 @@ export class ListProductOfUserComponent implements OnInit {
     this.router.navigate(['update', id]);
     console.log(id);
   }
+
+  findbyname(tenHang: any){
+    this.product = new Product();
+    this.productserviec.getProduct1(tenHang)
+    .subscribe(
+      data => {
+        this.product = data;
+        console.log(data);
+      },
+      error => console.log(error));
+    }
 }

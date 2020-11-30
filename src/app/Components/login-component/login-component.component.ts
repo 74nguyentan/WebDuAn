@@ -27,7 +27,7 @@ isLogin: boolean = false;
     ) {}
 
   ngOnInit(): void {
-
+    
   }
 
   login(userName,userPassword){
@@ -38,4 +38,5 @@ isLogin: boolean = false;
 
     });
   }
+
 }

@@ -9,6 +9,7 @@ export class ProductService {
   private baseUrl = 'http://localhost:8000/greenmarket/api/mathang';
   private url = 'http://localhost:8000/greenmarket/api/idloaihang';
   private url_user = 'http://localhost:8000/greenmarket/api/iduser';
+  private url_tenhang = 'http://localhost:8000/greenmarket/api/mathang1'; 
   private url_ = 'http://localhost:8000/greenmarket/api/fitler';
   private url__ = 'http://localhost:8000/greenmarket/api/gia100';
   private url300 = 'http://localhost:8000/greenmarket/api/gia300';
@@ -23,10 +24,13 @@ export class ProductService {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
+  getProduct1(tenHang: string): Observable<any> {
+    return this.http.get(`${this.url_tenhang}/${tenHang}`);
+  }
+
   getidloaihang(id: number): Observable<any> {
     return this.http.get(`${this.url}/${id}`);
   }
-<<<<<<< HEAD
   getfitler(id: any): Observable<any> {
     return this.http.get(`${this.url_}/${id}`);
   }
@@ -39,11 +43,8 @@ export class ProductService {
   getprice1000(id: any): Observable<any> {
     return this.http.get(`${this.url1000}/${id}`);
   }
-  getidusers(id: string): Observable<any> {
-=======
 
   getidusers(id: any): Observable<any> {
->>>>>>> 74994219bc3ef951025248f68b2004f499702edc
     return this.http.get(`${this.url_user}/${id}`);
   }
 

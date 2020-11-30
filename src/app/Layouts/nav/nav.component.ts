@@ -19,6 +19,7 @@ export class NavComponent implements OnInit, OnDestroy{
   public category: Array<any>;
   history: History = new History();
   id: string;
+  count : number
 
   imagerUrl =
     'https://cf.shopee.vn/file/687f3967b7c2fe6a134a2c11894eea4b_tn&quot;';
@@ -108,12 +109,23 @@ export class NavComponent implements OnInit, OnDestroy{
     this.id = this.authService.user_id();
     this.historyservice.getHistory(this.id).subscribe(data => {
       this.history = data;
+      this.count = data.length;
+      this.history = data.filter((value,i) => i <= 2);
       console.log(this.history);
     }, error => console.log(error));
+    this.router.routeReuseStrategy.shouldReuseRoute = function () {
+      return false;
+    };
   }
 
   productDetails(id: number){
     this.router.navigate(['details', id]);
+    this.router.routeReuseStrategy.shouldReuseRoute = function () {
+      return false;
+    };
   }
 
+  refresh(): void {
+    window.location.reload();
+}
 }

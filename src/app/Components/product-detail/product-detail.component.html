@@ -56,19 +56,9 @@
           </div>
 
           <div id="oke" class="ps-product__info">
-            <!-- <div class="ps-product__rating">
-              <select class="ps-rating">
-                <option value="1">1</option>
-                <option value="1">2</option>
-                <option value="1">3</option>
-                <option value="1">4</option>
-                <option value="2">5</option></select
-              ><a href="#">(Read all 8 reviews)</a>
-            </div> -->
             <h1>{{ product.tenHang }}</h1>
             <p class="ps-product__category">
               <a href="#"> {{ product.xuatXu }} </a> |
-              <!-- <a href="#" (click)="infomationShop(product.users.id)"> {{ product.users.hoVaTen }} </a> -->
               <a (click)="infomationShop(product.users.id)"> {{ product.users.hoVaTen }} </a>
             </p>
             <h3 class="ps-product__price">500 VNĐ <del>330 VNĐ</del></h3>
@@ -79,71 +69,20 @@
               </p>
             </div>
             <hr> <br>
-            <!-- <div class="ps-product__block ps-product__style">
-              <h4>CHOOSE YOUR STYLE</h4>
-              <ul>
-                <li>
-                  <a class="item" href="product-detail.html"
-                    ><img  src="../assets/images/images/shoe/sidebar/1.jpg" alt=""
-                  /></a>
-                </li>
-                <li>
-                  <a class="item" href="product-detail.html"
-                    ><img src="../assets/images/images/shoe/sidebar/2.jpg" alt=""
-                  /></a>
-                </li>
-                <li>
-                  <a class="item" href="product-detail.html"
-                    ><img src="../assets/images/images/shoe/sidebar/3.jpg" alt=""
-                  /></a>
-                </li>
-                <li>
-                  <a class="item" href="product-detail.html"
-                    ><img src="../assets/images/images/shoe/sidebar/2.jpg" alt=""
-                  /></a>
-                </li>
-              </ul>
-            </div> -->
-
-            <!-- <div class="ps-product__block ps-product__size">
-              <h4>CHOOSE SIZE<a href="#">Size chart</a></h4>
-              <select class="ps-select selectpicker mt-5">
-                <option value="1">Select Size</option>
-                <option value="2">4</option>
-                <option value="3">4.5</option>
-                <option value="3">5</option>
-                <option value="3">6</option>
-                <option value="3">6.5</option>
-                <option value="3">7</option>
-                <option value="3">7.5</option>
-                <option value="3">8</option>
-                <option value="3">8.5</option>
-                <option value="3">9</option>
-                <option value="3">9.5</option>
-                <option value="3">10</option>
-              </select>
-              <div class="form-group">
-                <input style="font-family: tahoma;font-size: 15px;color: brown;" class="form-control" type="number" value="1" />
-              </div>
-            </div> -->
-
             <div class="div mb-5">
-              <!-- <div class="sc-gZMcBi cRIaeY"><span><img src="https://static.chotot.com.vn/storage/chotot-icons/png/chat_green.png" class="sc-gqjmRU hDIvun"></span><span>CHAT VỚI NHÀ TUYỂN DỤNG</span></div> -->
-
-              <a  href="" class="ps-btn">
-                <!-- <img style="width: 40px; color: white;" src="https://static.chotot.com.vn/storage/chotot-icons/png/chat_green.png" alt=""> -->
+              <a  (click)="boxpeople = true"  class="ps-btn">
                 <img style="width: 40px;" src="https://drive.google.com/uc?export=download&id=1vdzV_8oaOj0ZU3siHGgQ0I13ixK4CtEg" alt="">
                   &nbsp; Chat với người bán
               </a>
             </div>
 
             <div class="ml-2 row ps-product__shopping">
-              <a  class="ps-btn mb-10" style="color: white;" *ngIf="lienhe" (click)="lienhe = false" >Liên hệ</a>
+              <a  class="ps-btn mb-10" style="color: white; font-size: 18px;" *ngIf="lienhe" (click)="lienhe = false" >Liên hệ</a>
               <a  class="ps-btn mb-10" style="color: white;" *ngIf="!lienhe">{{product.dienThoai}}</a>
               <div class="ps-product__actions">
-                <a class="mr-10" style="color: white;" (click)="favourite()" [class.favourite]="true">
+                <a class="mr-10" style="color: white;" (click)="favourite()" [class.favourite]="clickFavourite" [class.favourite1]="clickFavourite1">
                   <i class="fas fa-heart mt-1"></i></a>
-                <a  style="color: white;"><i class="fas fa-share-alt"></i></a>
+                <a  style="color: white; background-color: #999999;" ><i class="fas fa-share-alt"></i></a>
               </div>
             </div>
 
@@ -151,7 +90,7 @@
 
         </div>
 <!-- <br><br> -->
-        <div class="col-lg-10 col-md-12 col-lg-offset-1 mt-5">
+        <div class="col-lg-10 col-md-12 col-lg-offset-1 mt-4">
           <div class="clearfix"></div>
           <div class="ps-product__content mt-50">
             <ul class="tab-list" role="tablist">
@@ -264,7 +203,7 @@
                       <textarea class="form-control" rows="6"></textarea>
                     </div>
                     <div class="form-group">
-                      <button class="ps-btn ps-btn--sm">
+                      <button class="ps-btn ps-btn--sm"  style="font-family: tahoma;font-size: 18px; padding: 10px 30px; color: white;">
                         Thêm đánh giá<i class="ps-icon-next"></i>
                       </button>
                     </div>
@@ -278,12 +217,12 @@
                 <div class="form-group">
                   <input class="form-control" type="text" placeholder="" />
                 </div>
-                <button style="margin-left: 20px; font-size: 15px; font-family: tahoma;" class="ps-btn ps-btn--sm">Thêm thẻ</button>
+                <button style="font-family: tahoma;font-size: 18px; padding: 10px 30px; color: white;" class="ps-btn ps-btn--sm">Thêm thẻ</button>
               </form>
             </div>
             <div class="tab-pane" role="tabpanel" id="tab_04">
               <!-- <h3>Bình Luận</h3> -->
-              <div style="width: 800px;">
+              <div >
 
                 <div style="background-color: #F1F1F1; padding: 20px; border: 5px; margin-bottom: 20px;" *ngFor="let cm of comments" >
                   <div class="commentid">
@@ -295,11 +234,16 @@
                   </div>
                </div>
                 <form (ngSubmit)="save()" >
+
                   <div class="form-group">
-                    <label for="name">Viết bình luận </label>
-                    <input type="text" class="form-control" id="noiDungBinhLuan" required [(ngModel)]="comments.noiDungBinhLuan" name="noiDungBinhLuan">
+                    <textarea class="form-control" style="font-size: 14px;"  id="noiDungBinhLuan" required [(ngModel)]="comments.noiDungBinhLuan" name="noiDungBinhLuan" rows="6" placeholder="Nhập bình luận của bạn..."></textarea>
                   </div>
-                  <button type="submit" class="btn btn-success">Submit</button>
+                 <div class="row">
+                  <div class="col-9"></div>
+                  <div class="col-3">
+                    <button class="ps-btn mt-3 " style="font-size: 18px; padding: 10px 30px; color: white;" type="submit">Bình luận</button>
+                  </div>
+                 </div>
                 </form>
               </div>
             </div>
@@ -310,3 +254,112 @@
   </div>
 </div>
 </main>
+
+<div *ngIf="boxpeople" class="bychat container-fluid h-100">
+  <div class="row justify-content-center h-100">
+    <div class="col-md-3  chat">
+      <div class="card">
+        <div class="card-header msg_head">
+          <div class="d-flex bd-highlight">
+            <div class="img_cont">
+              <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img">
+              <span class="online_icon"></span>
+            </div>
+            <div class="user_info">
+              <span>Chat with Khalid</span>
+              <p>1767 Messages</p>
+            </div>
+            <div class="video_cam">
+              <button style="z-index: 99999;" type="button" class="btn btn-danger"(click)="boxpeople = false">Danger</button>
+            </div>
+          </div>
+          <!-- <span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span> -->
+          <div class="action_menu">
+            <ul>
+              <li><i class="fas fa-user-circle"></i> View profile</li>
+              <li><i class="fas fa-users"></i> Add to close friends</li>
+              <li><i class="fas fa-plus"></i> Add to group</li>
+              <li><i class="fas fa-ban"></i> Block</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-body msg_card_body">
+          <div class="d-flex justify-content-start mb-4">
+            <div class="img_cont_msg">
+              <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img_msg">
+            </div>
+            <div class="msg_cotainer">
+              Hi, how are you samim?
+              <span class="msg_time">8:40 AM, Today</span>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end mb-4">
+            <div class="msg_cotainer_send">
+              Hi Khalid i am good tnx how about you?
+              <span class="msg_time_send">8:55 AM, Today</span>
+            </div>
+            <div class="img_cont_msg">
+          <img src="" class="rounded-circle user_img_msg">
+            </div>
+          </div>
+          <div class="d-flex justify-content-start mb-4">
+            <div class="img_cont_msg">
+              <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img_msg">
+            </div>
+            <div class="msg_cotainer">
+              I am good too, thank you for your chat template
+              <span class="msg_time">9:00 AM, Today</span>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end mb-4">
+            <div class="msg_cotainer_send">
+              You are welcome
+              <span class="msg_time_send">9:05 AM, Today</span>
+            </div>
+            <div class="img_cont_msg">
+          <img src="" class="rounded-circle user_img_msg">
+            </div>
+          </div>
+          <div class="d-flex justify-content-start mb-4">
+            <div class="img_cont_msg">
+              <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img_msg">
+            </div>
+            <div class="msg_cotainer">
+              I am looking for your next templates
+              <span class="msg_time">9:07 AM, Today</span>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end mb-4">
+            <div class="msg_cotainer_send">
+              Ok, thank you have a good day
+              <span class="msg_time_send">9:10 AM, Today</span>
+            </div>
+            <div class="img_cont_msg">
+        <img src="" class="rounded-circle user_img_msg">
+            </div>
+          </div>
+          <div class="d-flex justify-content-start mb-4">
+            <div class="img_cont_msg">
+              <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img_msg">
+            </div>
+            <div class="msg_cotainer">
+              Bye, see you
+              <span class="msg_time">9:12 AM, Today</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="input-group">
+            <div class="input-group-append">
+              <span class="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>
+            </div>
+            <textarea name="" class="form-control type_msg" placeholder="Type your message..."></textarea>
+            <div class="input-group-append">
+              <span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

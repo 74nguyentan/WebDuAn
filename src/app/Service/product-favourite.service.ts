@@ -18,7 +18,9 @@ createFavoute(productFavourite:productFavourite){
 getidusers(id: any): Observable<any> {
   return this.http.get(`${this.url}/${id}`);
 }
-
+getidMatHang(id: any): Observable<any> {
+  return this.http.get(`${this.url}/mathang/${id}`);
+}
 deleteFavourite(id:number):Observable<any>{
   return this.http.delete(`${this.url}/${id}`,{responseType: 'text'});
 }

@@ -8,16 +8,16 @@ a.dark-grey-text:hover{
   font-weight: 500;
 }
 .text-uppercase{
-  font: 400 calc(20px * 0.83)/20px Roboto, "Helvetica Neue", sans-serif;
+  font: 400 calc(20px * 0.83)/20px tahoma;
 }
 p,.dark-grey-text{
-  font-family: 'Roboto', sans-serif;
+  font-family: tahoma;
 }
 .appWrapper-DesktopFooter-address i{
-  font-family: 'Roboto', sans-serif;
+  font-family: tahoma;
   font-size: 15px;
 }
 h5{
-  font-family: 'Roboto', sans-serif;
+  font-family: tahoma;
   font-size: 20px;
 }

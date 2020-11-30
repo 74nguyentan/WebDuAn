@@ -19,10 +19,14 @@ import { HistoryService } from 'src/app/Service/history.service';
   styleUrls: ['./product-detail.component.css'],
 })
 export class ProductDetailComponent implements OnInit {
-  myFullresImage
+  // fronend
+  boxpeople = false;
+  boxmess = false;
+  //fronend
+  myFullresImage;
   img_zoom: string;
   id: number;
-  lienhe:boolean = true;
+  lienhe: boolean = true;
   product: Product;
   comments: Comment = new Comment();
   history: History = new History();
@@ -33,13 +37,18 @@ export class ProductDetailComponent implements OnInit {
   img_2;
   img_3;
   clickFavourite = false;
+  clickFavourite1 = true;
 
-  constructor(private route: ActivatedRoute, private router: Router,
-    public AuthService: AuthService, public NgZone: NgZone,
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    public AuthService: AuthService,
+    public NgZone: NgZone,
     public UserServiceService: UserServiceService,
-    private productserviec: ProductService, private commentservice: CommentService,
-    private ProductFavouriteService: ProductFavouriteService,
-    private historyservice: HistoryService) { }
+    private productserviec: ProductService,
+    private commentservice: CommentService,
+    private ProductFavouriteService: ProductFavouriteService
+  ) {}
 
   ngOnInit() {
     this.product = new Product();
@@ -48,8 +57,8 @@ export class ProductDetailComponent implements OnInit {
     this.productFavourite = new productFavourite();
 
     this.id = this.route.snapshot.params['id'];
-    this.productserviec.getProduct(this.id)
-      .subscribe(data => {
+    this.productserviec.getProduct(this.id).subscribe(
+      (data) => {
         // console.log(data)
         this.product = data;
         this.img_0 = this.product.hinh0;
@@ -59,93 +68,97 @@ export class ProductDetailComponent implements OnInit {
         // console.log(this.product)
         this.img_zoom = this.img_0;
         this.myFullresImage = this.img_0;
-      }, error => console.log(error));
-this.ProductFavouriteService.getidusers(this.id).subscribe(data=>{
-  this.productFavourite = data;
-  this.clickFavourite = this.productFavourite.yeuThich;
-})
-    //save history
-    console.log("dfghjkdfghj"+ this.AuthService.user_id())
-    if(this.AuthService.user_id() != null){
-      this.savehistory();
-    }
-    // load binh luan
+      },
+      (error) => console.log(error)
+    );
+// san pham yeu thich
+    this.ProductFavouriteService.getidMatHang(this.id).subscribe((data) => {
+      this.productFavourite = Object.assign({}, ...data);
+      console.log("-- favori -- idd : " + this.productFavourite.id);
+
+      if (this.productFavourite.yeuThich == true) {
+        this.clickFavourite = this.productFavourite.yeuThich;
+        this.clickFavourite1 = !this.clickFavourite;
+      } else {
+        this.clickFavourite = false;
+        this.clickFavourite1 = !this.clickFavourite;
+      }
+    },
+    (error) => console.log("error favourite -- > " + error)
+    );
+
     this.load();
   }
 
-  load(){
+  load() {
     this.comments = new Comment();
-    this.commentservice.getComment(this.id).subscribe(data => {
-      // console.log(data);
-      // this.comment = Object.assign({}, ...data);
-      // this.comment= data;
-      this.comments =data;
-    })
-
+    this.commentservice.getComment(this.id).subscribe((data) => {
+      this.comments = data;
+    });
   }
 
   save() {
     var nd = this.comments.noiDungBinhLuan;
     this.comments = new Comment();
-    this.comments.noiDungBinhLuan =  nd;
+    this.comments.noiDungBinhLuan = nd;
     this.comments.users = {};
     this.comments.users.id = this.AuthService.user_id();
     this.comments.matHang = {};
     this.comments.matHang.id = this.id;
-    this.commentservice.createcomment(this.comments).subscribe(data => {
-      // console.log(this.comments)
-      console.log(data);
-      this.load();
-    },
+    this.commentservice.createcomment(this.comments).subscribe(
+      (data) => {
+        // console.log(this.comments)
+        console.log(data);
+        this.load();
+      },
       (error) => {
-        console.log("er-----> : " + error);
-      });
+        console.log('er-----> : ' + error);
+      }
+    );
   }
 
-
-  savehistory(){
-    this.history = new History();
-    this.history.users = {};
-    this.history.users.id = this.AuthService.user_id();
-    this.history.matHang = {};
-    this.history.matHang.id = this.id;
-    console.log(this.history);
-    this.historyservice.createhistory(this.history).subscribe(data =>{
-      console.log(data);
-      this.history = new History();
-    },
-    (error) => {
-      console.log("er-----> : " + error);
-    });
-
+  infomationShop(id: number) {
+    this.router.navigate(['shop', id]);
+    this.router.routeReuseStrategy.shouldReuseRoute = function () {
+      return false;
+    };
   }
 
-  updatehistory(){
-    this.history = new History();
-    this.history.users = {};
-    this.history.users.id = this.AuthService.user_id();
-    this.history.matHang = {};
-    this.history.matHang.id = this.id;
-    console.log(this.history);
-    this.historyservice.updatehistory(this.id, history).subscribe(data =>{
-      console.log(data);
-      this.history = new History();
-    },
-    (error) => {
-      console.log("er-----> : " + error);
-    });
+  favourite() {
+    console.log(
+      '-------------------->>>> clickFavourite => :' + this.clickFavourite
+    );
 
+    if (this.clickFavourite == true) {
+      // this.productFavourite = this.product
+      console.log(' delete -----id -- >>:' +this.id);
+
+      this.ProductFavouriteService.deleteFavourite(this.productFavourite.id).subscribe(
+        (data) => {
+          console.log(data);
+          this.clickFavourite = !this.clickFavourite;
+          this.clickFavourite1 = !this.clickFavourite1;
+        },
+        (error) => console.log(error)
+      );
+    } else {
+      this.productFavourite = new productFavourite();
+      this.productFavourite.yeuThich = true;
+      this.productFavourite.users = {};
+      this.productFavourite.users.id = this.AuthService.user_id();
+      this.productFavourite.matHang = {};
+      this.productFavourite.matHang.id = this.id;
+
+      this.ProductFavouriteService.createFavoute(
+        this.productFavourite
+      ).subscribe(
+        (data) => {
+          console.log(data);
+          this.clickFavourite = !this.clickFavourite;
+          this.clickFavourite1 = !this.clickFavourite1;
+        },
+        (error) => console.log('favourite error : ' + error)
+      );
+    }
   }
-
-
-infomationShop(id:number){
-  this.router.navigate(['shop', id]);
-  this.router.routeReuseStrategy.shouldReuseRoute = function () {
-    return false;
-  };
-}
-
-favourite(){
-  this.clickFavourite = true;
-}
 }

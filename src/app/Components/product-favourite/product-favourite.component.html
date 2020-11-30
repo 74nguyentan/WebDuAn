@@ -16,24 +16,24 @@
       </div>
 
       <div class="row products">
-        <div class="col-sm-3 mb-4" *ngFor=" let item of product | paginate: { itemsPerPage: 20, currentPage: p }">
+        <div class="col-sm-3 mb-4" *ngFor=" let item of productFavourite | paginate: { itemsPerPage: 20, currentPage: p }">
           <div>
             <img
-              src="{{ item.image }}"
+              src="{{ item.matHang.hinh0 }}"
               alt="Sản phẩm 1"
               class="img-circle img-thumbnail"
             />
-            <h2>{{item.name}}</h2>
+            <h2>{{item.matHang.tenHang}}</h2>
             <dl class="dl-horizontal">
               <dt>{{ 'price' | translate }}</dt>
-              <dd> {{ item.price }}</dd>
+              <dd> {{ item.matHang.gia }}</dd>
 
               <dt>{{ 'status' | translate }}</dt>
               <dd>{{ 'stocking' | translate }}</dd>
               <dt>{{ 'manufacturer' | translate }}</dt>
               <dd>{{ 'viet' | translate }}</dd>
             </dl>
-            <a routerLink="/proDetaill"  class="btn btn-1 color-green">
+            <a routerLink="/proDetaill" (click)="productDetails(item.matHang.id)" class="btn btn-1 color-green">
               <svg>
                 <rect x="0" y="0" fill="none" width="100%" height="100%"/>
               </svg>
