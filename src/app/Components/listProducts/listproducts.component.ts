@@ -30,13 +30,9 @@ export class ListproductsComponent implements OnInit {
     this.productserviec.getidloaihang(this.id)
       .subscribe(data => {
         this.product = data;
-<<<<<<< HEAD
         console.log(this.product)
       }, error => console.log(error));
-=======
-       }, error => console.log(error));
 
->>>>>>> 74994219bc3ef951025248f68b2004f499702edc
   }
   getProduct(id:number){
     this.productserviec.getfitler(id)
@@ -67,8 +63,4 @@ getPrice1000(id:number){
 
   }
 
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 74994219bc3ef951025248f68b2004f499702edc
+
