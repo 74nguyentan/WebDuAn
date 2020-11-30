@@ -43,18 +43,12 @@ export class ListproductsComponent implements OnInit {
     this.productserviec.getidloaihang(this.id)
       .subscribe(data => {
         this.product = data;
-<<<<<<< HEAD
-        console.log(this.product)
-      }, error => console.log(error));
-
-=======
 
       }, error => console.log(error));
 
     this.CategoryService.getAll(CATEGORY_API).subscribe((data) => {
       this.category = data;
     });
->>>>>>> eb84e627d6aecd8a1ace28283784e82d07ceb25c
   }
   getProduct(id: number) {
     this.productserviec.getfitler(id)
@@ -98,12 +92,11 @@ export class ListproductsComponent implements OnInit {
       });
 
   }
-<<<<<<< HEAD
-=======
+
   refresh(): void {
     window.location.reload();
   }
 }
->>>>>>> eb84e627d6aecd8a1ace28283784e82d07ceb25c
+
 
 
