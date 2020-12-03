@@ -8,7 +8,10 @@
 
 <!-- https://developers.facebook.com/docs/facebook-login/web/ -->
 
-
+<!-- add package.json -->
+ "firebase": "^7.21.0",
+ "@angular/fire": "5.4.2",
+<!--  --> 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
 ## Development server
