@@ -118,10 +118,10 @@ export class ToSellProductComponent implements OnInit {
   }
 
   updateproduct() {
-    this.products.hinh0 = this.base64textString[0];
-    this.products.hinh1 = this.base64textString[1];
-    this.products.hinh2 = this.base64textString[2];
-    this.products.hinh3 = this.base64textString[3];
+     this.base64textString[0] == this.products.hinh0;
+     this.base64textString[1] = this.products.hinh1;
+     this.base64textString[2] = this.products.hinh2;
+    this.base64textString[3] = this.products.hinh3;
     this.productserviec.updateProduct(this.id, this.products)
       .subscribe(data => {
     this.products = new Product();

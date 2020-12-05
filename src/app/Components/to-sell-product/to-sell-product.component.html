@@ -60,22 +60,22 @@
 
               <div class="wrapperzzz">
                 <p>Hình Ảnh</p> <hr>
-                <input type="file" name="upload" onchange="ImagesFileAsURL()" (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf" required   placeholder="Hình ảnh" multiple />
+                <input type="file" [(ngModel)]="products.hinh0"  name="upload" onchange="ImagesFileAsURL()" (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf" required   placeholder="Hình ảnh" multiple />
                 <img [src]="products.hinh0" [src]="base64textString[0]" alt="">
               </div>
               <div class="wrapperzzz">
                 <p>Hình Ảnh</p> <hr>
-                <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
+                <input type="file" [(ngModel)]="products.hinh1" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
                 <img [src]="products.hinh1" [src]="base64textString[1]" width="285px" height="177px" alt="">
               </div>
               <div class="wrapperzzz">
                 <p>Hình Ảnh</p> <hr>
-                <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
+                <input type="file" [(ngModel)]="products.hinh2" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
                 <img [src]="products.hinh2" [src]="base64textString[2]" width="285px" height="177px" alt="">
               </div>
               <div class="wrapperzzz">
                 <p>Hình Ảnh</p> <hr>
-                <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
+                <input type="file" [(ngModel)]="products.hinh3" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
                 <img [src]="products.hinh3" [src]="base64textString[3]"  width="285px" height="177px" alt="">
               </div>
             </div>
