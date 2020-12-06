@@ -1,7 +1,6 @@
 {
   "hosting": {
-    "site": "greenmarket-teamf5",
-    "public": "dist/greenmarket",
+    "public": "dist/ShopDuAn",
     "ignore": [
       "firebase.json",
       "**/.*",

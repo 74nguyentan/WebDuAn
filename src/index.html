@@ -1,32 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>ShopDuAn</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="utf-8" />
+    <title>ShopDuAn</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
 
-   <!-- Fonts-->
-   <link
-   href="https://fonts.googleapis.com/css?family=Archivo+Narrow:300,400,700%7CMontserrat:300,400,500,600,700,800,900"
-   rel="stylesheet"
- />
- <style>
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
-  </style>
- <!-- <link
+    <!-- Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Archivo+Narrow:300,400,700%7CMontserrat:300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+    </style>
+    <!-- <link
    rel="stylesheet"
    href="assets/plugins/font-awesome/css/font-awesome.min.css"
  /> -->
- <!-- <link rel="stylesheet" href="assets/plugins/ps-icon/style.css" /> -->
- <!-- CSS Library-->
- <link
-   rel="stylesheet"
-   href="assets/plugins/bootstrap/dist/css/bootstrap.min.css"
- />
- <!-- <link
+    <!-- <link rel="stylesheet" href="assets/plugins/ps-icon/style.css" /> -->
+    <!-- CSS Library-->
+    <link
+      rel="stylesheet"
+      href="assets/plugins/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- <link
    rel="stylesheet"
    href="assets/plugins/owl-carousel/assets/owl.carousel.css"
  />
@@ -34,12 +37,12 @@
    rel="stylesheet"
    href="assets/plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css"
  /> -->
- <!-- <link rel="stylesheet" href="assets/plugins/slick/slick/slick.css" /> -->
- <!-- <link
+    <!-- <link rel="stylesheet" href="assets/plugins/slick/slick/slick.css" /> -->
+    <!-- <link
    rel="stylesheet"
    href="assets/plugins/bootstrap-select/dist/css/bootstrap-select.min.css"
  /> -->
- <!-- <link
+    <!-- <link
    rel="stylesheet"
    href="assets/plugins/Magnific-Popup/dist/magnific-popup.css"
  />
@@ -47,15 +50,21 @@
  <link rel="stylesheet" href="assets/plugins/revolution/css/settings.css" />
  <link rel="stylesheet" href="assets/plugins/revolution/css/layers.css" />
  <link rel="stylesheet" href="assets/plugins/revolution/css/navigation.css" /> -->
- <!-- Custom-->
- <link rel="stylesheet" href="assets/css/styleNew.css" />
- <!-- to-sell-product -->
- <link rel="stylesheet" href="assets/css/to-sell-product.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<body class="mat-typography">
-  <app-root></app-root>
+    <!-- Custom-->
+    <link rel="stylesheet" href="assets/css/styleNew.css" />
+    <!-- to-sell-product -->
+    <link rel="stylesheet" href="assets/css/to-sell-product.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="mat-typography">
+    <app-root></app-root>
     <!-- JS Library-->
     <script
       type="text/javascript"
@@ -141,6 +150,40 @@
     <!-- Custom scripts-->
     <script type="text/javascript" src="assets/js/js/greenmain.js"></script>
     <!-- to-sell-product -->
-    <script type="text/javascript" src="assets/js/js/to-sell-product.js"></script>
-</body>
+    <script
+      type="text/javascript"
+      src="assets/js/js/to-sell-product.js"
+    ></script>
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v9.0",
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+
+    <!-- Your Chat Plugin code -->
+    <div
+      class="fb-customerchat"
+      attribution="setup_tool"
+      page_id="100310565281646"
+      theme_color="#36d38c"
+      logged_in_greeting="Xin chào! Tôi có thể giúp gì cho bạn ?"
+      logged_out_greeting="Xin chào! Tôi có thể giúp gì cho bạn ?"
+    ></div>
+  </body>
 </html>

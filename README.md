@@ -11,7 +11,10 @@
 <!-- add package.json -->
  "firebase": "^7.21.0",
  "@angular/fire": "5.4.2",
-<!--  --> 
+<!-- deploy firebase  -->
+https://www.positronx.io/deploy-angular-app-to-production-with-firebase-hosting/
+ <!--  -->
+ 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
 ## Development server
