@@ -45,6 +45,7 @@ import { AllProductsComponent } from './Components/all-products/all-products.com
 import { GitCardComponent } from './Components/git-card/git-card.component';
 import { DiscountCodeComponent } from './Components/discount-code/discount-code.component';
 import { ProductFavouriteComponent } from './Components/product-favourite/product-favourite.component';
+import { FindAllProductComponent } from './Components/find-all-product/find-all-product.component';
 
 
 
@@ -85,6 +86,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     GitCardComponent,
     DiscountCodeComponent,
     ProductFavouriteComponent,
+    FindAllProductComponent,
 
 
 

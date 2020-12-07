@@ -1,0 +1,360 @@
+<!-- slide -->
+<div id="carousel-simple" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-simple" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-simple" data-slide-to="1"></li>
+      <li data-target="#carousel-simple" data-slide-to="2"></li>
+      <li data-target="#carousel-simple" data-slide-to="3"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img
+          src="../../../assets/images/imgSL/sl01.png"
+          alt=""
+          class="d-block w-100"
+        />
+      </div>
+      <div class="item">
+        <img
+          src="../../../assets/images/imgSL/sl02.jpg"
+          alt=""
+          class="d-block w-100"
+        />
+      </div>
+      <div class="item">
+        <img
+          src="../../../assets/images/imgSL/sl04.jpg"
+          alt=""
+          class="d-block w-100"
+        />
+      </div>
+      <div class="item">
+        <img
+          src="../../../assets/images/imgSL/sl05.png"
+          alt=""
+          class="d-block w-100"
+        />
+      </div>
+    </div>
+  </div>
+  <!-- slide -->
+  <div class="container-fluid">
+    <div class="row pt-3 mb-4">
+      <!-- qc -->
+      <div class="col-sm-2">
+        <div class="box mt-2">
+          <img
+            src="https://kosman.vn/uploads/images/userfiles/2017/05/05/so_mi_nam_d%C3%A0i_tay_3.jpg"
+            alt=""
+          />
+          <div class="box-heading">
+            <h3 class="title">{{ 'title1' | translate }}</h3>
+            <span class="post">{{ 'price1' | translate }}</span>
+          </div>
+          <div class="boxContent text-justify">
+            <p class="description">
+              {{ 'caption1' | translate }}
+            </p>
+            <a routerLink="/proDetaill" class="cart" >{{ 'detail' | translate }}</a>
+          </div>
+        </div>
+        <div class="box mt-4">
+          <img
+            src="https://file.hstatic.net/1000043302/file/2_2d049544c7a74644b01f96f0058dc246_grande.jpg"
+            alt=""
+          />
+          <div class="box-heading">
+            <h3 class="title">{{ 'title2' | translate }}</h3>
+            <span class="post">{{ 'price2' | translate }}</span>
+          </div>
+          <div class="boxContent text-justify">
+            <p class="description">
+              {{ 'caption2' | translate }}
+            </p>
+            <a routerLink="/proDetaill" class="cart"> {{ 'detail' | translate }}</a>
+          </div>
+        </div>
+        <div class="box mt-4">
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/I/61mzFEx2M7L._AC_SY500_.jpg"
+            alt=""
+          />
+          <div class="box-heading">
+  
+            <!-- <h3 class="title">IPhone 11</h3>
+            <spaUpdatedn class="post">{{ 'detail' | translate }}: 22.000.000 đ</spaUpdatedn> -->
+  
+            <h3 class="title">{{ 'title3' | translate }}</h3>
+            <span class="post">{{ 'price3' | translate }}</span>
+  
+          </div>
+          <div class="boxContent text-justify">
+            <p class="description">
+              {{ 'caption3' | translate }}
+            </p>
+            <a routerLink="/proDetaill" class="cart"> {{ 'detail' | translate }}</a>
+          </div>
+        </div>
+        <div class="box mt-4">
+          <img
+            src="https://salt.tikicdn.com/cache/w300/ts/product/71/f2/e7/bee7f27a40f37df08c16ce95b97b310b.jpg"
+            alt=""
+          />
+          <div class="box-heading">
+            <h3 class="title">{{ 'title4' | translate }}</h3>
+            <span class="post">{{ 'price4' | translate }}</span>
+          </div>
+          <div class="boxContent text-justify">
+            <p class="description">
+              {{ 'caption4' | translate }}
+            </p>
+            <a routerLink="/proDetaill" class="cart"> {{ 'detail' | translate }}</a>
+          </div>
+        </div>
+        <div class="box mt-4">
+          <img
+            src="https://vnreview.vn/image/12/54/62/1254628.jpg?t=1407103761309"
+            alt=""
+          />
+          <div class="box-heading">
+            <h3 class="title">{{ 'title5' | translate }}</h3>
+            <span class="post">{{ 'price5' | translate }}</span>
+          </div>
+          <div class="boxContent text-justify">
+            <p class="description">
+              {{ 'caption5' | translate }}
+            </p>
+            <a routerLink="/proDetaill" class="cart"> {{ 'detail' | translate }}</a>
+          </div>
+        </div>
+      </div>
+      <!-- nd -->
+      <div class="col-sm-8">
+        <div>
+          <!-- button -->
+          <div class="row pt-2">
+            <div class="col-sm-3">
+              <!-- <button type="button" class="btn btn-outline-primary w-100"> <a style="font-size: 15px;"><i
+                    class="fas fa-address-card p-2 m-2"> Mã Giảm Giá </i></a> </button> -->
+              <button routerLink="/demo" class="custom-btn btn-13">{{ 'producttitle1' | translate }}</button>
+            </div>
+            <div class="col-sm-3">
+              <!-- <button type="button" class="btn btn-outline-success w-100"> <a style="font-size: 15px;"><i
+                    class="fab fa-adversal p-2 m-2"> Mã Giảm Giá </i></a> </button> -->
+              <button routerLink="/discout-code" class="custom-btn btn-13">{{ 'producttitle2' | translate }}</button>
+            </div>
+            <div class="col-sm-3">
+              <button routerLink="/git-card" class="custom-btn btn-13">{{ 'producttitle3' | translate }}</button>
+              <!-- <button type="button" class="btn btn-outline-danger w-100"> <a style="font-size: 15px;"><i
+                    class="fab fa-alipay p-2 m-2"> Mã Giảm Giá </i></a> </button> -->
+            </div>
+            <div class="col-sm-3">
+              <button class="custom-btn btn-13">{{ 'producttitle4' | translate }}</button>
+              <!-- <button type="button" class="btn btn-outline-warning w-100"> <a style="font-size: 15px;"><i
+                    class="fas fa-anchor p-2 m-2"> Mã Giảm Giá </i></a> </button> -->
+            </div>
+          </div>
+  
+       
+      
+        
+          <!-- tieu de -->
+          <div class="row pt-5 pb-2 mb-2">
+            <div class="ml-4 tittle-home justify-content-center"> {{ 'collecton' | translate }}</div>
+            <div class="col mr-4 tittle-right"></div>
+            <hr />
+          </div>
+          <!-- sp -->
+          <div class="products row ">
+            <div class="col-sm-3 mb-4" *ngFor=" let itemss of product">
+              <div>
+                <img
+                  src="{{itemss.hinh0}}"
+                  alt="Sản phẩm 1"
+                  class="img-circle img-thumbnail"
+                />
+                <h2>{{itemss.tenHang}}</h2>
+                <dl class="dl-horizontal">
+                  <dt>{{ 'price' | translate }}</dt>
+                  <dd>{{itemss.gia}}</dd>
+  
+                  <dt>{{ 'status' | translate }}</dt>
+                  <dd>{{ 'stocking' | translate }}</dd>
+                  <dt>{{ 'manufacturer' | translate }}</dt>
+                  <dd>{{ 'viet' | translate }}</dd>
+                </dl>
+                <a routerLink="/proDetaill" class="btn btn-1 color-green">
+                  <svg>
+                    <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+                  </svg>
+                  {{ 'detail' | translate }}
+                </a>
+              </div>
+            </div>
+          </div>
+          
+         
+         
+          <div class="row">
+            <div class="col-md-4 mx-auto">
+               <a routerLink="/all-products" class="btn3">
+                Xem thêm
+               </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- qc -->
+      <div class="col-sm-2 mt-2 right-layout">
+        <img class="iconHopQua" src="../../../assets/images/icons/hopqua1.png" />
+        <div class="endow-t ml-1" > <a>{{ 'producttitle5' | translate }}</a> </div>
+        <ul class="nav nav-tabs ml-1" role="tablist">
+          <li class="nav-item" class="active">
+            <a
+              class="nav-link"
+              href="#tab_01"
+              aria-controls="tab_01"
+              role="tab"
+              data-toggle="tab"
+              >{{ 'all' | translate }}</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#tab_02"
+              aria-controls="tab_02"
+              role="tab"
+              data-toggle="tab"
+              >{{ 'me' | translate }}</a
+            >
+          </li>
+        </ul>
+  
+        <div class="tab-content ">
+          <div class="tab-pane active" id="tab_01">
+            <div style="background-color: #fff; height: 15px;"></div>
+  
+            <div class="git ">
+              <img class="img-responsive" src="https://static.appotapay.com//assert/fr/2018-11-08/3ZbVGh97r9f5fWA1aDc01WyNCFHsOeQMRn0lEIIB.jpeg" />
+              <div class="row mt-2 mb-2"><h3 >{{ 'endowpro1' | translate }}</h3></div>
+              <div class="row xu">
+                <a  class="btn col-6" title="100đ"
+                  > {{ 'Point' | translate }}</a
+                >
+                <button routerLink="/" class="custom-btn btn-4 col-6"><span>{{ 'change' | translate }}</span></button>
+              </div>
+            </div>
+            <div class=" git">
+              <img class="img-responsive" src="https://didongviet.vn/blog/wp-content/uploads/2020/08/1200x628-7.jpg" />
+              <div class="row mt-2 mb-2"><h3 >{{ 'endowpro2' | translate }}</h3></div>
+              <div class="row xu">
+                <a  class="btn col-6" title="100đ"
+                  > {{ 'Point' | translate }}</a
+                >
+                <button routerLink="/" class="custom-btn btn-4 col-6"><span>{{ 'change' | translate }}</span></button>
+              </div>
+            </div>
+            <div class=" git">
+              <img class="img-responsive" src="https://moist-diane.com.vn/upload/images/S%C4%82N%20VOUCHER-01hhh(3).jpg" />
+              <div class="row mt-2 mb-2"><h3 >{{ 'endowpro3' | translate }}</h3></div>
+              <div class="row xu">
+                <a  class="btn col-6" title="100đ"
+                  > {{ 'Point' | translate }}</a
+                >
+                <button routerLink="/" class="custom-btn btn-4 col-6"><span>{{ 'change' | translate }}</span></button>
+              </div>
+            </div>
+            <div class="git">
+              <img class="img-responsive" src="https://media.meete.co/cache/800x0/2020/10/14/5d986527-504e-4879-9075-a2027b32003c.jpeg" />
+              <div class="row mt-2 mb-2"><h3 >{{ 'endowpro4' | translate }}</h3></div>
+              <div class="row xu">
+                <a  class="btn col-6" title="100đ"
+                  > {{ 'Point' | translate }}</a
+                >
+                <button routerLink="/" class="custom-btn btn-4 col-6"><span>{{ 'change' | translate }}</span></button>
+              </div>
+            </div>
+            <div class=" git">
+              <img class="img-responsive" src="https://atmilk.vn/wp-content/uploads/2018/12/ATMILK-web.png" />
+              <div class="row mt-2 mb-2"><h3 >{{ 'endowpro5' | translate }}</h3></div>
+              <div class="row xu">
+                <a  class="btn col-6" title="100đ"
+                  > {{ 'Point' | translate }}</a
+                >
+                <button routerLink="/" class="custom-btn btn-4 col-6"><span>{{ 'change' | translate }}</span></button>
+              </div>
+            </div>
+            <div class=" git">
+              <img class="img-responsive" src="https://bucket.nhanh.vn/store/7534/artCT/66147/img_9206.jpg" />
+              <div class="row mt-2 mb-2"><h3 >{{ 'endowpro6' | translate }}</h3></div>
+              <div class="row xu">
+                <a  class="btn col-6" title="100đ"
+                  > {{ 'Point' | translate }}</a
+                >
+                <button routerLink="/" class="custom-btn btn-4 col-6"><span>{{ 'change' | translate }}</span></button>
+              </div>
+            </div>
+            <div class="git">
+              <img class="img-responsive" src="https://static.appotapay.com//assert/fr/2018-11-08/3ZbVGh97r9f5fWA1aDc01WyNCFHsOeQMRn0lEIIB.jpeg" />
+              <div class="row mt-2 mb-2"><h3 >{{ 'endowpro1' | translate }}</h3></div>
+              <div class="row xu">
+                <a  class="btn col-6" title="100đ"
+                  > {{ 'Point' | translate }}</a
+                >
+                <button routerLink="/" class="custom-btn btn-4 col-6"><span>{{ 'change' | translate }}</span></button>
+              </div>
+            </div>
+            <div class=" git">
+              <img class="img-responsive" src="https://didongviet.vn/blog/wp-content/uploads/2020/08/1200x628-7.jpg" />
+              <div class="row mt-2 mb-2"><h3 >{{ 'endowpro2' | translate }}</h3></div>
+              <div class="row xu">
+                <a  class="btn col-6" title="100đ"
+                  > {{ 'Point' | translate }}</a
+                >
+                <button routerLink="/" class="custom-btn btn-4 col-6"><span>{{ 'change' | translate }}</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab_02">
+            <div style="background-color: #fff; height: 15px;"></div>
+  
+            <div class="git">
+              <img class="img-responsive" src="https://shopby.vn/wp-content/uploads/2019/04/phi-giao-hang-lazada.png" />
+              <div class="row mt-2 mb-2"><h3 >{{ 'free' | translate }}</h3></div>
+              <div class="row xu">
+                <a  class="btn col-6" title="100đ"
+                  > {{ 'Point' | translate }}</a
+                >
+                <button routerLink="/" class="custom-btn btn-4 col-6"><span>{{ 'change' | translate }}</span></button>
+              </div>
+            </div>
+            <div class=" git">
+              <img class="img-responsive" src="https://giamgiamoimua.com/wp-content/uploads/2019/04/lazada-mien-phi-van-chuyen-3.jpg" />
+              <div class="row mt-2 mb-2"><h3 >{{ 'free' | translate }}</h3></div>
+              <div class="row xu">
+                <a  class="btn col-6" title="100đ"
+                  > {{ 'Point' | translate }}</a
+                >
+                <button routerLink="/" class="custom-btn btn-4 col-6"><span>{{ 'change' | translate }}</span></button>
+              </div>
+            </div>
+            <div class=" git">
+              <img class="img-responsive" src="https://thuvienmuasam.com/uploads/default/original/2X/f/fa6a71b50262aba764baad7e3d108638fb23a3e1.jpeg" />
+              <div class="row mt-2 mb-2"><h3 >{{ 'free' | translate }}</h3></div>
+              <div class="row xu">
+                <a  class="btn col-6" title="100đ"
+                  > {{ 'Point' | translate }}</a
+                >
+                <button routerLink="/" class="custom-btn btn-4 col-6"><span>{{ 'change' | translate }}</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

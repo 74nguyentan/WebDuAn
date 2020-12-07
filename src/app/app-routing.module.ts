@@ -19,6 +19,7 @@ import {ShopImpormationComponent} from './Components/shop-impormation/shop-impor
 import { AllProductsComponent } from './Components/all-products/all-products.component';
 import { GitCardComponent } from './Components/git-card/git-card.component';
 import { DiscountCodeComponent } from './Components/discount-code/discount-code.component';
+import { FindAllProductComponent } from './Components/find-all-product/find-all-product.component';
 
 const routes: Routes = [
   {
@@ -101,8 +102,15 @@ const routes: Routes = [
   {
     path: 'productFavourite',
     component: ProductFavouriteComponent
+  },
+  {
+    path: 'findAllProduct',
+    component: FindAllProductComponent
+  },
+  {
+    path: 'findall',
+    component: FindAllProductComponent
   }
-
 ];
 
 @NgModule({

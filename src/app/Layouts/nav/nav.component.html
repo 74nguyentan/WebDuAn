@@ -192,8 +192,8 @@
       </div>
       <div class="navigation__column right">
         <form class="ps-search--header" action="do_action" method="post">
-          <input class="form-control" type="text" placeholder="{{ 'search' | translate }}" />
-          <button><i class="ps-icon-search"></i></button>
+          <input class="form-control" type="text" [(ngModel)]="tenHang" placeholder="{{ 'search' | translate }}" />
+          <button><i class="ps-icon-search" (click)="productfind(tenHang)"></i></button>
         </form>
         <div class="ps-cart">
           <a class="ps-cart__toggle" href="#"><span><i>{{count}}</i></span><i class="far fa-eye"></i></a>

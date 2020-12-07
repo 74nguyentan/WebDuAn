@@ -83,7 +83,7 @@
 
             <div class="col-md-5">
                 <div class="input-field">
-                  <select  [(ngModel)]="products.loaiHang"  name="products.id">
+                  <select  [(ngModel)]="products.loaiHang" name="products.id">
                     <option *ngFor="let item of category" [ngValue]="item" >{{ item.tenLoaiHang }}</option>
                   </select>
                   <label for="category">Danh mục</label>
