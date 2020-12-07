@@ -59,7 +59,7 @@
             <div class="col-md-5 c_anh">
 
               <div class="wrapperzzz">
-<<<<<<< Updated upstream
+<!-- <<<<<<< Updated upstream
                 <p>Hình Ảnh</p> <hr>
                 <input type="file" [(ngModel)]="products.hinh0"  name="upload" onchange="ImagesFileAsURL()" (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf" required   placeholder="Hình ảnh" multiple />
                 <img [src]="products.hinh0" [src]="base64textString[0]" alt="">
@@ -77,7 +77,7 @@
               <div class="wrapperzzz">
                 <p>Hình Ảnh</p> <hr>
                 <input type="file" [(ngModel)]="products.hinh3" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
-=======
+======= -->
                 <p>{{ 'picture' | translate }}</p> <hr>
                 <input type="file" name="upload" onchange="ImagesFileAsURL()" (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf" required   placeholder="Hình ảnh" multiple />
                 <img [src]="products.hinh0" [src]="base64textString[0]" alt="">
@@ -95,7 +95,7 @@
               <div class="wrapperzzz">
                 <p>{{ 'picture' | translate }}</p> <hr>
                 <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
->>>>>>> Stashed changes
+
                 <img [src]="products.hinh3" [src]="base64textString[3]"  width="285px" height="177px" alt="">
               </div>
             </div>
@@ -121,11 +121,11 @@
               <div class="button">
                 <div class="inner">
                 </div>
-<<<<<<< Updated upstream
-                <button href ="#" id="button" type="submit">HOÀN TẤT</button>
-=======
+
+                <button href ="#" id="button" type="submit">{{ 'completed' | translate }}</button>
+
                 <button id="button" type="submit">{{ 'completed' | translate }}</button>
->>>>>>> Stashed changes
+
               </div>
             </div>
           </div>

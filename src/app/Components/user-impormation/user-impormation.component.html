@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row pt-3 pb-2 mb-2">
           <div class="ml-1  tittle-home justify-content-center">
-            Thông tin cá nhân
+            {{ 'Personal' | translate }}
           </div>
           <div class=" tittle-right"></div>
           <hr />
@@ -31,18 +31,18 @@
               <div class="col-md-12 col-sm-6 pt-4 pb-2" id="manager" >
                 <table class="table table-bordered" *ngIf="users">
                   <tr>
-                    <th scope="row">Họ và tên:</th>
+                    <th scope="row"> {{ 'username' | translate }}</th>
                     <td>{{users.hoVaTen}}</td>
                     <td class="anhdd" rowspan="6" colspan="1" >
                       <img src="{{users.hinhAnhUser}}" alt="">
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">Mật khẩu:</th>
+                    <th scope="row"> {{ 'password' | translate }}:</th>
                     <td>********</td>
                   </tr>
                   <tr>
-                    <th>Điện thoại:</th>
+                    <th>{{ 'phone' | translate }}:</th>
                     <td>{{users.dienThoai}}</td>
                   </tr>
                   <tr>
@@ -50,24 +50,24 @@
                     <td>{{users.email}}</td>
                   </tr>
                   <tr>
-                    <th> Ngày lập:</th>
+                    <th> {{ 'date' | translate }}:</th>
                     <td>{{users.ngayLap}}</td>
                   </tr>
                   <tr>
-                    <th scope="row">Địa chỉ:</th>
+                    <th scope="row">{{ 'address' | translate }}:</th>
                     <td colspan="3">
                       {{users.diaChiUser}}
                     </td>
                   </tr>
                   <tr>
                     <td colspan="2">
-                    <i style="font-size: 13px; font-weight: 100;"> *Cung cấp địa chỉ sẽ giúp thuận tiện mua bán. Cập nhật địa chỉ ngay khi bạn chuyển đến địa chỉ mới*</i>
+                    <i style="font-size: 13px; font-weight: 100;">{{ 'rev' | translate }}</i>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <div style="min-height: 22px;" class="div"><a (click)="isShowFormUser = true" *ngIf="!isShowFormUser" ><i class="fas fa-edit">Chỉnh sửa</i></a></div>
-                      <p>*Điều chỉnh thông tin cá nhân*</p>
+                      <div style="min-height: 22px;" class="div"><a (click)="isShowFormUser = true" *ngIf="!isShowFormUser" ><i class="fas fa-edit">{{ 'edit' | translate }}</i></a></div>
+                      <p>{{ 'Adjust' | translate }}</p>
                     </td>
                   </tr>
                 </table>
@@ -92,7 +92,7 @@
               </div>
               <div class="card-header pt-4 pb-4">
                 <span class="lnr lnr-gift"></span>
-                <strong> Các gói nạp</strong>
+                <strong> {{ 'Packages' | translate }}</strong>
               </div>
               <div class="list-group pt-1 pb-2">
                 <div>
@@ -103,7 +103,7 @@
                 </div>
               </div>
               <div class="card-footer pt-4 pb-4" >
-                <button type="button" class="btn btn-success">NẠP NGAY</button>
+                <button type="button" class="btn btn-success"> {{ 'FILE' | translate }}</button>
               </div>
             </div>
 
@@ -117,7 +117,7 @@
       <div *ngIf="isShowFormUser">
         <div class="row pt-5 pb-1 mb-1" style="padding-left: 3px;">
           <div class="ml-4 tittle-home justify-content-center">
-            Chỉnh sửa thông tin
+            {{ 'update' | translate }}
           </div>
           <div class="col mr-5 tittle-right" ></div>
           <hr />
@@ -134,7 +134,7 @@
                     <div class="col-md-6">
                       <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%;"
                         data-validate="Không được bỏ trống">
-                      <label for="hoVaTen" >Họ và tên</label>
+                      <label for="hoVaTen" >  {{ 'username' | translate }}</label>
                         <input class="input100" type="text" name="hoVaTen" id="hoVaTen" required  [(ngModel)]="users.hoVaTen">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
@@ -144,7 +144,7 @@
 
                       <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%;"
                         data-validate="Password is required">
-                      <label >Mật khẩu</label>
+                      <label > {{ 'password' | translate }}</label>
                         <input class="input100" type="password" name="pass" required [(ngModel)]="users.matKhau">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
@@ -153,7 +153,7 @@
                       </div>
 
                       <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%;">
-                        <label>Hình ảnh</label>
+                        <label> {{ 'picture' | translate }}</label>
                         <input type="file" name="upload" id="upload" required [(ngModel)]="users.hinhAnhUser"  placeholder="Hình ảnh" multiple />
                       </div>
 
@@ -161,7 +161,7 @@
                     <div class="col-md-6">
                       <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%;"
                         data-validate="Không được bỏ trống">
-                      <label for="">Điện thoại</label>
+                      <label for="">{{ 'phone' | translate }}</label>
                         <input class="input100" type="text" name="dienthoai" required [(ngModel)]="users.dienThoai">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
@@ -181,7 +181,7 @@
 
                       <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%;"
                         data-validate="Password is required">
-                      <label for="">Địa chỉ</label>
+                      <label for="">{{ 'address' | translate }}</label>
                         <input class="input100" type="text" name="diachi" required [(ngModel)]="users.diaChiUser">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
@@ -196,7 +196,7 @@
                     <div class="col-md-3">
                       <div class="container-login100-form-btn p-t-22 ml-4">
                         <button class="login100-form-btn" type="submit"  >
-                          hoàn thành
+                          {{ 'finish' | translate }}
                         </button>
                       </div>
                     </div>
