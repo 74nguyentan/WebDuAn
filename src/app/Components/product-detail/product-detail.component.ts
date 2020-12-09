@@ -87,7 +87,7 @@ this.loadFavorite();
     // san pham yeu thich
     this.ProductFavouriteService.getidMatHang(this.id).subscribe((data) => {
       this.productFavourite = Object.assign({}, ...data);
-      console.log("-- favori -- idd : " + this.productFavourite.id);
+      // console.log("-- favori -- idd : " + this.productFavourite.id);
 
       if (this.productFavourite.yeuThich == true) {
         this.clickFavourite = this.productFavourite.yeuThich;
@@ -129,20 +129,17 @@ this.loadFavorite();
   }
 
   favourite() {
-    console.log(
-      '-------------------->>>> clickFavourite => :' + this.clickFavourite
-    );
 
     if (this.clickFavourite == true) {
       // this.productFavourite = this.product
-      console.log(' delete -----id -- >>:' +this.id);
+      // console.log(' delete -----id -- >>:' +this.id);
 
       this.ProductFavouriteService.deleteFavourite(this.productFavourite.id).subscribe(
         (data) => {
           console.log(data);
           this.clickFavourite = false;
           this.clickFavourite1 = true;
-          console.log("detele success !");
+          // console.log("detele success !");
 
         },
         (error) => console.log("err delete favourite " + error)
@@ -163,7 +160,7 @@ this.loadFavorite();
           this.clickFavourite = true;
           this.clickFavourite1 = false;
           this.loadFavorite();
-          console.log("favourite success !");
+          // console.log("favourite success !");
         },
         (error) => console.log('favourite error : ' + error)
       );
