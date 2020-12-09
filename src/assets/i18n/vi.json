@@ -50,8 +50,11 @@
   "price5": "Giá: 200.000 đ",
   "detail": "Chi Tiết",
   "price": "Giá:",
+  "pricee": "Giá",
   "status": "Tình trạng:",
+  "statuss": "Tình trạng",
   "manufacturer": "Xuất xứ:",
+  "manufacturerr": "Xuất xứ",
   "stocking": "Còn hàng",
   "china": "Hàn Quốc",
   "viet": "Việt Nam",
@@ -141,7 +144,7 @@
 
   "addnew": "Thêm mới sản phẩm",
   "nemgood": "Tên hàng",
-  "origin": "Xuát xứ",
+  "origin": "Xuất xứ",
     "no": "Không có tệp nào được chọn",
   "describe": "Mô tả  ",
   "completed": "HOÀN TẤT",
@@ -187,7 +190,52 @@
   "update": " Chỉnh sửa thông tin",
   "Packages": "  Các gói nạp",
   "FILE": " NẠP NGAY",
-  "edit": "Chỉnh sửa"
+  "edit": "Chỉnh sửa",
+  "edit2": "Sửa",
+  "delete": "Xóa",
+  "renewal": "Gia hạn",
+
+
+
+  "pronews1": "QUẦN ÁO NỮ",
+  "pronews1.1": "ĐẦM XÈO",
+  "pronews1.2": "ÁO SƠ MI",
+  "pronews1.3": "ÁO KHOÁC",
+  "pronews2.1": "ÁO KHOÁC",
+  "pronews2.2": "ÁO THUN",
+  "pronews2.3": "ÁO SƠ MI",
+  "pronews2": "QUẦN ÁO NAM",
+  "pronews3": "TRANG SỨC",
+  "pronews3.1": "ĐỒNG HỒ",
+  "pronews3.2": "VÒNG TAY",
+  "pronews3.3": "NHẪN",
+  "pronews4": "BA LÔ - TÚI XÁCH",
+  "pronews4.1": "BA LÔ",
+  "pronews4.2": "TÚI XÁCH",
+  "pronews4.3": "TÚI CHÉO",
+  "pronews5": "GIÀY-DÉP",
+  "pronews5.1": "THỂ THAO",
+  "pronews5.2": "THỜI TRANG",
+  "pronews5.3": "QUAI HẬU",
+  "pronews6": " Top hàng mới nhất",
+  "see": "Xem thêm",
+
+  "information": "Thông tin tham khảo",
+  "chat": "Chat với người bán",
+  "overview": "Tổng quan",
+  "evaluate": "Đánh giá",
+  "product": "Sản phẩm",
+  "comment": "Bình luận",
+  "p1": "Website thương mại điện tử: là website cho phép bạn mua rất nhiều sản phẩm giống như một cái chợ đầy sản phẩm để bạn lựa.",
+  "p2": "Mọi thắc mắc của bạn sẽ được giải quyết từ từ. Mình luôn nói, và luôn nhấn mạnh một điều và luôn muốn hỏi bạn",
+  "comment2": "Nhập bình luận của bạn...",
+
+  "list": "Danh sách sản phẩm",
+
+  "duration": "Thời hạn"
+
+
+
 
 }
 

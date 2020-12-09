@@ -6,7 +6,7 @@
 
       <div class="row w-100 pb-3">
         <div class="col-md-9 w-100 text-center">
-          <h1 > Danh sách sản phẩm</h1>
+          <h1 >{{ 'list' | translate }}</h1>
         </div>
         <div class="col-md-3">
 
@@ -16,7 +16,7 @@
                     <i class="fas fa-search h4 text-body"></i>
                 </div>
                 <div class="col">
-                    <input class="form-control form-control-lg form-control-borderless" (keyup)="onKey($event.target.value)"  type="search" placeholder="Nhập để tìm kiếm">
+                    <input class="form-control form-control-lg form-control-borderless" (keyup)="onKey($event.target.value)"  type="search" placeholder="{{ 'search' | translate }}">
                 </div>
                 <div class="col-auto" >
                     <!-- <button class="btn btn-lg btn-success" type="submit">Tìm kiếm</button> -->
@@ -32,12 +32,12 @@
             <table>
               <thead >
                 <tr class="row100 head">
-                  <th class="cell100 column1">Tên hàng</th>
-                  <th class="cell100 column2">Xuất sứ</th>
-                  <th class="cell100 column3">Giá</th>
-                  <th class="cell100 column4">Trạng thái</th>
-                  <th class="cell100 column5">Thời hạn</th>
-                  <th class="cell100 column6">Hình ảnh</th>
+                  <th class="cell100 column1">{{ 'nemgood' | translate }}</th>
+                  <th class="cell100 column2">{{ 'manufacturerr' | translate }}</th>
+                  <th class="cell100 column3">{{ 'pricee' | translate }}</th>
+                  <th class="cell100 column4">{{ 'statuss' | translate }}</th>
+                  <th class="cell100 column5">{{ 'duration' | translate }}</th>
+                  <th class="cell100 column6">{{ 'picture' | translate }}</th>
                   <th class="cell100 column7"></th>
                 </tr>
               </thead>
@@ -91,13 +91,13 @@
 
                   <td class="cell100 column7" id="edit">
                     <button class="custom-btn btn-3 mb-5 mt-3" (click)="updateproduct(item.id)">
-                      <span><i class="fas fa-edit"></i> Sửa</span>
+                      <span><i class="fas fa-edit"></i> {{ 'edit2' | translate }}</span>
                     </button>
                     <button class="custom-btn btn-2 mb-5" (click)="deleteProduct(item.id)">
-                      <span><i class="fas fa-times"></i> Xóa</span>
+                      <span><i class="fas fa-times"></i> {{ 'delete' | translate }}</span>
                     </button>
                     <button class="custom-btn btn-1">
-                      <span><i class="fas fa-clock"></i> Gia hạn</span>
+                      <span><i class="fas fa-clock"></i> {{ 'renewal' | translate }}</span>
                     </button>
                   </td>
                 </tr>

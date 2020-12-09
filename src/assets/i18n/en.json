@@ -49,9 +49,11 @@
 
     "detail": "Detail",
     "price": "Price:",
+    "pricee": "Price",
     "status": "Status:",
+    "statuss": "Status",
     "manufacturer": "Made in:",
-
+    "manufacturerr": "Made in",
 
     "producttitle1": "Price shock",
     "producttitle2": "Discount code",
@@ -203,6 +205,46 @@
   "update": " Edit information",
   "Packages": " Packages loaded",
   "FILE": "FILE NOW",
-  "edit": "Edit"
+  "edit": "Edit",
+
+  "pronews1": "WOMEN'S CLOTHING",
+  "pronews1.1": "SPREAD",
+  "pronews1.2": "SHIRT",
+  "pronews1.3": "COAT",
+  "pronews2.1": "COAT",
+  "pronews2.2": "T-SHIRT  ",
+  "pronews2.3": "SHIRT",
+  "pronews2": " MEN CLOTHES",
+  "pronews3": "JEWELRY",
+  "pronews3.1": "CLOCK",
+  "pronews3.2": "BRACELET",
+  "pronews3.3": "RINGS",
+  "pronews4": "BACKPACK BAG",
+  "pronews4.1": "BACKPACK",
+  "pronews4.2": "HAND BAG",
+  "pronews4.3": "CROSS BAG",
+  "pronews5": " FOOTWEAR",
+  "pronews5.1": "SPORT",
+  "pronews5.2": "FASHION",
+  "pronews5.3": "BACKLESS",
+  "pronews6": " Top latest products",
+  "see": "See More",
+
+  "information": "Reference information",
+  "chat": "Chat with the seller",
+  "overview": "Overview",
+  "evaluate": "Evaluate",
+  "product": "Product",
+  "comment": "Comment",
+  "p1": "E-commerce website: is a website that allows you to buy a lot of products like a market full of products for you to choose from.",
+  "p2": "All your inquiries will be resolved slowly. I always say, and always emphasize one thing and always want to ask you",
+  "comment2": "Enter your comment ...",
+
+  "list": "List of products",
+
+  "duration": "Duration"
+
+
+
 
 }
