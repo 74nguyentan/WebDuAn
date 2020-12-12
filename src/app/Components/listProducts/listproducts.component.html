@@ -78,7 +78,7 @@
             <li ><a (click)="getProduct(12)">Mỹ phẩm</a></li>
           </ul> -->
           <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
-          <mat-radio-button class="example-radio-button" *ngFor="let item of category" (click)="getProduct(item.id)" >
+          <mat-radio-button class="example-radio-button" *ngFor="let item of category" [value]="item.id" (click)="getProduct(item.id)" >
             {{item.tenLoaiHang}}
           </mat-radio-button>
         </mat-radio-group>
@@ -90,13 +90,13 @@
         </div>
         <div class="ps-widget__content">
           <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
-            <mat-radio-button class="example-radio-button" (click)="getPrice(100)" >
+            <mat-radio-button class="example-radio-button" [value]="100" (click)="getPrice(100)" >
               Dưới 100k
             </mat-radio-button>
-            <mat-radio-button class="example-radio-button" (click)="getPrice300(100)" >
+            <mat-radio-button class="example-radio-button" [value]="100" (click)="getPrice300(100)" >
               Từ 100k đến 300k
             </mat-radio-button>
-            <mat-radio-button class="example-radio-button" (click)="getPrice1000(300)" >
+            <mat-radio-button class="example-radio-button" [value]="300" (click)="getPrice1000(300)" >
               Từ 300k đến 1000k
             </mat-radio-button>
           </mat-radio-group>

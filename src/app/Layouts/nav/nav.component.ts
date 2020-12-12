@@ -72,7 +72,7 @@ export class NavComponent implements OnInit, OnDestroy{
   ngDoCheck(){
     this.login=this.authService.isLoggedIn;
 
-    this.reload();
+    // this.reload();
   }
 
   ngOnInit(): void {

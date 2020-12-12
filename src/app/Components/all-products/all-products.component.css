@@ -249,12 +249,22 @@ h2.title {
   margin-bottom: 0px;
 }
 
-::ng-deep .ngx-pagination a ,::ng-deep .ngx-pagination span{
-  text-align: right;
-  font-size: 16px;
-  font-family: tahoma;
-  color: black;
+
+/* radio button fiter */
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
 }
-::ng-deep .ngx-pagination a:hover ,::ng-deep .ngx-pagination span:hover{
-  color: green;
+
+.example-radio-button {
+  margin: 5px;
 }
+::ng-deep .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-inner-circle {
+background: #2ac37d;
+}
+
+::ng-deep .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border: solid 2px #2ac37d;
+}
+/* end  */
