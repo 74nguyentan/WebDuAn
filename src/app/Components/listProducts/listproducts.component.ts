@@ -85,7 +85,7 @@ export class ListproductsComponent implements OnInit {
     this.historyservice.createhistory(this.history).subscribe(data => {
       console.log(data);
       this.history = new History();
-      this.refresh();
+      // this.refresh();
     },
       (error) => {
         console.log("er-----> : " + error);
@@ -93,9 +93,9 @@ export class ListproductsComponent implements OnInit {
 
   }
 
-  refresh(): void {
-    window.location.reload();
-  }
+  // refresh(): void {
+  //   window.location.reload();
+  // }
 }
 
 

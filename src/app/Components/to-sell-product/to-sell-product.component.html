@@ -4,20 +4,20 @@
     <div class="col-md-8" style="padding-left: 50px ;">
       <div id="container" class="container" >
         <!-- thong tin co ban -->
-        <header>Thêm sản phẩm mới</header>
+        <header>{{ 'addnew' | translate }}</header>
         <form id="form1" runat="server" (ngSubmit)="onSubmit()">
           <div class="row">
             <div class="col-md-5">
               <div class="input-field">
                 <input type="text" id = "tenHang" required  [(ngModel)]="products.tenHang" name = "tenHang">
-                <label>Tên hàng</label>
+                <label>{{ 'nemgood' | translate }}</label>
               </div>
             </div>
             <div class="col-md-2"></div>
             <div class="col-md-5">
               <div class="input-field">
                 <input class="pswrd" id = "gia" type="text" required [(ngModel)]="products.gia" name = "gia">
-                <label>Giá</label>
+                <label>{{ 'price' | translate }}</label>
               </div>
             </div>
           </div>
@@ -25,7 +25,7 @@
             <div class="col-md-5">
               <div class="input-field">
                 <input type="text" id = "xuatXu" required [(ngModel)]="products.xuatXu" name = "xuatXu">
-                <label>Xuất xứ</label>
+                <label>{{ 'origin' | translate }}</label>
               </div>
             </div>
             <div class="col-md-2"></div>
@@ -36,7 +36,7 @@
                   <option  [ngValue]="0" >Còn hàng</option>
                   <option  [ngValue]="1" >Hết hàng</option>
                 </select>
-                <label for="category">Trạng thái</label>
+                <label for="category">{{ 'status' | translate }}</label>
               </div>
             </div>
           </div>
@@ -44,14 +44,14 @@
             <div class="col-md-5">
               <div class="input-field">
                 <input type="text" id = "diaChiBan" required  [(ngModel)]="products.diaChiBan" name = "diaChiBan">
-                <label>Địa chỉ bán</label>
+                <label>{{ 'address' | translate }}</label>
               </div>
             </div>
             <div class="col-md-2"></div>
             <div class="col-md-5">
               <div class="input-field">
                 <input class="pswrd" id = "dienThoai" type="text" required [(ngModel)]="products.dienThoai" name = "dienThoai">
-                <label>Điện Thoại</label>
+                <label>{{ 'phone' | translate }}</label>
               </div>
             </div>
           </div>
@@ -59,6 +59,7 @@
             <div class="col-md-5 c_anh">
 
               <div class="wrapperzzz">
+<!-- <<<<<<< Updated upstream
                 <p>Hình Ảnh</p> <hr>
                 <input type="file" [(ngModel)]="products.hinh0"  name="upload" onchange="ImagesFileAsURL()" (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf" required   placeholder="Hình ảnh" multiple />
                 <img [src]="products.hinh0" [src]="base64textString[0]" alt="">
@@ -76,6 +77,25 @@
               <div class="wrapperzzz">
                 <p>Hình Ảnh</p> <hr>
                 <input type="file" [(ngModel)]="products.hinh3" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
+======= -->
+                <p>{{ 'picture' | translate }}</p> <hr>
+                <input type="file" name="upload" onchange="ImagesFileAsURL()" (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf" required   placeholder="Hình ảnh" multiple />
+                <img [src]="products.hinh0" [src]="base64textString[0]" alt="">
+              </div>
+              <div class="wrapperzzz">
+                <p>{{ 'picture' | translate }}</p> <hr>
+                <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
+                <img [src]="products.hinh1" [src]="base64textString[1]" width="285px" height="177px" alt="">
+              </div>
+              <div class="wrapperzzz">
+                <p>{{ 'picture' | translate }}</p> <hr>
+                <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
+                <img [src]="products.hinh2" [src]="base64textString[2]" width="285px" height="177px" alt="">
+              </div>
+              <div class="wrapperzzz">
+                <p>{{ 'picture' | translate }}</p> <hr>
+                <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
+
                 <img [src]="products.hinh3" [src]="base64textString[3]"  width="285px" height="177px" alt="">
               </div>
             </div>
@@ -86,12 +106,12 @@
                   <select  [(ngModel)]="products.loaiHang" name="products.id">
                     <option *ngFor="let item of category" [ngValue]="item" >{{ item.tenLoaiHang }}</option>
                   </select>
-                  <label for="category">Danh mục</label>
+                  <label for="category">{{ 'category' | translate }}</label>
                 </div>
 
                 <div class="input-field">
                   <textarea class="form-control" id = "moTa" rows="15" required [(ngModel)]="products.moTa" name = "moTa"></textarea>
-                  <label>Mô tả</label>
+                  <label>{{ 'describe' | translate }}</label>
                 </div>
             </div>
           </div>
@@ -101,7 +121,11 @@
               <div class="button">
                 <div class="inner">
                 </div>
-                <button href ="#" id="button" type="submit">HOÀN TẤT</button>
+
+                <button href ="#" id="button" type="submit">{{ 'completed' | translate }}</button>
+
+                <button id="button" type="submit">{{ 'completed' | translate }}</button>
+
               </div>
             </div>
           </div>
@@ -115,20 +139,20 @@
     <!-- sp cu -->
     <div class="col-md-3">
       <div id="trangsp" class="container">
-        <div class="row "><div class="col-md-12" id="back"><a href="#">Sản phẩm gần đây</a></div></div>
+        <div class="row "><div class="col-md-12" id="back"><a href="#">{{ 'recent' | translate }}</a></div></div>
         <div class="ex3">
           <div class="col-md-12">
             <div class="products" >
               <img style="width: 100%" src="https://vnn-imgs-f.vgcloud.vn/2019/07/19/18/datsun-redigo-600x400.jpg" alt="">
               <div class="products-details animate" >
                 <div class="products-header">
-                  <h2> Ô tô CAMBRI </h2>
-                  <h3> Giá: 1.000.000.000 đ</h3>
+                  <h2> {{ 'car' | translate }} </h2>
+                  <h3>{{ 'price' | translate }} 1.000.000.000 đ</h3>
                 </div>
                 <div class="products-detail">
-                  <p style="color: white;">Sản phẩm trong gian hàng của chủ shop</p>
+                  <p style="color: white;">{{ 'stall' | translate }}</p>
                   <div class="social">
-                    <button type="button" class="btn btn-outline-success"> <a href="#">Chi tiết sản phẩm</a> </button>
+                    <button type="button" class="btn btn-outline-success"> <a href="#">{{ 'details' | translate }}</a> </button>
                   </div>
                 </div>
               </div>
@@ -139,13 +163,13 @@
                 src="https://vnn-imgs-f.vgcloud.vn/2020/06/30/16/ngam-xe-may-simson-s51-enduro-huyen-thoai-31-nam-tuoi-gia-150-trieu-dong-1-600x400.jpg" alt="">
               <div class="products-details animate">
                 <div class="products-header">
-                  <h2> Xe máy FERALI </h2>
-                  <h3> Giá: 600.000.000 đ </h3>
+                  <h2> {{ 'motorcycles' | translate }}</h2>
+                  <h3>{{ 'price' | translate }} 600.000.000 đ </h3>
                 </div>
                 <div class="products-detail">
-                  <p style="color: white;">Sản phẩm trong gian hàng của chủ shop</p>
+                  <p style="color: white;">{{ 'stall' | translate }}</p>
                   <div class="social">
-                    <button type="button" class="btn btn-outline-success"> <a href="#">Chi tiết sản phẩm</a> </button>
+                    <button type="button" class="btn btn-outline-success"> <a href="#">{{ 'details' | translate }}</a> </button>
                   </div>
                 </div>
               </div>
@@ -156,13 +180,13 @@
                 src="https://cdn.tgdd.vn/Files/2014/04/03/540444/Thuong-hieu-may-giat-uy-tin-2-600x400.jpg" alt="">
               <div class="products-details animate">
                 <div class="products-header">
-                  <h2> Máy giặt Panasoni </h2>
-                  <h3> Giá: 4.999.999 đ </h3>
+                  <h2>{{ 'machine' | translate }} </h2>
+                  <h3> {{ 'price' | translate }}4.999.999 đ </h3>
                 </div>
                 <div class="products-detail">
-                  <p style="color: white;">Sản phẩm trong gian hàng của chủ shop</p>
+                  <p style="color: white;">{{ 'stall' | translate }}</p>
                   <div class="social">
-                    <button type="button" class="btn btn-outline-success"> <a href="#">Chi tiết sản phẩm</a> </button>
+                    <button type="button" class="btn btn-outline-success"> <a href="#">{{ 'details' | translate }}</a> </button>
                   </div>
                 </div>
               </div>
@@ -173,13 +197,13 @@
                 src="https://bantrasofa.net/wp-content/uploads/2018/03/ban-tra-sofa-go-cong-nghiep-600x400.jpg" alt="">
               <div class="products-details animate">
                 <div class="products-header">
-                  <h2> Bàn HourOver </h2>
-                  <h3> Giá: 1.222.333 đ </h3>
+                  <h2>{{ 'Desk' | translate }}</h2>
+                  <h3>{{ 'price' | translate }} 1.222.333 đ </h3>
                 </div>
                 <div class="products-detail">
-                  <p style="color: white;">Sản phẩm trong gian hàng của chủ shop</p>
+                  <p style="color: white;">{{ 'stall' | translate }}</p>
                   <div class="social">
-                    <button type="button" class="btn btn-outline-success"> <a href="#">Chi tiết sản phẩm</a> </button>
+                    <button type="button" class="btn btn-outline-success"> <a href="#">{{ 'details' | translate }}</a> </button>
                   </div>
                 </div>
               </div>

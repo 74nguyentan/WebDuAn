@@ -71,10 +71,23 @@ export class ProductDetailComponent implements OnInit {
       },
       (error) => console.log(error)
     );
-// san pham yeu thich
+
+this.loadFavorite();
+    this.load();
+  }
+
+  load() {
+    this.comments = new Comment();
+    this.commentservice.getComment(this.id).subscribe((data) => {
+      this.comments = data;
+    });
+  }
+
+  loadFavorite(){
+    // san pham yeu thich
     this.ProductFavouriteService.getidMatHang(this.id).subscribe((data) => {
       this.productFavourite = Object.assign({}, ...data);
-      console.log("-- favori -- idd : " + this.productFavourite.id);
+      // console.log("-- favori -- idd : " + this.productFavourite.id);
 
       if (this.productFavourite.yeuThich == true) {
         this.clickFavourite = this.productFavourite.yeuThich;
@@ -86,15 +99,6 @@ export class ProductDetailComponent implements OnInit {
     },
     (error) => console.log("error favourite -- > " + error)
     );
-
-    this.load();
-  }
-
-  load() {
-    this.comments = new Comment();
-    this.commentservice.getComment(this.id).subscribe((data) => {
-      this.comments = data;
-    });
   }
 
   save() {
@@ -125,21 +129,20 @@ export class ProductDetailComponent implements OnInit {
   }
 
   favourite() {
-    console.log(
-      '-------------------->>>> clickFavourite => :' + this.clickFavourite
-    );
 
     if (this.clickFavourite == true) {
       // this.productFavourite = this.product
-      console.log(' delete -----id -- >>:' +this.id);
+      // console.log(' delete -----id -- >>:' +this.id);
 
       this.ProductFavouriteService.deleteFavourite(this.productFavourite.id).subscribe(
         (data) => {
           console.log(data);
-          this.clickFavourite = !this.clickFavourite;
-          this.clickFavourite1 = !this.clickFavourite1;
+          this.clickFavourite = false;
+          this.clickFavourite1 = true;
+          // console.log("detele success !");
+
         },
-        (error) => console.log(error)
+        (error) => console.log("err delete favourite " + error)
       );
     } else {
       this.productFavourite = new productFavourite();
@@ -154,8 +157,10 @@ export class ProductDetailComponent implements OnInit {
       ).subscribe(
         (data) => {
           console.log(data);
-          this.clickFavourite = !this.clickFavourite;
-          this.clickFavourite1 = !this.clickFavourite1;
+          this.clickFavourite = true;
+          this.clickFavourite1 = false;
+          this.loadFavorite();
+          // console.log("favourite success !");
         },
         (error) => console.log('favourite error : ' + error)
       );

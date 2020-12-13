@@ -44,6 +44,17 @@
 
       </div>
 
+      <div class="titlenew2 row mb-3 ml-1">
+        <div class="col-3 ">
+        </div>
+        <div class="col-9 mt-2">
+          <div class="controls pull-right hidden-xs">
+            <pagination-controls (pageChange)="p = $event" ></pagination-controls>
+          </div>
+        </div>
+        <hr>
+      </div>
+
     </div>
     <div class="ps-sidebar col-md  " style=" background: white; margin-right: 40px; margin-bottom: 75px; border-radius: 5px;"
     data-mh="product-listing">
@@ -67,7 +78,7 @@
             <li ><a (click)="getProduct(12)">Mỹ phẩm</a></li>
           </ul> -->
           <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
-          <mat-radio-button class="example-radio-button" *ngFor="let item of category" (click)="getProduct(item.id)" >
+          <mat-radio-button class="example-radio-button" *ngFor="let item of category" [value]="item.id" (click)="getProduct(item.id)" >
             {{item.tenLoaiHang}}
           </mat-radio-button>
         </mat-radio-group>

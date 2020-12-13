@@ -50,8 +50,11 @@
   "price5": "Giá: 200.000 đ",
   "detail": "Chi Tiết",
   "price": "Giá:",
+  "pricee": "Giá",
   "status": "Tình trạng:",
+  "statuss": "Tình trạng",
   "manufacturer": "Xuất xứ:",
+  "manufacturerr": "Xuất xứ",
   "stocking": "Còn hàng",
   "china": "Hàn Quốc",
   "viet": "Việt Nam",
@@ -135,5 +138,104 @@
   "membership1": "Mua hàng khắp thế giới cực dễ dàng, nhanh chóng",
   "membership2": "Theo dõi đơn hàng, hành trình đơn hàng",
   "membership3": "Nhận nhiều ưu đãi hấp dẫn từ khắp thế giới",
-  "productFavourite": "Sản phẩm yêu thích"
+  "productFavourite": "Sản phẩm yêu thích",
+
+
+
+  "addnew": "Thêm mới sản phẩm",
+  "nemgood": "Tên hàng",
+  "origin": "Xuất xứ",
+    "no": "Không có tệp nào được chọn",
+  "describe": "Mô tả  ",
+  "completed": "HOÀN TẤT",
+  "recent": "Sản phẩm gần đây",
+  "stall": "Sản phẩm trong gian hàng của chủ shop",
+  "details": "Chi tiết sản phẩm",
+  "car": "Ô tô CAMBRI",
+  "motorcycles": "Xe máy FERALI",
+  "machine": "Máy giặt Panasoni",
+  "Desk": "Bàn HourOver",
+  "picture": "Hình ảnh",
+  "category": "Danh mục",
+
+
+
+  "p": " GREEN MARKET - RAO VẶT TRỰC TUYẾN HÀNG ĐẦU CỦA NGƯỜI VIỆT ",
+  "b1": "Green Market chính thức gia nhập thị trường Việt Nam vào đầu năm 2020, với mục đích tạo ra cho bạn một kênh rao vặt trung gian, kết nối người mua với người bán lại với nhau bằng những giao dịch cực kỳ đơn giản, tiện lợi, nhanh chóng, an toàn, mang đến hiệu quả bất ngờ.",
+  "b2": "Đến nay, Green Market tự hào là Website rao vặt được ưa chuộng hàng đầu Việt Nam. Hàng ngàn món hời từ Bất động sản, Nhà cửa, Xe cộ, Đồ điện tử, Thú cưng, Vật dụng cá nhân... đến tìm việc làm, thông tin tuyển dụng, các dịch vụ - du lịch được đăng tin, rao bán trên Green Market.",
+  "b3": "Với Green Market, bạn có thể dễ dàng mua bán, trao đổi bất cứ một loại mặt hàng nào, dù đó là đồ cũ hay đồ mới với nhiều lĩnh vực:",
+  "b4": "Bất động sản: Cho thuê, Mua bán nhà đất, căn hộ chung cư, văn phòng mặt bằng kinh doanh, phòng trọ đa dạng về diện tích, vị trí",
+  "b5": "Phương tiện đi lại: xe ô tô, xe máy có độ bền cao, giá cả hợp lý.",
+  "b6": "Đồ dùng cá nhân: quần áo, giày dép, túi xách, đồng hồ... đa phong cách, hợp thời trang.",
+  "b7": "Đồ điện tử: điện thoại di động, máy tính bảng, laptop, tivi, loa, amply...; đồ điện gia dụng: máy giặt, tủ lạnh, máy lạnh điều hòa... với rất nhiều nhãn hiệu, kích thước khác nhau.",
+  "b8": "﻿Vật nuôi, thú cưng đa chủng loại: gà, chó, chim, mèo, cá, hamster giá cực tốt.",
+  "b9": "Tuyển dụng, việc làm với hàng triệu công việc hấp dẫn, phù hợp.v",
+  "b10": "﻿Dịch vụ, du lịch: khách sạn, vé máy bay, vé tàu, vé xe, tour du lịch và các voucher du lịch... uy tín, chất lượng.",
+  "b11": "﻿Đồ ăn, thực phẩm: các món ăn được chế biến thơm ngon, hấp dẫn, thực phẩm tươi sống, an toàn & giá cả hợp lý.",
+  "b12": "Và còn rất nhiều mặt hàng khác nữa đã và đang được rao bán tại Green Market.",
+  "b13": "Mỗi người trong chúng ta đều có những sản phẩm đã qua sử dụng và không cần dùng tới nữa. Vậy còn chần chừ gì nữa mà không để nó trở nên giá trị hơn với người khác. Rất đơn giản, bạn chỉ cần chụp hình lại, mô tả cụ thể về sản phẩm và sử dụng ứng dụng Đăng tin miễn phí của Green Market là đã có thể đến gần hơn với người cần nó.",
+  "b14": "Không những thế, Green Market còn cung cấp cho bạn thông tin về giá cả các mặt hàng để bạn có thể tham khảo. Đồng thời, thông qua Blog kinh nghiệm, Green Market sẽ tư vấn, chia sẻ cho bạn những thông tin bổ ích, bí quyết, mẹo vặt giúp bạn có những giao dịch mua bán an toàn, đảm bảo. Green Market cũng sẵn sàng hỗ trợ bạn trong mọi trường hợp cần thiết.",
+  "b15": "Chúc các bạn có những trải nghiệm mua bán tuyệt vời trên Green Market.",
+  "b16": "  Uy tín tạo thương hiệu",
+
+  "reset": " ĐẶT LẠI MẬT KHẨU",
+  "please": " Vui lòng nhập địa chỉ email của bạn để yêu cầu đặt lại mật khẩu !!",
+  "input": "Nhập email ",
+  "checkemail2": " kiểm tra email của bạn & làm theo hướng dẫn để đặt lại mật khẩu ",
+  "Personal": " Thông tin cá nhân",
+  "date": "Ngày lập ",
+  "rev": " *Cung cấp địa chỉ sẽ giúp thuận tiện mua bán. Cập nhật địa chỉ ngay khi bạn chuyển đến địa chỉ mới*",
+  "Adjust": " *Điều chỉnh thông tin cá nhân*",
+  "finish": " HOÀN THÀNH",
+  "update": " Chỉnh sửa thông tin",
+  "Packages": "  Các gói nạp",
+  "FILE": " NẠP NGAY",
+  "edit": "Chỉnh sửa",
+  "edit2": "Sửa",
+  "delete": "Xóa",
+  "renewal": "Gia hạn",
+
+
+
+  "pronews1": "QUẦN ÁO NỮ",
+  "pronews1.1": "ĐẦM XÈO",
+  "pronews1.2": "ÁO SƠ MI",
+  "pronews1.3": "ÁO KHOÁC",
+  "pronews2.1": "ÁO KHOÁC",
+  "pronews2.2": "ÁO THUN",
+  "pronews2.3": "ÁO SƠ MI",
+  "pronews2": "QUẦN ÁO NAM",
+  "pronews3": "TRANG SỨC",
+  "pronews3.1": "ĐỒNG HỒ",
+  "pronews3.2": "VÒNG TAY",
+  "pronews3.3": "NHẪN",
+  "pronews4": "BA LÔ - TÚI XÁCH",
+  "pronews4.1": "BA LÔ",
+  "pronews4.2": "TÚI XÁCH",
+  "pronews4.3": "TÚI CHÉO",
+  "pronews5": "GIÀY-DÉP",
+  "pronews5.1": "THỂ THAO",
+  "pronews5.2": "THỜI TRANG",
+  "pronews5.3": "QUAI HẬU",
+  "pronews6": " Top hàng mới nhất",
+  "see": "Xem thêm",
+
+  "information": "Thông tin tham khảo",
+  "chat": "Chat với người bán",
+  "overview": "Tổng quan",
+  "evaluate": "Đánh giá",
+  "product": "Sản phẩm",
+  "comment": "Bình luận",
+  "p1": "Website thương mại điện tử: là website cho phép bạn mua rất nhiều sản phẩm giống như một cái chợ đầy sản phẩm để bạn lựa.",
+  "p2": "Mọi thắc mắc của bạn sẽ được giải quyết từ từ. Mình luôn nói, và luôn nhấn mạnh một điều và luôn muốn hỏi bạn",
+  "comment2": "Nhập bình luận của bạn...",
+
+  "list": "Danh sách sản phẩm",
+
+  "duration": "Thời hạn"
+
+
+
+
 }
+

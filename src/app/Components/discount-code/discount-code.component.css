@@ -16,7 +16,7 @@ h1{
 .dis_content{
   font-family: tahoma;
   color: white;
-  background-image: url(../../../assets/images/brg.png);
+  background-image: url(../../../assets/images/brgdi.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 100%;
@@ -36,11 +36,10 @@ h1{
 /* slide  */
 .aktheak{
   width: 100%;
-  /* padding: 0px; */
 }
 .voucher{
   font-family: tahoma;
-  background-image: url(../../../assets/images/bgr.png);
+  background-image: url(../../../assets/images/card.png);
   background-repeat: no-repeat;
   background-size: 240.5px 100%;
   background-position: center;
