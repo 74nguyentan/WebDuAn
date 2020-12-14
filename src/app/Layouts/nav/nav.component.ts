@@ -20,7 +20,6 @@ export class NavComponent implements OnInit, OnDestroy{
   history: History = new History();
   id: string;
   count : number;
-  tenHang: string;
 
   imagerUrl =
     'https://cf.shopee.vn/file/687f3967b7c2fe6a134a2c11894eea4b_tn&quot;';
@@ -51,6 +50,7 @@ export class NavComponent implements OnInit, OnDestroy{
   login = false;
   role = 0;
   private valueFromChildSubscription: Subscription;
+
 
   constructor(
     private componentShareService: ComponentShareService,
@@ -124,15 +124,11 @@ export class NavComponent implements OnInit, OnDestroy{
     };
   }
 
-  productfind(tenHang: string){
-    this.router.navigate(['findall', tenHang]);
-    console.log(tenHang);
-    this.router.routeReuseStrategy.shouldReuseRoute = function () {
-      return false;
-    };
+  productfind(tenHang: string) {
+    this.router.navigate(['findAllProduct', tenHang]); 
+       
   }
-
-
+  
 
   refresh(): void {
     window.location.reload();

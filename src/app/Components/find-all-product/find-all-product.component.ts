@@ -6,6 +6,10 @@ import { AuthService } from 'src/app/Service/auth.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from 'src/app/Dialog/confirm-dialog/confirm-dialog.component';
 import { Inject } from '@angular/core';
+import { HistoryService } from 'src/app/Service/history.service';
+import { Users } from 'src/app/Model/user';
+import { History } from 'src/app/model/History';
+import { SuccessDialogComponent } from 'src/app/Dialog/success-dialog/success-dialog.component';
 
 @Component({
   selector: 'app-find-all-product',
@@ -14,28 +18,57 @@ import { Inject } from '@angular/core';
 })
 export class FindAllProductComponent implements OnInit {
 
-  product: Product;
+  products: Product;
+  tenHang: string;
+  history: History = new History();
+  Users: Users;
 
-  onKey(tenHang: any) { // without type info
-    this.findbyname(tenHang);
-  }
   constructor(private route: ActivatedRoute,private router: Router,
     @Inject(MatDialog) public data: any,
     private dialog: MatDialog,
-    private productserviec: ProductService, public authService: AuthService) { }
+    private productserviec: ProductService, public authService: AuthService,
+     private historyservice: HistoryService,public AuthService: AuthService) { }
 
   ngOnInit(): void {
-  }
-
-  findbyname(tenHang: any){
-    this.product = new Product();
-    this.productserviec.getProduct1(tenHang)
+    this.tenHang = this.route.snapshot.params['tenHang'];
+    console.log(this.tenHang);
+    
+    this.productserviec.getProduct1(this.tenHang)
     .subscribe(
-      data => {
-        this.product = data;
-        console.log(data);
+      data => { data.length 
+        this.products = data;
+        if(data.length == 0){
+          const confirmDialog = this.dialog.open(SuccessDialogComponent, {
+            data: {
+              title: 'Không có mặt hàng này !',
+            },
+          });
+          confirmDialog.afterClosed().subscribe((result) => {
+            if (result === false) {
+            }
+      });
+        } 
       },
       error => console.log(error));
-    }
+  }
+
+  productDetails(id: number) {
+    this.router.navigate(['details', id]);
+    this.history = new History();
+    this.history.users = {};
+    this.history.users.id = this.AuthService.user_id();
+    this.history.matHang = {};
+    this.history.matHang.id = id;
+    console.log(this.history);
+    this.historyservice.createhistory(this.history).subscribe(data => {
+      console.log(data);
+      this.history = new History();
+      // this.refresh();
+    },
+      (error) => {
+        console.log("er-----> : " + error);
+      });
+
+  }
 
 }

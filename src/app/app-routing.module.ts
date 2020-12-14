@@ -108,7 +108,7 @@ const routes: Routes = [
     component: FindAllProductComponent
   },
   {
-    path: 'findall',
+    path: 'findAllProduct/:tenHang',
     component: FindAllProductComponent
   }
 ];
