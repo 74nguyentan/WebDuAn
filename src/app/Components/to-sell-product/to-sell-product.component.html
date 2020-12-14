@@ -5,127 +5,157 @@
       <div id="container" class="container" >
         <!-- thong tin co ban -->
         <header>{{ 'addnew' | translate }}</header>
-        <form id="form1" runat="server" (ngSubmit)="onSubmit()">
+        <form id="form1" #productform="ngForm" runat="server"  (ngSubmit)="onSubmit()">
           <div class="row">
             <div class="col-md-5">
               <div class="input-field">
-                <input type="text" id = "tenHang" required  [(ngModel)]="products.tenHang" name = "tenHang">
+                <input type="text" id = "tenHang" required #tenHang="ngModel"  [(ngModel)]="products.tenHang" name = "tenHang">
                 <label>{{ 'nemgood' | translate }}</label>
+              </div>
+              <!-- {{name.className}} -->
+              <div *ngIf="tenHang.errors && (tenHang.dirty || tenHang.touched)" class="checklbl">
+                <div [hidden]="!tenHang.errors.required">
+                  Tên hàng không được bỏ trống
+                </div>
               </div>
             </div>
             <div class="col-md-2"></div>
             <div class="col-md-5">
               <div class="input-field">
-                <input class="pswrd" id = "gia" type="text" required [(ngModel)]="products.gia" name = "gia">
-                <label>{{ 'price' | translate }}</label>
+                <select  [(ngModel)]="products.loaiHang" name="products.id" required #product="ngModel">
+                  <option *ngFor="let item of category" [ngValue]="item" >{{ item.tenLoaiHang }}</option>
+                </select>
+                <label for="category">{{ 'category' | translate }}</label>
+              </div>
+              <div *ngIf="product.errors && (product.dirty || product.touched)" class="checklbl">
+                <div [hidden]="!product.errors.required">
+                  Bạn chưa chọn loại hàng
+                </div>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-5">
               <div class="input-field">
-                <input type="text" id = "xuatXu" required [(ngModel)]="products.xuatXu" name = "xuatXu">
+                <input type="text" id = "xuatXu" #xuatXu="ngModel" required [(ngModel)]="products.xuatXu" name = "xuatXu">
                 <label>{{ 'origin' | translate }}</label>
+              </div>
+              <div *ngIf="xuatXu.errors && (xuatXu.dirty || xuatXu.touched)" class="checklbl">
+                <div [hidden]="!xuatXu.errors.required">
+                  Xuất xứ không được để trống
+                </div>
               </div>
             </div>
             <div class="col-md-2"></div>
             <div class="col-md-5">
               <div class="input-field">
-                <select  [(ngModel)]="products.trangThai"  name = "trangThai">
+                <select  [(ngModel)]="products.trangThai"  name = "trangThai" #trangThai="ngModel" required>
                   <option>Trạng thái...</option>
                   <option  [ngValue]="0" >Còn hàng</option>
                   <option  [ngValue]="1" >Hết hàng</option>
                 </select>
                 <label for="category">{{ 'status' | translate }}</label>
               </div>
+              <div *ngIf="trangThai.errors && (trangThai.dirty || trangThai.touched)" class="checklbl">
+                <div [hidden]="!trangThai.errors.required">
+                  Bạn chưa chọn trạng thái
+                </div>
+              </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-5">
               <div class="input-field">
-                <input type="text" id = "diaChiBan" required  [(ngModel)]="products.diaChiBan" name = "diaChiBan">
+                <input type="text" id = "diaChiBan" #diaChiBan="ngModel" required  [(ngModel)]="products.diaChiBan" name = "diaChiBan">
                 <label>{{ 'address' | translate }}</label>
+              </div>
+              <div *ngIf="diaChiBan.errors && (diaChiBan.dirty || diaChiBan.touched)" class="checklbl">
+                <div [hidden]="!diaChiBan.errors.required">
+                  Địa chỉ không được để trống
+                </div>
               </div>
             </div>
             <div class="col-md-2"></div>
             <div class="col-md-5">
               <div class="input-field">
-                <input class="pswrd" id = "dienThoai" type="text" required [(ngModel)]="products.dienThoai" name = "dienThoai">
+                <input class="pswrd" id = "dienThoai" type="text" #phone="ngModel" pattern="^[0][0-9]{9}$"  required [(ngModel)]="products.dienThoai" name = "dienThoai">
                 <label>{{ 'phone' | translate }}</label>
+              </div>
+              <div *ngIf="phone.errors && (phone.dirty || phone.touched)" class="checklbl">
+                <div [hidden]="!phone.errors.required">
+                  Điện thoại không được trống
+                </div>
+                <div [hidden]="!phone.errors.pattern">
+                  Điện thoại không hợp lệ
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5">
+              <div class="input-field">
+                <input class="pswrd" id = "moTa" type="text" #moTa="ngModel"  required [(ngModel)]="products.moTa" name = "moTa">
+                <label>{{ 'describe' | translate }}</label>
+              </div>
+              <div *ngIf="moTa.errors && (moTa.dirty || moTa.touched)" class="checklbl">
+                <div [hidden]="!moTa.errors.required">
+                  Mô tả không được để trống
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+              <div class="input-field">
+                <input class="pswrd" id = "gia" type="text" #gia="ngModel" pattern="^[1-9]+[0-9]*$" required [(ngModel)]="products.gia" name = "gia">
+                <label>{{ 'price' | translate }}</label>
+              </div>
+              <div *ngIf="gia.errors && (gia.dirty || gia.touched)" class="checklbl">
+                <div [hidden]="!gia.errors.required">
+                  Giá không được để trống
+                </div>
+              </div>
+              <div *ngIf="gia.errors && (gia.dirty || gia.touched)" class="checklbl">
+                <div [hidden]="!gia.errors.pattern">
+                  Giá không hợp  lệ
+                </div>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-5 c_anh">
-
               <div class="wrapperzzz">
-<!-- <<<<<<< Updated upstream
-                <p>Hình Ảnh</p> <hr>
-                <input type="file" [(ngModel)]="products.hinh0"  name="upload" onchange="ImagesFileAsURL()" (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf" required   placeholder="Hình ảnh" multiple />
-                <img [src]="products.hinh0" [src]="base64textString[0]" alt="">
+                <p>{{ 'picture1' | translate }}</p> <hr>
+                <input type="file" name="upload" onchange="ImagesFileAsURL()" (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf" required  placeholder="Hình ảnh" multiple />
+                <img class="mt-3" [src]="products.hinh0" [src]="base64textString[0]"width="285px" height="150px" alt="">
               </div>
               <div class="wrapperzzz">
-                <p>Hình Ảnh</p> <hr>
-                <input type="file" [(ngModel)]="products.hinh1" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
-                <img [src]="products.hinh1" [src]="base64textString[1]" width="285px" height="177px" alt="">
-              </div>
-              <div class="wrapperzzz">
-                <p>Hình Ảnh</p> <hr>
-                <input type="file" [(ngModel)]="products.hinh2" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
-                <img [src]="products.hinh2" [src]="base64textString[2]" width="285px" height="177px" alt="">
-              </div>
-              <div class="wrapperzzz">
-                <p>Hình Ảnh</p> <hr>
-                <input type="file" [(ngModel)]="products.hinh3" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
-======= -->
-                <p>{{ 'picture' | translate }}</p> <hr>
-                <input type="file" name="upload" onchange="ImagesFileAsURL()" (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf" required   placeholder="Hình ảnh" multiple />
-                <img [src]="products.hinh0" [src]="base64textString[0]" alt="">
-              </div>
-              <div class="wrapperzzz">
-                <p>{{ 'picture' | translate }}</p> <hr>
+                <p>{{ 'picture3' | translate }}</p> <hr>
                 <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
-                <img [src]="products.hinh1" [src]="base64textString[1]" width="285px" height="177px" alt="">
-              </div>
-              <div class="wrapperzzz">
-                <p>{{ 'picture' | translate }}</p> <hr>
-                <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
-                <img [src]="products.hinh2" [src]="base64textString[2]" width="285px" height="177px" alt="">
-              </div>
-              <div class="wrapperzzz">
-                <p>{{ 'picture' | translate }}</p> <hr>
-                <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
-
-                <img [src]="products.hinh3" [src]="base64textString[3]"  width="285px" height="177px" alt="">
+                <img class="mt-3" [src]="products.hinh2" [src]="base64textString[2]" width="285px" height="150px" alt="">
               </div>
             </div>
-            <div class="col-md-2"></div>
+            <div class="col-2"></div>
+            <div class="col-md-5 c_anh">
+              <div class="wrapperzzz">
+                <p>{{ 'picture2' | translate }}</p> <hr>
+                <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
+                <img class="mt-3" [src]="products.hinh1" [src]="base64textString[1]" width="285px" height="150px" alt="">
+              </div>
 
-            <div class="col-md-5">
-                <div class="input-field">
-                  <select  [(ngModel)]="products.loaiHang" name="products.id">
-                    <option *ngFor="let item of category" [ngValue]="item" >{{ item.tenLoaiHang }}</option>
-                  </select>
-                  <label for="category">{{ 'category' | translate }}</label>
-                </div>
-
-                <div class="input-field">
-                  <textarea class="form-control" id = "moTa" rows="15" required [(ngModel)]="products.moTa" name = "moTa"></textarea>
-                  <label>{{ 'describe' | translate }}</label>
-                </div>
+              <div class="wrapperzzz">
+                <p>{{ 'picture4' | translate }}</p> <hr>
+                <input type="file" name="upload" id="upload" onchange="ImagesFileAsURL()" required (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf"  placeholder="Hình ảnh" multiple />
+                <img class="mt-3" [src]="products.hinh3" [src]="base64textString[3]"  width="285px" height="150px" alt="">
+              </div>
             </div>
           </div>
-
           <div class="row">
             <div class="col-md-12">
               <div class="button">
                 <div class="inner">
                 </div>
-
-                <button href ="#" id="button" type="submit">{{ 'completed' | translate }}</button>
-
-                <button id="button" type="submit">{{ 'completed' | translate }}</button>
-
+                <!-- <button href ="#" id="button" type="submit">{{ 'completed' | translate }}ddddddđ</button> -->
+                <button id="button" [disabled]="!productform.valid" type="submit">{{ 'completed' | translate }}</button>
               </div>
             </div>
           </div>
@@ -141,6 +171,74 @@
       <div id="trangsp" class="container">
         <div class="row "><div class="col-md-12" id="back"><a href="#">{{ 'recent' | translate }}</a></div></div>
         <div class="ex3">
+          <div class="col-md-12">
+            <div class="products" >
+              <img style="width: 100%" src="https://vnn-imgs-f.vgcloud.vn/2019/07/19/18/datsun-redigo-600x400.jpg" alt="">
+              <div class="products-details animate" >
+                <div class="products-header">
+                  <h2> {{ 'car' | translate }} </h2>
+                  <h3>{{ 'price' | translate }} 1.000.000.000 đ</h3>
+                </div>
+                <div class="products-detail">
+                  <p style="color: white;">{{ 'stall' | translate }}</p>
+                  <div class="social">
+                    <button type="button" class="btn btn-outline-success"> <a href="#">{{ 'details' | translate }}</a> </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="products"> <img style="width: 100%"
+                src="https://vnn-imgs-f.vgcloud.vn/2020/06/30/16/ngam-xe-may-simson-s51-enduro-huyen-thoai-31-nam-tuoi-gia-150-trieu-dong-1-600x400.jpg" alt="">
+              <div class="products-details animate">
+                <div class="products-header">
+                  <h2> {{ 'motorcycles' | translate }}</h2>
+                  <h3>{{ 'price' | translate }} 600.000.000 đ </h3>
+                </div>
+                <div class="products-detail">
+                  <p style="color: white;">{{ 'stall' | translate }}</p>
+                  <div class="social">
+                    <button type="button" class="btn btn-outline-success"> <a href="#">{{ 'details' | translate }}</a> </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="products"> <img style="width: 100%"
+                src="https://cdn.tgdd.vn/Files/2014/04/03/540444/Thuong-hieu-may-giat-uy-tin-2-600x400.jpg" alt="">
+              <div class="products-details animate">
+                <div class="products-header">
+                  <h2>{{ 'machine' | translate }} </h2>
+                  <h3> {{ 'price' | translate }}4.999.999 đ </h3>
+                </div>
+                <div class="products-detail">
+                  <p style="color: white;">{{ 'stall' | translate }}</p>
+                  <div class="social">
+                    <button type="button" class="btn btn-outline-success"> <a href="#">{{ 'details' | translate }}</a> </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="products"> <img style="width: 100%"
+                src="https://bantrasofa.net/wp-content/uploads/2018/03/ban-tra-sofa-go-cong-nghiep-600x400.jpg" alt="">
+              <div class="products-details animate">
+                <div class="products-header">
+                  <h2>{{ 'Desk' | translate }}</h2>
+                  <h3>{{ 'price' | translate }} 1.222.333 đ </h3>
+                </div>
+                <div class="products-detail">
+                  <p style="color: white;">{{ 'stall' | translate }}</p>
+                  <div class="social">
+                    <button type="button" class="btn btn-outline-success"> <a href="#">{{ 'details' | translate }}</a> </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="col-md-12">
             <div class="products" >
               <img style="width: 100%" src="https://vnn-imgs-f.vgcloud.vn/2019/07/19/18/datsun-redigo-600x400.jpg" alt="">

@@ -11,15 +11,30 @@ import { FailDialogComponent } from 'src/app/Dialog/fail-dialog/fail-dialog.comp
 import { Users } from 'src/app/Model/user';
 import { CookieService } from 'ngx-cookie-service';
 // import { FileUploader } from "angular-file-upload";
-
+import {
+  FormGroup,
+  Validators,
+  FormControl,
+  FormBuilder,
+  AbstractControl,
+} from '@angular/forms';
 const CATEGORY_API = 'http://localhost:8000/greenmarket/api/category';
+
+export function forbiddenUsername(users = []) {
+  return (c: AbstractControl) => {
+    return users.includes(c.value) ? { invalidusername: true } : null;
+  };
+}
+
 @Component({
   selector: 'app-to-sell-product',
   templateUrl: './to-sell-product.component.html',
   styleUrls: ['./to-sell-product.component.css']
 })
+
 export class ToSellProductComponent implements OnInit {
 
+  proform: FormGroup;
   products: Product = new Product();
   users: Users = new Users();
   public category: Array<any>;
@@ -47,12 +62,17 @@ export class ToSellProductComponent implements OnInit {
     private route: ActivatedRoute, private UserServiceService: UserServiceService,
     private AuthService: AuthService,
     @Inject(MatDialog) public data: any,
-    private dialog: MatDialog) { }
+    private dialog: MatDialog,
+    private fb: FormBuilder) { }
 
 
   submitted = false;
 
   ngOnInit(): void {
+    // check
+
+
+
     this.CategoryService.getAll(CATEGORY_API).subscribe(data => {
       this.category = data;
     })
