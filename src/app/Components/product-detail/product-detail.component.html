@@ -61,7 +61,7 @@
               <a href="#"> {{ product.xuatXu }} </a> |
               <a (click)="infomationShop(product.users.id)"> {{ product.users.hoVaTen }} </a>
             </p>
-            <h3 class="ps-product__price">500 VNĐ <del>330 VNĐ</del></h3>
+            <h3 class="ps-product__price">{{ product.gia }} <del>330 VNĐ</del></h3>
             <div class="ps-product__block ps-product__quickview">
               <h4>Thông tin tham khảo</h4>
               <p>
@@ -82,10 +82,9 @@
               <div class="ps-product__actions">
                 <a class="mr-10" style="color: white;" (click)="favourite()" [class.favourite]="clickFavourite" [class.favourite1]="clickFavourite1">
                   <i class="fas fa-heart mt-1"></i></a>
-                <a  style="color: white; background-color: #999999;" ><i class="fas fa-share-alt"></i></a>
+                <a  style="color: white; background-color: #999999;" (click)="updatereport()" ><i class="fas fa-share-alt"></i></a>
               </div>
             </div>
-
           </div>
 
         </div>

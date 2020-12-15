@@ -17,4 +17,5 @@ export class Product {
     trangThai: string;
     loaiHang: object;
     users: any ;
+    luotBaoCao: number;
 }

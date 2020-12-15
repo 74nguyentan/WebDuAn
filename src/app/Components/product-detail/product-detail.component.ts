@@ -12,6 +12,10 @@ import { Product } from 'src/app/model/Product';
 import { ProductService } from 'src/app/Service/product.service';
 import { History } from 'src/app/model/History';
 import { HistoryService } from 'src/app/Service/history.service';
+import { Inject } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { SuccessDialogComponent } from 'src/app/Dialog/success-dialog/success-dialog.component';
+import { ConfirmDialogComponent } from 'src/app/Dialog/confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-product-detail',
@@ -47,7 +51,8 @@ export class ProductDetailComponent implements OnInit {
     public UserServiceService: UserServiceService,
     private productserviec: ProductService,
     private commentservice: CommentService,
-    private ProductFavouriteService: ProductFavouriteService
+    private ProductFavouriteService: ProductFavouriteService,
+    @Inject(MatDialog) public data: any,private dialog: MatDialog,
   ) {}
 
   ngOnInit() {
@@ -165,5 +170,27 @@ this.loadFavorite();
         (error) => console.log('favourite error : ' + error)
       );
     }
+  }
+
+  updatereport() {
+    const confirmDialog = this.dialog.open(ConfirmDialogComponent, {
+      data: {
+        title: 'Bạn có muốn report bài này chứ ?',
+        mesage: 'bạn cân làm lại ... !',
+      },
+    });
+    confirmDialog.afterClosed().subscribe((result) => {
+      if (result === true) {
+        this.product.luotBaoCao = this.product.luotBaoCao + 1;
+        console.log(this.product);
+        console.log(this.id);
+      this.productserviec.updatereport(this.id, this.product)
+        .subscribe(data => {
+     //  this.product= new Product();
+      console.log(this.product);
+      
+       });
+      }
+});
   }
 }

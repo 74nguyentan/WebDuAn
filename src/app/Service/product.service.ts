@@ -14,6 +14,7 @@ export class ProductService {
   private url__ = 'http://localhost:8000/greenmarket/api/gia100';
   private url300 = 'http://localhost:8000/greenmarket/api/gia300';
   private url1000 = 'http://localhost:8000/greenmarket/api/gia1000';
+  private url_report = 'http://localhost:8000/greenmarket/api/tocao';
   constructor(private http: HttpClient) { }
 
   getProductList(): Observable<any> {
@@ -61,4 +62,8 @@ export class ProductService {
     return this.http.put(`${this.baseUrl}/${id}`, value);
   }
 
+  updatereport(id: number, value: any): Observable<Object> {
+    return this.http.put(`${this.url_report}/${id}`, value);
+  }
+  
 }

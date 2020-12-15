@@ -140,8 +140,8 @@ deletehistory(){
     this.historyservice.deleteHistory(this.id).subscribe(data => {
       this.history = data;
     }, error => console.log(error));
-    this.router.routeReuseStrategy.shouldReuseRoute = function () {
-      return false;
-    };
+    // this.router.routeReuseStrategy.shouldReuseRoute = function () {
+    //   return false;
+    // };
 }
 }
