@@ -133,4 +133,15 @@ export class NavComponent implements OnInit, OnDestroy{
   refresh(): void {
     window.location.reload();
 }
+
+deletehistory(){
+  this.history = new History();
+    this.id = this.authService.user_id();
+    this.historyservice.deleteHistory(this.id).subscribe(data => {
+      this.history = data;
+    }, error => console.log(error));
+    this.router.routeReuseStrategy.shouldReuseRoute = function () {
+      return false;
+    };
+}
 }

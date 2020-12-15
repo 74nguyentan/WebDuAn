@@ -33,7 +33,7 @@
                 </li>
 
                 <li>
-                  <a (click)="authService.SignOut()" ><i class="fas fa-sign-out-alt"></i> {{ 'loout' | translate }}</a>
+                  <a (click)="authService.SignOut()" (click)= "deletehistory()" ><i class="fas fa-sign-out-alt"></i> {{ 'loout' | translate }}</a>
                 </li>
               </ul>
             </div>

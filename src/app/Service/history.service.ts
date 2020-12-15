@@ -21,4 +21,8 @@ export class HistoryService {
  updatehistory(id: any , value: any): Observable<object>{
    return this.http.put(`${this.baseUrl}/${id}`, value);
  }
+
+ deleteHistory(id: any): Observable<any> {
+  return this.http.get(`${this.baseUrl1}/${id}`);
+}
 }
