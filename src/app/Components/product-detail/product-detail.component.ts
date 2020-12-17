@@ -107,6 +107,13 @@ this.loadFavorite();
   }
 
   save() {
+    if(this.AuthService.user_id() === "null"){
+      const confirmDialog = this.dialog.open(SuccessDialogComponent, {
+        data: {
+          title: 'vui lòng đăng nhập !',
+        },
+      });
+    } else{
     var nd = this.comments.noiDungBinhLuan;
     this.comments = new Comment();
     this.comments.noiDungBinhLuan = nd;
@@ -124,6 +131,7 @@ this.loadFavorite();
         console.log('er-----> : ' + error);
       }
     );
+    }
   }
 
   infomationShop(id: number) {
@@ -134,7 +142,13 @@ this.loadFavorite();
   }
 
   favourite() {
-
+    if(this.AuthService.user_id() === "null"){
+      const confirmDialog = this.dialog.open(SuccessDialogComponent, {
+        data: {
+          title: 'vui lòng đăng nhập !',
+        },
+      });
+    } else{
     if (this.clickFavourite == true) {
       // this.productFavourite = this.product
       // console.log(' delete -----id -- >>:' +this.id);
@@ -171,26 +185,37 @@ this.loadFavorite();
       );
     }
   }
+  }
 
   updatereport() {
-    const confirmDialog = this.dialog.open(ConfirmDialogComponent, {
-      data: {
-        title: 'Bạn có muốn report bài này chứ ?',
-        mesage: 'bạn cân làm lại ... !',
-      },
-    });
-    confirmDialog.afterClosed().subscribe((result) => {
-      if (result === true) {
-        this.product.luotBaoCao = this.product.luotBaoCao + 1;
+    if(this.AuthService.user_id() === "null"){
+      const confirmDialog = this.dialog.open(SuccessDialogComponent, {
+        data: {
+          title: 'vui lòng đăng nhập !',
+        },
+      });
+    } else{
+      const confirmDialog = this.dialog.open(ConfirmDialogComponent, {
+        data: {
+          title: 'Bạn có muốn report bài này chứ ?',
+          mesage: 'bạn cân làm lại ... !',
+        },
+      });
+      confirmDialog.afterClosed().subscribe((result) => {
+        if (result === true) {
+          this.product.luotBaoCao = this.product.luotBaoCao + 1;
+          console.log(this.product);
+          console.log(this.id);
+        this.productserviec.updatereport(this.id, this.product)
+          .subscribe(data => {
+       //  this.product= new Product();
         console.log(this.product);
-        console.log(this.id);
-      this.productserviec.updatereport(this.id, this.product)
-        .subscribe(data => {
-     //  this.product= new Product();
-      console.log(this.product);
-      
-       });
-      }
-});
+        
+         });
+        }
+  });
+    }
+   
   }
+    
 }
