@@ -14,8 +14,9 @@ import { History } from 'src/app/model/History';
 import { HistoryService } from 'src/app/Service/history.service';
 import { Inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { SuccessDialogComponent } from 'src/app/Dialog/success-dialog/success-dialog.component';
+
 import { ConfirmDialogComponent } from 'src/app/Dialog/confirm-dialog/confirm-dialog.component';
+import { FailDialogComponent } from 'src/app/Dialog/fail-dialog/fail-dialog.component';
 
 @Component({
   selector: 'app-product-detail',
@@ -108,7 +109,7 @@ this.loadFavorite();
 
   save() {
     if(this.AuthService.user_id() === "null"){
-      const confirmDialog = this.dialog.open(SuccessDialogComponent, {
+      const confirmDialog = this.dialog.open(FailDialogComponent, {
         data: {
           title: 'vui lòng đăng nhập !',
         },
@@ -143,7 +144,7 @@ this.loadFavorite();
 
   favourite() {
     if(this.AuthService.user_id() === "null"){
-      const confirmDialog = this.dialog.open(SuccessDialogComponent, {
+      const confirmDialog = this.dialog.open(FailDialogComponent, {
         data: {
           title: 'vui lòng đăng nhập !',
         },
@@ -189,7 +190,7 @@ this.loadFavorite();
 
   updatereport() {
     if(this.AuthService.user_id() === "null"){
-      const confirmDialog = this.dialog.open(SuccessDialogComponent, {
+      const confirmDialog = this.dialog.open(FailDialogComponent, {
         data: {
           title: 'vui lòng đăng nhập !',
         },
