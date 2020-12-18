@@ -69,12 +69,12 @@
               </p>
             </div>
             <hr> <br>
-            <div class="div mb-5">
+            <!-- <div class="div mb-5">
               <a style="color: white;"  (click)="boxpeople = true"  class="ps-btn">
                 <img style="width: 40px;" src="https://drive.google.com/uc?export=download&id=1vdzV_8oaOj0ZU3siHGgQ0I13ixK4CtEg" alt="">
                   &nbsp; Chat với người bán
               </a>
-            </div>
+            </div> -->
 
             <div class="ml-2 row ps-product__shopping">
               <a  class="ps-btn mb-10" style="color: white; font-size: 18px;" *ngIf="lienhe"  (click)="checklogin()" >Liên hệ</a>
@@ -84,6 +84,13 @@
                   <i class="fas fa-heart mt-1"></i></a>
                 <a  style="color: white; background-color: #999999;" (click)="updatereport()" ><i class="fa fa-bullhorn" aria-hidden="true"></i></a>
               </div>
+            </div>
+            <div class="div mt-4 mb-5">
+              <a style="color: white; padding-top: 8px; padding-bottom: 8px;"  class="ps-btn">
+                <!-- <img style="width: 40px;" src="https://img.icons8.com/wired/64/000000/circled-left-2.png" alt=""> -->
+                <i class="fas fa-hand-point-left" style="font-size: 25px;"></i>
+                  &nbsp; Quay lại danh sách
+              </a>
             </div>
           </div>
 

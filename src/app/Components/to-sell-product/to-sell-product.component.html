@@ -27,11 +27,11 @@
                 </select>
                 <label for="category">{{ 'category' | translate }}</label>
               </div>
-              <div *ngIf="product.errors && (product.dirty || product.touched)" class="checklbl">
+              <!-- <div *ngIf="product.errors && (product.dirty || product.touched)" class="checklbl">
                 <div [hidden]="!product.errors.required">
                   Bạn chưa chọn loại hàng
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="row">
@@ -56,11 +56,11 @@
                 </select>
                 <label for="category">{{ 'status' | translate }}</label>
               </div>
-              <div *ngIf="trangThai.errors && (trangThai.dirty || trangThai.touched)" class="checklbl">
+              <!-- <div *ngIf="trangThai.errors && (trangThai.dirty || trangThai.touched)" class="checklbl">
                 <div [hidden]="!trangThai.errors.required">
                   Bạn chưa chọn trạng thái
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="row">
@@ -149,13 +149,14 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-12">
+          <div class="fa_button row" >
+            <div class="col-9"></div>
+            <div class="col-md-3">
               <div class="button">
                 <div class="inner">
                 </div>
                 <!-- <button href ="#" id="button" type="submit">{{ 'completed' | translate }}ddddddđ</button> -->
-                <button id="button" [disabled]="!productform.valid" type="submit">{{ 'completed' | translate }}</button>
+                <button  id="button" [disabled]="!productform.valid" type="submit">{{ 'completed' | translate }}</button>
               </div>
             </div>
           </div>

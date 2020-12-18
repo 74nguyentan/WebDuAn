@@ -318,7 +318,7 @@ form .button {
   margin-top: 30px;
   overflow: hidden;
   z-index: 111;
-  width: 30%;
+  width: 100%;
   float: right;
 }
 
@@ -402,4 +402,18 @@ div.ex3 {
 /* //check  */
 .checklbl{
   color: red;
+}
+
+@media (max-width: 1920px) {
+  .fa_button{
+    margin-right: 20px;
+  }
+}
+@media (max-width: 1368px) {
+  .fa_button{
+    padding: 0px;
+    margin: 0px -4px 0px 0px;
+    text-align: center;
+  }
+
 }
