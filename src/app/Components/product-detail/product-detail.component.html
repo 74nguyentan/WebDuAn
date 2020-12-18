@@ -77,8 +77,8 @@
             </div>
 
             <div class="ml-2 row ps-product__shopping">
-              <a  class="ps-btn mb-10" style="color: white; font-size: 18px;" *ngIf="lienhe" (click)="lienhe = false" >Liên hệ</a>
-              <a  class="ps-btn mb-10" style="color: white;" *ngIf="!lienhe">{{product.dienThoai}}</a>
+              <a  class="ps-btn mb-10" style="color: white; font-size: 18px;" *ngIf="lienhe"  (click)="checklogin()" >Liên hệ</a>
+              <a  class="ps-btn mb-10" style="color: white;"  *ngIf="!lienhe">{{product.dienThoai}}</a>
               <div class="ps-product__actions">
                 <a class="mr-10" style="color: white;" (click)="favourite()" [class.favourite]="clickFavourite" [class.favourite1]="clickFavourite1">
                   <i class="fas fa-heart mt-1"></i></a>

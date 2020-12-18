@@ -219,4 +219,17 @@ this.loadFavorite();
    
   }
     
+
+  checklogin(){
+    if(this.AuthService.user_id() === "null"){
+      this.lienhe = true;
+      const confirmDialog = this.dialog.open(FailDialogComponent, {
+        data: {
+          title: 'vui lòng đăng nhập !',
+        },
+      });
+    } else{
+      this.lienhe = false;
+    }
+  }
 }
