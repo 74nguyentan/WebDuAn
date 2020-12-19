@@ -82,11 +82,11 @@
               <div class="ps-product__actions">
                 <a class="mr-10" style="color: white;" (click)="favourite()" [class.favourite]="clickFavourite" [class.favourite1]="clickFavourite1">
                   <i class="fas fa-heart mt-1"></i></a>
-                <a  style="color: white; background-color: #999999;" (click)="updatereport()" ><i class="fa fa-bullhorn" aria-hidden="true"></i></a>
+                <a  style="color: white; " (click)="clickReport1 ? updatereport() : back()" [class.report]="clickReport" [class.report1]="clickReport1"><i class="fa fa-flag" ></i></a>
               </div>
             </div>
             <div class="div mt-4 mb-5">
-              <a style="color: white; padding-top: 8px; padding-bottom: 8px;"  class="ps-btn">
+              <a style="color: white; padding-top: 8px; padding-bottom: 8px;"  class="ps-btn" routerLink="/loaihang/1">
                 <!-- <img style="width: 40px;" src="https://img.icons8.com/wired/64/000000/circled-left-2.png" alt=""> -->
                 <i class="fas fa-hand-point-left" style="font-size: 25px;"></i>
                   &nbsp; Quay lại danh sách
@@ -141,19 +141,24 @@
           <div class="tab-content mb-60">
             <div class="tab-pane active" role="tabpanel" id="tab_01">
               <p>
-                Caramels tootsie roll carrot cake sugar plum. Sweet roll jelly
-                bear claw liquorice. Gingerbread lollipop dragée cake. Pie
-                topping jelly-o. Fruitcake dragée candy canes tootsie roll.
-                Pastry jelly-o cupcake. Bonbon brownie soufflé muffin.
+                Green Market chính thức gia nhập thị trường Việt Nam vào đầu năm 2020, với mục đích tạo ra cho bạn một kênh rao vặt trung gian, kết nối người mua với người bán lại với nhau bằng những giao dịch cực kỳ đơn giản, tiện lợi, nhanh chóng, an toàn, mang đến hiệu quả bất ngờ.
+                Đến nay, Green Market tự hào là Website rao vặt được ưa chuộng hàng đầu Việt Nam. Hàng ngàn món hời từ Bất động sản, Nhà cửa, Xe cộ, Đồ điện tử, Thú cưng, Vật dụng cá nhân... đến tìm việc làm, thông tin tuyển dụng, các dịch vụ - du lịch được đăng tin, rao bán trên Green Market.
+                Với Green Market, bạn có thể dễ dàng mua bán, trao đổi bất cứ một loại mặt hàng nào, dù đó là đồ cũ hay đồ mới với nhiều lĩnh vực:
+                Bất động sản: Cho thuê, Mua bán nhà đất, căn hộ chung cư, văn phòng mặt bằng kinh doanh, phòng trọ đa dạng về diện tích, vị trí
+                Phương tiện đi lại: xe ô tô, xe máy có độ bền cao, giá cả hợp lý.
+                Đồ dùng cá nhân: quần áo, giày dép, túi xách, đồng hồ... đa phong cách, hợp thời trang.
+                Đồ điện tử: điện thoại di động, máy tính bảng, laptop, tivi, loa, amply...; đồ điện gia dụng: máy giặt, tủ lạnh, máy lạnh điều hòa... với rất nhiều nhãn hiệu, kích thước khác nhau.
+                Vật nuôi, thú cưng đa chủng loại: gà, chó, chim, mèo, cá, hamster giá cực tốt.
+                Tuyển dụng, việc làm với hàng triệu công việc hấp dẫn, phù hợp.v
+                Dịch vụ, du lịch: khách sạn, vé máy bay, vé tàu, vé xe, tour du lịch và các voucher du lịch... uy tín, chất lượng.
+                Đồ ăn, thực phẩm: các món ăn được chế biến thơm ngon, hấp dẫn, thực phẩm tươi sống, an toàn & giá cả hợp lý.
+                Và còn rất nhiều mặt hàng khác nữa đã và đang được rao bán tại Green Market.
+                Mỗi người trong chúng ta đều có những sản phẩm đã qua sử dụng và không cần dùng tới nữa. Vậy còn chần chừ gì nữa mà không để nó trở nên giá trị hơn với người khác. Rất đơn giản, bạn chỉ cần chụp hình lại, mô tả cụ thể về sản phẩm và sử dụng ứng dụng Đăng tin miễn phí của Green Market là đã có thể đến gần hơn với người cần nó.
+                Không những thế, Green Market còn cung cấp cho bạn thông tin về giá cả các mặt hàng để bạn có thể tham khảo. Đồng thời, thông qua Blog kinh nghiệm, Green Market sẽ tư vấn, chia sẻ cho bạn những thông tin bổ ích, bí quyết, mẹo vặt giúp bạn có những giao dịch mua bán an toàn, đảm bảo. Green Market cũng sẵn sàng hỗ trợ bạn trong mọi trường hợp cần thiết.
+                Chúc các bạn có những trải nghiệm mua bán tuyệt vời trên Green Market.
+
               </p>
-              <p>
-                Sweet roll soufflé oat cake apple pie croissant. Pie gummi bears
-                jujubes cake lemon drops gummi bears croissant macaroon pie.
-                Fruitcake tootsie roll chocolate cake Carrot cake cake bear claw
-                jujubes topping cake apple pie. Jujubes gummi bears soufflé
-                candy canes topping gummi bears cake soufflé cake. Cotton candy
-                soufflé sugar plum pastry sweet roll..
-              </p>
+
             </div>
             <div class="tab-pane" role="tabpanel" id="tab_02">
               <p class="mb-20">

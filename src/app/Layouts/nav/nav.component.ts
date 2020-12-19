@@ -125,10 +125,10 @@ export class NavComponent implements OnInit, OnDestroy{
   }
 
   productfind(tenHang: string) {
-    this.router.navigate(['findAllProduct', tenHang]); 
-       
+    this.router.navigate(['findAllProduct', tenHang]);
+
   }
-  
+
 
   refresh(): void {
     window.location.reload();

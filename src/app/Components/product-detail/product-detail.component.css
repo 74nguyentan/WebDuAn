@@ -113,7 +113,19 @@
 /* .ps-product__thumbnail .ps-product__review .ps-product__variants{
   height: 80px;
 
+
+
 } */
+
+/* report*/
+
+.report{
+  background-color: #2ac37d;
+}
+.report1{
+  background-color: #999999;
+}
+/*  */
 .favourite{
   background-color: #2ac37d;
 }

@@ -4,12 +4,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/model/Product';
 import { AuthService } from 'src/app/Service/auth.service';
 import { MatDialog } from '@angular/material/dialog';
-import { ConfirmDialogComponent } from 'src/app/Dialog/confirm-dialog/confirm-dialog.component';
 import { Inject } from '@angular/core';
 import { HistoryService } from 'src/app/Service/history.service';
 import { Users } from 'src/app/Model/user';
 import { History } from 'src/app/model/History';
-import { SuccessDialogComponent } from 'src/app/Dialog/success-dialog/success-dialog.component';
+import { FailDialogComponent } from 'src/app/Dialog/fail-dialog/fail-dialog.component';
 
 @Component({
   selector: 'app-find-all-product',
@@ -32,13 +31,13 @@ export class FindAllProductComponent implements OnInit {
   ngOnInit(): void {
     this.tenHang = this.route.snapshot.params['tenHang'];
     console.log(this.tenHang);
-    
+
     this.productserviec.getProduct1(this.tenHang)
     .subscribe(
-      data => { data.length 
+      data => { data.length
         this.products = data;
         if(data.length == 0){
-          const confirmDialog = this.dialog.open(SuccessDialogComponent, {
+          const confirmDialog = this.dialog.open(FailDialogComponent, {
             data: {
               title: 'Không có mặt hàng này !',
             },
@@ -47,7 +46,7 @@ export class FindAllProductComponent implements OnInit {
             if (result === false) {
             }
       });
-        } 
+        }
       },
       error => console.log(error));
   }

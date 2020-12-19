@@ -43,6 +43,8 @@ export class ProductDetailComponent implements OnInit {
   img_3;
   clickFavourite = false;
   clickFavourite1 = true;
+  clickReport = false;
+  clickReport1 = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -198,12 +200,14 @@ this.loadFavorite();
     } else{
       const confirmDialog = this.dialog.open(ConfirmDialogComponent, {
         data: {
-          title: 'Bạn có muốn report bài này chứ ?',
-          mesage: 'bạn cân làm lại ... !',
+          title: 'Bạn có muốn báo cáo bài này chứ ?',
+          message: 'Sản phẩm này đã vi phạm chính sách của chúng tôi ?',
         },
       });
       confirmDialog.afterClosed().subscribe((result) => {
         if (result === true) {
+          this.clickReport = true;
+          this.clickReport1 = false;
           this.product.luotBaoCao = this.product.luotBaoCao + 1;
           console.log(this.product);
           console.log(this.id);
@@ -211,14 +215,36 @@ this.loadFavorite();
           .subscribe(data => {
        //  this.product= new Product();
         console.log(this.product);
-        
+
          });
         }
   });
     }
-   
+
   }
-    
+  back(){
+    const confirmDialog = this.dialog.open(ConfirmDialogComponent, {
+      data: {
+        title: 'Hoàn tác ?',
+        message: 'Bạn muốn hoàn tác chứ ?',
+      },
+    });
+    confirmDialog.afterClosed().subscribe((result) => {
+      if (result === true) {
+        this.clickReport = false;
+        this.clickReport1 = true;
+        this.product.luotBaoCao = this.product.luotBaoCao - 1;
+        // console.log(this.product);
+        // console.log(this.id);
+      this.productserviec.updatereport(this.id, this.product)
+        .subscribe(data => {
+     //  this.product= new Product();
+      // console.log(this.product);
+
+       });
+      }
+});
+  }
 
   checklogin(){
     if(this.AuthService.user_id() === "null"){
